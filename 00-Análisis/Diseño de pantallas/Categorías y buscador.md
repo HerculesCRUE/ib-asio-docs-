@@ -8,17 +8,15 @@
 
 [1. Home](#home)
 
-[2. Buscador](#buscador)
+[2. Categorías](#categorías)
 
-[3. Categorías](#categorías)
+[2.1. Centros de investigación](#centros-de-investigación)
 
-[3.1. Centros de investigación](#centros-de-investigación)
+[2.2. Detalle de centro de investigación](#detalle-de-centro-de-investigación)
 
-[3.2. Detalle de centro de investigación](#detalle-de-centro-de-investigación)
+[2.3. Acciones de transferencia](#acciones-de-transferencia)
 
-[3.3. Acciones de transferencia](#acciones-de-transferencia)
-
-[3.4 Detalle de proyecto](#detalle de proyecto)
+[2.4 Detalle de proyecto](#detalle de proyecto)
 
 
 
@@ -68,30 +66,6 @@ Dentro del propio Home se podrán ver:
 
 
 ![home - front](./images/mocks/home.png)
-
-
-
-
-
-Buscador
-===================
-
-En la pantalla home de la aplicación se mostrará un buscador para datos públicos del dataset importado a ASIO. Este buscador constará de un único campos de texto y realizará la búsqueda en los campos de las  categorías creadas en la aplicación:
-
-- Estructuras de investigación
-- Personal investigador
-- Categorías
-- Producción científica
-- Acciones de investigación
-- Estadísticas e indicadores
-
-
-
-Al realizar una búsqueda, la página redireccionará  a otra nueva página, donde se mostrarán los resultados en una tabla.
-
-
-
-![Resultados del buscador](./images/mocks/buscador.png)
 
 
 
