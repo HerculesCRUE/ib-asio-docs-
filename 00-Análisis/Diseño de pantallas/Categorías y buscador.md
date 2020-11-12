@@ -121,6 +121,22 @@ Pulsando sobre un centro de investigación en la pantalla de esta categoría, la
 
 
 
+![Detalle de centro de investigación](./images/mocks/detalle-universidad-top.png)
+
+
+
+![Detalle de centro de investigación](./images/mocks/detalle-universidad-produccion.png)
+
+
+
+![Detalle de centro de investigación](./images/mocks/detalle-universidad-proyectos.png)
+
+
+
+![Detalle de centro de investigación](./images/mocks/detalle-universidad-patentes.png)
+
+
+
 En esta pantalla se responderá a las siguientes preguntas de competencia:
 
 | Pregunta de competencia                                      |
