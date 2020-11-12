@@ -1,4 +1,3 @@
-
 ![](./images/logos_feder.png)
 
 # Propuesta de solución para el front
@@ -20,8 +19,6 @@
 [3.3. Acciones de transferencia](#acciones-de-transferencia)
 
 [3.4 Detalle de proyecto](#detalle de proyecto)
-
-
 
 
 
