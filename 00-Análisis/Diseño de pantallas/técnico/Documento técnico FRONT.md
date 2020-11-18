@@ -15,11 +15,11 @@
 
 ​ ​ [2.2. Dependencias](#dependencias)
 
-​ ​ [2.3. Componentes reutilizables](#componentes)
+​ ​ [2.3. Componentes reutilizables](#componentes-reutilizables)
 
 ​ ​ ​ ​ [2.2.1. Tree](#tree)
 
-​​ ​ ​ ​ [2.2.2. Gráfico](#grafico)
+​​ ​ ​ ​ [2.2.2. Gráfico](#tarta)
 
 ​​ ​ ​ ​ [2.2.3. Timeline](#timeline)
 
@@ -27,9 +27,9 @@
 
 ​ ​ [2.5. Home](#home)
 
-​ ​ [2.6. Centros de investigación](#centros)
+​ ​ [2.6. Centros de investigación](#centros-de-investigación)
 
-​ ​ [2.7. Detalle centro de investigación](#detalleCentro)
+​ ​ [2.7. Detalle centro de investigación](#detalle-de-centro-de-investigación)
 
 
 
@@ -329,7 +329,7 @@ Componentes que se reutilizarán por las diferentes pantallas de la aplicación
 
 Componente para poder ver los datos de una categoria y sus subcategorias en forma de arbol. Este componente utilizará el componente de apache echart.
 
-![home - front](../images/tree.png)
+![arbol](../images/arbol.png)
 
 
 
@@ -338,7 +338,7 @@ Componente para poder ver los datos de una categoria y sus subcategorias en form
 
 Componente para poder ver los datos de una categoria y sus subcategorias en forma de tarta. Este componente utilizará el componente de apache echart.
 
-![home - front](../images/tarta.png)
+![Tarta](../images/pie.png)
 
 
 
@@ -347,7 +347,7 @@ Componente para poder ver los datos de una categoria y sus subcategorias en form
 
 Componente para poder ver los datos en un gráfico de tiempo. Este componente utilizará el componente de apache echart.
 
-![home - front](../images/timeline.png)
+![Timeline](../images/time-line.png)
 
 
 
@@ -381,4 +381,25 @@ Desde Home o el menú podremos navegar hasta la pantalla de centros de investiga
 
 Pulsando sobre un centro de investigación en la pantalla de esta categoría, la web nos redirigirá a la información de ese centro de investigación. Para ello se recuperarán los datos mediante un servicio y con ellos se pintará la pantalla de detalle, como en pantallas anteriores todos los graficos, barras o mapas serán componentes externos a los que se les pasará el json que utilizará para pintar el gráfico.
 
-![Detalle centro de investigación](../images/mocks/detalle-universidad.png)
+En esta pantalla tendremos varios tabs donde se incluira parte de la información.
+
+TAB Proyectos:
+
+![Proyectos](../images/mocks/detalle-universidad-proyectos.png)
+
+TAB Personal de investigación:
+
+![Personal del investigación](../images/mocks/detalle-universidad.png)
+
+TAB TOP investigadores:
+
+![TOP investigadores](../images/mocks/detalle-universidad.png)
+
+TAB Patentes:
+
+![Patentes](../images/mocks/detalle-universidad-patentes.png)
+
+TAB Producción cientifica:
+
+![Producción cientifica](../images/mocks/detalle-universidad-produccion.png)
+
