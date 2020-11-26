@@ -61,7 +61,7 @@ Dentro del propio Home se podrán ver:
 
 
 
-![home - front](./images/screenshots/home.jpg)
+![home - front](./images/screenshots/home.JPG)
 
 
 
@@ -99,11 +99,11 @@ Se podrá acceder a ella a través de la pantalla home, o del menú superior. En
 
 
 
-![Centros de investigación](./images/screenshots/estructuras-all.jpg)
+![Centros de investigación](./images/screenshots/estructuras-all.JPG)
 
 
 
-![Centros de investigación](./images/screenshots/estructuras-top.jpg)
+![Centros de investigación](./images/screenshots/estructuras-top.JPG)
 
 
 
@@ -136,25 +136,25 @@ Pulsando sobre un centro de investigación en la pantalla de esta categoría, la
 
 ### Sección de top de investigadores
 
-![Detalle de centro de investigación](./images/screenshots/estructuras-top.jpg)
+![Detalle de centro de investigación](./images/screenshots/estructuras-top.JPG)
 
 
 
 ### Sección de producción científica
 
-![Detalle de centro de investigación](./images/screenshots/detalle-estructuras-produccion.jpg)
+![Detalle de centro de investigación](./images/screenshots/detalle-estructuras-produccion.JPG)
 
 
 
 ### Sección de proyectos
 
-![Detalle de centro de investigación](./images/screenshots/detalle-estructuras-proyecto.jpg)
+![Detalle de centro de investigación](./images/screenshots/detalle-estructuras-proyecto.JPG)
 
 
 
 ### Sección de patentes
 
-![Detalle de centro de investigación](./images/screenshots/detalle-estructuras-patentes.jpg)
+![Detalle de centro de investigación](./images/screenshots/detalle-estructuras-patentes.JPG)
 
 
 
