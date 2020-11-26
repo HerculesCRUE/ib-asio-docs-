@@ -75,6 +75,8 @@ En cada categoría se mostrarán una serie de filtros, algunos comunes para vari
 
 Para el filtro por áreas, se utilizará un componente para mostrar un árbol y se utilizará el módulo vertical "[subject áreas](https://github.com/weso/hercules-ontology/blob/master/src/asio-module-subjectareas.ttl)":
 
+
+
 ![](./images/areas.png)
 
 
