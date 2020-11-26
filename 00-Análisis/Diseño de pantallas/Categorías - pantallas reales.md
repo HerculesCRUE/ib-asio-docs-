@@ -12,7 +12,7 @@
 
 [2.1. Estructura de investigación](#estructura-de-investigación)
 
-[2.2. Detalle de centro de investigación](#detalle de proyecto)
+[2.2. Detalle de una estructura de investigación](#detalle-de-una-estructura-de-investigación)
 
 
 
