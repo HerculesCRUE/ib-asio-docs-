@@ -128,10 +128,6 @@ Pulsando sobre un centro de investigación en la pantalla de esta categoría, la
 
 
 
-### Sección de top de investigadores
-
-![Captura de detalle de una estructuras de investigación - tab top de personal investigador](./images/screenshots/detalle-estructuras-top.png)
-
 
 
 ### Sección de producción científica
