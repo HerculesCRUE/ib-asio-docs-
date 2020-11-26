@@ -61,7 +61,7 @@ Dentro del propio Home se podrán ver:
 
 
 
-![home - front](./images/screenshots/home.JPG)
+![home - front](./images/screenshots/home.png)
 
 
 
@@ -101,11 +101,7 @@ Se podrá acceder a ella a través de la pantalla home, o del menú superior. En
 
 
 
-![Captura de estructuras de investigación 1/2](./images/screenshots/estructuras-all.JPG)
-
-
-
-![Captura de estructuras de investigación 2/2](./images/screenshots/estructuras-top.JPG)
+![Captura de estructuras de investigación](./images/screenshots/estructuras.png)
 
 
 
@@ -128,35 +124,31 @@ Pulsando sobre un centro de investigación en la pantalla de esta categoría, la
 
 ### Sección de personal investigador
 
-![Captura de detalle de una estructuras de investigación - tab personal investigador 1/2](./images/screenshots/detalle-estructuras-personal-arbol.JPG)
-
-
-
-![Captura de detalle de una estructuras de investigación - tab personal investigador 2/2](./images/screenshots/detalle-estructuras-personal-tabla.JPG)
+![Captura de detalle de una estructuras de investigación - tab personal investigador](./images/screenshots/detalle-estructuras-personal.png)
 
 
 
 ### Sección de top de investigadores
 
-![Captura de detalle de una estructuras de investigación - tab top de personal investigador](./images/screenshots/estructuras-top.JPG)
+![Captura de detalle de una estructuras de investigación - tab top de personal investigador](./images/screenshots/detalle-estructuras-top.png)
 
 
 
 ### Sección de producción científica
 
-![Captura de detalle de una estructuras de investigación - tab produccion cientifica](./images/screenshots/detalle-estructuras-produccion.JPG)
+![Captura de detalle de una estructuras de investigación - tab produccion cientifica](./images/screenshots/detalle-estructuras-produccion.png)
 
 
 
 ### Sección de proyectos
 
-![Captura de detalle de una estructuras de investigación - tab proyectos](./images/screenshots/detalle-estructuras-proyecto.JPG)
+![Captura de detalle de una estructuras de investigación - tab proyectos](./images/screenshots/detalle-estructuras-proyecto.png)
 
 
 
 ### Sección de patentes
 
-![Captura de detalle de una estructuras de investigación - tab patentes](./images/screenshots/detalle-estructuras-patentes.JPG)
+![Captura de detalle de una estructuras de investigación - tab patentes](./images/screenshots/detalle-estructuras-patentes.png)
 
 
 
