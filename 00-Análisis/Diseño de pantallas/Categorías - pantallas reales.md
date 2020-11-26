@@ -99,11 +99,11 @@ Se podrá acceder a ella a través de la pantalla home, o del menú superior. En
 
 
 
-![Centros de investigación](./images/screenshots/estructuras-all.JPG)
+![Captura de estructuras de investigación 1/2](./images/screenshots/estructuras-all.JPG)
 
 
 
-![Centros de investigación](./images/screenshots/estructuras-top.JPG)
+![Captura de estructuras de investigación 2/2](./images/screenshots/estructuras-top.JPG)
 
 
 
@@ -126,35 +126,35 @@ Pulsando sobre un centro de investigación en la pantalla de esta categoría, la
 
 ### Sección de personal investigador
 
-![Detalle de centro de investigación](./images/screenshots/detalle-estructuras-personal-arbol.JPG)
+![Captura de detalle de una estructuras de investigación - tab personal investigador 1/2](./images/screenshots/detalle-estructuras-personal-arbol.JPG)
 
 
 
-![Detalle de centro de investigación](./images/screenshots/detalle-estructuras-personal-tabla.JPG)
+![Captura de detalle de una estructuras de investigación - tab personal investigador 2/2](./images/screenshots/detalle-estructuras-personal-tabla.JPG)
 
 
 
 ### Sección de top de investigadores
 
-![Detalle de centro de investigación](./images/screenshots/estructuras-top.JPG)
+![Captura de detalle de una estructuras de investigación - tab top de personal investigador](./images/screenshots/estructuras-top.JPG)
 
 
 
 ### Sección de producción científica
 
-![Detalle de centro de investigación](./images/screenshots/detalle-estructuras-produccion.JPG)
+![Captura de detalle de una estructuras de investigación - tab produccion cientifica](./images/screenshots/detalle-estructuras-produccion.JPG)
 
 
 
 ### Sección de proyectos
 
-![Detalle de centro de investigación](./images/screenshots/detalle-estructuras-proyecto.JPG)
+![Captura de detalle de una estructuras de investigación - tab proyectos](./images/screenshots/detalle-estructuras-proyecto.JPG)
 
 
 
 ### Sección de patentes
 
-![Detalle de centro de investigación](./images/screenshots/detalle-estructuras-patentes.JPG)
+![Captura de detalle de una estructuras de investigación - tab patentes](./images/screenshots/detalle-estructuras-patentes.JPG)
 
 
 
