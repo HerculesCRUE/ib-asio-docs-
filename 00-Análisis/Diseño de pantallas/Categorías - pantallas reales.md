@@ -10,13 +10,9 @@
 
 [2. Categorías](#categorías)
 
-[2.1. Centros de investigación](#centros-de-investigación)
+[2.1. Estructura de investigación](#estructura-de-investigación)
 
-[2.2. Detalle de centro de investigación](#detalle-de-centro-de-investigación)
-
-[2.3. Acciones de transferencia](#acciones-de-transferencia)
-
-[2.4 Detalle de proyecto](#detalle de proyecto)
+[2.2. Detalle de centro de investigación](#detalle de proyecto)
 
 
 
@@ -65,7 +61,7 @@ Dentro del propio Home se podrán ver:
 
 
 
-![home - front](./images/mocks/home.png)
+![home - front](./images/screenshots/home.jpg)
 
 
 
@@ -83,22 +79,31 @@ Para el filtro por áreas, se utilizará un componente para mostrar un árbol y 
 
 
 
-## Centros de investigación
+## Estructura de investigación
 
 
 
-En la categoría de centros de investigación, podremos ver información general sobre las diferentes estructuras de investigación:
+En la categoría de estructura de investigación, podremos ver información general sobre las diferentes estructuras de investigación:
 
 - Centros
+
 - Universidades
+
 - Fundaciones
+
 - Organismos
+
+  
 
 Se podrá acceder a ella a través de la pantalla home, o del menú superior. En el menú superior mostrará las diferentes opciones que hay dentro de las estructuras de organización: Universidad, centro, etc. Si se selecciona una de estas sub-opciones, mostrará la información filtrada por ese tipo de estructura.
 
 
 
-![Centros de investigación](./images/mocks/universidades.png)
+![Centros de investigación](./images/screenshots/estructuras_all.jpg)
+
+
+
+![Centros de investigación](./images/screenshots/estructuras_top.jpg)
 
 
 
@@ -113,27 +118,45 @@ La información que se mostrará en esta página tratará de responder, entre ot
 
 
 
-## Detalle de centro de investigación
+## Detalle de una estructura de investigación
 
-Pulsando sobre un centro de investigación en la pantalla de esta categoría, la web nos redirigirá a la información de ese centro de investigación. Para facilitar la visualización de los datos sobre el centro de investigación, la información se mostrará agrupada por [tabs](https://getbootstrap.com/docs/4.0/components/navs/).
-
-![Detalle de centro de investigación](./images/mocks/detalle-universidad.png)
+Pulsando sobre un centro de investigación en la pantalla de esta categoría, la web nos redirigirá a la información de ese centro de investigación. Para facilitar la visualización de los datos sobre la estructura de investigación, la información se mostrará agrupada por [tabs](https://getbootstrap.com/docs/4.0/components/navs/).
 
 
 
-![Detalle de centro de investigación](./images/mocks/detalle-universidad-top.png)
+### Sección de personal investigador
+
+![Detalle de centro de investigación](./images/screenshots/detalle_estructuras_personal_arbol.JPG)
 
 
 
-![Detalle de centro de investigación](./images/mocks/detalle-universidad-produccion.png)
+![Detalle de centro de investigación](./images/screenshots/detalle_estructuras_personal_tabla.JPG)
 
 
 
-![Detalle de centro de investigación](./images/mocks/detalle-universidad-proyectos.png)
+### Sección de top de investigadores
+
+![Detalle de centro de investigación](./images/screenshots/estructuras_top.jpg)
 
 
 
-![Detalle de centro de investigación](./images/mocks/detalle-universidad-patentes.png)
+### Sección de producción científica
+
+![Detalle de centro de investigación](./images/screenshots/detalle_estructuras_produccion.jpg)
+
+
+
+### Sección de proyectos
+
+![Detalle de centro de investigación](./images/screenshots/detalle_estructuras_proyecto.jpg)
+
+
+
+### Sección de patentes
+
+![Detalle de centro de investigación](./images/screenshots/detalle_estructuras_patentes.jpg)
+
+
 
 
 
@@ -151,47 +174,5 @@ En esta pantalla se responderá a las siguientes preguntas de competencia:
 |                                                              |
 
 
-
-## Acciones de investigación
-
-Se mostrará un filtro, en forma de árbol al igual que las áreas, en el que se mostrarán los distintos tipos y subtipos de acciones de investigación posibles, todas subclases de la clase [Document](https://github.com/weso/hercules-ontology/blob/master/src/asio-core.ttl) de la ontología.
-
-![](./images/document-protege.png)
-
-
-
-Estas podrán ser seleccionables en el menú superior, o en el filtro de la propia categoría acciones de investigación.
-
-![Acciones de investigación](./images/mocks/acciones-de-investigacion.png)
-
-
-
-En esta página se trata de mostrar la información de las preguntas de competencia relacionadas con proyectos. 
-
-| Pregunta de competencia                                      |
-| ------------------------------------------------------------ |
-| CQ10. Como investigador y personal no investigador de la universidad requiero obtener un listado de los proyectos adjudicados/desarrollados, de un centro/estructura de investigación, de un área/disciplina, en un determinado año de búsqueda en los que se tenga acceso al detalle de al menos:<br/>○	Nombre del proyecto<br/>○	Palabras claves<br/>○	Tipo de participación: coordinador o participante<br/>○	Tipo de proyecto: competitivo o no competitivo<br/>○	Tipo de financiamiento: público o privado.<br/>○	Tipo de convocatoria: nacional, H2020, etc.<br/>○	Número y listado de personas involucradas en el proyecto<br/>○	Nombre(s) del investigador(s) principal<br/>○	Entregables/memoria del proyecto<br/>○	Producción científica relacionada con el proyecto<br/>○	Entidades colaboradoras/participantes<br/>○	Cuantía<br/>○	etc. |
-| CQ46. Estado del arte: ¿puedo ver los resultados de proyectos por temática concreta de proyectos desarrollados en la red, diferenciando a nivel regional, nacional, europeo? |
-|                                                              |
-|                                                              |
-
-
-
-
-
-## Detalle de proyecto
-
-![Detalle proyecto](./images/mocks/detalle-proyecto.png)
-
-
-
-Se responden a las siguientes preguntas de competencia, a modo consulta:
-
-| Pregunta de competencia                                      |
-| ------------------------------------------------------------ |
-| CQ13. Como investigador, personal no investigador de la universidad requiero insertar/modificar los datos relacionados con los proyectos de investigación, incluyendo los entregables que se hayan generado en la fase de propuesta. El usuario tendrá acceso a esta información según el nivel de acceso que se le haya proporcionado previamente según su rol, según niveles de confidencialidad de ser el caso. Entre los datos que se proporcionarán por cada proyecto se tendrá al menos:<br/>○	Nombre del proyecto<br/>○	Palabras claves<br/>○	Tipo de participación de la entidad: coordinador o participante<br/>○	Tipo de proyecto: competitivo o no competitivo<br/>○	Tipo de financiamiento: público o privado<br/>○	Tipo de convocatoria: nacional, H2020, etc.<br/>○	Número y listado de personas involucradas en el proyecto<br/>○	Nombre(s) del investigador(s) principal<br/>○	Entregables/memoria del proyecto<br/>○	Producción científica relacionada con el proyecto<br/>○	Entidades colaboradoras/participantes<br/>○	Cuantía<br/> |
-| CQ14. Como usuario necesito una visualización [filtering] que me permita explorar la información de cada proyecto según los filtros que haya elegido, por ejemplo, por años, por tipo de convocatoria, por cuantía mayor a determinado valor, según un área/disciplina, según la ubicación geográfica, etc. |
-|                                                              |
-|                                                              |
 
 
