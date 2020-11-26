@@ -99,11 +99,11 @@ Se podrá acceder a ella a través de la pantalla home, o del menú superior. En
 
 
 
-![Centros de investigación](./images/screenshots/estructuras_all.jpg)
+![Centros de investigación](./images/screenshots/estructuras-all.jpg)
 
 
 
-![Centros de investigación](./images/screenshots/estructuras_top.jpg)
+![Centros de investigación](./images/screenshots/estructuras-top.jpg)
 
 
 
@@ -126,35 +126,35 @@ Pulsando sobre un centro de investigación en la pantalla de esta categoría, la
 
 ### Sección de personal investigador
 
-![Detalle de centro de investigación](./images/screenshots/detalle_estructuras_personal_arbol.JPG)
+![Detalle de centro de investigación](./images/screenshots/detalle-estructuras-personal-arbol.JPG)
 
 
 
-![Detalle de centro de investigación](./images/screenshots/detalle_estructuras_personal_tabla.JPG)
+![Detalle de centro de investigación](./images/screenshots/detalle-estructuras-personal-tabla.JPG)
 
 
 
 ### Sección de top de investigadores
 
-![Detalle de centro de investigación](./images/screenshots/estructuras_top.jpg)
+![Detalle de centro de investigación](./images/screenshots/estructuras-top.jpg)
 
 
 
 ### Sección de producción científica
 
-![Detalle de centro de investigación](./images/screenshots/detalle_estructuras_produccion.jpg)
+![Detalle de centro de investigación](./images/screenshots/detalle-estructuras-produccion.jpg)
 
 
 
 ### Sección de proyectos
 
-![Detalle de centro de investigación](./images/screenshots/detalle_estructuras_proyecto.jpg)
+![Detalle de centro de investigación](./images/screenshots/detalle-estructuras-proyecto.jpg)
 
 
 
 ### Sección de patentes
 
-![Detalle de centro de investigación](./images/screenshots/detalle_estructuras_patentes.jpg)
+![Detalle de centro de investigación](./images/screenshots/detalle-estructuras-patentes.jpg)
 
 
 
