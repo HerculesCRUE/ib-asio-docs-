@@ -10,9 +10,9 @@
 
 [2. Categorías](#categorías)
 
-[2.1. Centros de investigación](#centros-de-investigación)
+[2.1. Estructura de investigación](#estructura-de-investigación)
 
-[2.2. Detalle de centro de investigación](#detalle-de-centro-de-investigación)
+[2.2. Detalle de una estructura de investigación](#detalle-de-una-estructura-de-investigación)
 
 [2.3. Acciones de investigación](#acciones-de-investigación)
 
@@ -83,7 +83,7 @@ Para el filtro por áreas, se utilizará un componente para mostrar un árbol y 
 
 
 
-## Centros de investigación
+## Estructura de investigación
 
 
 
@@ -120,7 +120,7 @@ La información que se mostrará en esta página tratará de responder, entre ot
 
 
 
-## Detalle de centro de investigación
+## Detalle de una estructura de investigación
 
 Pulsando sobre un centro de investigación en la pantalla de esta categoría, la web nos redirigirá a la información de ese centro de investigación. Para facilitar la visualización de los datos sobre el centro de investigación, la información se mostrará agrupada por [tabs](https://getbootstrap.com/docs/4.0/components/navs/).
 
