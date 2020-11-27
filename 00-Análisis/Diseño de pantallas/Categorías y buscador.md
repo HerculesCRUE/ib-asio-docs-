@@ -14,7 +14,7 @@
 
 [2.2. Detalle de centro de investigación](#detalle-de-centro-de-investigación)
 
-[2.3. Acciones de transferencia](#acciones-de-transferencia)
+[2.3. Acciones de investigación](#acciones-de-investigación)
 
 [2.4 Detalle de proyecto](#detalle de proyecto)
 
@@ -94,7 +94,14 @@ En la categoría de centros de investigación, podremos ver información general
 - Fundaciones
 - Organismos
 
-Se podrá acceder a ella a través de la pantalla home, o del menú superior. En el menú superior mostrará las diferentes opciones que hay dentro de las estructuras de organización: Universidad, centro, etc. Si se selecciona una de estas sub-opciones, mostrará la información filtrada por ese tipo de estructura.
+Se podrá acceder a ella a través de la pantalla home, o del menú superior.
+
+La pantalla dispondrá de una serie de filtros:
+
+- Las diferentes opciones que hay dentro de las estructuras de organización: Universidad, centro, etc. Si se selecciona una de estas sub-opciones, mostrará la información filtrada por ese tipo de estructura en la tabla.
+- Para poder filtrar universidades que posean sellos de calidad como Severo Ochoa.
+- Un filtro por centros que hayan realizado proyectos H2020 y/o proyectos del Plan Estatal.
+- Un buscador general por nombre de centro.
 
 
 
@@ -154,15 +161,37 @@ En esta pantalla se responderá a las siguientes preguntas de competencia:
 
 ## Acciones de investigación
 
+
+
+Se dividirá en dos secciones, una para documentos y otra para proyectos.
+
+
+
+### Documentos
+
+
+
 Se mostrará un filtro, en forma de árbol al igual que las áreas, en el que se mostrarán los distintos tipos y subtipos de acciones de investigación posibles, todas subclases de la clase [Document](https://github.com/weso/hercules-ontology/blob/master/src/asio-core.ttl) de la ontología.
+
+
 
 ![](./images/document-protege.png)
 
 
 
-Estas podrán ser seleccionables en el menú superior, o en el filtro de la propia categoría acciones de investigación.
+Además la tabla podrá ser filtrada por año y por nombre.
 
-![Acciones de investigación](./images/mocks/acciones-de-investigacion.png)
+
+
+![Acciones de investigación - Documentos](./images/mocks/acciones-de-investigacion - documento.png)
+
+
+
+### Proyectos
+
+En esta sección de acciones de transferencia se podrán ver los proyectos filtrados por nombre y por ámbito.
+
+![Acciones de investigación - proyectos](./images/mocks/acciones-de-investigacion- proyectos.png)
 
 
 
