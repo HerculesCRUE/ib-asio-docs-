@@ -202,7 +202,7 @@ Además la tabla podrá ser filtrada por año y por nombre.
 
 
 
-![Acciones de investigación - Documentos](./images/mocks/acciones-de-investigacion - documento.png)
+![Acciones de investigación - Documentos](./images/mocks/acciones-de-investigacion-documento.png)
 
 
 
@@ -210,7 +210,7 @@ Además la tabla podrá ser filtrada por año y por nombre.
 
 En esta sección de acciones de transferencia se podrán ver los proyectos filtrados por nombre y por ámbito.
 
-![Acciones de investigación - proyectos](./images/mocks/acciones-de-investigacion- proyectos.png)
+![Acciones de investigación - proyectos](./images/mocks/acciones-de-investigacion-proyectos.png)
 
 
 
