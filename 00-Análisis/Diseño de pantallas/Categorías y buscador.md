@@ -47,8 +47,7 @@ Dentro del propio Home se podrán ver:
     - Congresos
   - Acciones de investigación
     - Proyectos
-    - Acciones de transferencia / Startups / spinoffs
-    - Patentes
+    - Documentos
   - Estadísticas e indicadores
     - Indicadores / tendencias (trends)
     - Financiación (funding) / calidad / estadísticas
@@ -124,11 +123,19 @@ La información que se mostrará en esta página tratará de responder, entre ot
 
 Pulsando sobre un centro de investigación en la pantalla de esta categoría, la web nos redirigirá a la información de ese centro de investigación. Para facilitar la visualización de los datos sobre el centro de investigación, la información se mostrará agrupada por [tabs](https://getbootstrap.com/docs/4.0/components/navs/).
 
+
+
+### Sección de personal investigador
+
+
+
 ![Detalle de centro de investigación](./images/mocks/detalle-universidad.png)
 
 
 
-![Detalle de centro de investigación](./images/mocks/detalle-universidad-top.png)
+
+
+### Sección de producción científica
 
 
 
@@ -136,7 +143,17 @@ Pulsando sobre un centro de investigación en la pantalla de esta categoría, la
 
 
 
+
+
+### Sección de proyectos
+
+
+
 ![Detalle de centro de investigación](./images/mocks/detalle-universidad-proyectos.png)
+
+
+
+### Sección de patentes
 
 
 

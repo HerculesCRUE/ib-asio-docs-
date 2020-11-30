@@ -43,8 +43,7 @@ Dentro del propio Home se podrán ver:
     - Congresos
   - Acciones de investigación
     - Proyectos
-    - Acciones de transferencia / Startups / spinoffs
-    - Patentes
+    - Documentos
   - Estadísticas e indicadores
     - Indicadores / tendencias (trends)
     - Financiación (funding) / calidad / estadísticas
@@ -97,7 +96,14 @@ En la categoría de estructura de investigación, podremos ver información gene
 
   
 
-Se podrá acceder a ella a través de la pantalla home, o del menú superior. En el menú superior mostrará las diferentes opciones que hay dentro de las estructuras de organización: Universidad, centro, etc. Si se selecciona una de estas sub-opciones, mostrará la información filtrada por ese tipo de estructura.
+Se podrá acceder a ella a través de la pantalla home, o del menú superior.
+
+La pantalla dispondrá de una serie de filtros:
+
+- Las diferentes opciones que hay dentro de las estructuras de organización: Universidad, centro, etc. Si se selecciona una de estas sub-opciones, mostrará la información filtrada por ese tipo de estructura en la tabla.
+- Para poder filtrar universidades que posean sellos de calidad como Severo Ochoa.
+- Un filtro por centros que hayan realizado proyectos H2020 y/o proyectos del Plan Estatal.
+- Un buscador general por nombre de centro.
 
 
 
