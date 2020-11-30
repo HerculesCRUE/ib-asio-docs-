@@ -16,7 +16,9 @@
 
 [2.3. Acciones de investigación](#acciones-de-investigación)
 
-[2.4 Detalle de proyecto](#detalle de proyecto)
+[2.4.Detalle de proyecto](#detalle-de-proyecto)
+
+
 
 
 
