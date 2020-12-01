@@ -248,26 +248,11 @@ Se responden a las siguientes preguntas de competencia, a modo consulta:
 
 
 
-La pantalla se divide en dos secciones mostradas en tabs:
-
-- Personal investigador: En la que se muestra el personal investigador filtrado por áreas y tipo, se podrá ordenar, cambiar el número de resultados, etc.
-- Investigadores que dirigen tesis: Se mostrarán los investigadores que dirigen tesis en universidades distintas a la suya, el número de éstas y el número de tesis de otras universidad con mención Cum Laude.
-
-
-
-### Personal investigador
+Se muestra el personal investigador filtrado por áreas y tipo, se podrá ordenar, cambiar el número de resultados, etc.
 
 ![Detalle proyecto](./images/mocks/personal-investigador.png)
 
 
-
-
-
-### Personal investigador por tesis dirigidas
-
-
-
-![Detalle proyecto](./images/mocks/personal-investigador-tesis.png)
 
 
 
