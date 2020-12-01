@@ -18,7 +18,11 @@
 
 [2.4.Detalle de proyecto](#detalle-de-proyecto)
 
+[3. Personal investigador](#personal-investigador)
 
+[3.1. Sección personal investigador](#Sección-personal-investigador)
+
+[3.2. Personal investigador por tesis dirigidas](#personal-investigador-por-tesis-dirigidas)
 
 
 
@@ -242,4 +246,41 @@ Se responden a las siguientes preguntas de competencia, a modo consulta:
 |                                                              |
 |                                                              |
 
+
+
+## Personal investigador
+
+
+
+La pantalla se divide en dos secciones mostradas en tabs:
+
+- Personal investigador: En la que se muestra el personal investigador filtrado por áreas y tipo, se podrá ordenar, cambiar el número de resultados, etc.
+- Investigadores que dirigen tesis: Se mostrarán los investigadores que dirigen tesis en universidades distintas a la suya, el número de éstas y el número de tesis de otras universidad con mención Cum Laude.
+
+
+
+### Sección personal investigador
+
+![Detalle proyecto](./images/mocks/personal-investigador.png)
+
+
+
+
+
+### Personal investigador por tesis dirigidas
+
+
+
+![Detalle proyecto](./images/mocks/personal-investigador-tesis.png)
+
+
+
+Se utilizan las siguientes preguntas de competencia para el diseño de la pantalla:
+
+| Pregunta de competencia                                      |
+| ------------------------------------------------------------ |
+| CQ02. Como usuario requiero obtener un listado de los investigadores de un centro/estructura de investigación de un área/disciplina específica. Este listado podrá filtrarse según el tipo de investigador ya sea docente, personal investigador en formación, etc. |
+| CQ03. Como usuario requiero obtener el Top 10 (o el número que se considere relevante pues será parametrizable) de los investigadores de un centro/estructura de investigación ordenados por el número de citas, número de publicaciones, h-index, etc. en un área/disciplina específica. [As a user I would like to obtain the Top 10 (or any relevant number, as this would be a parameter) research centers/strutures who have quality seals associated, such as the Severo Ochoa seal.] |
+| CQ45. Investigadores que dirigen tesis en programas de doctorado diferentes a los de su Universidad, y cuántas de esas tesis dirigidas han obtenido mención cum laude. |
+|                                                              |
 
