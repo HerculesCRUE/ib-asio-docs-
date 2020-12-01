@@ -12,17 +12,13 @@
 
 [2.1. Estructura de investigación](#estructura-de-investigación)
 
-[2.2. Detalle de una estructura de investigación](#detalle-de-una-estructura-de-investigación)
+[2.1.2. Detalle de una estructura de investigación](#detalle-de-una-estructura-de-investigación)
 
-[2.3. Acciones de investigación](#acciones-de-investigación)
+[2.2. Acciones de investigación](#acciones-de-investigación)
 
-[2.4.Detalle de proyecto](#detalle-de-proyecto)
+[2.2.1. Detalle de proyecto](#detalle-de-proyecto)
 
-[3. Personal investigador](#personal-investigador)
-
-[3.1. Sección personal investigador](#Sección-personal-investigador)
-
-[3.2. Personal investigador por tesis dirigidas](#personal-investigador-por-tesis-dirigidas)
+[2.3. Personal investigador](#personal-investigador)
 
 
 
@@ -259,7 +255,7 @@ La pantalla se divide en dos secciones mostradas en tabs:
 
 
 
-### Sección personal investigador
+### Personal investigador
 
 ![Detalle proyecto](./images/mocks/personal-investigador.png)
 
