@@ -16,7 +16,7 @@
 
 [2.2. Acciones de investigación](#acciones-de-investigación)
 
-[2.2.1. Detalle de proyecto](#detalle-de-proyecto)
+[2.2.1. Detalle de una acción de investigación](#detalle-de-una-acción-de-investigación)
 
 [2.3. Personal investigador](#personal-investigador)
 
@@ -227,9 +227,41 @@ En esta página se trata de mostrar la información de las preguntas de competen
 
 
 
-## Detalle de proyecto
+## Detalle de una acción de investigación
+
+La información se mostrará agrupada en tres secciones (tabs) :
+
+- Información general del proyecto
+
+- Participantes
+
+- Entregables
+
+  
+
+### Información general
+
+
 
 ![Detalle proyecto](./images/mocks/detalle-proyecto.png)
+
+
+
+### Participantes
+
+
+
+![Detalle proyecto](./images/mocks/detalle-proyecto-participantes.png)
+
+
+
+### Entregables
+
+
+
+![Detalle proyecto](./images/mocks/detalle-proyecto-entregables.png)
+
+
 
 
 
