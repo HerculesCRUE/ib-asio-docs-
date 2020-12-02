@@ -243,7 +243,7 @@ La información se mostrará agrupada en tres secciones (tabs) :
 
 
 
-![Detalle proyecto](./images/mocks/detalle-proyecto.png)
+![Detalle proyecto](./images/mocks/detalle-accion-de-investigacion.png)
 
 
 
@@ -251,7 +251,7 @@ La información se mostrará agrupada en tres secciones (tabs) :
 
 
 
-![Detalle proyecto](./images/mocks/detalle-proyecto-participantes.png)
+![Detalle proyecto](./images/mocks/detalle-accion-de-investigacion-participantes.png)
 
 
 
@@ -259,7 +259,7 @@ La información se mostrará agrupada en tres secciones (tabs) :
 
 
 
-![Detalle proyecto](./images/mocks/detalle-proyecto-entregables.png)
+![Detalle proyecto](./images/mocks/detalle-accion-de-investigacion-entregables.png)
 
 
 
