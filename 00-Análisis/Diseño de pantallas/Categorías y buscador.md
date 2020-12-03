@@ -20,6 +20,8 @@
 
 [2.3. Personal investigador](#personal-investigador)
 
+[2.3.1. Detalle de personal investigador](#detalle-de-personal-investigador)
+
 
 
 
@@ -297,3 +299,21 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 | CQ45. Investigadores que dirigen tesis en programas de doctorado diferentes a los de su Universidad, y cuántas de esas tesis dirigidas han obtenido mención cum laude. |
 |                                                              |
 
+
+
+## Detalle de personal investigador
+
+
+
+| Pregunta de competencia                                      |
+| ------------------------------------------------------------ |
+| CQ25. Obtener el listado de los trabajos que he dirigido/codirigido ya sean de grado (TFG), máster (TFM), o tesis doctorales. |
+| CQ26. Obtener el listado de congresos/workshops y eventos de divulgación científica en los que haya participado indicando el rol que he tenido: organizador, expositor, etc. |
+| CQ27. Obtener el listado de patentes, diseños industriales, etc. que haya registrado como titular o cotitular X o Y persona, Z o K institución. |
+| CQ28. Obtener el listado de proyectos en los que he participado incluyendo el rol que he desempeñado, por ejemplo, investigador principal. |
+| CQ29. Obtener el listado de mi producción científica.        |
+| CQ30. Obtener el listado de startup o spin-off que he fundado o de las que he sido socio. |
+| CQ31. Obtener los indicadores de mi producción científica como, por ejemplo, total de citas, h-index, etc. |
+| CQ32. Visualizar mi trayectoria según la línea del tiempo y parametrizable de acuerdo criterios como, por ejemplo, proyectos, tesis dirigidas/codirigidas, etc. |
+| CQ33. Saber si soy apto para solicitar una evaluación relativa al nuevo sexenio de transferencia del conocimiento e innovación  o alguna de las evaluaciones que realiza la ANECA. |
+|                                                              |
