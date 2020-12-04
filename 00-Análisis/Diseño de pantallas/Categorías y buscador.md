@@ -82,7 +82,7 @@ En cada categoría se mostrarán una serie de filtros, algunos comunes para vari
 
 Para el filtro por áreas, se utilizará un componente para mostrar un árbol y se utilizará el módulo vertical "[subject áreas](https://github.com/weso/hercules-ontology/blob/master/src/asio-module-subjectareas.ttl)":
 
-![](./images/areas.png)
+![Áreas](./images/areas.png)
 
 
 
@@ -108,7 +108,7 @@ La pantalla dispondrá de una serie de filtros:
 
 
 
-![Centros de investigación](./images/mocks/universidades.png)
+![Structuras de investigación](./images/mocks/estructuras-de-investigación.png)
 
 
 
@@ -129,39 +129,39 @@ Pulsando sobre un centro de investigación en la pantalla de esta categoría, la
 
 
 
-### Sección de personal investigador
+### Personal investigador
 
 
 
-![Detalle de centro de investigación](./images/mocks/detalle-universidad.png)
-
-
-
-
-
-### Sección de producción científica
-
-
-
-![Detalle de centro de investigación](./images/mocks/detalle-universidad-produccion.png)
+![Detalle de estructura de investigación](./images/mocks/detalle-estructuras-de-investigación.png)
 
 
 
 
 
-### Sección de proyectos
+### Producción científica
 
 
 
-![Detalle de centro de investigación](./images/mocks/detalle-universidad-proyectos.png)
+![Detalle de estructura de investigación - producción científica](./images/mocks/detalle-estructuras-de-investigación-produccion.png)
 
 
 
-### Sección de patentes
+
+
+### Proyectos
 
 
 
-![Detalle de centro de investigación](./images/mocks/detalle-universidad-patentes.png)
+![Detalle de estructura de investigación - Proyectos](./images/mocks/detalle-estructuras-de-investigación-proyectos.png)
+
+
+
+### Patentes
+
+
+
+![Detalle de estructura de investigación - patentes](./images/mocks/detalle-estructuras-de-investigación-patentes.png)
 
 
 
@@ -245,7 +245,7 @@ La información se mostrará agrupada en tres secciones (tabs) :
 
 
 
-![Detalle proyecto](./images/mocks/detalle-accion-de-investigacion.png)
+![Detalle de una acción de investigación](./images/mocks/detalle-accion-de-investigacion.png)
 
 
 
@@ -253,7 +253,7 @@ La información se mostrará agrupada en tres secciones (tabs) :
 
 
 
-![Detalle proyecto](./images/mocks/detalle-accion-de-investigacion-participantes.png)
+![Detalle de una acción de investigación - participantes](./images/mocks/detalle-accion-de-investigacion-participantes.png)
 
 
 
@@ -261,7 +261,7 @@ La información se mostrará agrupada en tres secciones (tabs) :
 
 
 
-![Detalle proyecto](./images/mocks/detalle-accion-de-investigacion-entregables.png)
+![Detalle de una acción de investigación - entregables](./images/mocks/detalle-accion-de-investigacion-entregables.png)
 
 
 
@@ -284,7 +284,7 @@ Se responden a las siguientes preguntas de competencia, a modo consulta:
 
 Se muestra el personal investigador filtrado por áreas y tipo, se podrá ordenar, cambiar el número de resultados, etc.
 
-![Detalle proyecto](./images/mocks/personal-investigador.png)
+![Personal investigador](./images/mocks/personal-investigador.png)
 
 
 
@@ -302,6 +302,24 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 
 
 ## Detalle de personal investigador
+
+
+
+Se podrá acceder al detalle de una persona investigadora a través de la pantalla de personal investigador.
+La pantalla se dividirá en cuatro secciones:
+
+- Acciones de investigación.
+- Congresos.
+- Actividad empresarial.
+- Trayectoria.
+
+
+
+### Acciones de investigación
+
+
+
+
 
 
 
