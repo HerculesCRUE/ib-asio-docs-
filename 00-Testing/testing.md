@@ -40,7 +40,29 @@ Se añaden las dependencias de cucumber en el _pom.xml_ version `6.4.0` con el s
             <artifactId>cucumber-reporting</artifactId>
             <version>${cucumber.version}</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>     
+        
+        
+        
+        <plugin>
+				<groupId>net.masterthought</groupId>
+				<artifactId>maven-cucumber-reporting</artifactId>
+				<version>3.13.0</version>
+				<executions>
+					<execution>
+						<id>execution</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<projectName>ManagementSystemCucumber</projectName>
+							<outputDirectory>${project.build.directory}</outputDirectory>
+							<cucumberOutput>${project.build.directory}/cucumber/cucumber.json</cucumberOutput>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 ```
 
 Una vez instalado el plugin y configuradas las dependencias de maven, para ejecutar las pruebas se necesita ejecutar la instrucción de maven:
@@ -62,9 +84,9 @@ proyecto
       java
         ..
           runners
-            (ficheros del tipo *Runner.java)
+            (ficheros del tipo *RunnerTest.java)
             stepdefs
-              (ficheros del tipo *StepDefinitions.java)
+              (ficheros del tipo *StepDefinitionsTest.java)
 ```
 
 Ejemplo:
