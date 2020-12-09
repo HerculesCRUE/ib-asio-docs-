@@ -317,11 +317,13 @@ La pantalla se dividirá en cuatro secciones:
 
 ### Acciones de investigación
 
+![Detalle de personal investigador - acciones](./images/mocks/categorias/detalle-personal-investigador-acciones.png)
 
 
-## Congresos
 
+### Congresos
 
+![Detalle de personal investigador - congresos](./images/mocks/categorias/detalle-personal-investigador-congresos.png)
 
 
 
@@ -329,17 +331,19 @@ La pantalla se dividirá en cuatro secciones:
 
 ## Actividad empresarial
 
-
+![Detalle de personal investigador - actividad empresarial](./images/mocks/categorias/detalle-personal-investigador-actividad-empresarial.png)
 
 
 
 ## Trayectoria
 
+![Detalle de personal investigador - trayectoria](./images/mocks/categorias/detalle-personal-investigador-trayectoria.png)
 
 
 
 
 
+Se utilizan las siguientes preguntas de competencia para el diseño de la pantalla:
 
 | Pregunta de competencia                                      |
 | ------------------------------------------------------------ |
