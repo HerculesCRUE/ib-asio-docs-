@@ -108,7 +108,7 @@ La pantalla dispondrá de una serie de filtros:
 
 
 
-![Structuras de investigación](./images/mocks/estructuras-de-investigación.png)
+![Estructuras de investigación](./images/mocks/categorias/estructuras-de-investigación.png)
 
 
 
@@ -133,7 +133,7 @@ Pulsando sobre un centro de investigación en la pantalla de esta categoría, la
 
 
 
-![Detalle de estructura de investigación](./images/mocks/detalle-estructuras-de-investigación.png)
+![Detalle de estructura de investigación](./images/mocks/categorias/detalle-estructuras-de-investigación.png)
 
 
 
@@ -143,7 +143,7 @@ Pulsando sobre un centro de investigación en la pantalla de esta categoría, la
 
 
 
-![Detalle de estructura de investigación - producción científica](./images/mocks/detalle-estructuras-de-investigación-produccion.png)
+![Detalle de estructura de investigación - producción científica](./images/mocks/categorias/detalle-estructuras-de-investigación-produccion.png)
 
 
 
@@ -153,7 +153,7 @@ Pulsando sobre un centro de investigación en la pantalla de esta categoría, la
 
 
 
-![Detalle de estructura de investigación - Proyectos](./images/mocks/detalle-estructuras-de-investigación-proyectos.png)
+![Detalle de estructura de investigación - Proyectos](./images/mocks/categorias/detalle-estructuras-de-investigación-proyectos.png)
 
 
 
@@ -161,7 +161,7 @@ Pulsando sobre un centro de investigación en la pantalla de esta categoría, la
 
 
 
-![Detalle de estructura de investigación - patentes](./images/mocks/detalle-estructuras-de-investigación-patentes.png)
+![Detalle de estructura de investigación - patentes](./images/mocks/categorias/detalle-estructuras-de-investigación-patentes.png)
 
 
 
@@ -204,7 +204,7 @@ Además la tabla podrá ser filtrada por año y por nombre.
 
 
 
-![Acciones de investigación - Documentos](./images/mocks/acciones-de-investigacion-documento.png)
+![Acciones de investigación - Documentos](./images/mocks/categorias/acciones-de-investigacion-documento.png)
 
 
 
@@ -212,7 +212,7 @@ Además la tabla podrá ser filtrada por año y por nombre.
 
 En esta sección de acciones de transferencia se podrán ver los proyectos filtrados por nombre y por ámbito.
 
-![Acciones de investigación - proyectos](./images/mocks/acciones-de-investigacion-proyectos.png)
+![Acciones de investigación - proyectos](./images/mocks/categorias/acciones-de-investigacion-proyectos.png)
 
 
 
@@ -245,7 +245,7 @@ La información se mostrará agrupada en tres secciones (tabs) :
 
 
 
-![Detalle de una acción de investigación](./images/mocks/detalle-accion-de-investigacion.png)
+![Detalle de una acción de investigación](./images/mocks/categorias/detalle-accion-de-investigacion.png)
 
 
 
@@ -253,7 +253,7 @@ La información se mostrará agrupada en tres secciones (tabs) :
 
 
 
-![Detalle de una acción de investigación - participantes](./images/mocks/detalle-accion-de-investigacion-participantes.png)
+![Detalle de una acción de investigación - participantes](./images/mocks/categorias/detalle-accion-de-investigacion-participantes.png)
 
 
 
@@ -261,7 +261,7 @@ La información se mostrará agrupada en tres secciones (tabs) :
 
 
 
-![Detalle de una acción de investigación - entregables](./images/mocks/detalle-accion-de-investigacion-entregables.png)
+![Detalle de una acción de investigación - entregables](./images/mocks/categorias/detalle-accion-de-investigacion-entregables.png)
 
 
 
@@ -284,7 +284,7 @@ Se responden a las siguientes preguntas de competencia, a modo consulta:
 
 Se muestra el personal investigador filtrado por áreas y tipo, se podrá ordenar, cambiar el número de resultados, etc.
 
-![Personal investigador](./images/mocks/personal-investigador.png)
+![Personal investigador](./images/mocks/categorias/personal-investigador.png)
 
 
 
@@ -316,6 +316,24 @@ La pantalla se dividirá en cuatro secciones:
 
 
 ### Acciones de investigación
+
+
+
+## Congresos
+
+
+
+
+
+
+
+## Actividad empresarial
+
+
+
+
+
+## Trayectoria
 
 
 
