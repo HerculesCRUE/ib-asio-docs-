@@ -1,6 +1,6 @@
 ![](../img/logos_feder.png)
 
-# Elección de infraetructura para Autenticación y Autorización
+# Elección de infraestructura para Autenticación y Autorización
 
 ## Introducción
 
