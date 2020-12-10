@@ -271,19 +271,51 @@ Este modulo, tiene dos módulos principales:
 
 ##### Descubrimiento de enlaces entre entidades de distintos Backend SGI
 
-En este caso, los distintos Backend SGI, comparten ontología, y por lo tanto, las entidades disponibles entre distintos backend SGI, son comparables en los términos definidos por el módulo de [Reconciliación de entidades](#reconciliación-de-entidades), descrito en el punto anterior, y por lo tanto, tanto la algoritmia, como el diseño de la solución deberá de ser el mismo, siendo necesaria únicamente a priori, la modificación del componente [**Data Fetcher**](#integración-del-proceso-dentro-de-la-arquitectura-general-de-la-aplicación), que en este caso tiene que tener además la capacidad de obtener datos de todas los backend SGI, que estén involucrados. Por otro lado el componente [**Merge event Processor**](#integración-del-proceso-dentro-de-la-arquitectura-general-de-la-aplicación), deberá en este caso de añadir las tripletas necesarias (en ambos componentes), para indicar el enlace entre entidades.
+En este caso, los distintos Backend SGI, comparten ontología, y por lo tanto, las entidades disponibles entre distintos backend SGI, son comparables en los términos definidos por el módulo de [Reconciliación de entidades](#reconciliación-de-entidades), descrito en el punto anterior.
+
+De esta forma tanto la algoritmia, como el diseño de la solución será exactamente el mismo, siendo necesaria únicamente a priori, la modificación del conector de datos ([**Data Fetcher**](#integración-del-proceso-dentro-de-la-arquitectura-general-de-la-aplicación)), que en este caso tiene que tener además de la capacidad de obtener datos de su propio Backend SGI,  la capacidad de obtener datos de todos aquellos backend SGI que estén definidos e incluso la de obtener instancias dentro del mismo Backend SGI, almacenadas en distintos Triple Stores. La labor de descubrimiento de los distintos Backend SGI, se centralizara un Service Discovery, de forma que este sea consciente de todos los posibles Backend SGI, que pudiesen estar disponibles.
+
+Sera necesario programar con cierta periodicidad, la labor de descubrimiento de enlaces. 
+
+En la primera iteración será necesario evaluar todas las entidades del nodo y sus instancias que pudiesen estar relacionadas con las mismas entidades de otros nodos. Esto indudablemente tendrá un coste computacional elevado en la primera iteración (que en ningún caso interferirá con cualquier otra actividad que pudiese realizar la plataforma). 
+
+En cualquier caso se han introducido mecanismos de optimización de búsqueda, tales como cacheado de datos (Redis), evaluación perezosa (se aborta la evaluación cuando esta no puede llegar al umbral mínimo), evaluación en memoria, reducción de espacio de búsqueda (por medio de Elasticsearch) para garantizar que la operación a pesar de ser costosa, se realiza con la máxima optimización posible.
+
+Sin embargo en sucesivas iteraciones se evaluaran solo las similitudes que pudiesen existir a partir de los deltas, es decir, las entidades que hubiesen sufrido algún tipo de cambio desde la ultima evaluación, lo que supondrá una optimización suficiente, para que de esta forma la labor pueda ser operativa en escenarios de elevado un crecimiento horizontal del numero de nodos, sin un coste computacional demasiado elevado (siempre dependiendo de la volumetría de cambios). La librería de descubrimiento almacena asimismo los metadatos necesarios para poder realizar esta función de la forma mas eficiente posible, mediante: uso de caches, metadatos de estado por nodo, triple store y tipo de entidad ....
+
+Por otro lado el componente [**Merge event Processor**](#integración-del-proceso-dentro-de-la-arquitectura-general-de-la-aplicación), deberá en este caso de añadir las tripletas necesarias (en ambas instancias), para indicar el enlace entre instancias de distintos Backend SGI o dentro del mismo Backend SGI, almacenadas en distintos Triple Stores.
+
+Asi mismo la propiedad que indicara una relación de equivalencia entre entidades de distintos nodos será la propiedad **owl:sameAs**, formándose asi tripletas (en ambas instancias) del tipo :
+
+`URI_Instancia_X_nodo_A  owl:sameAs URI_Instancia_Y_nodo_B`
+
+Estas tripletas de equivalencia serán de especial interés para la solución propuesta para la [federación de consultas](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/00-Arquitectura/arquitectura_semantica/federaci%C3%B3n/ASIO_Izertis_Federaci%C3%B3n_BORRADOR.md), especialmente en lo relativo a la agregación de resultados, ya que permitirá al motor de agregación, no duplicar en la respuesta las instancias relacionadas retornadas por los distintos Backend SGI, y presentar en su lugar una única instancia, con todas las relaciones con otras instancias equivalentes distribuidas en otros Backend SGI. Por otra parte, dado que la relación de similitud, estará siempre pre-calculada, esto no deberá de suponer un sobrecoste al proceso de agregación. 
 
 ##### Descubrimiento de enlaces entre entidades en la nube LOD
 
 En este caso es necesario trabajar sobre el conjunto de datasets disponibles en la nube LOD, que puedan ser relevantes  para el proyecto, por lo tanto, el primer paso, previo a la implementación, es la identificación de dichos datasets.
 
-En el momento actual, se esta trabajando en dicha selección por lo que no es conveniente profundizar en los pasos posteriores, aunque podemos determinar que será necesario:
+En primera instancia se proponen los datasets de
 
-* Relacionar nuestra ontología con la ontología de los dataset seleccionados
-* Establecer un modelo de datos común.
-* Aplicar la [Reconciliación de entidades](#reconciliación-de-entidades), descrita en el punto anterior
+* [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page): Dataset generalista, donde podrían relacionarse investigadores, universidades, Proyectos....
+* [OKRG](): Dataset orientado a los artículos de investigación.
+* [VIVO](https://duraspace.org/vivo/): Dataset orientado a la actividad académica.
+* [CERIF](https://www.eurocris.org/eurocris_archive/cerifsupport.org/index_688.html): Dataset que modela el ecosistema de investigación. 
+
+Para ello es necesario tener en cuenta las siguientes consideraciones:
+
+* Sera necesario crear conectores para todos los datasets enumerados, que obtengan información de cada uno de los datasets externos enumerados, y lo conviertan en el modelo de datos genérico, usado por la librería de descubrimiento.
+* Sera necesario admitir y procesar ficheros de configuración, donde se pueda mapear el modelo de datos propio de cada dataset, con el modelo de datos genérico, donde debe de estar descrito al menos:
+  * Entidad relacionada del Backend SGI
+  * Entidad relacionada con el dataset externo
+  * Meta-información relativa al método de obtención de datos desde el dataset externo para cada entidad, y modo de extracción. 
+  * Propiedades a mapear que relacionen propiedades del Backend SGI con Dataset externo.
+* Para este caso concreto, y en base al mapeo descrito en el punto anterior y a la estadística generada por la librería de descubrimiento sobre las propiedades asociadas a una determinada entidad, se creara el sub conjunto de propiedades coincidentes de modo que puedan ser comparadas, y se generaran nuevas estadísticas para usar en la comparación en función de dichas propiedades. 
+* Una vez que los datos externos, siguen el modelo de datos genérico, usado por la librería de descubrimiento y generadas las estadísticas, se aplicara la [Reconciliación de entidades](#reconciliación-de-entidades), descrita en el punto anterior, usando las estadísticas especificas de la unión de ambos modelos.
 
 ### Detección de equivalencias
 
 Este punto esta en estudio.
+
+## Implementación de la solución
 
