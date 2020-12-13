@@ -140,9 +140,9 @@ A priori, tanto Codacy como SonarCloud cummplen para las características del pr
 
 Actualmente el análisis estático se está llevando utilizando herramientas propias de cada uno de los equipos. Esto puede implicar que en algunas ocasiones estas herramientas no tengan un acceso público para poder visualizar los resultados del análisis y por otro que no exista una homogeneización de las herramientas utilizadas. 
 
-Se propone un proceso de adaptación para que todos los proyectos utilicen las mismas herramientas, pasando por las siguientes fases:
+Se propone un proceso de adaptación para que todos los proyectos/repositorios utilicen las mismas herramientas, pasando por las siguientes fases:
 
 1. Planificación y diseño de las herramientas a utilizar
 2. Hacer públicos los resultados que se encuentran en herramientas privadas 
-3. Estudio sobre unificación de herramienitas entre diferentes proyectos, ampliando las indicadas en este documento si es necesario
+3. Estudio sobre unificación de herramientas  entre diferentes proyectos, ampliando las indicadas en este documento si es necesario
 4. Implementación final
