@@ -14,6 +14,10 @@
 
 [2.2. Detalle de una estructura de investigación](#detalle-de-una-estructura-de-investigación)
 
+[2.2. Acciones de investigación](#acciones-de-investigación)
+
+[2.2.1. Detalle de una acción de investigación](#detalle-de-una-estructura-de-investigación)
+
 
 
 
@@ -178,3 +182,48 @@ En esta pantalla se responderá a las siguientes preguntas de competencia:
 
 
 
+
+## Acciones de investigación
+
+
+
+Se divide en dos secciones, una para documentos y otra para proyectos.
+
+
+
+### Documentos
+
+
+
+Se muestra un filtro, en forma de árbol al igual que las áreas, en el que se mostrarán los distintos tipos y subtipos de acciones de investigación posibles, todas subclases de la clase [Document](https://github.com/weso/hercules-ontology/blob/master/src/asio-core.ttl) de la ontología.
+
+
+
+![](C:\Users\pteran\Documents\reposgit\asio-docs\00-Análisis\Diseño de pantallas\images\document-protege.png)
+
+
+
+Además la tabla podrá ser filtrada por año y por nombre.
+
+
+
+![Captura de acciones de investigación - tab patentes](./images/screenshots/acciones-investigacion-documentos.png)
+
+
+
+### Proyectos
+
+En esta sección de acciones de transferencia se podrán ver los proyectos filtrados por nombre y por ámbito.
+
+![Captura de acciones de investigación - tab patentes](./images/screenshots/acciones-investigacion-proyectos.png)
+
+
+
+En esta página se trata de mostrar la información de las preguntas de competencia relacionadas con proyectos. 
+
+| Pregunta de competencia                                      |
+| ------------------------------------------------------------ |
+| CQ10. Como investigador y personal no investigador de la universidad requiero obtener un listado de los proyectos adjudicados/desarrollados, de un centro/estructura de investigación, de un área/disciplina, en un determinado año de búsqueda en los que se tenga acceso al detalle de al menos:<br/>○	Nombre del proyecto<br/>○	Palabras claves<br/>○	Tipo de participación: coordinador o participante<br/>○	Tipo de proyecto: competitivo o no competitivo<br/>○	Tipo de financiamiento: público o privado.<br/>○	Tipo de convocatoria: nacional, H2020, etc.<br/>○	Número y listado de personas involucradas en el proyecto<br/>○	Nombre(s) del investigador(s) principal<br/>○	Entregables/memoria del proyecto<br/>○	Producción científica relacionada con el proyecto<br/>○	Entidades colaboradoras/participantes<br/>○	Cuantía<br/>○	etc. |
+| CQ46. Estado del arte: ¿puedo ver los resultados de proyectos por temática concreta de proyectos desarrollados en la red, diferenciando a nivel regional, nacional, europeo? |
+|                                                              |
+|                                                              |
