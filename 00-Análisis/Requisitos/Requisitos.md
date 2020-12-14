@@ -35,7 +35,11 @@
 
 [Requisitos funcionales](./Documents/Requisitos%20funcionales.md)
 
-[Diseño de pantallas](../Diseño de pantallas/Diseño%20de%20pantallas.md)
+[Diseño de pantallas](../Diseño%20de%20pantallas/Diseño%20de%20pantallas.md)
+
+[Diseño de pantallas de categorías](../Diseño%20de%20pantallas/Categorías%20y%20buscador.md)
+
+[Pantallas reales](../Diseño%20de%20pantallas/Categorías%20-%20pantallas%20reales.md)
 
 [Términos de ASIO](./Documents/Términos.md)
 
