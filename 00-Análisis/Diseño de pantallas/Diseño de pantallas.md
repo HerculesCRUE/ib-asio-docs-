@@ -14,8 +14,6 @@
 
 ​	[2.1. Gestión de usuarios y roles](#gestión-de-usuarios-y-roles)
 
-[2.. Gestión de usuarios y roles](#gestión-de-usuarios-y-roles)
-
 ​		[2.1.1. Dar de alta usuario no PDI](#dar-de-alta-usuario-no-pdi)
 
 ​		[2.1.2. Edición de perfil](#edición-de-perfil)
@@ -35,6 +33,8 @@
 ​	[2.3. Consulta de datos](#consulta-de-datos)
 
 ​		[2.3.1. Pantalla genérica de consulta de datos](#pantalla-genérica-de-consulta-de-datos)
+
+​		[2.3.2. Pantallas de categorías](../Diseño%20de%20pantallas/Categorías%20y%20buscador.md)
 
 
 
