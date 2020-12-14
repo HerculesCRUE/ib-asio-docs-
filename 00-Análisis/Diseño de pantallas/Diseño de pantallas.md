@@ -16,7 +16,7 @@
 
 [2.. Gestión de usuarios y roles](#gestión-de-usuarios-y-roles)
 
-​		[2.1.1. Dar de alta usuario no PDI](#dar-de-alta -usuario-no-PDI)
+​		[2.1.1. Dar de alta usuario no PDI](#dar-de-alta-usuario-no-pdi)
 
 ​		[2.1.2. Edición de perfil](#edición-de-perfil)
 
