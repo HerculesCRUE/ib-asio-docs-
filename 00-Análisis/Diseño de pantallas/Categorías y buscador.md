@@ -129,7 +129,7 @@ Pulsando sobre un centro de investigación en la pantalla de esta categoría, la
 
 
 
-### Personal investigador
+### Sección personal investigador
 
 
 
@@ -139,7 +139,7 @@ Pulsando sobre un centro de investigación en la pantalla de esta categoría, la
 
 
 
-### Producción científica
+### Sección de producción científica
 
 
 
@@ -149,7 +149,7 @@ Pulsando sobre un centro de investigación en la pantalla de esta categoría, la
 
 
 
-### Proyectos
+### Sección de proyectos
 
 
 
@@ -157,7 +157,7 @@ Pulsando sobre un centro de investigación en la pantalla de esta categoría, la
 
 
 
-### Patentes
+### Sección de patentes
 
 
 
