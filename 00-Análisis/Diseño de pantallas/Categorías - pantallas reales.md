@@ -207,7 +207,7 @@ Además la tabla podrá ser filtrada por año y por nombre.
 
 
 
-![Captura de acciones de investigación - tab patentes](./images/screenshots/acciones-investigacion-documentos.png)
+![Captura de acciones de investigación - tab documentos](./images/screenshots/acciones-investigacion-documentos.png)
 
 
 
@@ -215,7 +215,7 @@ Además la tabla podrá ser filtrada por año y por nombre.
 
 En esta sección de acciones de transferencia se podrán ver los proyectos filtrados por nombre y por ámbito.
 
-![Captura de acciones de investigación - tab patentes](./images/screenshots/acciones-investigacion-proyectos.png)
+![Captura de acciones de investigación - tab proyectos](./images/screenshots/acciones-investigacion-proyectos.png)
 
 
 
@@ -227,3 +227,53 @@ En esta página se trata de mostrar la información de las preguntas de competen
 | CQ46. Estado del arte: ¿puedo ver los resultados de proyectos por temática concreta de proyectos desarrollados en la red, diferenciando a nivel regional, nacional, europeo? |
 |                                                              |
 |                                                              |
+
+
+
+## Detalle de una acción de investigación
+
+La información se muestra agrupada en tres secciones (tabs) :
+
+- Información general del proyecto
+
+- Participantes
+
+- Entregables
+
+  
+
+### Información general
+
+
+
+![Captura de detalle de acciones de investigación - tab información](./images/screenshots/detalle-acciones-investigacion-informacion.png)
+
+
+
+### Participantes
+
+
+
+![Captura de detalle de acciones de investigación - tab participantes](./images/screenshots/detalle-acciones-investigacion-participantes.png)
+
+
+
+### Entregables
+
+
+
+![Captura de detalle de acciones de investigación - tab entregables](./images/screenshots/detalle-acciones-investigacion-entregables.png)
+
+
+
+
+
+Se responden a las siguientes preguntas de competencia, a modo consulta:
+
+| Pregunta de competencia                                      |
+| ------------------------------------------------------------ |
+| CQ13. Como investigador, personal no investigador de la universidad requiero insertar/modificar los datos relacionados con los proyectos de investigación, incluyendo los entregables que se hayan generado en la fase de propuesta. El usuario tendrá acceso a esta información según el nivel de acceso que se le haya proporcionado previamente según su rol, según niveles de confidencialidad de ser el caso. Entre los datos que se proporcionarán por cada proyecto se tendrá al menos:<br/>○	Nombre del proyecto<br/>○	Palabras claves<br/>○	Tipo de participación de la entidad: coordinador o participante<br/>○	Tipo de proyecto: competitivo o no competitivo<br/>○	Tipo de financiamiento: público o privado<br/>○	Tipo de convocatoria: nacional, H2020, etc.<br/>○	Número y listado de personas involucradas en el proyecto<br/>○	Nombre(s) del investigador(s) principal<br/>○	Entregables/memoria del proyecto<br/>○	Producción científica relacionada con el proyecto<br/>○	Entidades colaboradoras/participantes<br/>○	Cuantía<br/> |
+| CQ14. Como usuario necesito una visualización [filtering] que me permita explorar la información de cada proyecto según los filtros que haya elegido, por ejemplo, por años, por tipo de convocatoria, por cuantía mayor a determinado valor, según un área/disciplina, según la ubicación geográfica, etc. |
+|                                                              |
+|                                                              |
+
