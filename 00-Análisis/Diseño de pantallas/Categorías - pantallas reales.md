@@ -20,7 +20,9 @@
 Home
 ============
 
-El home de la web dispondrá de un menú superior con los accesos a las diferentes categorías y a la pantalla de consultas SparQL. También se mostrarán los iconos de login/acceso o la imagen del usuario identificado. 
+El home de la web dispondrá de un menú superior con los accesos a las diferentes categorías y a la pantalla de consultas SparQL. También se mostrarán los iconos de login/acceso o la imagen del usuario identificado. Las opciones que no estén funcionando, se mostrarán desactivadas en gris, tanto en el home como en el menú lateral.
+
+
 
 Dentro del propio Home se podrán ver:
 
@@ -57,6 +59,10 @@ Dentro del propio Home se podrán ver:
   - Renderización de metadatos de Named Graphs
   - Información sobre el proyecto Hércules+
   - Datos de contacto
+
+
+
+
 
 
 
