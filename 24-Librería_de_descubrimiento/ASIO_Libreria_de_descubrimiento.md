@@ -2,14 +2,14 @@
 
 | Entregable     | Documentación de la librería de descubrimiento               |
 | -------------- | ------------------------------------------------------------ |
-| Fecha          | 24/09/2020                                                   |
+| Fecha          | 17/12/2020                                                   |
 | Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
 | Módulo         | Discovery                                                    |
 | Tipo           | Documentación                                                |
 | Objetivo       | Librería de descubrimiento para el proyecto Backend SGI (ASIO) |
 | Estado         | Completada                                                   |
 | Próximos pasos | Implementación                                               |
-| Documentación  | [Implementación de librería de descubrimiento](https://github.com/HerculesCRUE/ib-discovery) |
+| Documentación  | [Implementación de librería de descubrimiento](https://github.com/HerculesCRUE/ib-discovery/tree/master/docs) |
 
 # Librería de descubrimiento
 
@@ -317,9 +317,7 @@ Para ello es necesario tener en cuenta las siguientes consideraciones:
 
 ### Detección de equivalencias
 
-Este punto esta en estudio.
-
-## 
+Este punto esta en estudio. 
 
 
 
