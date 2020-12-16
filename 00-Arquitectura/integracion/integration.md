@@ -107,6 +107,75 @@ Este módulo será un servicio REST autenticado accesible desde **triple-store-d
 
 Los ficheros delta son objetos JSON cuya información contiene las modificaciones a realizar en la ETL tras cambios en la ontología. Estos ficheros son interpretables por el nuevo módulo de la arquitectura semántica **triple-store-delta** de tal forma que es capaz de modificar el contenido de los datos actuales en Trellis y Wikibase de forma automática para adaptarlos a la nueva semántica de la ontología.
 
+### Definición de la gramática
+
+Los ficheros DELTA constan de una gramática sencilla en la que cada objeto a procesar está compuesto por un conjunto de elementos tipo
+
+```
+propiedad ::= valor
+```
+
+El conjunto de propiedades que se pueden utilizar está claramente definido:
+
+* action
+* entity
+* property
+* toName
+* type
+* fromType
+* toType
+
+Las propiedades **action** y **entity** siempre estarán presentes en cada elemento del fichero. El resto de propiedades serán necesarias en función de los valores de la propiedad **action** (ver Instrucciones DELTA).
+
+### Estructura del fichero
+
+Los ficheros DELTA siguen una nomenclatura a la hora de ser nombrados, consistente en concatenar las versiones que se van procesar:
+
+```
+XXXYYY
+```
+
+Por ejemplo:
+
+```
+000001
+002003
+005008
+```
+
+Internamente, los ficheros constan de un array de elementos en formato JSON, en los que cada elemento forma parte de la gramática definida:
+
+```
+[
+    {
+        propiedad: valor,
+        …
+    },
+    …
+]
+```
+
+Como se puede ver en el siguiente ejemplo:
+
+```
+[
+    {
+        “action”: “UPDATE”,
+         “entity”: “asio.Person”,
+        ”property”: “address”,
+        ”fromType”: “java.lang.String”,
+         “toType”: “asio.Address”
+    }, 
+    {
+         “action”: “DELETE”,
+        ”entity”: “asio.Student”,
+        ”property”: “name”
+    }
+]
+```
+
+Como se puede observar, cada elemento a procesar contiene propiedades de definidas en la gramática que necesita.
+
 ### Instrucciones DELTA
 
 Operaciones soportadas:
@@ -177,6 +246,95 @@ DELETE GrupoInvestigacion
 ```js
 DELETE GrupoInvestigacion PROPERTY descripcion
 ```
+
+### Creación de ficheros DELTA
+
+#### ShEx Lite
+
+Desde la aparición del Shape Expressions Language (ShEx), las demandas de la comunidad sobre nuevas herramientas basadas en el ShEx han crecido. Una de esas demandas, nacida durante el desarrollo del Proyecto Europeo Hércules ASIO3, fue la creación de una herramienta que pueda transformar automáticamente las ShEx en modelos de dominio de objetos representados por medio de un lenguaje de programación orientada a objetos. El modelo de dominio generado será parte de una solución basada en una arquitectura limpia. ShEx-Lite fue creado como un subconjunto de ShEx que permite la generación automática de modelos de dominio desde esquemas expresados con ella.
+
+#### Generación del schema.json
+
+Junto con la generación del modelo de dominio en el lenguaje correspondiente, se genera un fichero schema.json que contiene la estructura de dicho modelo de dominio en formato JSON. El fichero tiene la siguiente estructura:
+
+```
+{
+    generationDate,
+    classes: [
+        {
+            className
+            atributes: [
+                {
+                    attributeName
+                    attributeType
+                },
+                …
+            ]
+        },
+        …
+    ]
+}
+```
+
+La información de este fichero, durante la primera ejecución del proceso, se almacena en base de datos, añadiendo además la versión que se está procesando (000 al ser la primera). El hecho de almacenar esta información en base de datos facilitará que en las siguientes ejecuciones se pueda realizar una comparación con un nuevo schema.json, así como actualizar las versiones almacenadas y la generación de los ficheros DELTA correspondientes.
+
+#### Generación de ficheros DELTA
+
+Un fichero DELTA contiene las operaciones a realizar fruto de la comparación de datos entre versiones del modelo de dominio. Suponemos, por ejemplo, que tenemos la siguiente estructura almacenada en base de datos:
+
+```
+className: ExampleClass
+atributes: [
+    {
+        attributeName: width
+        attributeType: String
+    },
+]
+```
+
+En nueva ejecución del proceso de generación del dominio comprobamos que la estructura recibida para esa clase es la siguiente:
+
+```
+className: ExampleClass
+atributes: [
+    {
+        attributeName: width
+        attributeType: Integer
+    },
+]
+```
+
+El tipo de la propiedad **width** ha cambiado, por lo que será necesario generar una instrucción DELTA que indique que se debe actualizar el tipo de ese campo. El resultado sería el siguiente:
+
+```
+[
+    {
+        action: UPDATE,
+        entity: EXampleClass,
+        property: width,
+        fromType: java.lang.String,
+        toType: java.lang.Integer
+    } 
+]
+```
+
+Una vez generado el fichero DELTA con todas las modificaciones a realizar, se nombra dicho fichero concatenando la versión actual con la nueva.
+
+#### Procesamiento en triple-store
+
+El procesamiento de los ficheros DELTA se realizará dentro de un módulo específico denominado delta-processor, que recibirá un fichero, procesará su contenido y aplicará los cambios. Para procesar el contenido se hará uso del patrón Intérprete (ver [patrón Intérprete](./patron_interprete.md)), que ayudará a traducir la gramática definida para los ficheros e instrucciones que permitan aplicar los cambios solicitados.
+
+![](./resources/triple-store-proceso-general.png)
+
+A la hora de procesar el contenido de los ficheros DELTA se debe crear una estructura, tal y como establece el patrón Intérprete, de tipo árbol que posteriormente permita transformarlo en instrucciones concretas que apliquen los cambios.
+
+![](./resources/triple-store-creacion-arbol.png)
+
+Supongamos la solicitud de un cambio de nombre de una de las propiedades de un objeto. Esto generaría un árbol con la siguiente estructura:
+
+![](./resources/triple-store-arbol.png)
+
+A partir de este árbol, es posible generar una consulta, o la lógica que corresponda,
 
 ### Modificaciones en la infraestructura semántica
 
