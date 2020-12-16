@@ -34,13 +34,70 @@ Actualemnte, Ontolo-CI está siendo desarrollado y mantenido por el grupo de inv
 
 Este sistea es una abstracción de un ejecutor de tests. Pero con inegración con GitHub. Esto último permite automatizar tareas como revisar pull requests de forma automática o dar feedback al usuario sobre los errores cometidos en el código. Sin embargo, es cierto que Ontlo-CI impone que el lenguaje de definición de los tests sea Shape Expressions. Aunque esto no acarrera ningún comprmiso para el proyecto Hércules. Ya que, para la generación del modelo de dominio se emplean Shape Expressions. Pudiendo servir estas Shape Expressions para dos propósitos: testear la ontología y generar el modelo de dominio.
 
-### Integración con GitHub
-Explicar como se integra GitHub con Ontlo-CI.
+### Integración con entorno de desarrollo
+En el caso de la herraienta seleccionada, Ontolo-CI, la integración es muy sencilla. Se presenta como un contenedor de Docker [4]. Una vez desplegado, provee de todos los servicios necesarios. Interfaz Web para ver el estado de las ejecuciones, ejecutor de tests y un módulo de comunicación con GitHub.
+
+El siguiente diagrama muestra cómo Ontolo-CI puede integrarse con uno o varios repositorios de ontologías alojados en GitHub.
+
+![](assets/ontolo-ci-main-schema.png)
+
+La herramienta escogida, además realizar la integración continua, es capaz de comunicarse con GitHub para informar sobre el resultado de las pruebas. De esta forma, si una pull request [5] a la rama principal no cumple con las pruebas definidas, el sistema de integración continua le comunicará a GitHub que no permita que estos cambios llegen a la rama principal. De esta forma se asegura la estabilidad de la rama principal. Y, por tanto, de la ontología. 
 
 ## Definición de las pruebas
-Para definir las pruebas que queremos ejecutar sobre la ontología empleamos varios mecanismos. En concreto, usamos un esquema que nos modela aquello que queremos probar, instancias que siguen este modelo y un shape map que nos asocia la instancia cn el esquema. Finalmente, le proporcionamos al sistema el restultado esperado. de esta forma el sistema puede decidir si el resultado de la prueba es satisfactorio o no.
+Para describir las pruebas Ontolo-CI emplea el mismo sistema que se usa en el W3C. Ficheros "manifest" de descripción. Cada repositorio de ontologías tiene un único manifest. Y en él se especifican las pruebas que se tienen que ejecutar. Por ejemplo, el siguiente fichero manifest define _n_ casos de prueba.
+
+```json
+ ...,
+  {
+     "test_name": "test that a project instance does not conform to a random shape",
+     "ontology": "../../src/asio-core.ttl",
+     "data": "../asio-individuals.ttl",
+     "schema": "../random_shape.s",
+     "in_shape_map": "../random_shape_in.m",
+     "out_shape_map": "../random_shape_out.m"
+   },
+   ...
+]
+```
+
+En el manifest anterior tenemmos cinco entradas:
+
+ - **Ontology:** El fichero de ontología que queremos probar.
+ - **Data:** Las instancias de datos que vamos a usar para probar la ontología.
+ - **Schema:** El esquema que debería de seguir la ontología.
+ - **Shape Map de entrada:** La condición que se tiene que cumplir.
+ - **Shape Map de salida:** El resultado esperado de la validación. Puede esperarse que el test pase o que no pase si es un test negativo.
+
+De esta forma un esquema posible podría ser:
+```turtle
+# Prefixes definitions.
+prefix asio: <http://purl.org/hercules/asio/core#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+asio:RandomShape {
+  asio:name   xsd:date      ;
+  asio:random foaf:Agent  + ;
+}
+```
+
+Un shape map de entrada podría ser:
+```turtle
+asioIndividuals:CHANCE@asio:RandomShape
+```
+
+Y, un shape map de salida podría ser:
+```turtle
+asioIndividuals:CHANCE@!asio:RandomShape
+```
+
+Como vemos en el shape map de salida le estamos diciendo que esperamos que esa instancia no valide contra esa shape. Un test negativo.
 
 ## Referencias
  - [1] Sistema de control de versiones para OWL. [Documento](../ASIO_Izertis_ControlDeVersionesOWL.md).
  - [2] FOWLER, Martin; FOEMMEL, Matthew. Continuous integration. 2006. [PDF](https://moodle2019-20.ua.es/moodle/pluginfile.php/2228/mod_resource/content/2/martin-fowler-continuous-integration.pdf) 
- - [3] Licencia MIT Wikipedia. [Enlace](https://es.wikipedia.org/wiki/Licencia_MIT).  
+ - [3] Licencia MIT Wikipedia. [Enlace](https://es.wikipedia.org/wiki/Licencia_MIT).
+ - [4] Página web oficial de Docker. [Web](https://www.docker.com/)  
+ - [5] Manual sobre Pull Requests de GitHub. [Web](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/proposing-changes-to-your-work-with-pull-requests)  
