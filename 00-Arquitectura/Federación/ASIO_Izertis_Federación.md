@@ -39,14 +39,20 @@ El módulo de federación de consultas se subdivide a su vez en tres subsistemas
 
 ### Consulta
 
-Dado el volumen de información almacenada sería recomendable disponer de una capa intermedia que permitiese realizar consultas de forma más eficiente, en lugar de realizar la consulta desde el API de SPARQL estándar. 
+Dado el volumen de información almacenada sería recomendable disponer de una capa intermedia que permitiese realizar consultas de forma más eficiente, en lugar de realizar la consulta desde el API de SPARQL estándar [Gombos and Kiss, 2016; Acosta et al., 2019], siguiendo diferentes enfoques planteados recientemente. 
 
-Se descarta el uso de la federación provista por SPARQL por los siguientes motivos:
+Se descarta el uso de la federación provista por SPARQL por los siguientes motivos [Buil-Aranda et al., 2014]:
 
 - El proceso de consulta federada no es robusto ante fallos de la red de endpoints adscritos.
 - El proceso de agregación de datos es muy limitado y queda restringido a las funcionalidades expuestas por el propio lenguaje de consulta.
-- La escalabilidad del proceso es limitada para grandes volúmenes de información.
+- La escalabilidad del proceso es limitada para grandes volúmenes de información y está restringido por los propios endpoints SPARQL.
 - Se pierde control sobre el proceso y no permite obtener ventajas del modelo de datos común y la librería de descubrimiento.
+
+Adicionalmente, se han identificado tres retos tecnológicos, aún por resolver en el ecosistema SPARQL [Oguz et al., 2015]:
+
+* Gestión de metadatos: este reto implica la unificación y sincronización de un catálogo de metadatos común, que en el caso de ASIO se resuelve a través de la ontología común centralizada en el nodo maestro.
+* Caché de resultados: actualmente este reto se está abordando mediante el uso de Elasticsearch y Redis, desde el módulo de [Libería de descubrimiento](../../24-Librer%C3%ADa_de_descubrimiento/ASIO_Libreria_de_descubrimiento.md#integraci%C3%B3n-del-proceso-dentro-de-la-arquitectura-general-de-la-aplicaci%C3%B3n). Como próximos pasos se refactorizará dicho módulo para compartir la funcionalidad con el módulo final de federación de consultas.
+* Procesado adaptativo de consultas: principalmente vinculado a la planificación/optimización de consultas [Peng et al., 2019], quedando fuera del alcance del presente proyecto por ser parte del núcleo del planificador de consultas propio del triplestore empleado.
 
 ### Identificación
 
@@ -62,5 +68,17 @@ Las consultas federadas sin agregación se emplean en la Librería de descubrimi
 
 ## Referencias. 
 
-[]
+[Acosta et al., 2019] Maribel Acosta, Olaf Hartig, and Juan Sequeda (2019). **Federated RDF Query Processing**. In: Sakr S., Zomaya A.Y. (eds) Encyclopedia of Big Data Technologies. Springer, Cham. 
+https://doi.org/10.1007/978-3-319-77525-8_228
 
+[Buil-Aranda et al., 2014] Carlos Buil-Aranda, Axel Polleres, and Jurgen Umbrich (2014). **Strategies for executing federated queries in SPARQL1.1**. International Semantic Web Conference (2), pp. 390-405. 
+https://www.carlosbuil.com/2015-iswc-strategies.pdf
+
+[Gombos and Kiss, 2016] Gergo Gombos and Attila Kiss (2016). **Federated Query Evaluation Supported by SPARQL Recommendation**. In: Yamamoto S. (eds) Human Interface and the Management of Information: Information, Design and Interaction. HIMI 2016. Lecture Notes in Computer Science, vol 9734. Springer, Cham. 
+https://doi.org/10.1007/978-3-319-40349-6_25
+
+[Oguz et al., 2015] Damla Oguz, Belgin Ergenc, Shaoyi Yin, Oguz Dikenelli and Abdelkader Hameurlain (2015). **Federated query processing on linked data: a qualitative survey and open challenges**. The Knowledge Engineering Review, 30:5, pp. 545–563. Cambridge University Press.
+https://doi.org/10.1017/S0269888915000107
+
+[Peng et al., 2019] Peng Peng, Qi Ge, Lei Zou, M. Tamer Özsu, Zhiwei Xu, and Dongyan Zhao (2019). **Optimizing Multi-Query Evaluation in Federated RDF Systems**. IEEE Transactions on Knowledge and Data Engineering (Early Access).
+https://doi.org/10.1109/TKDE.2019.2947050
