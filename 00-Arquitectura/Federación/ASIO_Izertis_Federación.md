@@ -7,7 +7,7 @@
 | Módulo         | Arquitectura Semántica                                       |
 | Tipo           | Documento                                                    |
 | Objetivo       | Este documento recoge el análisis de alternativas para la federación de consultas sobre una arquitectura de nodos distribuidos en la red HERCULES. |
-| Estado         | **50%** Arquitectura y diseño, implementación preliminar integrada en [Librería de descubrimiento](../../../24-Librer%C3%ADa_de_descubrimiento/ASIO_Libreria_de_descubrimiento.md#integraci%C3%B3n-del-proceso-dentro-de-la-arquitectura-general-de-la-aplicaci%C3%B3n). |
+| Estado         | **50%** Arquitectura y diseño, implementación preliminar integrada en [Librería de descubrimiento](../../24-Librer%C3%ADa_de_descubrimiento/ASIO_Libreria_de_descubrimiento.md#integraci%C3%B3n-del-proceso-dentro-de-la-arquitectura-general-de-la-aplicaci%C3%B3n). |
 | Próximos pasos | Refactorización de Librería de descubrimiento, integración del módulo de Service discovery, e implementación final del agregador de resultados de consultas federadas. |
 
 # Federación de consultas
@@ -50,15 +50,15 @@ Se descarta el uso de la federación provista por SPARQL por los siguientes moti
 
 ### Identificación
 
-Este subsistema hace uso de la Librería de descubrimiento, a partir del módulo de [Reconciliación de entidades](../../../24-Librer%C3%ADa_de_descubrimiento/ASIO_Libreria_de_descubrimiento.md#reconciliaci%C3%B3n-de-entidades), para poder identificar entidades repetidas o similares.
+Este subsistema hace uso de la Librería de descubrimiento, a partir del módulo de [Reconciliación de entidades](../../24-Librer%C3%ADa_de_descubrimiento/ASIO_Libreria_de_descubrimiento.md#reconciliaci%C3%B3n-de-entidades), para poder identificar entidades repetidas o similares.
 
 ### Agregación
 
 La versión más sencilla de la federación ofrece los resultados de forma directa, sin agregar. En caso de duplicados idénticos, se informa de todos los nodos que disponen de la entidad, sin repetirla. En caso de resultados similares (misma entidad, con diferente contenido) se listan todas las variantes y su procedencia.
 
-Esta versión simplificada es de interés para poder analizar de forma explícita el contenido ofrecido por cada nodo, si bien sería muy recomendable poder contar con un módulo de unificación (*merge*) de entidades, reutilizado los servicios ya desarrollados en el módulo de importación de datos, concretamente el [Merge Event Processor](../../../24-Librer%C3%ADa_de_descubrimiento/ASIO_Libreria_de_descubrimiento.md#integraci%C3%B3n-del-proceso-dentro-de-la-arquitectura-general-de-la-aplicaci%C3%B3n), empleado en la Librería de descubrimiento..
+Esta versión simplificada es de interés para poder analizar de forma explícita el contenido ofrecido por cada nodo, si bien sería muy recomendable poder contar con un módulo de unificación (*merge*) de entidades, reutilizado los servicios ya desarrollados en el módulo de importación de datos, concretamente el [Merge Event Processor](../../24-Librer%C3%ADa_de_descubrimiento/ASIO_Libreria_de_descubrimiento.md#integraci%C3%B3n-del-proceso-dentro-de-la-arquitectura-general-de-la-aplicaci%C3%B3n), empleado en la Librería de descubrimiento..
 
-Las consultas federadas sin agregación se emplean en la Librería de descubrimiento con el objetivo de consultar las entidades albergadas en diferentes nodos de la red durante el proceso de importación, a través del [Data Fetcher](../../../24-Librer%C3%ADa_de_descubrimiento/ASIO_Libreria_de_descubrimiento.md#integraci%C3%B3n-del-proceso-dentro-de-la-arquitectura-general-de-la-aplicaci%C3%B3n). Para la siguiente entrega, se prevé refactorizar la implementación de la Librería de descubrimiento, en la que existe actualmente un alto grado de acoplamiento entre las funcionalidades de ambos módulos.
+Las consultas federadas sin agregación se emplean en la Librería de descubrimiento con el objetivo de consultar las entidades albergadas en diferentes nodos de la red durante el proceso de importación, a través del [Data Fetcher](../../24-Librer%C3%ADa_de_descubrimiento/ASIO_Libreria_de_descubrimiento.md#integraci%C3%B3n-del-proceso-dentro-de-la-arquitectura-general-de-la-aplicaci%C3%B3n). Para la siguiente entrega, se prevé refactorizar la implementación de la Librería de descubrimiento, en la que existe actualmente un alto grado de acoplamiento entre las funcionalidades de ambos módulos.
 
 ## Referencias. 
 
