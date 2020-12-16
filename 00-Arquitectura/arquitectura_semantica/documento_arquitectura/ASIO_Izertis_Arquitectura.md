@@ -215,10 +215,12 @@ Una vez se hayan cargado todos los datos de una de las fuentes, el módulo ETL s
 
 **Implementación:** 
 
-Para la implementación de la ETL se utilizará Pentaho Data Integration el cual es un software que facilita la extracción, transformación y carga de datos, y por tanto indicado para hacer la transformación de los datos de entrada al formato "POJO".
+Para la implementación de la ETL se utilizará Pentaho Data Integration el cual es un software que facilita la extracción, transformación y carga de datos, y por tanto indicado para hacer la transformación de los datos de entrada al formato "POJO", así como sus agregaciones.
 
 - **Input:** Datos procedentes de la base de datos intermedia en formato del módulo de entrada
-- **Output:** Evento publicado en Service Bus general, en formato POJO
+- **Output:** 
+    - Evento publicado en Service Bus general, en formato POJO
+    - Agregaciones de datos en Service Bus general (links)
 
 #### Service bus interno del módulo de entrada
 
@@ -238,7 +240,7 @@ Dada la arquitectura basada en _event processing_, el sistema es capaz de forma 
 
 #### Sistema de gestión
 
-El sistema de gestión será el encargado de recoger los datos en formato POJO del service bus general. Con ellos lo que hará será:
+El sistema de gestión será el encargado de recoger los datos en formato POJO del service bus general, así como sus agregaciones del service bus con los links. Con ellos lo que hará será:
 
 - Utilizar la librería de descubrimiento para validar si se trata de un nuevo recurso, uno ya existente que hay que actualizar o bien es necesario realizar un borrado
 - Generación de RDF apoyándose en la factoría de URIs
@@ -250,6 +252,10 @@ El sistema de gestión será el encargado de recoger los datos en formato POJO d
 
 - **Input:** Evento recibido desde el service bus general del sistema, con datos en formato POJO
 - **Output:** Evento publicado en Service Bus de gestión, con el RDF además de la operación a realizar
+
+#### Service bus de gestión (interno)
+
+En el sistema de gestión se utiliza un bus para enviar eventos desde el sistema de gestión al procesador de eventos. En este caso es necesario garantizar el orden de los datos por lo que se desaconseja el uso de Kafka por este motivo. Por ello se opta por una cola ActiveMQ, la cual sigue el estándar JMS.
 
 #### Procesadores de eventos
 
@@ -702,6 +708,12 @@ Este estilo arquitectónico se ha denominado arquitectura Kappa y suele material
 - Para el modelado de datos, la utilización de un log que solamente permite añadir datos puede ser más sencilla que el uso de transacciones ACID sobre bases de datos tradicionales. El patrón event-sourcing encaja con este estilo arquitectónico. 
 - Este estilo puede facilitar el análisis de datos posterior. En muchas ocasiones es más útil entender cómo se ha llegado a un estado de la base de datos, que disponer únicamente del estado final de la base de datos.
 - El patrón publicación/suscripción permite desacoplar el sistema de publicación de eventos de los sistemas consumidores. En caso de que un consumidor de eventos falle, puede haber otros consumidores funcionando.
+
+### Garantía de orden de eventos
+
+Kafka no está diseñado para garantizar el orden de los eventos enviados. Es por ello que en los casos en los que sea necesario garantizar este orden se opte por un sistema tipo ActiveMQ.
+
+ActiveMQ es un broker de mensajería OpenSoruce que implementa la especificación JMS.
 
 ## Elección de almacenamiento RDF
 

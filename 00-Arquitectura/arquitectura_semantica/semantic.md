@@ -14,5 +14,4 @@ Descripción del contenido de la arquitectura semántica
 | [arquitectura](./documento_arquitectura)                          | Análisis y elección de arquitectura                                    |
 | [federación](./federación)                                        | Análisis de alternativas para la federación de consultas               |
 | [ldp](./ldp)                                                      | Análisis del cumplimiento LDP (Linked Data Platform)                   |
-| [autenticacion_autorizacion](./auth/autenticacion_autorizacion)   | Elección de infraetructura para Autenticación y Autorización           |
 | [plantilla_arc42](./plantilla_arc42)                              | Template para documentación                                            |

@@ -39,7 +39,8 @@ Relación de entregables oficiales del proyecto en su estado actual.
 | [26-Test suite para publicación de datos](./26-Test_suite_para_publicación_de_datos/README.md) |                                                              | -                                                            |
 | [27 Manual Test Suite para publicación de datos](./27_Manual_Test_Suite_para_publicación_de_datos/README.md) | N/A                                                          | -                                                            |
 | [28-Material de formación](./28-Material_de_formación/README.md) | N/A                                                          | -                                                            |
-| [28-Auditoría de código](./29-Auditoria_de_codigo/README.md) | N/A                                                          | -                                                            |
+| [29-Auditoría de código](./29-Auditoria_de_codigo/README.md) | N/A                                                          | -                                                            |
+| [30-Autenticación y autorización](./30-Autenticacion_autorizacion/README.md) | N/A                                                          | -                                                            |
 
 ## 2. Otros entregables
 
