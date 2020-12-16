@@ -6,6 +6,8 @@ Descripción del contenido de arquitectura
 
 | Carpeta                                                      | Contenido                                                    |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [arquitectura semántica](./arquitectura_semantica/semantic.md) | Contiene la información referente a la arquitectura semántica |
-| [infraestructura ontológica](./infraestructura_ontologica/ontology.md) | Contiene la información referente a la infraestructura ontológica |
-| [integración](./integracion/integration.md)                  | Contiene información referente a la integración entre la arquitectura semántica y la infraestructura ontológica |
+| [Arquitectura semántica](./arquitectura_semantica/semantic.md) | Contiene la información referente a la arquitectura semántica |
+| [Infraestructura ontológica](./infraestructura_ontologica/ontology.md) | Contiene la información referente a la infraestructura ontológica |
+| [Integración](./integracion/integration.md)                  | Contiene información referente a la integración entre la arquitectura semántica y la infraestructura ontológica |
+| [Autenticación y autorización](./Autenticacion_autorizacion/README.md) | Contiene información sobre la autenticación y autorización |
+| [Auditoría de codigo](./Auditoria_de_codigo/README.md) | Contiene información sobre la auditoría de código |
