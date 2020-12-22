@@ -22,6 +22,8 @@
 
 [2.3.1. Detalle de personal investigador](#detalle-de-personal-investigador)
 
+[2.4. Categorías](#categorías)
+
 
 
 
@@ -46,9 +48,8 @@ Dentro del propio Home se podrán ver:
     - Líneas de investigación
     - Tópicos (topics)
   - Producción científica
-    - Artículos
-    - Libros
     - Congresos
+    - Charlas
   - Acciones de investigación
     - Proyectos
     - Documentos
@@ -81,6 +82,8 @@ Dentro del propio Home se podrán ver:
 En cada categoría se mostrarán una serie de filtros, algunos comunes para varias categorías.
 
 Para el filtro por áreas, se utilizará un componente para mostrar un árbol y se utilizará el módulo vertical "[subject áreas](https://github.com/weso/hercules-ontology/blob/master/src/asio-module-subjectareas.ttl)":
+
+
 
 ![Áreas](./images/areas.png)
 
@@ -356,4 +359,23 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 | CQ31. Obtener los indicadores de mi producción científica como, por ejemplo, total de citas, h-index, etc. |
 | CQ32. Visualizar mi trayectoria según la línea del tiempo y parametrizable de acuerdo criterios como, por ejemplo, proyectos, tesis dirigidas/codirigidas, etc. |
 | CQ33. Saber si soy apto para solicitar una evaluación relativa al nuevo sexenio de transferencia del conocimiento e innovación  o alguna de las evaluaciones que realiza la ANECA. |
+|                                                              |
+
+
+
+
+
+# Categorías
+
+
+
+
+
+Se utilizan las siguientes preguntas de competencia para el diseño de la pantalla:
+
+| Pregunta de competencia                                      |
+| ------------------------------------------------------------ |
+| CQ20. Como usuario necesito detectar tendencias en áreas y líneas investigación a partir de los datos disponibles en Hércules. |
+|                                                              |
+|                                                              |
 |                                                              |
