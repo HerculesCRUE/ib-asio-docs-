@@ -8,7 +8,7 @@
 
 [1. Home](#home)
 
-[2. Categorías](#categorías)
+[2. Información de investigación](#información-de-investigación)
 
 [2.1. Estructura de investigación](#estructura-de-investigación)
 
@@ -75,7 +75,7 @@ Dentro del propio Home se podrán ver:
 
 
 
-# Categorías
+# Información de investigación
 
 
 
