@@ -79,7 +79,7 @@ Dentro del propio Home se podrán ver:
 
 
 
-En cada categoría se mostrarán una serie de filtros, algunos comunes para varias categorías.
+Se han predefinido una serie de páginas, en cada una de ellas se mostrarán una serie de filtros, algunos comunes para varias de ellas.
 
 Para el filtro por áreas, se utilizará un componente para mostrar un árbol y se utilizará el módulo vertical "[subject áreas](https://github.com/weso/hercules-ontology/blob/master/src/asio-module-subjectareas.ttl)":
 
@@ -93,7 +93,7 @@ Para el filtro por áreas, se utilizará un componente para mostrar un árbol y 
 
 
 
-En la categoría de centros de investigación, podremos ver información general sobre las diferentes estructuras de investigación:
+En la páginas de estructuras de investigación, podremos ver información general sobre las diferentes estructuras de investigación:
 
 - Centros
 - Universidades
