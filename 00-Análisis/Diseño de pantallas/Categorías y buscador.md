@@ -369,6 +369,8 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 
 
 
+![Categorías - áreas](./images/mocks/categorias/categorias.png)
+
 
 
 Se utilizan las siguientes preguntas de competencia para el diseño de la pantalla:
