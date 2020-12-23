@@ -24,6 +24,8 @@
 
 [2.4. Categorías](#categorías)
 
+[2.4.1. Detalle de categoría](#detalle-de-categoría)
+
 
 
 
