@@ -189,27 +189,19 @@ En esta pantalla se responderá a las siguientes preguntas de competencia:
 
 
 
-Se dividirá en dos secciones, una para documentos y otra para proyectos.
+Se dividirá en dos secciones, una para patentes y otra para proyectos.
 
 
 
-### Documentos
+### Patentes
 
 
 
-Se mostrará un filtro, en forma de árbol al igual que las áreas, en el que se mostrarán los distintos tipos y subtipos de acciones de investigación posibles, todas subclases de la clase [Document](https://github.com/weso/hercules-ontology/blob/master/src/asio-core.ttl) de la ontología.
+La tabla podrá ser filtrada por año y por nombre.
 
 
 
-![](./images/document-protege.png)
-
-
-
-Además la tabla podrá ser filtrada por año y por nombre.
-
-
-
-![Acciones de investigación - Documentos](./images/mocks/categorias/acciones-de-investigacion-documento.png)
+![Acciones de investigación - Patentes](./images/mocks/categorias/acciones-de-investigacion-patentes.png)
 
 
 
@@ -408,3 +400,17 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 | CQ10. Como investigador y personal no investigador de la universidad requiero obtener un listado de los proyectos adjudicados/desarrollados, de un centro/estructura de investigación, de un área/disciplina, en un determinado año de búsqueda en los que se tenga acceso al detalle de al menos:○	Nombre del proyecto○	Palabras claves○	Tipo de participación: coordinador o participante○	Tipo de proyecto: competitivo o no competitivo○	Tipo de financiamiento: público o privado.○	Tipo de convocatoria: nacional, H2020, etc.○	Número y listado de personas involucradas en el proyecto○	Nombre(s) del investigador(s) principal○	Entregables/memoria del proyecto○	Producción científica relacionada con el proyecto○	Entidades colaboradoras/participantes○	Cuantía○	etc. |
 | CQ11. Como usuario acdémico no investigador necesito conocer el tamaño, experiencia y envejecimiento de un área de investigación a escala de universidad, regional, nacional. |
 |                                                              |
+
+
+
+## Producción científica
+
+
+
+### Documentos
+
+Se mostrará un filtro, en forma de árbol al igual que las áreas, en el que se mostrarán los distintos tipos y subtipos de acciones de investigación posibles, todas subclases de la clase [Document](https://github.com/weso/hercules-ontology/blob/master/src/asio-core.ttl) de la ontología.
+
+
+
+![](./images/document-protege.png)
