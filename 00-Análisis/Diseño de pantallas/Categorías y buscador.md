@@ -148,6 +148,10 @@ Pulsando sobre un centro de investigación en la pantalla de esta categoría, la
 
 
 
+Se mostrará toda la producción científica (Ver sección) excepto Eventos.
+
+
+
 ![Detalle de estructura de investigación - producción científica](./images/mocks/categorias/detalle-estructuras-de-investigación-produccion.png)
 
 
@@ -197,7 +201,7 @@ Se dividirá en dos secciones, una para patentes y otra para proyectos.
 
 
 
-La tabla podrá ser filtrada por año y por nombre.
+La tabla podrá ser filtrada por fechas y por nombre.
 
 
 
@@ -207,7 +211,7 @@ La tabla podrá ser filtrada por año y por nombre.
 
 ### Proyectos
 
-En esta sección de acciones de transferencia se podrán ver los proyectos filtrados por nombre y por ámbito.
+En esta sección de acciones de transferencia se podrán ver los proyectos filtrados por nombre, fechas, competitivo o no y nivel.
 
 ![Acciones de investigación - proyectos](./images/mocks/categorias/acciones-de-investigacion-proyectos.png)
 
