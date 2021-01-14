@@ -365,7 +365,7 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 
 
 
-![Categorías - áreas](./images/mocks/categorias/categorias.png)
+![Áreas](./images/mocks/categorias/areas.png)
 
 
 
@@ -386,7 +386,7 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 
 
 
-![Categorías - áreas](./images/mocks/categorias/detalle-categorias.png)
+![Detalle de un area](./images/mocks/categorias/detalle-areas.png)
 
 
 
