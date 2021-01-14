@@ -22,9 +22,9 @@
 
 [2.3.1. Detalle de personal investigador](#detalle-de-personal-investigador)
 
-[2.4. Categorías](#categorías)
+[2.4. Áreas](#áreas)
 
-[2.4.1. Detalle de categoría](#detalle-de-categoría)
+[2.4.1. Detalle de área](#detalle-de-área)
 
 [2.5. Producción científica](#producción-científica)
 
@@ -46,11 +46,7 @@ Dentro del propio Home se podrán ver:
     - Fundaciones
     - Organismos
   - Personal investigador
-  - Categorías:
-    - Disciplinas
-    - áreas
-    - Líneas de investigación
-    - Tópicos (topics)
+  - Áreas de investigación
   - Producción científica
     - Congresos
     - Charlas
@@ -365,7 +361,7 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 
 
 
-# Categorías
+# Áreas
 
 
 
@@ -375,18 +371,18 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 
 Se utilizan las siguientes preguntas de competencia para el diseño de la pantalla:
 
-| Pregunta de competencia                                      |
-| ------------------------------------------------------------ |
-| CQ20. Como usuario necesito detectar tendencias en áreas y líneas investigación a partir de los datos disponibles en Hércules. |
-| CQ08. Como usuario requiero comparar comunidades autónomas, universidades, grupos de investigación, etc. en determinados tópicos para identificar cuál es el más competitivo y por qué. |
-|                                                              |
-|                                                              |
+| Pregunta de competencia                                      | Queries                                                      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| CQ20. Como usuario necesito detectar tendencias en áreas y líneas investigación a partir de los datos disponibles en Hércules. | [query1](https://tinyurl.com/y8hw5ka4)<br />[query2](https://tinyurl.com/yc6u4kk4) |
+| CQ08. Como usuario requiero comparar comunidades autónomas, universidades, grupos de investigación, etc. en determinados tópicos para identificar cuál es el más competitivo y por qué. |                                                              |
+|                                                              |                                                              |
+|                                                              |                                                              |
 
 
 
 
 
-# Detalle de Categoría
+# Detalle de Área
 
 
 
