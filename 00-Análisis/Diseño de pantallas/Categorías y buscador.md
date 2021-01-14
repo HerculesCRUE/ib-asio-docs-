@@ -374,7 +374,7 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 | Pregunta de competencia                                      | Queries                                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | CQ20. Como usuario necesito detectar tendencias en áreas y líneas investigación a partir de los datos disponibles en Hércules. | [query1](https://tinyurl.com/y8hw5ka4)<br />[query2](https://tinyurl.com/yc6u4kk4) |
-| CQ08. Como usuario requiero comparar comunidades autónomas, universidades, grupos de investigación, etc. en determinados tópicos para identificar cuál es el más competitivo y por qué. |                                                              |
+| CQ08. Como usuario requiero comparar comunidades autónomas, universidades, grupos de investigación, etc. en determinados tópicos para identificar cuál es el más competitivo y por qué. | [query](https://tinyurl.com/y9t5oc7a)                        |
 |                                                              |                                                              |
 |                                                              |                                                              |
 
