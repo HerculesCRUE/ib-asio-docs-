@@ -324,7 +324,7 @@ La pantalla se dividirá en cuatro secciones:
 
 
 
-### Congresos
+### Eventos
 
 ![Detalle de personal investigador - congresos](./images/mocks/categorias/detalle-personal-investigador-congresos.png)
 
