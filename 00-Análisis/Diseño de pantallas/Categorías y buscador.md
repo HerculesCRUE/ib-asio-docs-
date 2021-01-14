@@ -26,6 +26,8 @@
 
 [2.4.1. Detalle de categoría](#detalle-de-categoría)
 
+[2.5. Producción científica](#producción-científica)
+
 
 
 
@@ -409,12 +411,61 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 
 ## Producción científica
 
-
-
-### Documentos
-
-Se mostrará un filtro, en forma de árbol al igual que las áreas, en el que se mostrarán los distintos tipos y subtipos de acciones de investigación posibles, todas subclases de la clase [Document](https://github.com/weso/hercules-ontology/blob/master/src/asio-core.ttl) de la ontología.
+En la producción científica se moestrarán los documentos, excepto Patentes, ya que, estas son acciones de investigación y los eventos. Los diferentes documentos que hay en la ontología son:
 
 
 
 ![](./images/document-protege.png)
+
+
+
+Se ha dividico la pantalla en cuatro secciones: Publicaciones académicas, publicaciones científicas, otras publicaciones y eventos.
+
+
+
+## Publicaciones científicas
+
+
+
+![Producción científica - publicaciones científicas](./images/mocks/categorias/produccion-cientifica-cientificas.png)
+
+
+
+## Publicaciones académicas
+
+
+
+![Producción científica - publicaciones académicas](./images/mocks/categorias/produccion-cientifica-académicas.png)
+
+
+
+## Otras publicaciones
+
+
+
+![Producción científica - otras publicaciones](./images/mocks/categorias/produccion-cientifica-otras.png)
+
+
+
+## Eventos
+
+
+
+![Producción científica - publicaciones científicas](./images/mocks/categorias/produccion-cientifica-eventos.png)
+
+
+
+
+
+Se utilizan las siguientes preguntas de competencia para el diseño de las pantallas:
+
+| Pregunta de competencia                                      | Queries                                                      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| CQ26. Obtener el listado de congresos/workshops y eventos de divulgación científica en los que haya participado indicando el rol que he tenido: organizador, expositor, etc. | [query](https://tinyurl.com/y792383w)                        |
+| CQ06. Como usuario requiero obtener un listado de la producción científica en un determinado rango de fechas de un centro/estructura de investigación en un área/disciplina. Para cada resultado se incluirán algunos metadatos importantes de la producción como, por ejemplo, DOI, año de publicación, etc. | [query](https://tinyurl.com/y7bb7g54)                        |
+| CQ25. Obtener el listado de los trabajos que he dirigido/codirigido ya sean de grado (TFG), máster (TFM), o tesis doctorales. | [query1](https://tinyurl.com/y9ao7oh2)<br />[query2](https://tinyurl.com/y8gxakof) |
+| CQ45. Investigadores que dirigen tesis en programas de doctorado diferentes a los de su Universidad, y cuántas de esas tesis dirigidas han obtenido mención cum laude. | [query](https://tinyurl.com/yb9uztal)                        |
+|                                                              |                                                              |
+|                                                              |                                                              |
+|                                                              |                                                              |
+|                                                              |                                                              |
