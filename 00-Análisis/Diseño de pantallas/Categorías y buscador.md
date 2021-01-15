@@ -392,16 +392,16 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 
 Se utilizan las siguientes preguntas de competencia para el diseño de la pantalla:
 
-| Pregunta de competencia                                      |
-| ------------------------------------------------------------ |
-| CQ08. Como usuario requiero comparar comunidades autónomas, universidades, grupos de investigación, etc. en determinados tópicos para identificar cuál es el más competitivo y por qué. |
-| CQ01. Como usuario requiero obtener un listado de los centros/estructuras de investigación que trabajan en un área/disciplina específica. |
-| CQ02. Como usuario requiero obtener un listado de los investigadores de un centro/estructura de investigación de un área/disciplina específica. Este listado podrá filtrarse según el tipo de investigador ya sea docente, personal investigador en formación, etc. |
-| CQ06. Como usuario requiero obtener un listado de la producción científica en un determinado rango de fechas de un centro/estructura de investigación en un área/disciplina. Para cada resultado se incluirán algunos metadatos importantes de la producción como, por ejemplo, DOI, año de publicación, etc. |
-| CQ09. Como usuario requiero obtener un listado de patentes, diseños industriales, etc. de un centro/estructura de investigación en un área/disciplina. |
-| CQ10. Como investigador y personal no investigador de la universidad requiero obtener un listado de los proyectos adjudicados/desarrollados, de un centro/estructura de investigación, de un área/disciplina, en un determinado año de búsqueda en los que se tenga acceso al detalle de al menos:○	Nombre del proyecto○	Palabras claves○	Tipo de participación: coordinador o participante○	Tipo de proyecto: competitivo o no competitivo○	Tipo de financiamiento: público o privado.○	Tipo de convocatoria: nacional, H2020, etc.○	Número y listado de personas involucradas en el proyecto○	Nombre(s) del investigador(s) principal○	Entregables/memoria del proyecto○	Producción científica relacionada con el proyecto○	Entidades colaboradoras/participantes○	Cuantía○	etc. |
-| CQ11. Como usuario acdémico no investigador necesito conocer el tamaño, experiencia y envejecimiento de un área de investigación a escala de universidad, regional, nacional. |
-|                                                              |
+| Pregunta de competencia                                      | Queries                                                      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| CQ08. Como usuario requiero comparar comunidades autónomas, universidades, grupos de investigación, etc. en determinados tópicos para identificar cuál es el más competitivo y por qué. | [query](https://tinyurl.com/y9t5oc7a)                        |
+| CQ01. Como usuario requiero obtener un listado de los centros/estructuras de investigación que trabajan en un área/disciplina específica. | [query1](https://tinyurl.com/ycalwrym)<br />[query2](https://tinyurl.com/yanx4dhq) |
+| CQ02. Como usuario requiero obtener un listado de los investigadores de un centro/estructura de investigación de un área/disciplina específica. Este listado podrá filtrarse según el tipo de investigador ya sea docente, personal investigador en formación, etc. | [query](https://tinyurl.com/yal7vbhs)                        |
+| CQ06. Como usuario requiero obtener un listado de la producción científica en un determinado rango de fechas de un centro/estructura de investigación en un área/disciplina. Para cada resultado se incluirán algunos metadatos importantes de la producción como, por ejemplo, DOI, año de publicación, etc. | [query](https://tinyurl.com/y7bb7g54)                        |
+| CQ09. Como usuario requiero obtener un listado de patentes, diseños industriales, etc. de un centro/estructura de investigación en un área/disciplina. | [query](https://tinyurl.com/sph76pz)                         |
+| CQ10. Como investigador y personal no investigador de la universidad requiero obtener un listado de los proyectos adjudicados/desarrollados, de un centro/estructura de investigación, de un área/disciplina, en un determinado año de búsqueda en los que se tenga acceso al detalle de al menos:○	Nombre del proyecto○	Palabras claves○	Tipo de participación: coordinador o participante○	Tipo de proyecto: competitivo o no competitivo○	Tipo de financiamiento: público o privado.○	Tipo de convocatoria: nacional, H2020, etc.○	Número y listado de personas involucradas en el proyecto○	Nombre(s) del investigador(s) principal○	Entregables/memoria del proyecto○	Producción científica relacionada con el proyecto○	Entidades colaboradoras/participantes○	Cuantía○	etc. | [query](https://tinyurl.com/y8n6upzz)                        |
+| CQ11. Como usuario acdémico no investigador necesito conocer el tamaño, experiencia y envejecimiento de un área de investigación a escala de universidad, regional, nacional. | [query](https://tinyurl.com/y7wqbxf5)                        |
+|                                                              |                                                              |
 
 
 
