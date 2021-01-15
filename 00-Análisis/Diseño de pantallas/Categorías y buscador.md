@@ -28,6 +28,8 @@
 
 [2.5. Producción científica](#producción-científica)
 
+[2.5. Detalle de producción científica](#detalle-de-producción-científica)
+
 
 
 
@@ -328,13 +330,13 @@ La pantalla se dividirá en cuatro secciones:
 
 
 
-## Actividad empresarial
+### Actividad empresarial
 
 ![Detalle de personal investigador - actividad empresarial](./images/mocks/categorias/detalle-personal-investigador-actividad-empresarial.png)
 
 
 
-## Trayectoria
+### Trayectoria
 
 ![Detalle de personal investigador - trayectoria](./images/mocks/categorias/detalle-personal-investigador-trayectoria.png)
 
@@ -361,7 +363,7 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 
 
 
-# Áreas
+## Áreas
 
 
 
@@ -382,7 +384,7 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 
 
 
-# Detalle de Área
+## Detalle de Área
 
 
 
@@ -419,7 +421,7 @@ Se ha dividico la pantalla en cuatro secciones: Publicaciones académicas, publi
 
 
 
-## Publicaciones científicas
+### Publicaciones científicas
 
 
 
@@ -427,7 +429,7 @@ Se ha dividico la pantalla en cuatro secciones: Publicaciones académicas, publi
 
 
 
-## Publicaciones académicas
+### Publicaciones académicas
 
 
 
@@ -435,7 +437,7 @@ Se ha dividico la pantalla en cuatro secciones: Publicaciones académicas, publi
 
 
 
-## Otras publicaciones
+### Otras publicaciones
 
 
 
@@ -443,7 +445,7 @@ Se ha dividico la pantalla en cuatro secciones: Publicaciones académicas, publi
 
 
 
-## Eventos
+### Eventos
 
 
 
@@ -465,3 +467,10 @@ Se utilizan las siguientes preguntas de competencia para el diseño de las panta
 |                                                              |                                                              |
 |                                                              |                                                              |
 |                                                              |                                                              |
+
+
+
+## Detalle de producción científica
+
+
+
