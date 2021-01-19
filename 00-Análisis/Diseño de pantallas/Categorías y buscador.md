@@ -367,6 +367,10 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 
 
 
+Si se hace click en el árbol sobre un área, podremos ver su detalle.
+
+
+
 ![Áreas](./images/mocks/categorias/areas.png)
 
 
@@ -473,4 +477,14 @@ Se utilizan las siguientes preguntas de competencia para el diseño de las panta
 ## Detalle de producción científica
 
 
+
+En el detalle de producción científica hay dos casos, el detalle de un documento y el detalle de un evento.
+
+
+
+### Detalle de producción científica - Documento
+
+
+
+![Detalle de producción científica - documento](./images/mocks/categorias/detalle-produccion-cientifica-documentos.png)
 
