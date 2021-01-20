@@ -421,7 +421,7 @@ En la producción científica se moestrarán los documentos, excepto Patentes, y
 
 
 
-Se ha dividico la pantalla en cuatro secciones: Publicaciones académicas, publicaciones científicas, otras publicaciones y eventos.
+Se ha dividido la pantalla en cuatro secciones: Publicaciones académicas, publicaciones científicas, otras publicaciones y eventos.
 
 
 
@@ -451,9 +451,14 @@ Se ha dividico la pantalla en cuatro secciones: Publicaciones académicas, publi
 
 ### Eventos
 
+Los diferentes eventos de los que dispone la ontología son:
+![image-20210120133518174](C:\Users\pteran\Documents\reposgit\asio-docs\00-Análisis\Diseño de pantallas\images\eventos-ontología.png)
+
 
 
 ![Producción científica - publicaciones científicas](./images/mocks/categorias/produccion-cientifica-eventos.png)
+
+
 
 
 
