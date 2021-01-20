@@ -488,3 +488,11 @@ En el detalle de producción científica hay dos casos, el detalle de un documen
 
 ![Detalle de producción científica - documento](./images/mocks/categorias/detalle-produccion-cientifica-documentos.png)
 
+
+
+### Detalle de producción científica - Evento
+
+
+
+![Detalle de producción científica - evento](./images/mocks/categorias/detalle-produccion-cientifica-eventos.png)
+
