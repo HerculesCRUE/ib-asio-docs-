@@ -28,7 +28,9 @@
 
 [2.5. Producción científica](#producción-científica)
 
-[2.5. Detalle de producción científica](#detalle-de-producción-científica)
+[2.5.1. Detalle de producción científica](#detalle-de-producción-científica)
+
+[2.6. Estadísticas](#estadísticas)
 
 
 
@@ -501,3 +503,10 @@ En el detalle de producción científica hay dos casos, el detalle de un documen
 
 ![Detalle de producción científica - evento](./images/mocks/categorias/detalle-produccion-cientifica-eventos.png)
 
+
+
+## Estadísticas
+
+
+
+![Estadísticas](./images/mocks/categorias/estadísticas.png)
