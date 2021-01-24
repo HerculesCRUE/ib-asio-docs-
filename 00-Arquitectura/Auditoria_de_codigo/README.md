@@ -132,6 +132,15 @@ En cuanto a planes de precios, para proyectos Open Source públicos es gratuita.
 
 En cuanto a planes de precios, para proyectos Open Source públicos es gratuita.
 
+### Ontolo-CI
+
+[Ontolo-CI](https://github.com/weso/ontolo-ci) es una herramienta implementada ad-hoc para realizar integración continua de ontologías. Gracias a esta integración continua se puede asegurar que la ontología que se está desarrollando cumple con los requisitos que se esperan de ella. Además, es fundamental para poder realizar un control de versiones efectivo sobre ontologías. Entre las características principales se puede enumerar:
+
+- Ejecución de tests con Shape Expressions.
+- Ejecución de preguntas de competencia con consultas SPARQL.
+- Localización automática de errores de sintaxis en las ontologías.
+- Informes visuales con el resultado de las pruebas realizadas.
+
 ### Conclusión
 
 A priori, tanto Codacy como SonarCloud cummplen para las características del proyecto (lenguajes, OpenSource, ...). No obstante, es cierto que SonarCloud tiene mayor soporte de lenguajes y es el lider del sector, con lo que se propone la utilización de este analizador estático.
