@@ -132,6 +132,14 @@ En cuanto a planes de precios, para proyectos Open Source públicos es gratuita.
 
 En cuanto a planes de precios, para proyectos Open Source públicos es gratuita.
 
+### Conclusión
+
+A priori, tanto Codacy como SonarCloud cummplen para las características del proyecto (lenguajes, OpenSource, ...). No obstante, es cierto que SonarCloud tiene mayor soporte de lenguajes y es el lider del sector, con lo que se propone la utilización de este analizador estático.
+
+## Intrgración continua de ontologías
+
+Las ontologías como tal no son programas. Es decir no expresan un algoritmo, si no que declaran y modelan un dominio. Por tanto, cuando queremos asegurar que el dominio descrito por una ontología es el que nosotros queremos, tenemos que ejecutar pruebas sobre la ontología. Este tipo de pruebas no pueden ser ejecutadas en sistemas como TravisCI o similares. Por lo tanto se ha desarrollado una herramenta similar cuya única función es realizar integración continua de ontologías a través de Shape Expressions y consultas de SPARQL.
+
 ### Ontolo-CI
 
 [Ontolo-CI](https://github.com/weso/ontolo-ci) es una herramienta implementada ad-hoc para realizar integración continua de ontologías. Gracias a esta integración continua se puede asegurar que la ontología que se está desarrollando cumple con los requisitos que se esperan de ella. Además, es fundamental para poder realizar un control de versiones efectivo sobre ontologías. Entre las características principales se puede enumerar:
@@ -143,7 +151,7 @@ En cuanto a planes de precios, para proyectos Open Source públicos es gratuita.
 
 ### Conclusión
 
-A priori, tanto Codacy como SonarCloud cummplen para las características del proyecto (lenguajes, OpenSource, ...). No obstante, es cierto que SonarCloud tiene mayor soporte de lenguajes y es el lider del sector, con lo que se propone la utilización de este analizador estático.
+Una vez se hayan unificado las ontologías en un único repositorio de código se deberá de realizar una instalación de una instancia de Onolo-Ci en el entorno de despliegue de La Universidad de Murcia. Esta instancia se comunicará con el repositorio donde esté alojada la ontología de forma que realice el proceso de integración continua.
 
 ## Proceso de adaptación
 
