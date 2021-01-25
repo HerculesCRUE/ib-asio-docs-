@@ -509,4 +509,5 @@ En el detalle de producción científica hay dos casos, el detalle de un documen
 
 
 
-![Estadísticas](./images/mocks/categorias/estadísticas.png)
+![Estadísticas](./images/mocks/categorias/estadisticas.png)
+
