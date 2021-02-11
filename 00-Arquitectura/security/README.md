@@ -188,11 +188,16 @@ También hay que tener en cuenta que desde la ejecución de consultas SPARQL se 
 
 ##### Solución planteada
 
-Debido a que la consulta de datos mediante SPARQL permite acceder a la información de múltiples formas, es muy complicado poner limitaciones al acceso a determinada información de los recursos. Tampoco se observa que haya una solución de terceros que contemple la limitación a ciertos datos ni que sea completa. A continuación se plantean las posibles opciones.
+Debido a que la consulta de datos mediante SPARQL permite acceder a la información de múltiples formas, es muy complicado poner limitaciones al acceso a determinada información de los recursos. Tampoco se observa que haya una solución de terceros que contemple la limitación a ciertos datos ni que sea completa. Para dar una solucíon completa para la seguridad del endpoint SPARQL, se deberá abordar desde 2 puntos de vista:
+
+- Limitar SPARQL a perfiles
+- Utilizar ACLs del endpoint SPARQL
 
 ###### Limitar SPARQL a perfiles
 
 En este caso, se plantea que la consulta de datos SPARQL se limite solamente a ciertos perfiles que puedan visualizar toda la información del sistema. Mediante esta técnica se evitarían los problemas planteados anteriormente ya que los usuarios que puedan acceder son usuarios avanzados y tendrán privilegios suficientes para consultar toda la información.
+
+Además, el tener la posibilidad de ejecudtar consultas SPARQL, las cuales pueden llegar a ser muy pesadas, también puede influir mucho en el rendimiento del sistema. El hecho de limitar la ejecución de SPARQL a ciertos perfiles "autorizados" y especializados hace que este impacto se reduzca.
 
 ###### Utilizar ACLs del endpoint SPARQL
 
@@ -239,3 +244,4 @@ En este caso se plantea utilizar los mecanismos que ofrece el servidor LDP, util
 - https://jena.apache.org/documentation/permissions/evaluator.html
 - https://jena.apache.org/documentation/fuseki2/fuseki-security.html
 - https://jena.apache.org/documentation/fuseki2/fuseki-data-access-control.html#endpoint-acl
+- https://jena.apache.org/documentation/fuseki2/fuseki-data-access-control.html
