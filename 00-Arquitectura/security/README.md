@@ -205,7 +205,9 @@ En este caso se haría uso de los ACLs definidos en el propio endpoint SPARQL, e
 
 Esto tiene como contrapartida, que al  hacerse a nivel de triplestore y no a nivel de solución, que si se desease sustituir el triplestore en algún momento, habría que volver a plantear la seguridad de los datos.
 
-También habría que limitar la ejecución de consultas federadas a determinados roles autorizados para ello.
+###### Impacto en consultas federadas
+
+También habría que limitar la ejecución de consultas federadas a determinados roles autorizados para ello. No obstante, dado que el control de las consultas federadas se realizará desde el propio endpoint, el cual recibirá el token JWT, será cada uno de los nodos los que se encarguen de verificar los datos que puede ver cada usuario, por tanto será transparente de cara a la federación, salvo por el hecho de que será preciso enviar el token de seguridad en las peticiones a cada uno de los nodos.
 
 ### Servicio LDP
 
