@@ -53,7 +53,10 @@ class TrellisHandler:
         }
         uri = self.get_base_uri() + parent_uri if parent_uri is not None else self.get_base_uri()
         response = requests.request("POST", uri, headers=headers, data=payload)
-        location = response.headers['location']
+        if response.status_code == 409:
+            location = uri
+        else:
+            location = response.headers['location']
         return location
 
     def create_instance(self,instance,instance_map):

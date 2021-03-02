@@ -11,3 +11,4 @@ CMD /usr/local/start-container.sh
 
 COPY asio-ldp-dropwizard-1.0-SNAPSHOT-shaded.jar /opt/app/asio-ldp-dropwizard-1.0-SNAPSHOT-shaded.jar
 COPY config-dev.yml /opt/app/config-dev.yml
+

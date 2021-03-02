@@ -2,6 +2,9 @@ import json
 from rdflib.graph import Graph
 import pandas as pd
 from models.instance import Instance
+import requests
+import re
+
 
 class bcolors:
     HEADER = '\033[95m'
@@ -13,8 +16,9 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
+
 class FairEvaluator:
-    def __init__(self,trellis_handler,uris_factory_handler):
+    def __init__(self, trellis_handler, uris_factory_handler):
         # with open('./data/public_uris.json','r') as f:
         #     self.uris_list = json.loads(f.read())
         # with open('./data/private_uris.json','r') as f:
@@ -31,12 +35,13 @@ class FairEvaluator:
             '3': 'in implementation phase',
             '4': 'fully implemented'
         }
-        self.uris_metadata_ids,self.uris_metadata,self.uris_metadata_headers = self.__populate_metadata_ids_from_uri_list()
-        self.uris_mementos_metadata_ids,self.uri_mementos_metadata,self.uris_mementos_metadata_headers  = self.__populate_metadata_mementos_ids_from_uri_list()
+        self.uris_metadata_ids, self.uris_metadata, self.uris_metadata_headers = self.__populate_metadata_ids_from_uri_list()
+        self.uris_mementos_metadata_ids, self.uri_mementos_metadata, self.uris_mementos_metadata_headers = self.__populate_metadata_mementos_ids_from_uri_list()
         self.uris_data_ids = self.__populate_data_ids_from_uri_list()
         self.headers, self.triples = self.__populate_responses_from_uri_list()
         self.evaluation = pd.read_csv("./data/FAIR_evaluation.csv")
-        print('Generated file '+bcolors.BOLD+'FAIR_evaluation_out.csv with the metrics evaluation results'+bcolors.ENDC)
+        print(
+            'Generated file ' + bcolors.BOLD + 'FAIR_evaluation_out.csv with the metrics evaluation results' + bcolors.ENDC)
 
     def evaluate_fair(self):
         self.evaluate_findable()
@@ -46,22 +51,21 @@ class FairEvaluator:
         print(self.evaluation)
         self.evaluation.to_csv("./data/FAIR_evaluation_out.csv")
 
-    def evaluate_findable(self):
-        print('\n'+'::' * 50)
-        print('Evaluating findable metrics...')
-        self.evaluate_RDA_F1_01M()
-        self.evaluate_RDA_F1_01D()
-        self.evaluate_RDA_F1_02M()
-        self.evaluate_RDA_F1_02D()
-        self.evaluate_RDA_F2_01M()
-        self.evaluate_RDA_F3_01M()
-        print('\t'+'-'*96)
-        print('::' * 50)
-
+    # def evaluate_findable(self):
+    #     print('\n' + '::' * 50)
+    #     print('Evaluating findable metrics...')
+    #     self.evaluate_RDA_F1_01M()
+    #     self.evaluate_RDA_F1_01D()
+    #     self.evaluate_RDA_F1_02M()
+    #     self.evaluate_RDA_F1_02D()
+    #     self.evaluate_RDA_F2_01M()
+    #     self.evaluate_RDA_F3_01M()
+    #     print('\t' + '-' * 96)
+    #     print('::' * 50)
 
     ######################## FINDABLES #######################################################################
     def evaluate_findable(self):
-        print('\n'+'::' * 50)
+        print('\n' + '::' * 50)
         print('Evaluating findable metrics...')
         self.evaluate_RDA_F1_01M()
         self.evaluate_RDA_F1_01D()
@@ -69,7 +73,7 @@ class FairEvaluator:
         self.evaluate_RDA_F1_02D()
         self.evaluate_RDA_F2_01M()
         self.evaluate_RDA_F3_01M()
-        print('\t'+'-'*96)
+        print('\t' + '-' * 96)
         print('::' * 50)
 
     def evaluate_RDA_F1_01M(self):
@@ -78,14 +82,14 @@ class FairEvaluator:
         fails = 0
         for t in self.uris_metadata_ids:
             for uri in self.uris_metadata_ids[t]:
-                if len(self.uris_metadata_ids[t][uri])>0:
+                if len(self.uris_metadata_ids[t][uri]) > 0:
                     hits += 1
                 else:
                     fails += 1
-        result = self.__get_evaluation(hits,fails)
-        self.print_leyend('F1', indicator_id, 'Essential', 'Metadata is identified by a persistent identifier', self.values[str(result)])
+        result = self.__get_evaluation(hits, fails)
+        self.print_leyend('F1', indicator_id, 'Essential', 'Metadata is identified by a persistent identifier',
+                          self.values[str(result)])
         self.__update_metric_with_result(indicator_id, result)
-
 
     def evaluate_RDA_F1_01D(self):
         indicator_id = 'RDA-F1-01D'
@@ -98,7 +102,8 @@ class FairEvaluator:
                 else:
                     fails += 1
         result = self.__get_evaluation(hits, fails)
-        self.print_leyend('F1', indicator_id, 'Essential', 'Data is identified by a persistent identifier',self.values[str(result)])
+        self.print_leyend('F1', indicator_id, 'Essential', 'Data is identified by a persistent identifier',
+                          self.values[str(result)])
         self.__update_metric_with_result(indicator_id, result)
 
     def evaluate_RDA_F1_02M(self):
@@ -143,17 +148,17 @@ class FairEvaluator:
         ids = set()
         # Has headers to link with resources
         for uri in self.headers['entities']:
-            if 'link' in self.headers['entities'][uri] and len(self.headers['entities'][uri]['link'].split(','))>0:
+            if 'link' in self.headers['entities'][uri] and len(self.headers['entities'][uri]['link'].split(',')) > 0:
                 hits += 1
             else:
                 fails += 1
-         # Container has triples for content
+        # Container has triples for content
         for uri in self.triples['entities']:
             contains = 0
             for triple in self.triples['entities'][uri]:
                 if '<http://www.w3.org/ns/ldp#contains>' in triple[0]:
                     contains += 1
-            if contains>0:
+            if contains > 0:
                 hits += 1
             else:
                 fails += 1
@@ -190,6 +195,8 @@ class FairEvaluator:
         print('\n' + '::' * 50)
         print('Evaluating accessible metrics...')
         self.evaluate_RDA_A1_01M()
+        self.evaluate_RDA_A1_02M()
+        self.evaluate_RDA_A1_02D()
         self.evaluate_RDA_A1_03M()
         self.evaluate_RDA_A1_03D()
         self.evaluate_RDA_A1_04M_and_RDA_A1_1_01M()
@@ -217,7 +224,59 @@ class FairEvaluator:
                 else:
                     fails += 1
         result = self.__get_evaluation(hits, fails)
-        self.print_leyend('A1', indicator_id, 'Important','Metadata contains information to enable the user to get access to the data',
+        self.print_leyend('A1', indicator_id, 'Important',
+                          'Metadata contains information to enable the user to get access to the data',
+                          self.values[str(result)])
+        self.__update_metric_with_result(indicator_id, result)
+
+    def evaluate_RDA_A1_02M(self):
+        indicator_id = 'RDA-A1-02M'
+        hits = 0
+        fails = 0
+        ids = set()
+        # Has headers to link with resources
+        for t in self.uri_mementos_metadata:
+            for uri in self.uri_mementos_metadata[t]:
+                res = requests.get(uri)
+                links = []
+                for linkPart in res.headers['link'].split(";"):
+                    m = re.search('<(.+?)>', linkPart)
+                    if m:
+                        links.append(m.group(1))
+                found = False
+
+                for link in links:
+                    if requests.get(link).status_code == 200:
+                        found = True
+                        break
+                if found:
+                    hits += 1
+                else:
+                    fails += 1
+        result = self.__get_evaluation(hits, fails)
+        self.print_leyend('A1', indicator_id, 'Essential',
+                          'Metadata can be accessed manually (i.e. with human intervention)',
+                          self.values[str(result)])
+        self.__update_metric_with_result(indicator_id, result)
+
+    def evaluate_RDA_A1_02D(self):
+        indicator_id = 'RDA-A1-02D'
+        hits = 0
+        fails = 0
+        ids = set()
+        # Has headers to link with resources
+        for t in self.uri_mementos_metadata:
+            for uri in self.uri_mementos_metadata[t]:
+                if requests.get(uri).status_code == 200:
+                    found = True
+                    break
+                if found:
+                    hits += 1
+                else:
+                    fails += 1
+        result = self.__get_evaluation(hits, fails)
+        self.print_leyend('A1', indicator_id, 'Essential',
+                          'Data can be accessed manually (i.e. with human intervention)',
                           self.values[str(result)])
         self.__update_metric_with_result(indicator_id, result)
 
@@ -229,12 +288,12 @@ class FairEvaluator:
         # Has headers to link with resources
         for t in self.uri_mementos_metadata:
             for uri in self.uri_mementos_metadata[t]:
-                if len(self.uri_mementos_metadata[t][uri])>0:
+                if len(self.uri_mementos_metadata[t][uri]) > 0:
                     hits += 1
                 else:
                     fails += 1
         result = self.__get_evaluation(hits, fails)
-        self.print_leyend('A1', indicator_id, 'Important','Metadata identifier resolves to a metadata record',
+        self.print_leyend('A1', indicator_id, 'Important', 'Metadata identifier resolves to a metadata record',
                           self.values[str(result)])
         self.__update_metric_with_result(indicator_id, result)
 
@@ -246,12 +305,12 @@ class FairEvaluator:
         # Has headers to link with resources
         for t in self.triples:
             for uri in self.triples[t]:
-                if len(self.triples[t][uri])>0:
+                if len(self.triples[t][uri]) > 0:
                     hits += 1
                 else:
                     fails += 1
         result = self.__get_evaluation(hits, fails)
-        self.print_leyend('A1', indicator_id, 'Important','Data identifier resolves to a digital object',
+        self.print_leyend('A1', indicator_id, 'Important', 'Data identifier resolves to a digital object',
                           self.values[str(result)])
         self.__update_metric_with_result(indicator_id, result)
 
@@ -264,12 +323,12 @@ class FairEvaluator:
         # Has headers to link with resources
         for t in self.uris_list:
             for uri in self.uris_list[t]:
-                if 'http://' in (self.uris_list[t][uri]+'?ext=timemap'):
+                if 'http://' in (self.uris_list[t][uri] + '?ext=timemap'):
                     hits += 1
                 else:
-                    fails +=1
+                    fails += 1
         result = self.__get_evaluation(hits, fails)
-        self.print_leyend('A1', indicator_id1, 'Important','Metadata is accessed through standardised protocol',
+        self.print_leyend('A1', indicator_id1, 'Important', 'Metadata is accessed through standardised protocol',
                           self.values[str(result)])
         self.print_leyend('A1.1', indicator_id2, 'Important', 'Metadata is accessible through a free access protocol',
                           self.values[str(result)])
@@ -288,13 +347,14 @@ class FairEvaluator:
                 if 'http://' in self.uris_list[t][uri]:
                     hits += 1
                 else:
-                    fails +=1
+                    fails += 1
         result = self.__get_evaluation(hits, fails)
-        self.print_leyend('A1', indicator_id, 'Important','Data is accessible through standardised protocol',
+        self.print_leyend('A1', indicator_id, 'Important', 'Data is accessible through standardised protocol',
                           self.values[str(result)])
-        self.print_leyend('A1.1', indicator_id2, 'Important','Data is accessible through a free access protocol',
+        self.print_leyend('A1.1', indicator_id2, 'Important', 'Data is accessible through a free access protocol',
                           self.values[str(result)])
-        self.print_leyend('A1.2', indicator_id3, 'Important','Data is accessible through an access protocol that supports authentication and authorisation',
+        self.print_leyend('A1.2', indicator_id3, 'Important',
+                          'Data is accessible through an access protocol that supports authentication and authorisation',
                           self.values[str(result)])
         self.__update_metric_with_result(indicator_id, result)
         self.__update_metric_with_result(indicator_id2, result)
@@ -308,12 +368,13 @@ class FairEvaluator:
         # Has headers to link with resources
         for t in self.triples:
             for uri in self.triples[t]:
-                if len(self.triples[t][uri])>0:
+                if len(self.triples[t][uri]) > 0:
                     hits += 1
                 else:
                     fails += 1
         result = self.__get_evaluation(hits, fails)
-        self.print_leyend('A1', indicator_id, 'Important','Data can be accessed automatically (i.e. by a computer program)',
+        self.print_leyend('A1', indicator_id, 'Important',
+                          'Data can be accessed automatically (i.e. by a computer program)',
                           self.values[str(result)])
         self.__update_metric_with_result(indicator_id, result)
 
@@ -329,7 +390,7 @@ class FairEvaluator:
         # Create canonical uri
 
         canonical = self.uf.create_canonical_entity('test')
-        uris_link_before = self.uf.do_link_canonical_entity_to_local('test',trellis_location,'trellis')
+        uris_link_before = self.uf.do_link_canonical_entity_to_local('test', trellis_location, 'trellis')
         result = self.__get_evaluation(hits, fails)
 
         # Delete container
@@ -338,18 +399,18 @@ class FairEvaluator:
         # Create container
         trellis_location_2 = self.th.create_basic_container(None, 'test2')
         # Delete link
-        self.uf.do_unlink_canonical_entity_to_local('test',trellis_location,'trellis')
+        self.uf.do_unlink_canonical_entity_to_local('test', trellis_location, 'trellis')
         uris_link_after = self.uf.do_link_canonical_entity_to_local('test', trellis_location_2, 'trellis')
 
         if uris_link_after['localUri'] == trellis_location_2:
-            hits +=1
+            hits += 1
         else:
             fails += 1
         result = self.__get_evaluation(hits, fails)
-        self.print_leyend('A2', indicator_id,'Essential', 'Metadata is guaranteed to remain available after data is no longer available',
+        self.print_leyend('A2', indicator_id, 'Essential',
+                          'Metadata is guaranteed to remain available after data is no longer available',
                           self.values[str(result)])
         self.__update_metric_with_result(indicator_id, result)
-
 
     ######################## INTEROPERABLE #######################################################################
 
@@ -358,11 +419,17 @@ class FairEvaluator:
         print('Evaluating interoperable metrics...')
         self.evaluate_RDA_I1_01M_and_RDA_I1_02M()
         self.evaluate_RDA_I1_01D_and_RDA_I1_02D()
+        self.evaluate_RDA_I2_01M()
+        self.evaluate_RDA_I3_02M()
+        self.evaluate_RDA_I3_02D()
+        self.evaluate_RDA_I3_03M()
+        self.evaluate_RDA_I3_04M()
+        self.evaluate_RDA_I2_01D()
+        self.evaluate_RDA_I3_02M()
         self.evaluate_RDA_I3_01M()
         self.evaluate_RDA_I3_01D()
         print('\t' + '-' * 96)
         print('::' * 50)
-
 
     def evaluate_RDA_I1_01M_and_RDA_I1_02M(self):
         indicator_id_1 = 'RDA-I1-01M'
@@ -378,7 +445,8 @@ class FairEvaluator:
                 else:
                     fails += 1
         result = self.__get_evaluation(hits, fails)
-        self.print_leyend('I1', indicator_id_1, 'Important','Metadata uses knowledge representation expressed in standardised format',
+        self.print_leyend('I1', indicator_id_1, 'Important',
+                          'Metadata uses knowledge representation expressed in standardised format',
                           self.values[str(result)])
         self.__update_metric_with_result(indicator_id_1, result)
         self.print_leyend('I1', indicator_id_2, 'Important',
@@ -400,13 +468,71 @@ class FairEvaluator:
                 else:
                     fails += 1
         result = self.__get_evaluation(hits, fails)
-        self.print_leyend('I1', indicator_id_1, 'Important','Data uses knowledge representation expressed in standardised format',
+        self.print_leyend('I1', indicator_id_1, 'Important',
+                          'Data uses knowledge representation expressed in standardised format',
                           self.values[str(result)])
         self.__update_metric_with_result(indicator_id_1, result)
         self.print_leyend('I1', indicator_id_2, 'Important',
                           'Data uses machine-understandable knowledge representation',
                           self.values[str(result)])
         self.__update_metric_with_result(indicator_id_2, result)
+
+    def evaluate_RDA_I2_01M(self):
+        indicator_id = 'RDA-I2-01M'
+        hits = 0
+        fails = 0
+        ids = set()
+        # Has headers to link with resources
+        for t in self.uri_mementos_metadata:
+            for uri in self.uri_mementos_metadata[t]:
+                res = requests.get(uri)
+                links = []
+                for linkPart in res.headers['link'].split(";"):
+                    m = re.search('<(.+?)>', linkPart)
+                    if m:
+                        links.append(m.group(1))
+                found = False
+
+                for link in links:
+                    if 'http://www.w3.org/ns/ldp#Resource' in link or 'http://www.w3.org/ns/ldp#RDFSource' in link:
+                        found = True
+                        break
+                if found:
+                    hits += 1
+                else:
+                    fails += 1
+        result = self.__get_evaluation(hits, fails)
+        self.print_leyend('I2', indicator_id, 'Important',
+                          'Metadata uses FAIR-compliant vocabularies',
+                          self.values[str(result)])
+        self.__update_metric_with_result(indicator_id, result)
+
+    def evaluate_RDA_I2_01D(self):
+        indicator_id = 'RDA-I2-01D'
+        hits = 0
+        fails = 0
+        ids = set()
+        # Has headers to link with resources
+        for t in self.uri_mementos_metadata:
+            for uri in self.uri_mementos_metadata[t]:
+                res = requests.get(uri)
+                vocabularies_uris = []
+                for line in str(res.content).split("\\n"):
+                    if "@prefix" in line and "hercules.org" not in line and "example.org" not in line:
+                        m = re.search('<(.+?)>', line)
+                        if m:
+                            vocabularies_uris.append(m.group(1))
+
+                for vocabularyUri in vocabularies_uris:
+                    if requests.get(vocabularyUri).status_code == 200:
+                        hits += 1
+                    else:
+                        fails += 1
+        result = self.__get_evaluation(hits, fails)
+        self.print_leyend('I2', indicator_id, 'Useful',
+                          'Data uses FAIR-compliant vocabularies',
+                          self.values[str(result)])
+        self.__update_metric_with_result(indicator_id, result)
 
     def evaluate_RDA_I3_01M(self):
         indicator_id_1 = 'RDA-I3-01M'
@@ -416,12 +542,12 @@ class FairEvaluator:
         # Has headers to link with resources
         for t in self.headers:
             for uri in self.headers[t]:
-                if len(self.headers[t][uri]['link'])>0:
+                if len(self.headers[t][uri]['link']) > 0:
                     hits += 1
                 else:
                     fails += 1
         result = self.__get_evaluation(hits, fails)
-        self.print_leyend('I3', indicator_id_1, 'Important','Metadata includes references to other metadata',
+        self.print_leyend('I3', indicator_id_1, 'Important', 'Metadata includes references to other metadata',
                           self.values[str(result)])
         self.__update_metric_with_result(indicator_id_1, result)
 
@@ -442,9 +568,113 @@ class FairEvaluator:
                     else:
                         fails += 1
         result = self.__get_evaluation(hits, fails)
-        self.print_leyend('I1', indicator_id_1, 'Essential','Data includes references to other data',
+        self.print_leyend('I1', indicator_id_1, 'Essential', 'Data includes references to other data',
                           self.values[str(result)])
         self.__update_metric_with_result(indicator_id_1, result)
+
+    def evaluate_RDA_I3_02M(self):
+        indicator_id = 'RDA-I3-02M'
+        hits = 0
+        fails = 0
+        ids = set()
+        # Has headers to link with resources
+        for t in self.uri_mementos_metadata:
+            for uri in self.uri_mementos_metadata[t]:
+                res = requests.get(uri+"?ext=timemap")
+                if uri in res.headers['link']:
+                    hits += 1
+                else:
+                    fails += 1
+        result = self.__get_evaluation(hits, fails)
+        self.print_leyend('I3', indicator_id, 'Useful',
+                          'Metadata includes references to other data',
+                          self.values[str(result)])
+        self.__update_metric_with_result(indicator_id, result)
+
+    def evaluate_RDA_I3_02D(self):
+        indicator_id = 'RDA-I3-02D'
+        hits = 0
+        fails = 0
+        ids = set()
+        # Has headers to link with resources
+        for uri in self.triples['instances']:
+            if 'university' not in uri and 'group' not in uri:
+                continue
+            contains = 0
+            for triple in self.triples['instances'][uri]:
+                if 'has-groups' in triple[0] or 'has-researchers' in triple[0]:
+                    t0 = triple[0]
+                    t1 = triple[1][1:-1]
+
+                    if t1 in self.uris_list['instances']:
+                        hits += 1
+                    else:
+                        fails += 1
+        result = self.__get_evaluation(hits, fails)
+        self.print_leyend('I3', indicator_id, 'Useful',
+                          'Data includes qualified references to other data',
+                          self.values[str(result)])
+        self.__update_metric_with_result(indicator_id, result)
+
+    def evaluate_RDA_I3_03M(self):
+        indicator_id = 'RDA-I3-03M'
+
+        hits = 0
+        fails = 0
+        # Has headers to link with resources
+        for t in self.uri_mementos_metadata:
+            for uri in self.uri_mementos_metadata[t]:
+                res = requests.get(uri)
+                links = []
+                for linkPart in res.headers['link'].split(";"):
+                    m = re.search('<(.+?)>', linkPart)
+                    if m:
+                        links.append(m.group(1))
+                found = False
+
+                for link in links:
+                    if requests.get(link).status_code == 200:
+                        found = True
+                        break
+                if found:
+                    hits += 1
+                else:
+                    fails += 1
+        result = self.__get_evaluation(hits, fails)
+        self.print_leyend('I3', indicator_id, 'Useful',
+                          'Metadata includes qualified references to other metadata',
+                          self.values[str(result)])
+        self.__update_metric_with_result(indicator_id, result)
+
+    def evaluate_RDA_I3_04M(self):
+        indicator_id = 'RDA-I3-04M'
+
+        hits = 0
+        fails = 0
+        # Has headers to link with resources
+        for t in self.uri_mementos_metadata:
+            for uri in self.uri_mementos_metadata[t]:
+                res = requests.get(uri)
+                links = []
+                for linkPart in res.headers['link'].split(";"):
+                    m = re.search('<(.+?)>', linkPart)
+                    if m:
+                        links.append(m.group(1))
+                found = False
+
+                for link in links:
+                    if '?version' in link and requests.get(link).status_code == 200:
+                        found = True
+                        break
+                if found:
+                    hits += 1
+                else:
+                    fails += 1
+        result = self.__get_evaluation(hits, fails)
+        self.print_leyend('I3', indicator_id, 'Useful',
+                          'Metadata include qualified references to other data',
+                          self.values[str(result)])
+        self.__update_metric_with_result(indicator_id, result)
 
 
     ######################## REUSABLE #######################################################################
@@ -458,7 +688,6 @@ class FairEvaluator:
         self.evaluate_RDA_R1_3_01D_and_RDA_R1_3_02D()
         print('\t' + '-' * 96)
         print('::' * 50)
-
 
     def evaluate_RDA_R1_01M(self):
         indicator_id_1 = 'RDA-R1-01M'
@@ -477,12 +706,13 @@ class FairEvaluator:
                     properties += 1
                 else:
                     no_properties += 1
-            if properties>0 and no_properties ==0:
+            if properties > 0 and no_properties == 0:
                 hits += 1
             else:
                 fails += 1
         result = self.__get_evaluation(hits, fails)
-        self.print_leyend('R1', indicator_id_1, 'Essential', 'Plurality of accurate and relevant attributes are provided to allow reuse',
+        self.print_leyend('R1', indicator_id_1, 'Essential',
+                          'Plurality of accurate and relevant attributes are provided to allow reuse',
                           self.values[str(result)])
         self.__update_metric_with_result(indicator_id_1, result)
 
@@ -499,7 +729,7 @@ class FairEvaluator:
             for uri in self.uris_metadata[t]:
                 id_metadata = None
                 found_prov = False
-                for triples_uri in self.uris_metadata[t][uri]['<'+uri+'>']:
+                for triples_uri in self.uris_metadata[t][uri]['<' + uri + '>']:
                     if triples_uri[0] == '<http://www.w3.org/ns/prov#wasGeneratedBy>':
                         id_metadata = triples_uri[1]
                         found_prov = True
@@ -508,7 +738,7 @@ class FairEvaluator:
                         if triples_uri[0] == '<http://www.w3.org/ns/prov#wasGeneratedBy>':
                             id_metadata = triples_uri[1]
                             found_prov = True
-                if id_metadata is not None and len(self.uris_metadata[t][uri][id_metadata])>0:
+                if id_metadata is not None and len(self.uris_metadata[t][uri][id_metadata]) > 0:
                     hits1 += 1
                 else:
                     fails1 += 1
@@ -517,15 +747,16 @@ class FairEvaluator:
                 else:
                     fails2 += 1
         result1 = self.__get_evaluation(hits1, fails1)
-        self.print_leyend('R1.2', indicator_id_1, 'Essential', 'Metadata includes provenance information according to community-specific standards',
+        self.print_leyend('R1.2', indicator_id_1, 'Essential',
+                          'Metadata includes provenance information according to community-specific standards',
                           self.values[str(result1)])
         self.__update_metric_with_result(indicator_id_1, result1)
 
         result2 = self.__get_evaluation(hits2, fails2)
-        self.print_leyend('R1.2', indicator_id_2, 'Essential', 'Metadata includes provenance information according to a cross-community language',
+        self.print_leyend('R1.2', indicator_id_2, 'Essential',
+                          'Metadata includes provenance information according to a cross-community language',
                           self.values[str(result2)])
         self.__update_metric_with_result(indicator_id_2, result2)
-
 
     def evaluate_RDA_R1_3_01M_and_RDA_R1_3_02M(self):
         indicator_id_1 = 'RDA-R1.3-01M'
@@ -539,12 +770,12 @@ class FairEvaluator:
                 common_ontologies = 0
                 for subject in self.uris_metadata[t][uri]:
                     for triples in self.uris_metadata[t][uri][subject]:
-                        if 'http://purl.org/dc/terms' in triples[0]  or \
-                            'http://www.w3.org/1999/02/22-rdf-syntax-ns'  in triples[0]  or \
-                            'http://www.w3.org/ns/ldp#contains'  in triples[0]  or \
-                            'http://www.w3.org/ns/prov' in triples[0]:
-                            common_ontologies +=1
-                if common_ontologies>0:
+                        if 'http://purl.org/dc/terms' in triples[0] or \
+                                'http://www.w3.org/1999/02/22-rdf-syntax-ns' in triples[0] or \
+                                'http://www.w3.org/ns/ldp#contains' in triples[0] or \
+                                'http://www.w3.org/ns/prov' in triples[0]:
+                            common_ontologies += 1
+                if common_ontologies > 0:
                     hits += 1
                 else:
                     falis += 1
@@ -553,10 +784,10 @@ class FairEvaluator:
                           self.values[str(result)])
         self.__update_metric_with_result(indicator_id_1, result)
 
-        self.print_leyend('R1.3', indicator_id_2, 'Essential', 'Metadata is expressed in compliance with a machine-understandable community standard',
+        self.print_leyend('R1.3', indicator_id_2, 'Essential',
+                          'Metadata is expressed in compliance with a machine-understandable community standard',
                           self.values[str(result)])
         self.__update_metric_with_result(indicator_id_2, result)
-
 
     def evaluate_RDA_R1_3_01D_and_RDA_R1_3_02D(self):
         indicator_id_1 = 'RDA-R1.3-01D'
@@ -570,12 +801,12 @@ class FairEvaluator:
                 common_ontologies = 0
                 for triples in self.triples[t][uri]:
                     for triple in triples:
-                        if 'http://purl.org/dc/terms' in triple  or \
-                            'http://www.w3.org/1999/02/22-rdf-syntax-ns'  in triple  or \
-                            'http://www.w3.org/ns/ldp#contains'  in triple  or \
-                            'http://www.w3.org/ns/prov' in triple:
-                            common_ontologies +=1
-                if common_ontologies>0:
+                        if 'http://purl.org/dc/terms' in triple or \
+                                'http://www.w3.org/1999/02/22-rdf-syntax-ns' in triple or \
+                                'http://www.w3.org/ns/ldp#contains' in triple or \
+                                'http://www.w3.org/ns/prov' in triple:
+                            common_ontologies += 1
+                if common_ontologies > 0:
                     hits += 1
                 else:
                     falis += 1
@@ -584,7 +815,8 @@ class FairEvaluator:
                           self.values[str(result)])
         self.__update_metric_with_result(indicator_id_1, result)
 
-        self.print_leyend('R1.3', indicator_id_2, 'Essential', 'Data is expressed in compliance with a machine-understandable community standard',
+        self.print_leyend('R1.3', indicator_id_2, 'Essential',
+                          'Data is expressed in compliance with a machine-understandable community standard',
                           self.values[str(result)])
         self.__update_metric_with_result(indicator_id_2, result)
 
@@ -601,19 +833,20 @@ class FairEvaluator:
                 triples[line[0]].append(line[1:])
         return triples
 
-    def print_leyend(self,principle, indicator_id, type, description, result):
-        print('\t'+'-'*96)
-        print('\t'+bcolors.WARNING+'Principle: '+principle+bcolors.ENDC)
+    def print_leyend(self, principle, indicator_id, type, description, result):
+        print('\t' + '-' * 96)
+        print('\t' + bcolors.WARNING + 'Principle: ' + principle + bcolors.ENDC)
         print('\tIndicator: %s' % indicator_id)
         print('\tLevel: %s' % type)
         print('\tDescription: %s' % description)
         if result == 'fully implemented':
-            print('\t'+bcolors.OKGREEN +'Evaluation Result: ' + result +bcolors.ENDC)
+            print('\t' + bcolors.OKGREEN + 'Evaluation Result: ' + result + bcolors.ENDC)
         else:
             print('\t' + bcolors.FAIL + 'Evaluation Result: ' + result + bcolors.ENDC)
 
-    def __update_metric_with_result(self, indicator,result):
-        self.evaluation.loc[self.evaluation['INDICATOR_ID'] == indicator, ['METRIC','SCORE','MANUAL']] = result,1 if result == 4 else 0,0
+    def __update_metric_with_result(self, indicator, result):
+        self.evaluation.loc[self.evaluation['INDICATOR_ID'] == indicator, ['METRIC', 'SCORE',
+                                                                           'MANUAL']] = result, 1 if result == 4 else 0, 0
 
     def __populate_metadata_ids_from_uri_list(self):
         metadata_uris_list = {}
@@ -629,14 +862,14 @@ class FairEvaluator:
                 resource_uris = [resource_uri]
                 if resource_uri[-1] == '/':
                     resource_uris.append(resource_uri[:-1])
-                h,b = self.th.get_audit_metadata(resource_uri)
+                h, b = self.th.get_audit_metadata(resource_uri)
                 triples = self.serialize_turtle(b)
-                l = self.__get_metadata_id(triples,resource_uris)
+                l = self.__get_metadata_id(triples, resource_uris)
                 metadata_uris_list[t][resource_uri] = l
                 metadata_uris_headers_list[t][resource_uri] = h
                 if '<' + resource_uri + '>' in triples:
                     metadata_uris_data_list[t][resource_uri] = triples
-        return metadata_uris_list,metadata_uris_data_list,metadata_uris_headers_list
+        return metadata_uris_list, metadata_uris_data_list, metadata_uris_headers_list
 
     def __populate_metadata_mementos_ids_from_uri_list(self):
         metadata_uris_list = {}
@@ -652,14 +885,14 @@ class FairEvaluator:
                 resource_uris = [resource_uri]
                 if resource_uri[-1] == '/':
                     resource_uris.append(resource_uri[:-1])
-                h,b = self.th.get_mementos_metadata(resource_uri)
+                h, b = self.th.get_mementos_metadata(resource_uri)
                 triples = self.serialize_turtle(b)
-                l = self.__get_metadata_id(triples,resource_uris)
+                l = self.__get_metadata_id(triples, resource_uris)
                 metadata_uris_list[t][resource_uri] = l
                 metadata_uris_headers_list[t][resource_uri] = h
                 if '<' + resource_uri + '>' in triples:
                     metadata_uris_data_list[t][resource_uri] = triples
-        return metadata_uris_list,metadata_uris_data_list,metadata_uris_headers_list
+        return metadata_uris_list, metadata_uris_data_list, metadata_uris_headers_list
 
     def __populate_data_ids_from_uri_list(self):
         data_uris_list = {}
@@ -686,11 +919,11 @@ class FairEvaluator:
                 h, b = self.th.get_data(resource_uri)
                 headers_uris_list[t][resource_uri] = h
                 triples = self.serialize_turtle(b)
-                if '<'+resource_uri+'>' in triples:
-                    resources_uris_list[t][resource_uri] = triples['<'+resource_uri+'>']
-        return headers_uris_list,resources_uris_list
+                if '<' + resource_uri + '>' in triples:
+                    resources_uris_list[t][resource_uri] = triples['<' + resource_uri + '>']
+        return headers_uris_list, resources_uris_list
 
-    def __get_evaluation(self,hints, fails):
+    def __get_evaluation(self, hints, fails):
         if fails == 0:
             return 4
         if hints > fails:
@@ -700,21 +933,20 @@ class FairEvaluator:
         else:
             return 1
 
-
-    def __get_metadata_id(self,triples,resource_ids):
+    def __get_metadata_id(self, triples, resource_ids):
         metadata_keys = []
         for resource_id in resource_ids:
-            resource_key = '<'+resource_id+'>'
+            resource_key = '<' + resource_id + '>'
             if resource_key in triples:
                 for tripe in triples[resource_key]:
                     if '_:' in tripe[1]:
                         metadata_keys.append(tripe[1])
         return metadata_keys
 
-    def __get_data_id(self,triples,resource_ids):
+    def __get_data_id(self, triples, resource_ids):
         data_keys = []
         for resource_id in resource_ids:
-            resource_key = '<'+resource_id+'>'
+            resource_key = '<' + resource_id + '>'
             if resource_key in triples:
                 for tripe in triples[resource_key]:
                     if '_:' not in tripe[1]:
@@ -725,7 +957,7 @@ class FairEvaluator:
         public = {
             'properties': {},
             'entities': {},
-            'instances':{}
+            'instances': {}
         }
         privates = {
             'properties': {},
@@ -751,4 +983,4 @@ class FairEvaluator:
             except:
                 pass
 
-        return public,privates
+        return public, privates

@@ -5,6 +5,7 @@ import numpy as np
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import plotly.offline as offline
+import plotly.io as pio
 
 valid_columns = ['FACET','PRINCIPLE','INDICATOR_ID','PRIORITY','METRIC','SCORE']
 
@@ -21,6 +22,8 @@ oneMaturityColor = 'lightgoldenrodyellow'
 twoMaturityColor = 'khaki'
 threeMaturityColor = 'darkseagreen'
 fourMaturityColor = 'darkolivegreen'
+
+pio.renderers.default = 'browser'
 
 def get_level(df, facet):
     d = df[df['FACET'] == facet]

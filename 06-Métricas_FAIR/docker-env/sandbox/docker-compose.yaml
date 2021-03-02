@@ -8,7 +8,7 @@ services:
     ports:
       - "3307:3306"
     volumes:
-      - mysql-data-sandbox:/var/lib/mysql
+      - mysql-data-sandbox-fair:/var/lib/mysql
     command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
     environment:
       # MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
@@ -39,15 +39,15 @@ services:
       - sandbox-net
   fuseki-sandbox:
     build: ./fuseki-tdb/
-    container_name: fuseki-sandbox
+    container_name: fuseki-asio
     restart: always
     environment:
       - ADMIN_PASSWORD=pw123
     ports:
       - "3030:3030"
     volumes:
-      - fuseki-data-sandbox:/fuseki/databases/trellis
-      - fuseki-backup-sandbox:/fuseki/databases/backups
+      - fuseki-data-sandbox-fair:/fuseki/databases/trellis
+      - fuseki-backup-sandbox-fair:/fuseki/databases/backups
       #- ./fuseki-conf/config.ttl:/fuseki/config.ttl
       #- ./fuseki-conf/trellis.ttl:/fuseki/trellis.ttl
       #- ./fuseki-conf/shiro.ini:/fuseki/shiro.ttl
@@ -55,28 +55,59 @@ services:
     networks:
       - sandbox-net
   trellis-sandbox:
-    image: trellisldp/trellis-triplestore
+    build: ./trellis
     container_name: trellis
-    restart: always
     ports:
       - "8080:8080"
-    environment:
-      - TRELLIS_TRIPLESTORE_RDF_LOCATION=http://fuseki-sandbox:3030/trellis/
     links:
       - "fuseki-sandbox:fuseki-sandbox"
     depends_on:
       - fuseki-sandbox
     volumes:
-      - trellis-data-sandbox:/opt/trellis/data
-      - trellis-log-sandbox:/opt/trellis/log
+      - trellis-data-sandbox-fair:/opt/trellis/data
+      - trellis-log-sandbox-fair:/opt/trellis/log
     networks:
       - sandbox-net
+#  fuseki-sandbox:
+#    build: ./fuseki-tdb/
+#    container_name: fuseki-sandbox
+#    restart: always
+#    environment:
+#      - ADMIN_PASSWORD=pw123
+#    ports:
+#      - "3030:3030"
+#    volumes:
+#      - fuseki-data-sandbox-fair:/fuseki/databases/trellis
+#      - fuseki-backup-sandbox-fair:/fuseki/databases/backups
+#      #- ./fuseki-conf/config.ttl:/fuseki/config.ttl
+#      #- ./fuseki-conf/trellis.ttl:/fuseki/trellis.ttl
+#      #- ./fuseki-conf/shiro.ini:/fuseki/shiro.ttl
+#      #- ./fuseki-conf/log4j.properties:/fuseki/log4j.properties
+#    networks:
+#      - sandbox-net
+#  trellis-sandbox:
+#    image: trellisldp/trellis-triplestore
+#    container_name: trellis
+#    restart: always
+#    ports:
+#      - "8080:8080"
+#    environment:
+#      - TRELLIS_TRIPLESTORE_RDF_LOCATION=http://fuseki-sandbox:3030/trellis/
+#    links:
+#      - "fuseki-sandbox:fuseki-sandbox"
+#    depends_on:
+#      - fuseki-sandbox
+#    volumes:
+#      - trellis-data-sandbox-fair:/opt/trellis/data
+#      - trellis-log-sandbox-fair:/opt/trellis/log
+#    networks:
+#      - sandbox-net
 volumes:
-  fuseki-data-sandbox:
-  fuseki-backup-sandbox:
-  mysql-data-sandbox:
-  trellis-data-sandbox:
-  trellis-log-sandbox:
+  fuseki-data-sandbox-fair:
+  fuseki-backup-sandbox-fair:
+  mysql-data-sandbox-fair:
+  trellis-data-sandbox-fair:
+  trellis-log-sandbox-fair:
 
 networks:
   sandbox-net:
