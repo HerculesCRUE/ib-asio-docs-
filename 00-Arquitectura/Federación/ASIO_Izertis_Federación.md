@@ -7,8 +7,8 @@
 | Módulo         | Arquitectura Semántica                                       |
 | Tipo           | Documento                                                    |
 | Objetivo       | Este documento recoge el análisis de alternativas para la federación de consultas sobre una arquitectura de nodos distribuidos en la red HERCULES. |
-| Estado         | **50%** Arquitectura y diseño, implementación preliminar integrada en [Librería de descubrimiento](../../24-Librer%C3%ADa_de_descubrimiento/ASIO_Libreria_de_descubrimiento.md#integraci%C3%B3n-del-proceso-dentro-de-la-arquitectura-general-de-la-aplicaci%C3%B3n). |
-| Próximos pasos | Refactorización de Librería de descubrimiento, integración del módulo de Service discovery, e implementación final del agregador de resultados de consultas federadas. |
+| Estado         | **100%** Arquitectura y diseño, implementación preliminar integrada en [Librería de descubrimiento](../../24-Librer%C3%ADa_de_descubrimiento/ASIO_Libreria_de_descubrimiento.md#integraci%C3%B3n-del-proceso-dentro-de-la-arquitectura-general-de-la-aplicaci%C3%B3n). |
+| Próximos pasos | Si fuese necesario añadir mas conectores a datasets de la nube LOD |
 
 # Federación de consultas
 

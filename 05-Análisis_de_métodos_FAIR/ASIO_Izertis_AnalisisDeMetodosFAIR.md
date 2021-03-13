@@ -95,7 +95,7 @@ A continuación se muestra el cronograma previsto para 2020, actualizado el 23 d
 
 ### Indicadores y prioridades
 
-Según la recomendación de RDA [RDA, 2020] y con el objetivo de mejorar la trazabilidad, l**os indicadores se subdividen en varios indicadores de detalle y se organizan por prioridades**.
+Según la recomendación de c [RDA, 2020] y con el objetivo de mejorar la trazabilidad, l**os indicadores se subdividen en varios indicadores de detalle y se organizan por prioridades**.
 
 Las prioridades se fundamentan en el hecho de que algunos indicadores resultan más importantes que otros desde el punto de vista de un proveedor de datos, principalmente en términos de esfuerzo frente a beneficio. **La propuesta incluye 3 niveles de prioridad**:
 
@@ -137,7 +137,7 @@ El resultado se detalla en la siguiente lista de métricas:
 | I3   | I3-02M   | Metadata includes references to other data                  | ⬤    |
 | I3   | I3-02D   | Data includes qualified references to other data            | ⬤    |
 | I3   | I3-03M   | Metadata includes qualified references to other metadata    | ⬤⬤   |
-| I3   | I3-04M   | Metadata include qualified references to other data         | ⬤    |
+| I3   | I3-04M   |          | ⬤    |
 | R1   | R1-01M   | Plurality of accurate and relevant attributes are provided to allow reuse | ⬤⬤⬤  |
 | R1.1 | R1.1-01M | Metadata includes information about the licence under which the data can be reused | ⬤⬤⬤  |
 | R1.1 | R1.1-02M | Metadata refers to a standard reuse licence                 | ⬤⬤   |
