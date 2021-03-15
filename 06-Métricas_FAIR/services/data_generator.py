@@ -3,6 +3,7 @@ from services.uris_factory_handler import URISFactoryHandler
 from services.trellis_handler import TrellisHandler
 import json
 import os
+import requests
 
 
 class DataGenerator:
@@ -41,6 +42,21 @@ class DataGenerator:
             f2.write(json.dumps(self.private_uris, indent=2))
 
         # json.dump(self.private_uris, outfile)
+
+    def insert_ontology(self):
+        ontologies_path = './ontologies'
+        sparql_endpoint = 'http://localhost:3030/trellis/data?graph=ontology:data'
+        arr = os.listdir(ontologies_path)
+        files = []
+        headers = {}
+        payload={}
+        for onto_file in arr:
+            f = ('file', (onto_file,
+                          open(ontologies_path + '/' + onto_file,
+                               'rb'), 'application/octet-stream'))
+            files.append(f)
+
+        response = requests.request("POST", sparql_endpoint, headers=headers, data=payload, files=files)
 
     def __iterate_instances(self, index, parent, json_instances):
         for j_instance in json_instances:

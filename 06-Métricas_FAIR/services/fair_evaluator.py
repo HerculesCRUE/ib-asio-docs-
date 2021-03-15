@@ -44,10 +44,14 @@ class FairEvaluator:
             'Generated file ' + bcolors.BOLD + 'FAIR_evaluation_out.csv with the metrics evaluation results' + bcolors.ENDC)
 
     def evaluate_fair(self):
+        # self.evaluate_RDA_R1_1_01M()
+        # self.evaluate_RDA_R1_2_01M()
+        # self.evaluate_RDA_R1_3_01M()
         self.evaluate_findable()
         self.evaluate_accessible()
         self.evaluate_interoperable()
         self.evaluate_reusable()
+        self.evaluate_RDA_F4_01M()
         print(self.evaluation)
         self.evaluation.to_csv("./data/FAIR_evaluation_out.csv")
 
@@ -154,6 +158,8 @@ class FairEvaluator:
                 fails += 1
         # Container has triples for content
         for uri in self.triples['entities']:
+            if 'test' in uri:
+                continue
             contains = 0
             for triple in self.triples['entities'][uri]:
                 if '<http://www.w3.org/ns/ldp#contains>' in triple[0]:
@@ -186,6 +192,29 @@ class FairEvaluator:
                     fails += 1
         result = self.__get_evaluation(hits, fails)
         self.print_leyend('F3', indicator_id, 'Essential', 'Metadata includes the identifier for the data',
+                          self.values[str(result)])
+        self.__update_metric_with_result(indicator_id, result)
+
+    def evaluate_RDA_F4_01M(self):
+        indicator_id = 'RDA-F4-01M'
+        hits = 0
+        fails = 0
+        ids = set()
+        # Check if ontology as triples
+        url = 'http://localhost:3030/trellis/sparql?query=SELECT (COUNT(*) as ?Triples) WHERE {   GRAPH <ontology:data> { ?a ?b ?c } }'
+        response = requests.request("POST", url, headers={}, data={})
+        if response.status_code == 200:
+            j_response = response.json()
+            try:
+                if int(j_response['results']['bindings'][0]['Triples']['value']) > 0:
+                    hits += 1
+            except ValueError:
+                fails += 1
+        else:
+            fails += 1
+        result = self.__get_evaluation(hits, fails)
+        result = self.__get_evaluation(hits, fails)
+        self.print_leyend('F4', indicator_id, 'Essential', 'Metadata is offered in such a way that it can be harvested and indexed',
                           self.values[str(result)])
         self.__update_metric_with_result(indicator_id, result)
 
@@ -566,7 +595,11 @@ class FairEvaluator:
                     if triple[1][1:-1] in self.uris_list_privates['instances']:
                         hits += 1
                     else:
-                        fails += 1
+                        res = requests.get(t1)
+                        if res.status_code == 200:
+                            hits += 1
+                        else:
+                            fails += 1
         result = self.__get_evaluation(hits, fails)
         self.print_leyend('I1', indicator_id_1, 'Essential', 'Data includes references to other data',
                           self.values[str(result)])
@@ -683,6 +716,9 @@ class FairEvaluator:
         print('\n' + '::' * 50)
         print('Evaluating reusable metrics...')
         self.evaluate_RDA_R1_01M()
+        self.evaluate_RDA_R1_1_01M()
+        self.evaluate_RDA_R1_2_01M()
+        self.evaluate_RDA_R1_3_01M()
         self.evaluate_RDA_R1_2_01M_and_RDA_R1_2_02M()
         self.evaluate_RDA_R1_3_01M_and_RDA_R1_3_02M()
         self.evaluate_RDA_R1_3_01D_and_RDA_R1_3_02D()
@@ -715,6 +751,76 @@ class FairEvaluator:
                           'Plurality of accurate and relevant attributes are provided to allow reuse',
                           self.values[str(result)])
         self.__update_metric_with_result(indicator_id_1, result)
+
+
+    def evaluate_RDA_R1_1_01M(self):
+        indicator_id = 'RDA-R1.1-01M'
+        hits = 0
+        fails = 0
+        ids = set()
+        # Check if ontology as triples
+        url = 'http://localhost:3030/trellis/sparql?query=SELECT (COUNT(*) as ?licences) WHERE {   GRAPH <ontology:data> { ?a <http://purl.org/dc/terms/license> ?c } }'
+        response = requests.request("POST", url, headers={}, data={})
+        if response.status_code == 200:
+            j_response = response.json()
+            try:
+                if int(j_response['results']['bindings'][0]['licences']['value']) > 0:
+                    hits += 1
+            except ValueError:
+                fails += 1
+        else:
+            fails += 1
+        result = self.__get_evaluation(hits, fails)
+        self.print_leyend('R1.1', indicator_id, 'Essential', 'Metadata includes information about the licence under which the data can be reused',
+                          self.values[str(result)])
+        self.__update_metric_with_result(indicator_id, result)
+
+    def evaluate_RDA_R1_2_01M(self):
+        indicator_id = 'RDA-R1.1-02M'
+        hits = 0
+        fails = 0
+        ids = set()
+        # Check if ontology as triples
+        url = 'http://localhost:3030/trellis/sparql?query=SELECT ?c WHERE {   GRAPH <ontology:data> { ?a <http://purl.org/dc/terms/license> ?c } }'
+        response = requests.request("POST", url, headers={}, data={})
+        if response.status_code == 200:
+            j_response = response.json()
+            try:
+                for binding in j_response['results']['bindings']:
+                    if 'creativecommons.org' in binding['c']['value']:
+                        hits += 1
+                    else:
+                        fails += 1
+            except ValueError:
+                fails += 1
+        else:
+            fails += 1
+        result = self.__get_evaluation(hits, fails)
+        self.print_leyend('R1.1', indicator_id, 'Essential', 'Metadata refers to a standard reuse licence',
+                          self.values[str(result)])
+        self.__update_metric_with_result(indicator_id, result)
+
+    def evaluate_RDA_R1_3_01M(self):
+        indicator_id = 'RDA-R1.1-03M'
+        hits = 0
+        fails = 0
+        ids = set()
+        # Check if ontology as triples
+        url = 'http://localhost:3030/trellis/sparql?query=SELECT (COUNT(*) as ?licences) WHERE {   GRAPH <ontology:data> { ?a <http://purl.org/dc/terms/license> ?c } }'
+        response = requests.request("POST", url, headers={}, data={})
+        if response.status_code == 200:
+            j_response = response.json()
+            try:
+                if int(j_response['results']['bindings'][0]['licences']['value']) > 0:
+                    hits += 1
+            except ValueError:
+                fails += 1
+        else:
+            fails += 1
+        result = self.__get_evaluation(hits, fails)
+        self.print_leyend('R1.1', indicator_id, 'Essential', 'Metadata refers to a machine-understandable reuse licence',
+                          self.values[str(result)])
+        self.__update_metric_with_result(indicator_id, result)
 
     def evaluate_RDA_R1_2_01M_and_RDA_R1_2_02M(self):
         indicator_id_1 = 'RDA-R1.2-01M'
@@ -964,9 +1070,9 @@ class FairEvaluator:
             'entities': {},
             'instances': {}
         }
-
+        X = self.uf.get_all_canonical_uri_language()
         for canonical in self.uf.get_all_canonical_uri_language():
-            canonical_full_uri = canonical['fullURI'];
+            canonical_full_uri = canonical['fullURI']
             local_uris = self.uf.get_local_storage_by_canonical_uri(
                 canonical['fullURI'], 'en-EN', 'trellis')
             try:

@@ -23,6 +23,7 @@ def main():
     if '-d' in sys.argv[1:] or '-D' in sys.argv[1:]:
         print('Building data....')
         dc = DataGenerator(open('./data/instances_generator_metadata.json'), th, uf)
+        dc.insert_ontology()
         dc.generate_sintetic_data()
 
     fe = FairEvaluator(th, uf)
