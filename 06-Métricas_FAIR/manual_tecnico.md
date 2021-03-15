@@ -94,3 +94,41 @@ REUSABLE -> tiene todos los esenciales, todos los importantes y todos los útile
 Ran 4 tests in 0.427s
 OK
 ```
+
+## Añadir nuevas métricas
+
+La clase **fair_evaluation.py** contiene las implementaciones de evaluación de las métricas FAIR.
+
+Como se ha comentado con anterioridad, la evaluación requiere de el entono [Sandbox](Sandbox) desplegado.
+
+El método **evaluate_fair** invoca la ejecución de los bloques 
+
+* **evaluate_findable:** Métricas de tipo Findable.
+* **evaluate_accessible:** Métricas de tipo Accesible.
+* **evaluate_interoperable:** Métricas de tipo Interoperable.
+* **evaluate_reusable:** Métricas de tipo Reusable.
+
+Dentro de estos métodos podemos encontrar explícitamente las llamadas a los test que implementan la evaluación de cada métrica.
+
+En lo relativo a la estructura de la evaluación de una métrica en si, todas siguen una estructura común donde tenemos los siguientes elementos:
+
+* **indicador_id:** Corresponde al id de la métrica, a evaluar, que ha de coincidir con la columna INDICATOR_ID del fichero **FAIR_evaluation.cvs** del directorio data
+* **__get_evaluation(hits,fails):** Este método retorna un resultado (entre 1 y 4), para la métrica que estamos evaluando a partir del número de aciertos y fallos en la evaluación. 
+* **print_leyend(principle, indicator_id, type, description, result):** Este método pinta el log en pantalla relativo a la evaluación de la métrica según los parámetros pasados 
+  * **principle:** Principio FAIR a el que pertenece la evaluación
+  * **indicador_id:** Corresponde al id de la métrica
+  * **type:** Tipo de la métrica. Uno de los disponibles en la columna PRIORITY de la tabla **FAIR_evaluation.cvs**
+  * **description:** Descripción de la métrica que aparecerá en el log.
+  * **result:** Valor de la evaluación de la métrica, obtenido por la llamada al método **__get_evaluation(hits,fails)**
+* **__update_metric_with_result(indicator_id, result)**: Añade el resultado de la evaluación de la métrica, al fichero  **FAIR_evaluation_out.csv**
+  * **indicador_id:** Corresponde al id de la métrica
+  * **result:** Valor de la evaluación de la métrica, obtenido por la llamada al método **__get_evaluation(hits,fails)**
+
+Básicamente, para añadir nuevas métricas, los pasos necesarios son los siguientes:
+
+1. Crear el test que evalúe el principio FAIR deseado: Por el momento la convención de nombres es evaluate_{INDICATOR_ID}.
+2. Dar valor a la variable indicator_id, con el INDICATOR_ID que aparece en el fichero **FAIR_evaluation.cvs**
+3. Crear lógica de negocio que evalúe la métrica FAIR, contabilizando cumplimientos e incumplimientos.
+4. Invocar la función **__get_evaluation(hits,fails)**, pasando cumplimientos e incumplimientos para obtener resultado de la evaluacion
+5. (Opcional) Llamar a la función **print_leyend(principle, indicator_id, type, description, result)**, para mostrar log en pantalla.
+6. Invocar al metodo **__update_metric_with_result(indicator_id, result)**, para actualizar el fichero **FAIR_evaluation_out.csv**, con el valor del resultado de la evaluación, para el INDICATOR_ID pasado por parámetro. 
