@@ -1,14 +1,15 @@
 ![](./images/logos_feder.png)
 
-| Entregable     | Arquitectura Semántica - Federación de Consultas             |
-| -------------- | ------------------------------------------------------------ |
-| Fecha          | 16/12/2020                                                   |
-| Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://www.crue.org/proyecto/hercules/) |
-| Módulo         | Arquitectura Semántica                                       |
-| Tipo           | Documento                                                    |
-| Objetivo       | Este documento recoge el análisis de alternativas para la federación de consultas sobre una arquitectura de nodos distribuidos en la red HERCULES. |
-| Estado         | **100%** Arquitectura y diseño, implementación preliminar integrada en [Librería de descubrimiento](../../24-Librer%C3%ADa_de_descubrimiento/ASIO_Libreria_de_descubrimiento.md#integraci%C3%B3n-del-proceso-dentro-de-la-arquitectura-general-de-la-aplicaci%C3%B3n). |
-| Próximos pasos | Si fuese necesario añadir mas conectores a datasets de la nube LOD |
+| Entregable                         | Arquitectura Semántica - Federación de Consultas             |
+| ---------------------------------- | ------------------------------------------------------------ |
+| Fecha                              | 16/12/2020                                                   |
+| Proyecto                           | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://www.crue.org/proyecto/hercules/) |
+| Módulo                             | Arquitectura Semántica                                       |
+| Tipo                               | Documento                                                    |
+| Objetivo                           | Este documento recoge el análisis de alternativas para la federación de consultas sobre una arquitectura de nodos distribuidos en la red HERCULES. |
+| Estado                             | **100%** implementada                                        |
+| Próximos pasos                     | Si fuese necesario añadir mas conectores a datasets de la nube LOD |
+| Documentación de la implementación | [Build (Pasos para la compilación y ejecución)](https://github.com/HerculesCRUE/ib-federation/blob/master/docs/build.md). <br>[Docker (Pasos para la generación de una imagen y publicación)](https://github.com/HerculesCRUE/ib-federation/blob/master/docs/docker.md). <br/>[Manual de usuario (descripción a alto nivel)](https://github.com/HerculesCRUE/ib-federation/blob/master/docs/manual_de_usuario.md)<br>[Documentación tecnica (descripción a bajo nivel)](https://github.com/HerculesCRUE/ib-federation/blob/master/docs/documentacion-tecnica.md).<br>[Documentación API REST](https://github.com/HerculesCRUE/ib-federation/blob/master/docs/documentacion_api_rest.md) |
 
 # Federación de consultas
 
