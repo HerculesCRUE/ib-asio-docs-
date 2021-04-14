@@ -1,6 +1,6 @@
 ![](./images/logos_feder.png)
 
-# Propuesta de solución para el front
+# Pantallas reales propuestas
 
 
 
@@ -26,37 +26,19 @@
 Home
 ============
 
-El home de la web dispondrá de un menú superior con los accesos a las diferentes categorías y a la pantalla de consultas SparQL. También se mostrarán los iconos de login/acceso o la imagen del usuario identificado. Las opciones que no estén funcionando, se mostrarán desactivadas en gris, tanto en el home como en el menú lateral.
+El home de la web dispone de un menú superior con los accesos a las diferentes categorías y a la pantalla de consultas SparQL. También se mostrarán los iconos de login/acceso o la imagen del usuario identificado. Las opciones que no estén funcionando, se mostrarán desactivadas en gris, tanto en el home como en el menú lateral.
 
 
 
 Dentro del propio Home se podrán ver:
 
-- Buscador general de datos públicos
 - Las categorías, que serían:
-  - Estructuras de investigación:
-    - Centros
-    - Universidades
-    - Fundaciones
-    - Organismos
+  - Estructuras de investigación
   - Personal investigador
-  - Categorías:
-    - Disciplinas
-    - áreas
-    - Líneas de investigación
-    - Tópicos (topics)
+  - Áreas
   - Producción científica
-    - Artículos
-    - Libros
-    - Congresos
   - Acciones de investigación
-    - Proyectos
-    - Documentos
   - Estadísticas e indicadores
-    - Indicadores / tendencias (trends)
-    - Financiación (funding) / calidad / estadísticas
-    - Búsqueda de partners / estado de la técnica (state of the art)
-- Los servicios de los que dispone la web, como las consultas SparQL y gestiones propias de usuarios administradores. Por ejemplo la gestión de usuarios, que sólo sería visible para usuarios de tipo Gestor Asio.
 - Al final de la página se mostrarán los enlaces a información del proyecto en general:
   - Repositorios
   - Validadores
@@ -73,6 +55,16 @@ Dentro del propio Home se podrán ver:
 
 
 ![home - front](./images/screenshots/home.png)
+
+
+
+Una vez el usuario se logee, se mostrarán dos opciones más en el home:
+
+- Los servicios de los que dispone la web, como las consultas SparQL y gestiones propias de usuarios administradores. Por ejemplo la gestión de usuarios, que sólo sería visible para usuarios de tipo Gestor Asio.
+
+  
+
+![home - front](./images/screenshots/home-login.png)
 
 
 
@@ -104,7 +96,9 @@ En la categoría de estructura de investigación, podremos ver información gene
 
 - Fundaciones
 
-- Organismos
+- Empresa
+
+- etc
 
   
 
@@ -113,8 +107,6 @@ Se podrá acceder a ella a través de la pantalla home, o del menú superior.
 La pantalla dispondrá de una serie de filtros:
 
 - Las diferentes opciones que hay dentro de las estructuras de organización: Universidad, centro, etc. Si se selecciona una de estas sub-opciones, mostrará la información filtrada por ese tipo de estructura en la tabla.
-- Para poder filtrar universidades que posean sellos de calidad como Severo Ochoa.
-- Un filtro por centros que hayan realizado proyectos H2020 y/o proyectos del Plan Estatal.
 - Un buscador general por nombre de centro.
 
 
@@ -136,11 +128,13 @@ La información que se mostrará en esta página tratará de responder, entre ot
 
 ## Detalle de una estructura de investigación
 
-Pulsando sobre un centro de investigación en la pantalla de esta categoría, la web nos redirigirá a la información de ese centro de investigación. Para facilitar la visualización de los datos sobre la estructura de investigación, la información se mostrará agrupada por [tabs](https://getbootstrap.com/docs/4.0/components/navs/).
+Pulsando sobre un centro de investigación en la pantalla de esta categoría, la web nos redirigirá a la información de esa estrutura de investigación. Para facilitar la visualización de los datos sobre la estructura de investigación, la información se mostrará agrupada por [tabs](https://getbootstrap.com/docs/4.0/components/navs/).
 
 
 
 ### Sección de personal investigador
+
+
 
 ![Captura de detalle de una estructuras de investigación - tab personal investigador](./images/screenshots/detalle-estructuras-personal.png)
 
@@ -148,9 +142,21 @@ Pulsando sobre un centro de investigación en la pantalla de esta categoría, la
 
 
 
-### Sección de producción científica
+### Sección de publicaciones científicas
 
-![Captura de detalle de una estructuras de investigación - tab produccion cientifica](./images/screenshots/detalle-estructuras-produccion.png)
+
+
+![Captura de detalle de una estructuras de investigación - tab publicaciones científicas](./images/screenshots/detalle-estructuras-publicaciones-cientificas.png)
+
+
+
+
+
+### Sección de publicaciones académicas
+
+
+
+![Captura de detalle de una estructuras de investigación - tab publicaciones académicas](./images/screenshots/detalle-estructuras-publicaciones-academicas.png)
 
 
 
@@ -189,19 +195,11 @@ En esta pantalla se responderá a las siguientes preguntas de competencia:
 
 
 
-Se divide en dos secciones, una para documentos y otra para proyectos.
+Se divide en dos secciones, una para patentes y otra para proyectos.
 
 
 
-### Documentos
 
-
-
-Se muestra un filtro, en forma de árbol al igual que las áreas, en el que se mostrarán los distintos tipos y subtipos de acciones de investigación posibles, todas subclases de la clase [Document](https://github.com/weso/hercules-ontology/blob/master/src/asio-core.ttl) de la ontología.
-
-
-
-![](C:\Users\pteran\Documents\reposgit\asio-docs\00-Análisis\Diseño de pantallas\images\document-protege.png)
 
 
 
