@@ -38,7 +38,7 @@ Relación de entregables oficiales del proyecto en su estado actual.
 | [25-Librería de publicación](./25-Librería_de_publicación/README.md) |                                                              | -                                                            |
 | [26-Test suite para publicación de datos](./26-Test_suite_para_publicación_de_datos/README.md) |                                                              | -                                                            |
 | [27 Manual Test Suite para publicación de datos](./27_Manual_Test_Suite_para_publicación_de_datos/README.md) | N/A                                                          | -                                                            |
-| [28-Material de formación](./28-Material_de_formación/README.md) | N/A                                                          | -                                                            |
+| [28-Material de formación](./28-Material_de_formación/README.md) | N/A                                                          | [Sesiones de Formacion](https://www.um.es/web/hercules/proyectos/asio/formacion/izertis)                                                            |
 
 ## 2. Otros entregables
 
