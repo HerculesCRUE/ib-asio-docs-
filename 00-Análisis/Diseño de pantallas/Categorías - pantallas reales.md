@@ -308,3 +308,37 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 | CQ45. Investigadores que dirigen tesis en programas de doctorado diferentes a los de su Universidad, y cuántas de esas tesis dirigidas han obtenido mención cum laude. |
 |                                                              |
 
+
+
+## Detalle de personal investigador
+
+
+
+### Detalle de personal investigador - acciones de investigación
+
+
+
+![Captura de personal investigador](./images/screenshots/detalle-personal-investigador-acciones.png)
+
+
+
+### Detalle de personal investigador - eventos
+
+![Captura de personal investigador](./images/screenshots/detalle-personal-investigador-eventos.png)
+
+
+
+### Detalle de personal investigador - actividad empresarial
+
+
+
+![Captura de personal investigador](./images/screenshots/detalle-personal-investigador-actividad.png)
+
+
+
+### Detalle de personal investigador - trayectoria
+
+
+
+![Captura de personal investigador](./images/screenshots/detalle-personal-investigador-trayectoria.png)
+
