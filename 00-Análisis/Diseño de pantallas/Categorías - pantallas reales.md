@@ -20,6 +20,8 @@
 
 [2.3. Personal investigador](#personal-investigador)
 
+[2.3.1  Detalle de personal investigador](#detalle-de-personal-investigador)
+
 
 
 
@@ -199,23 +201,23 @@ Se divide en dos secciones, una para patentes y otra para proyectos.
 
 
 
+### Acciones de investigación proyectos
 
 
 
-
-Además la tabla podrá ser filtrada por año y por nombre.
-
-
-
-![Captura de acciones de investigación - tab documentos](./images/screenshots/acciones-investigacion-documentos.png)
+La tabla podrá ser filtrada por año y por nombre.
 
 
 
-### Proyectos
+![Captura de acciones de investigación - tab documentos](./images/screenshots/acciones-investigacion-proyectos.png)
 
-En esta sección de acciones de transferencia se podrán ver los proyectos filtrados por nombre y por ámbito.
 
-![Captura de acciones de investigación - tab proyectos](./images/screenshots/acciones-investigacion-proyectos.png)
+
+### Acciones de investigación - patentes
+
+En esta sección de acciones de investigación se podrán ver las patentes filtradas por nombre y por ámbito.
+
+![Captura de acciones de investigación - tab proyectos](./images/screenshots/acciones-investigacion-patentes.png)
 
 
 
@@ -242,27 +244,33 @@ La información se muestra agrupada en tres secciones (tabs) :
 
   
 
-### Información general
+### Información general -patentes
 
 
 
-![Captura de detalle de acciones de investigación - tab información](./images/screenshots/detalle-acciones-investigacion-informacion.png)
+![Captura de detalle de acciones de investigación - tab información](./images/screenshots/detalle-acciones-investigacion-patentes.png)
 
 
 
-### Participantes
+### Información general -proyectos
+
+![Captura de detalle de acciones de investigación - tab información](./images/screenshots/detalle-acciones-investigacion-proyecto.png)
 
 
 
-![Captura de detalle de acciones de investigación - tab participantes](./images/screenshots/detalle-acciones-investigacion-participantes.png)
+### Información general -participantes en un proyecto
 
 
 
-### Entregables
+![Captura de detalle de acciones de investigación - tab participantes](./images/screenshots/detalle-acciones-investigacion-participantes-proyecto.png)
 
 
 
-![Captura de detalle de acciones de investigación - tab entregables](./images/screenshots/detalle-acciones-investigacion-entregables.png)
+### Información general - entregables en un proyecto
+
+
+
+![Captura de detalle de acciones de investigación - tab entregables](./images/screenshots/detalle-acciones-investigacion-entregables-proyecto.png)
 
 
 
