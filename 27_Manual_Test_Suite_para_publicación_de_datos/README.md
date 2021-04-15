@@ -17,7 +17,7 @@ Desde el punto de vista del cumplimento LDP, [Trellis](https://github.com/trelli
 
 Para evaluar el cumplimiento de dichos requisitos de primera mano, se ha usado el [LDP Test Suit](https://dvcs.w3.org/hg/ldpwg/raw-file/default/tests/ldp-testsuite.html), creado exprofeso por la LDP, para evaluar el nivel de cumplimiento.
 
-Los resultados, y las causas de los *"errores"* en los test, están descritos de forma exhaustiva en el documento [Analisis de Test LDP (caso de uso Trellis).md](./Analisis%20de%20Test%20LDP%20(caso%20de%20uso%20Trellis).md)
+Los resultados, y las causas de los *"errores"* en los test, están descritos de forma exhaustiva en el documento [Test Suite para publicación de datos ](../26-Test_suite_para_publicación_de_datos/README.md)
 
 **Comentarios sobre resultados de test**
 
