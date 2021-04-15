@@ -1,4 +1,4 @@
-# Pruebas de carga
+# Pruebas de rendimiento
 
 
 
@@ -7,6 +7,18 @@
 [2. Metodología](#metodología)
 
 [2. Tipos de pruebas](#tipos-de-pruebas)
+
+[2.1. Pruebas de carga](#pruebas-de-carga)
+
+[2.2. Pruebas de estrés](#pruebas-de-estrés)
+
+[2.2. Pruebas de estabilidad](#pruebas-de-estabilidad)
+
+[2.2. Pruebas de pico](#pruebas-de-pico)
+
+[3. Anexo](#anexo)
+
+[3.1. Endpoints](#endpoints)
 
 
 
@@ -61,7 +73,7 @@ De cara a la realización de las pruebas se realizarán las siguientes fases:
 
 
 
-### Prueba de Carga
+### Pruebas de Carga
 
 
 Permitirá observar el comportamiento del sistema bajo una cantidad esperada de peticiones. Esta carga puede ser el número esperado de usuarios concurrentes, utilizando la aplicación y realizando un número determinado de acciones, durante un tiempo establecido.
@@ -70,7 +82,7 @@ Esta prueba puede mostrar los **tiempos de respuesta** de cada una de las accion
 
 
 
-### Pruebas de Carga sobre el API
+#### Pruebas de Carga sobre el API
 
 Sobre los distintos endpoints detallados en el Anexo se configurarán llamadas mediante JMeter. Dichas llamadas simularán el flujo de un usuario realizando consultas a través del frontal:
 
@@ -102,7 +114,7 @@ Con la información obtenida en cada una de las pruebas se podrá pintar una gr�
 
 
 
-### Pruebas de Carga sobre el Importadores
+#### Pruebas de Carga sobre el Importadores
 
 
 Para las pruebas de carga de los importadores se ejecutarán tres importaciones consecutivas
@@ -115,13 +127,13 @@ Importación 3: Importará 300 elementos
 
 
 
-# Prueba de Estrés
+### Pruebas de Estrés
 
 Las pruebas de estrés se utilizan para &quot;romper&quot; el sistema. Se irá doblando el número de usuarios que se agregan a la aplicación, ejecutando las pruebas hasta que se detecte la rotura del sistema. Con este tipo de prueba se podrá determinar la solidez del sistema en momentos de carga máxima
 
 
 
-### Pruebas de Estrés sobre el API
+#### Pruebas de Estrés sobre el API
 
 Sobre los distintos endpoints detallados en el Anexo se configurarán llamadas mediante JMeter. Dichas llamadas simularán el flujo de un usuario realizando consultas a través del frontal:
 
@@ -149,7 +161,7 @@ Se obtendrá una tabla con los siguientes parámetros
 
 
 
-### Pruebas de Estrés sobre el Importadores
+#### Pruebas de Estrés sobre el Importadores
 
 Para las pruebas de carga de los importadores se ejecutarán sucesivas importaciones en las que se irá duplicando el número de datos, así como aumentando la concurrencia de las importaciones
 
@@ -161,13 +173,13 @@ Importación 3: Cuatro importadores con 400 elementos cada uno
 
 
 
-# Prueba de Estabilidad
+### Pruebas de Estabilidad
 
 Las pruebas de estabilidad se realizarán para comprobar si el sistema puede soportar una carga esperada continuada. Son útiles para determinar, por ejemplo, si hay alguna fuga de memoria.
 
 
 
-### Pruebas de Estabilidad sobre el API
+#### Pruebas de Estabilidad sobre el API
 
 Sobre los distintos endpoints detallados en el Anexo se configurarán llamadas mediante JMeter. Dichas llamadas simularán el flujo de un usuario realizando consultas a través del frontal:
 
@@ -195,18 +207,18 @@ Se obtendrá una tabla con los siguientes parámetros
 
 
 
-### Pruebas de Estabilidad sobre el Importadores
+#### Pruebas de Estabilidad sobre el Importadores
 
 Se concatenarán sucesivas importaciones en un periodo de 4 horas, durante este periodo, cada una de las importaciones a lanzar cargará un total de 200 registros.
 
 
-# Prueba de Pico
+### Pruebas de Pico
 
 Como su nombre indica las pruebas de pico sirven para observar el comportamiento del sistema variando el número de usuarios, tanto cuando bajan como cuando tiene cambios drásticos en su carga.
 
 
 
-### Pruebas de Pico sobre el API
+#### Pruebas de Pico sobre el API
 
 Como en las anteriores pruebas cada usuario (hilo) realizará las siguientes acciones:
 
@@ -234,14 +246,14 @@ Se obtendrá una tabla con los siguientes parámetros
 
 
 
-### Pruebas de Pico sobre el Importadores
+#### Pruebas de Pico sobre el Importadores
 
 Para las pruebas de pico en los importadores, se configurarán en un periodo de tiempo determinado hasta un máximo de 4 importaciones simultaneas, así como momentos en que sólo se realice una importación.
 
 
-# Anexo
+## Anexo
 
-# Endpoints
+### Endpoints
 
 - article-Article
 - book-Book
