@@ -18,7 +18,9 @@
 
 [3. Resultados de las pruebas](#resultados-de-las-pruebas)
 
-[3.1. Resultados de las pruebas de carga](#resultados-de-las-pruebas-de-carga)
+[3.1. Configuración de jMeter](#configuración-de-jmeter)
+
+[3.2. Resultados de las pruebas de carga](#resultados-de-las-pruebas-de-carga)
 
 [4. Anexo](#anexo)
 
@@ -264,7 +266,7 @@ Para las pruebas de pico en los importadores, se configurarán en un periodo de 
 
 ### Configuración de Jmeter
 
-Se han establecido una serie de llamadas agrupadas por sección de la web, todas estas secciones corresponden con pantallas que hacen llamadas a servicios consultas SPARQL. Se han configurado las llamadas de las siguientes pantallas:
+Se han establecido una serie de llamadas agrupadas por sección de la web, todas estas secciones corresponden con pantallas que hacen llamadas a servicios consultas SPARQL. Se han configurado las llamadas a las apis que se realizan en las siguientes pantallas:
 
 - Estructuras de investigación:
   - Detalle de una estructura de investigación.
@@ -293,11 +295,69 @@ En esta otra imagen, se pueden ver las llamadas configuradas en algunas de estas
 
 ![Detalle de grupos en jMeter](./img/jmeter/list-detail.JPG)
 
+
+
 ## Resultados de las pruebas de Carga
 
 
 
+Se han configurado, tal y como se explica en el apartado [pruebas de carga sobre el API](#pruebas-de-carga-sobre-el-api), los siguientes parámetros:
 
+- Número de hilos (usuarios): 100
+- Ramp-up period: 1 segundo
+- Loop count: 15
+- Se ha marcado la casilla "Especify threat lifetime" para limitar el tiempo que se va a estar ejecutando el hilo y se han marcado los valores:
+  - Duration:  900 seconds
+  - Startup delay: 0 seconds
+
+![Configuración del hilo para los test de carga de la API](./img/jmeter/threat-test-carga.JPG)
+
+
+
+
+
+Los resultados han sido satisfactorios, ya que, tras las pruebas de carga, en las imagenes que se muestran a continuación se puede observar que las llamadas se han podido ejecutar satisfactoriamente, de una forma bastante estable.
+
+![Resultados de los test de carga en la gráfica](./img/jmeter/grafica-test-carga.png)
+
+
+
+![Resultados de los test de carga en la tabla](./img/jmeter/tabla-test-carga.JPG)
+
+
+
+Los resultados obtenidos se pueden ver en la siguiente tabla:
+
+
+
+| Label                                 | # Samples | Average | Min  | Max   | Std. Dev. | Error %  | Throughput | Received KB/sec | Sent KB/sec | Avg. Bytes |
+| ------------------------------------- | --------- | ------- | ---- | ----- | --------- | -------- | ---------- | --------------- | ----------- | ---------- |
+| /api/university/quality               | 494       | 2700    | 279  | 21038 | 2221.39   | 0.607%   | .55543     | 0.87            | 0.34        | 1596.0     |
+| /api/university/financing             | 494       | 2853    | 631  | 21047 | 2044.54   | 0.202%   | .54623     | 0.85            | 0.33        | 1590.7     |
+| /api/organization/search              | 983       | 3757    | 410  | 21062 | 3020.10   | 1.119%   | 1.09177    | 2.81            | 0.68        | 2638.0     |
+| /api/organization/-1/T3JnYW5pemF0aW9u | 491       | 3449    | 286  | 21054 | 3271.32   | 1.018%   | .55067     | 0.23            | 0.39        | 423.5      |
+| /api/person/area                      | 959       | 3169    | 216  | 21055 | 2691.58   | 0.626%   | 1.07583    | 1.93            | 0.69        | 1837.7     |
+| /api/academicpublication/search       | 2758      | 3403    | 175  | 21327 | 2770.58   | 0.979%   | 3.09199    | 9.82            | 2.17        | 3251.6     |
+| /api/project/search                   | 2638      | 3648    | 173  | 21060 | 2795.51   | 1.099%   | 2.94302    | 11.34           | 1.90        | 3944.5     |
+| /api/document/search                  | 2744      | 3532    | 199  | 21064 | 2853.48   | 0.729%   | 3.09382    | 8.55            | 2.10        | 2830.6     |
+| /api/patent/area                      | 1326      | 3154    | 121  | 21058 | 2626.04   | 0.679%   | 1.48941    | 0.60            | 0.94        | 415.0      |
+| /api/patent/search                    | 2613      | 3325    | 210  | 21057 | 2049.81   | 0.459%   | 2.96469    | 5.81            | 1.94        | 2006.0     |
+| /api/researchstaff/search             | 1343      | 3472    | 312  | 22289 | 2639.33   | 0.670%   | 1.55977    | 1.19            | 1.02        | 780.3      |
+| /main/categories/scientist/1          | 467       | 743     | 43   | 21058 | 3340.84   | 1.071%   | .54542     | 0.67            | 0.36        | 1252.9     |
+| /api/otherpublication/search          | 1796      | 3445    | 557  | 22578 | 2971.31   | 0.835%   | 2.11013    | 5.07            | 1.35        | 2459.8     |
+| /api/event/search                     | 1785      | 3621    | 513  | 21711 | 3000.23   | 0.840%   | 2.10303    | 5.62            | 1.29        | 2734.5     |
+| /api/booksection/search/              | 1326      | 3093    | 489  | 21068 | 2787.52   | 0.528%   | 1.60681    | 1.22            | 1.12        | 777.3      |
+| /api/document/M-21543-97/Qm9vaw==     | 441       | 2998    | 564  | 21061 | 2624.16   | 1.134%   | .53723     | 0.38            | 0.37        | 732.9      |
+| /api/event/48/Q29uZmVyZW5jZQ==        | 432       | 3373    | 834  | 21050 | 2533.57   | 0.694%   | .54725     | 0.41            | 0.37        | 772.9      |
+| /api/project/byModality               | 843       | 3139    | 485  | 21044 | 2332.54   | 0.356%   | 1.07206    | 1.66            | 0.65        | 1586.7     |
+| /api/patent/1                         | 414       | 2894    | 822  | 10400 | 1116.52   | 0.000%   | .53708     | 0.35            | 0.32        | 671.0      |
+| /api/project/1                        | 405       | 3506    | 871  | 22632 | 2750.71   | 0.988%   | .54669     | 0.39            | 0.34        | 732.7      |
+| /api/person/search                    | 405       | 4279    | 1475 | 22210 | 2487.22   | 0.741%   | .54688     | 1.71            | 0.34        | 3201.8     |
+| /api/statistics/topPatents            | 402       | 4327    | 1477 | 21858 | 2623.24   | 100.000% | .54959     | 0.38            | 0.33        | 701.6      |
+| openid-configuration                  | 400       | 336     | 42   | 21053 | 2061.21   | 0.500%   | .55355     | 0.67            | 0.10        | 1243.4     |
+| token                                 | 400       | 3230    | 297  | 21058 | 5610.65   | 5.000%   | .54999     | 2.08            | 0.19        | 3876.4     |
+| sparql                                | 397       | 6725    | 958  | 25774 | 5377.59   | 5.038%   | .54936     | 0.39            | 1.33        | 732.4      |
+| TOTAL                                 | 26756     | 3368    | 42   | 25774 | 2900.90   | 2.377%   | 29.37105   | 61.66           | 19.58       | 2149.8     |
 
 
 
