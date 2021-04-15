@@ -16,9 +16,13 @@
 
 [2.2. Pruebas de pico](#pruebas-de-pico)
 
-[3. Anexo](#anexo)
+[3. Resultados de las pruebas](#resultados-de-las-pruebas)
 
-[3.1. Endpoints](#endpoints)
+[3.1. Resultados de las pruebas de carga](#resultados-de-las-pruebas-de-carga)
+
+[4. Anexo](#anexo)
+
+[4.1. Endpoints](#endpoints)
 
 
 
@@ -249,6 +253,52 @@ Se obtendrá una tabla con los siguientes parámetros
 #### Pruebas de Pico sobre el Importadores
 
 Para las pruebas de pico en los importadores, se configurarán en un periodo de tiempo determinado hasta un máximo de 4 importaciones simultaneas, así como momentos en que sólo se realice una importación.
+
+
+
+
+
+## Resultados de las pruebas
+
+
+
+### Configuración de Jmeter
+
+Se han establecido una serie de llamadas agrupadas por sección de la web, todas estas secciones corresponden con pantallas que hacen llamadas a servicios consultas SPARQL. Se han configurado las llamadas de las siguientes pantallas:
+
+- Estructuras de investigación:
+  - Detalle de una estructura de investigación.
+- Personal investigador:
+  - Detalle de personal invertigador.
+- Producción científica:
+  - Detalle de un documento.
+- Producción científica:
+  - Detalle de un evento.
+- Acciones de investigación:
+  - Detalle de una patente.
+- Acciones de investigación:
+  - Detalle de un proyecto.
+- Estadísticas.
+- SPARQL.
+
+
+
+En la siguiente imagen se pueden ver estas categorías en el árbol de Jmeter:
+
+![Grupos en jMeter](./img/jmeter/list.JPG)
+
+
+
+En esta otra imagen, se pueden ver las llamadas configuradas en algunas de estas categorías en el árbol de Jmeter y la configuración de una de ellas:
+
+![Detalle de grupos en jMeter](./img/jmeter/list-detail.JPG)
+
+## Resultados de las pruebas de Carga
+
+
+
+
+
 
 
 ## Anexo
