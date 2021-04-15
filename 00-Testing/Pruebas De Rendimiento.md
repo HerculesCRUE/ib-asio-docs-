@@ -460,7 +460,9 @@ Se han configurado, tal y como se explica en el apartado [pruebas de estabilidad
 
 
 
-En las siguientes imágenes se peuden ver los resultados con 400 usuarios, que en este caso es al que han fallado servicios con valores entre un 20% de fallos y un 45% de fallos en los servicios, dado que las consultas SPARQL con las que se realizan las pruebas son un tanto complejas:
+En las siguientes imágenes se pueden ver los resultados en gráfica y tabla. Se puede observar que los resultados se mantienen en una estabilidad en la tabla y que el porcentaje de error es inferior a un 1% en su mayoría.
+
+
 
 ![Resultados de los test de carga en la gráfica](./img/jmeter/grafica-test-estabilidad.png)
 
@@ -471,6 +473,33 @@ En las siguientes imágenes se peuden ver los resultados con 400 usuarios, que e
 
 
 Los resultados obtenidos se pueden ver en la siguiente tabla:
+
+| Label                                 | # Samples | Average | Min  | Max   | Std. Dev. | Error %  | Throughput | Received KB/sec | Sent KB/sec | Avg. Bytes |
+| ------------------------------------- | --------- | ------- | ---- | ----- | --------- | -------- | ---------- | --------------- | ----------- | ---------- |
+| /api/university/quality               | 1500      | 824     | 85   | 21051 | 2182.20   | 0.400%   | .50804     | 0.79            | 0.31        | 1593.3     |
+| /api/university/financing             | 1500      | 1085    | 110  | 21060 | 2442.06   | 100.000% | .50784     | 0.35            | 0.31        | 698.8      |
+| /api/organization/search              | 3000      | 855     | 109  | 21055 | 2132.44   | 0.600%   | 1.01447    | 2.61            | 0.63        | 2636.6     |
+| /api/organization/-1/T3JnYW5pemF0aW9u | 1500      | 746     | 102  | 21058 | 2066.85   | 0.533%   | .50779     | 0.20            | 0.36        | 411.4      |
+| /api/person/area                      | 3000      | 719     | 118  | 21054 | 2057.25   | 0.500%   | 1.00509    | 1.92            | 0.64        | 1955.8     |
+| /api/academicpublication/search       | 9000      | 796     | 132  | 21062 | 2176.29   | 0.522%   | 2.96096    | 9.41            | 2.09        | 3253.2     |
+| /api/project/search                   | 9000      | 806     | 134  | 21068 | 2114.83   | 0.578%   | 2.92102    | 11.27           | 1.89        | 3949.9     |
+| /api/document/search                  | 9000      | 822     | 150  | 21058 | 2207.38   | 0.678%   | 2.97148    | 8.21            | 2.01        | 2830.5     |
+| /api/patent/area                      | 4500      | 730     | 96   | 21051 | 2206.93   | 0.600%   | 1.47089    | 4.06            | 0.92        | 2823.5     |
+| /api/patent/search                    | 9000      | 797     | 117  | 21059 | 2228.35   | 0.667%   | 2.93179    | 6.26            | 1.91        | 2185.0     |
+| /api/researchstaff/search             | 4500      | 1030    | 259  | 21066 | 2145.20   | 0.511%   | 1.46791    | 4.28            | 0.96        | 2983.6     |
+| /main/categories/scientist/1          | 1500      | 332     | 43   | 21053 | 1943.41   | 0.467%   | .50893     | 0.62            | 0.33        | 1242.8     |
+| /api/otherpublication/search          | 6000      | 776     | 132  | 21060 | 2139.83   | 0.633%   | 2.00276    | 4.81            | 1.28        | 2458.9     |
+| /api/event/search                     | 6000      | 875     | 156  | 21054 | 2351.90   | 0.700%   | 2.00240    | 5.35            | 1.23        | 2734.2     |
+| /api/booksection/search/              | 4500      | 842     | 110  | 21066 | 2520.60   | 0.733%   | 1.52065    | 1.16            | 1.06        | 781.7      |
+| /api/document/M-21543-97/Qm9vaw==     | 1500      | 845     | 130  | 21061 | 2603.41   | 1.200%   | .50843     | 0.36            | 0.35        | 734.4      |
+| /api/event/48/Q29uZmVyZW5jZQ==        | 1500      | 694     | 110  | 21046 | 2015.86   | 0.467%   | .51044     | 0.38            | 0.35        | 768.0      |
+| /api/project/byModality               | 3000      | 643     | 101  | 21056 | 1848.94   | 0.433%   | 1.01261    | 1.68            | 0.62        | 1695.3     |
+| /api/patent/1                         | 1500      | 792     | 100  | 21051 | 2367.31   | 0.667%   | .51075     | 0.34            | 0.30        | 685.9      |
+| /api/project/1                        | 1500      | 705     | 116  | 21053 | 1767.91   | 0.400%   | .51035     | 0.36            | 0.32        | 719.8      |
+| /api/person/search                    | 1500      | 1100    | 354  | 21046 | 1804.27   | 0.267%   | .51046     | 1.54            | 0.32        | 3093.5     |
+| token                                 | 1500      | 4771    | 281  | 21063 | 6664.66   | 8.467%   | .51064     | 1.91            | 0.17        | 3835.8     |
+| sparql                                | 1500      | 1623    | 92   | 21057 | 3525.87   | 9.733%   | .51193     | 0.38            | 1.20        | 767.6      |
+| TOTAL                                 | 87000     | 891     | 43   | 21068 | 2427.23   | 2.607%   | 27.90746   | 66.24           | 18.87       | 2430.6     |
 
 
 
@@ -493,7 +522,7 @@ Se han configurado, tal y como se explica en el apartado [pruebas de pico sobre 
 
 
 
-En las siguientes imágenes se peuden ver los resultados en gráfica y tabla. Se puede observar que los resultados se mantienen en una estabilidad en la tabla y que el porcentaje de error es inferior a un 1% en su mayoría.
+En las siguientes imágenes se pueden ver los resultados en gráfica y tabla. Se puede observar que los resultados se mantienen en una estabilidad en la tabla y que el porcentaje de error es inferior a un 1% en su mayoría.
 
 ![Resultados de los test de carga de pico en la gráfica](./img/jmeter/grafica-test-pico.png)
 
