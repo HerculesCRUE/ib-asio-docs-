@@ -451,14 +451,12 @@ Se han configurado, tal y como se explica en el apartado [pruebas de estabilidad
 - Ramp-up period: 1 segundo
 - Loop count: 15
 - Se ha marcado la casilla "Especify threat lifetime" para limitar el tiempo que se va a estar ejecutando el hilo y se han marcado los valores:
-  - Duration:  900 seconds
+  - Duration:  7200 seconds
   - Startup delay: 0 seconds
 
 
 
 ![Configuración del hilo para los test de carga de la API](./img/jmeter/threat-test-estabilidad.JPG)
-
-
 
 
 
@@ -491,25 +489,50 @@ Se han configurado, tal y como se explica en el apartado [pruebas de pico sobre 
 
 
 
-
-
 ![Configuración del hilo para los test de carga de la API](./img/jmeter/threat-test-pico.JPG)
 
 
 
+En las siguientes imágenes se peuden ver los resultados en gráfica y tabla. Se puede observar que los resultados se mantienen en una estabilidad en la tabla y que el porcentaje de error es inferior a un 1% en su mayoría.
 
-
-En las siguientes imágenes se peuden ver los resultados con 400 usuarios, que en este caso es al que han fallado servicios con valores entre un 20% de fallos y un 45% de fallos en los servicios, dado que las consultas SPARQL con las que se realizan las pruebas son un tanto complejas:
-
-![Resultados de los test de carga en la gráfica](./img/jmeter/grafica-test-estabilidad.png)
+![Resultados de los test de carga de pico en la gráfica](./img/jmeter/grafica-test-pico.png)
 
 
 
-![Resultados de los test de carga en la tabla](./img/jmeter/tabla-test-estabilidad.JPG)
+![Resultados de los test de carga de pico en la tabla](./img/jmeter/tabla-test-pico.JPG)
 
 
 
 Los resultados obtenidos se pueden ver en la siguiente tabla:
+
+
+
+| Label                                 | # Samples | Average | Min  | Max   | Std. Dev. | Error % | Throughput | Received KB/sec | Sent KB/sec | Avg. Bytes |
+| ------------------------------------- | --------- | ------- | ---- | ----- | --------- | ------- | ---------- | --------------- | ----------- | ---------- |
+| /api/university/quality               | 932       | 1061    | 85   | 21056 | 2736.44   | 0.751%  | .51756     | 0.81            | 0.31        | 1597.9     |
+| /api/university/financing             | 929       | 799     | 83   | 21057 | 2309.42   | 0.323%  | .51662     | 0.80            | 0.32        | 1592.3     |
+| /api/organization/search              | 1852      | 930     | 107  | 21057 | 2296.75   | 0.864%  | 1.03292    | 2.66            | 0.64        | 2637.3     |
+| /api/organization/-1/T3JnYW5pemF0aW9u | 926       | 756     | 97   | 21028 | 1884.83   | 0.324%  | .51743     | 0.21            | 0.37        | 406.1      |
+| /api/person/area                      | 1835      | 930     | 118  | 21054 | 2481.15   | 0.599%  | 1.02583    | 1.84            | 0.65        | 1837.5     |
+| /api/academicpublication/search       | 5400      | 943     | 131  | 21057 | 2312.12   | 0.370%  | 3.01335    | 9.57            | 2.13        | 3253.7     |
+| /api/project/search                   | 5260      | 882     | 133  | 21072 | 1915.71   | 0.266%  | 2.94337    | 11.36           | 1.91        | 3953.2     |
+| /api/document/search                  | 5395      | 999     | 154  | 21057 | 2429.43   | 0.556%  | 3.03127    | 8.38            | 2.06        | 2830.4     |
+| /api/patent/area                      | 2645      | 749     | 96   | 21064 | 1960.72   | 0.340%  | 1.48840    | 3.93            | 0.94        | 2703.7     |
+| /api/patent/search                    | 5254      | 862     | 117  | 21050 | 1940.21   | 0.419%  | 2.96051    | 6.25            | 1.93        | 2161.5     |
+| /api/researchstaff/search             | 2656      | 1392    | 276  | 21057 | 2511.71   | 0.602%  | 1.50866    | 4.56            | 0.98        | 3092.9     |
+| /main/categories/scientist/1          | 906       | 563     | 42   | 21053 | 2803.16   | 0.993%  | .52101     | 0.64            | 0.34        | 1251.6     |
+| /api/otherpublication/search          | 3568      | 934     | 131  | 21052 | 2463.34   | 0.673%  | 2.04898    | 4.92            | 1.31        | 2459.0     |
+| /api/event/search                     | 3554      | 972     | 154  | 21058 | 2501.65   | 0.760%  | 2.04592    | 5.46            | 1.26        | 2734.3     |
+| /api/booksection/search/              | 2673      | 932     | 108  | 21066 | 2510.72   | 0.599%  | 1.55593    | 1.18            | 1.09        | 778.8      |
+| /api/document/M-21543-97/Qm9vaw==     | 892       | 979     | 134  | 21048 | 2752.89   | 0.785%  | .52015     | 0.37            | 0.36        | 725.3      |
+| /api/event/48/Q29uZmVyZW5jZQ==        | 874       | 702     | 113  | 21030 | 1656.16   | 0.114%  | .52020     | 0.39            | 0.35        | 760.5      |
+| /api/project/byModality               | 1724      | 743     | 100  | 21054 | 1944.25   | 0.580%  | 1.02695    | 1.59            | 0.62        | 1589.7     |
+| /api/patent/1                         | 859       | 652     | 101  | 21043 | 1534.80   | 0.349%  | .51687     | 0.34            | 0.30        | 678.8      |
+| /api/project/1                        | 842       | 949     | 123  | 21048 | 2161.05   | 0.356%  | .51383     | 0.36            | 0.32        | 718.8      |
+| /api/person/search                    | 840       | 1279    | 343  | 21059 | 2151.42   | 0.595%  | .51333     | 1.61            | 0.32        | 3202.2     |
+| token                                 | 836       | 4618    | 277  | 21068 | 6782.50   | 8.014%  | .51094     | 1.92            | 0.17        | 3841.1     |
+| sparql                                | 832       | 1930    | 91   | 21046 | 3345.59   | 8.534%  | .51236     | 0.37            | 1.21        | 744.4      |
+| TOTAL                                 | 51484     | 1003    | 42   | 21072 | 2482.43   | 0.765%  | 28.49969   | 67.80           | 19.28       | 2436.2     |
 
 
 
