@@ -388,7 +388,7 @@ Se van duplicando el valor del número de hilos conforme se van ejecutando los t
 
 
 
-![Configuración del hilo para los test de carga de la API](./img/jmeter/threat-test-carga.JPG)
+![Configuración del hilo para los test de carga de la API](./img/jmeter/threat-test-estres.JPG)
 
 
 
