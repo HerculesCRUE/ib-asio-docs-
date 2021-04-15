@@ -305,6 +305,10 @@ Sobrecada una de las apis se ha añadido un timer aleatorio con máximo 3 segund
 
 
 
+Se ha dejado el fichero creado para pruebas en el repositorio en el siguiente [link](./test jMeter ASIO.jmx).
+
+
+
 ## Resultados de las pruebas de Carga
 
 
