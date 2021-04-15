@@ -5,7 +5,7 @@
 | Fecha          | 15/04/2021                                                   |
 | Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://www.crue.org/proyecto/hercules/) |
 | Módulo         | Manual Test Suite para publicación de datos                 |
-| Tipo           | Software                                                     |
+| Tipo           | Documento                                                     |
 | Objetivo       | Manual Test Suite para publicación de datos  |
 | Estado         | **100%**  |
 
