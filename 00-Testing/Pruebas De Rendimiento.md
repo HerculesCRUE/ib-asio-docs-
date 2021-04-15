@@ -435,6 +435,80 @@ Los resultados obtenidos se pueden ver en la siguiente tabla:
 
 
 
+
+
+## Resultados de las pruebas de Estabilidad
+
+
+
+Se han configurado, tal y como se explica en el apartado [pruebas de estabilidad sobre el API](#pruebas-de-estabilidad-sobre-el-api), los siguientes parámetros:
+
+- Número de hilos (usuarios): 100
+- Ramp-up period: 1 segundo
+- Loop count: 15
+- Se ha marcado la casilla "Especify threat lifetime" para limitar el tiempo que se va a estar ejecutando el hilo y se han marcado los valores:
+  - Duration:  900 seconds
+  - Startup delay: 0 seconds
+
+
+
+![Configuración del hilo para los test de carga de la API](./img/jmeter/threat-test-estabilidad.JPG)
+
+
+
+
+
+En las siguientes imágenes se peuden ver los resultados con 400 usuarios, que en este caso es al que han fallado servicios con valores entre un 20% de fallos y un 45% de fallos en los servicios, dado que las consultas SPARQL con las que se realizan las pruebas son un tanto complejas:
+
+![Resultados de los test de carga en la gráfica](./img/jmeter/grafica-test-estabilidad.png)
+
+
+
+![Resultados de los test de carga en la tabla](./img/jmeter/tabla-test-estabilidad.JPG)
+
+
+
+Los resultados obtenidos se pueden ver en la siguiente tabla:
+
+
+
+## Resultados de las pruebas de Pico
+
+
+
+Se han configurado, tal y como se explica en el apartado [pruebas de pico sobre el API](#pruebas-de-pico-sobre-el-api), los siguientes parámetros:
+
+- Número de hilos (usuarios): 100
+- Ramp-up period: 1 segundo
+- Loop count: 15
+- Se ha marcado la casilla "Especify threat lifetime" para limitar el tiempo que se va a estar ejecutando el hilo y se han marcado los valores:
+  - Duration:  1800 seconds
+  - Startup delay: 0 second
+
+
+
+
+
+![Configuración del hilo para los test de carga de la API](./img/jmeter/threat-test-pico.JPG)
+
+
+
+
+
+En las siguientes imágenes se peuden ver los resultados con 400 usuarios, que en este caso es al que han fallado servicios con valores entre un 20% de fallos y un 45% de fallos en los servicios, dado que las consultas SPARQL con las que se realizan las pruebas son un tanto complejas:
+
+![Resultados de los test de carga en la gráfica](./img/jmeter/grafica-test-estabilidad.png)
+
+
+
+![Resultados de los test de carga en la tabla](./img/jmeter/tabla-test-estabilidad.JPG)
+
+
+
+Los resultados obtenidos se pueden ver en la siguiente tabla:
+
+
+
 ## Anexo
 
 ### Endpoints
