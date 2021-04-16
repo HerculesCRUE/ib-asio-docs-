@@ -49,7 +49,7 @@ Relación de entregables adicionales del proyecto.
 | [00-Análisis](./00-An%C3%A1lisis)                    | N/A     | Actual       |
 | [00-Arquitectura](./00-Arquitectura/architecture.md) | N/A     | Actual       |
 | [00-Testing](./00-Testing/testing.md)                | N/A     | Actual       |
-| [00-Pruebas Rendimiento](./00-Testing/Pruebas De Rendimiento.md)                | N/A     | Actual       |
+| [00-Pruebas Rendimiento](./00-Testing/Pruebas%20De%20Rendimiento.md)                | N/A     | Actual       |
 
 ## 3. Repositorios
 
