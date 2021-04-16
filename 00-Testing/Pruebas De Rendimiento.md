@@ -1,3 +1,5 @@
+![](./img/logos_feder.png)
+
 # Pruebas de rendimiento
 
 
