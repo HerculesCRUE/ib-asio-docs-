@@ -20,7 +20,13 @@
 
 [3.1. Configuración de jMeter](#configuración-de-jmeter)
 
-[3.2. Resultados de las pruebas de carga](#resultados-de-las-pruebas-de-carga)
+[3.2. Resultados de las pruebas de carga de la API](#resultados-de-las-pruebas-de-carga-de-la-API)
+
+[3.2. Resultados de las pruebas de estrés de la API](#resultados-de-las-pruebas-de-estrés-de-la-API)
+
+[3.2. Resultados de las pruebas de estabilidad de la API](#resultados-de-las-pruebas-de-estabilidad-de-la-API)
+
+[3.2. Resultados de las pruebas de pico de la API](#resultados-de-las-pruebas-de-pico-de-la-API)
 
 [4. Anexo](#anexo)
 
@@ -309,7 +315,7 @@ Se ha dejado el fichero creado para pruebas en el repositorio en el siguiente [l
 
 
 
-## Resultados de las pruebas de Carga
+## Resultados de las pruebas de Carga de la API
 
 
 
@@ -373,7 +379,7 @@ Los resultados obtenidos se pueden ver en la siguiente tabla:
 
 
 
-## Resultados de las pruebas de Estrés
+## Resultados de las pruebas de Estrés de la API
 
 
 
@@ -441,7 +447,7 @@ Los resultados obtenidos se pueden ver en la siguiente tabla:
 
 
 
-## Resultados de las pruebas de Estabilidad
+## Resultados de las pruebas de Estabilidad de la API
 
 
 
@@ -503,7 +509,7 @@ Los resultados obtenidos se pueden ver en la siguiente tabla:
 
 
 
-## Resultados de las pruebas de Pico
+## Resultados de las pruebas de Pico de la API
 
 
 
