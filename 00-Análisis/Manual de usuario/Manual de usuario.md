@@ -93,11 +93,7 @@ java -jar -Dspring.batch.job.names=importCvnJob {jar-name}.jar
 
 Para acceder a la máquina de Trellis se necesita usuario y contraseña de la UM y se accede a través de la URL:
 
-`http://herc-iz-front-desa.atica.um.es/`
-
-
-
-
+`https://ldp.herculesasioizertis.desa.um.es/`
 
 
 
@@ -116,7 +112,7 @@ Al pulsar sobre cualquiera de las entradas, se muestra el detalle:
 # Wikibase
 
 A través de la plataforma de Wikibase podemos acceder también a los datos importados:
-`http://herc-iz-front-desa.atica.um.es:8181/`
+`http://wb.herculesasioizertis.desa.um.es/`
 
 
 
@@ -132,7 +128,9 @@ Se pueden ver los detalles pulsando sobre estos datos, o sobre los resultados de
 
 
 
-A través de las consultas SparQL también se podrán obtener los datos que nos interesen.
+A través de las consultas SparQL también se podrán obtener los datos que nos interesen:
+
+`http://wbquery.herculesasioizertis.desa.um.es/`
 
 ![arquitectura](./images/consulta-wikibase.png)
 
