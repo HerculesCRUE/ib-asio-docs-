@@ -89,6 +89,20 @@ java -jar -Dspring.batch.job.names=importCvnJob {jar-name}.jar
 
 
 
+## Importador SGI
+
+El importador de SGI importa los datos a partir de unos servicios implementados por el protocolo OAI-PMH.
+
+El repositorio de este servicio se puede consultar en [oah-pmh](https://github.com/HerculesCRUE/oai-pmh). El proceso que hay que lanzar para iniciar el procesado de estos ficheros es: 
+
+```
+java -jar -Dspring.batch.job.names=importOaipmhJob {jar-name}.jar
+```
+
+
+
+
+
 # Trellis
 
 Para acceder a la máquina de Trellis se necesita usuario y contraseña de la UM y se accede a través de la URL:
