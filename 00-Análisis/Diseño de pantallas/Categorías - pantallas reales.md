@@ -22,6 +22,18 @@
 
 [2.3.1  Detalle de personal investigador](#detalle-de-personal-investigador)
 
+[2.4.  Áreas](#areas)
+
+[2.5.  Producción científica](#producción científica)
+
+[2.5.1.  Detalle de producción científica](#detalle-de-producción científica)
+
+[2.6.  Estadísticas](#estadísticas)
+
+[2.6.1. Detalle de acción  de investigación](#detalle-de-acción-de-investigación)
+
+
+
 
 
 
@@ -342,3 +354,90 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 
 ![Captura de personal investigador](./images/screenshots/detalle-personal-investigador-trayectoria.png)
 
+
+
+
+
+## Áreas
+
+
+
+En esta pantalla se muestra información sobre los datos del módulo vertical "áreas de conocimiento".
+
+
+
+![Captura áreas](./images/screenshots/areas.png)
+
+
+
+## Producción científica
+
+
+
+Se muestran los documentos y los eventos de investigaciones.
+
+
+
+### Producción científica - publicaciones científicas
+
+
+
+![Publicaciones científicas](./images/screenshots/produccion-cientifica-publicaciones-cientificas.png)
+
+
+
+
+
+### Producción científica - publicaciones académicas
+
+
+
+![Publicaciones académicas](./images/screenshots/produccion-cientifica-publicaciones-academicas.png)
+
+
+
+
+
+### Producción científica - otras publicaciones
+
+
+
+![Otros publicaciones](./images/screenshots/produccion-cientifica-otros-documentos.png)
+
+
+
+
+
+### Producción científica - eventos
+
+
+
+![Eventos](./images/screenshots/produccion-cientifica-eventos.png)
+
+
+
+## Detalle de producción científica
+
+
+
+### Detalle de producción científica - documentos
+
+
+
+![Captura de personal investigador](./images/screenshots/detalle-produccion-cientifica-documentos.png)
+
+
+
+### Detalle de producción científica - eventos
+
+
+
+![Captura de personal investigador](./images/screenshots/detalle-produccion-cientifica-eventos.png)
+
+
+
+## Estadísticas
+
+
+
+![Estadisticas](./images/screenshots/estadisticas.png)
