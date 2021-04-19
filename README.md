@@ -1,86 +1,595 @@
 ![](./images/logos_feder.png)
 
-# Almacenamiento y entrega de documentación
+| Entregable     | Métricas FAIR                                                |
+| -------------- | ------------------------------------------------------------ |
+| Fecha          | 16/04/2020                                                   |
+| Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](http://www.crue.org/SitePages/ProyectoHercules.aspx) |
+| Módulo         | Infraestructura Ontológica                                   |
+| Tipo           | Software y resultados                                        |
+| Objetivo       | Evaluar el cumplimiento de las métricas FAIR definidas en el documento de [Análisis de métodos FAIR](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/entregables_hito_1/05-An%C3%A1lisis_de_m%C3%A9todos_FAIR/ASIO_Izertis_AnalisisDeMetodosFAIR.md) sobre el proyecto ASIO, tanto a nivel de ontología como de conjuntos de datos. A partir de dicha evaluación se generan gráficas de nivel de cumplimiento por áreas e indicadores individuales de forma automática para su posterior integración en páginas web y/o informes. |
+| Estado         | **100%** La evaluación de los indicadores se ha realizado completamente y el software permite generar las gráficas necesarias, incluyendo pruebas unitarias pertinentes. La automatización cubre el 100% de las métricas. |
+| Próximos pasos | Finalizado                                                   |
+| Documentación  | [Manual de usuario](manual_usuario.md)<br />[Manual de despliegue](manual_despliegue.md)<br />[Documentación técnica](manual_tecnico.md) |
 
-[1. Entregables oficiales](#1-entregables-oficiales)
+## Métricas FAIR
 
-[2. Otros entregables](#2-otros-entregables)
+La evaluación de indicadores de realiza de forma individual y se agrupa por áreas FAIR (FINDABLE, ACCESIBLE, INTEROPERABLE y REUSABLE).
 
-[3. Repositorios](#3-repositorios)
+El resultado de la evaluación por indicadores individuales se muestra a continuación:
 
-## 1. Entregables oficiales
+![](./plots/levels_plot.png)
 
-Relación de entregables oficiales del proyecto en su estado actual.
+El resultado de la evaluación por áreas sería el siguiente:
 
-| Documentación                                                | Pruebas                                                      | Repositorios                                                 |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [01-Red de Ontologías Hércules](./01-Red_de_Ontologías_Hércules/ASIO_Red_de_Ontologias_Hercules.md) |                                                              | [ib-hercules-ontology](https://github.com/HerculesCRUE/ib-hercules-ontology) |
-| [02 y 14-Especificación Ontologías Hércules](./02-Especificación_Ontologías_Hércules/ASIO_Izertis_EspecificacionOntologiasHercules.md) | N/A                                                          | [ib-hercules-ontology](https://github.com/HerculesCRUE/ib-hercules-ontology) |
-| [03-Conversión de recursos a OWL](./03-Conversión_de_recursos_a_OWL/ASIO_Izertis_ConversionDeRecursosAOWL.md) |                                                              | -                                                            |
-| [04-Modelo multilingüismo](./04-Modelo_multilingüismo/ASIO_Izertis_ModeloMultilinguismo.md) | N/A                                                          | -                                                            |
-| [05-Análisis de métodos FAIR](./05-Análisis_de_métodos_FAIR/ASIO_Izertis_AnalisisDeMetodosFAIR.md) | N/A                                                          | -                                                            |
-| [06-Métricas FAIR](./06-Métricas_FAIR/README.md)             | [test-fair](./06-M%C3%A9tricas_FAIR/manual_tecnico.md#pruebas-unitarias) | -                                                            |
-| [07-Control de versiones OWL](./07-Control_de_versiones_OWL/ASIO_Izertis_ControlDeVersionesOWL.md) |                                                              | [ib-hercules-sync](https://github.com/HerculesCRUE/ib-hercules-sync) |
-| [08 y 19-Esquema de URIs Hércules](./08-Esquema_de_URIs_Hércules/ASIO_Izertis_ArquitecturaDeURIs.md) | N/A                                                          | -                                                            |
-| [09-Buenas prácticas para URIs Hércules](./09-Buenas_prácticas_para_URIs_Hércules/ASIO_Izertis_BuenasPracticasParaURIsHercules.md) | N/A                                                          | -                                                            |
-| [10-Librería Factoría de URIs](https://github.com/HerculesCRUE/ib-uris-generator) | [Testing TDD](https://reports.herculesasioizertis.desa.um.es/uris-generator/surefire/surefire-report.html)<br/>[Cobertura TDD](https://reports.herculesasioizertis.desa.um.es/uris-generator/jacoco/)<br/>[Testing BDD](https://github.com/HerculesCRUE/ib-uris-generator/blob/master/docs/testing.md) | [ib-uris-generator](https://github.com/HerculesCRUE/ib-uris-generator) |
-| [11-Benchmark con criterios adicionales y resultados](https://github.com/HerculesCRUE/ib-benchmarks) | [Test Unitarios](https://github.com/HerculesCRUE/ib-benchmarks/blob/master/test.md) | [ib-benchmarks](https://github.com/HerculesCRUE/ib-benchmarks) |
-| [12-Análisis sobre necesidad de cumplimiento LDP](./12-Análisis_sobre_necesidad_de_cumplimiento_LDP/Analisis_sobre_la_necesidad_de_cumplimiento_LDP.md) | N/A                                                          | -                                                            |
-| 13 y 16-Backend SGI Software<br />[Arquitectura](./00-Arquitectura/architecture.md),<br /> [Importador](https://github.com/HerculesCRUE/ib-dataset-importer), [Procesador](https://github.com/HerculesCRUE/ib-input-processor),<br /> [Sistema de gestión](https://github.com/HerculesCRUE/ib-management-system),<br /> [Procesador de eventos](https://github.com/HerculesCRUE/ib-event-processor),<br /> [Servicio de publicación web](https://github.com/HerculesCRUE/ib-web-publication-backend),<br /> [Librería de conexión con Triple Store](https://github.com/HerculesCRUE/ib-triples-storage-adapter),<br /> [Librería de descubrimiento](https://github.com/HerculesCRUE/ib-discovery),<br /> [Modelo de dominio](https://github.com/HerculesCRUE/ib-dataset-domain-model),<br /> [Proyecto ETL](https://github.com/HerculesCRUE/ib-dataset-etl),<br /> [Docker Pentaho](https://github.com/HerculesCRUE/ib-pentaho-docker),<br /> [Plataforma Linked Data](https://github.com/HerculesCRUE/ib-asio-ldp), <br />[Documentación despliegue en entorno de desarrollo](https://github.com/HerculesCRUE/ib-asio-composeset/blob/master/README.md)<br /> | <br />[Testing dataset importer](https://reports.herculesasioizertis.desa.um.es/dataset-importer/surefire/surefire-report.html),<br />[Cobertura dataset importer](https://reports.herculesasioizertis.desa.um.es/dataset-importer/jacoco/),<br /><br />[Testing input processor](https://reports.herculesasioizertis.desa.um.es/input-processor/surefire/surefire-report.html)<br />[Cobertura input processor](https://reports.herculesasioizertis.desa.um.es/input-processor/jacoco/)<br /><br />[Testing event processor](https://reports.herculesasioizertis.desa.um.es/event-processor/surefire/surefire-report.html)<br />[Cobertura event processor](https://reports.herculesasioizertis.desa.um.es/event-processor/jacoco/)<br /><br />[Testing triples storage adapter](https://reports.herculesasioizertis.desa.um.es/triples-storage-adapter/surefire/surefire-report.html)<br />[Cobertura triples storage adapter](https://reports.herculesasioizertis.desa.um.es/triples-storage-adapter/jacoco/)<br /><br />[Testing management system](https://reports.herculesasioizertis.desa.um.es/management-system/surefire/surefire-report.html)<br />[Cobertura management system](https://reports.herculesasioizertis.desa.um.es/management-system/jacoco/)<br /><br />[Testing web-publication-service](https://sonarcloud.io/component_measures?id=HerculesCRUE_ib-web-publication-service&metric=coverage&view=list)<br />[Testing web-publication-backend](https://reports.herculesasioizertis.desa.um.es/web-publication-backend/surefire/surefire-report.html)<br />[Cobertura web-publication-backend](https://sonarcloud.io/component_measures?id=HerculesCRUE_ib-web-publication-backend&metric=coverage&view=list)<br /><br /> | [ib-asio-ldp](https://github.com/HerculesCRUE/ib-asio-ldp),<br />[ib-dataset-importer](https://github.com/HerculesCRUE/ib-dataset-importer),<br /> [ib-dataset-domain-model](https://github.com/HerculesCRUE/ib-dataset-domain-model), <br />[ib-input-processor](https://github.com/HerculesCRUE/ib-input-processor), <br />[ib-domain-model](https://github.com/HerculesCRUE/ib-domain-model), <br />[ib-event-processor](https://github.com/HerculesCRUE/ib-event-processor), <br />[ib-triples-storage-adapter](https://github.com/HerculesCRUE/ib-triples-storage-adapter), <br />[ib-management-system](https://github.com/HerculesCRUE/ib-management-system), <br />[ib-pentaho-docker](https://github.com/HerculesCRUE/ib-pentaho-docker), <br />[ib-fuseki-docker](https://github.com/HerculesCRUE/ib-fuseki-docker), <br />[ib-wikibase-docker](https://github.com/HerculesCRUE/ib-wikibase-docker),<br /> [ib-web-publication-service](https://github.com/HerculesCRUE/ib-web-publication-service),<br /> [ib-web-publication-backend](https://github.com/HerculesCRUE/ib-web-publication-backend), <br />[ib-simulator-importer](https://github.com/HerculesCRUE/ib-simulator-importer),<br /> [ib-dataset-etl](https://github.com/HerculesCRUE/ib-dataset-etl), <br />[ib-asio-abstractions](https://github.com/HerculesCRUE/ib-asio-abstractions), <br />[ib-asio-composeset](https://github.com/HerculesCRUE/ib-asio-composeset)<br />[ib-api-exchange](https://github.com/HerculesCRUE/ib-api-exchange) |
-| [15-Ejemplos reales de aplicación de razonamiento automático](./15-Ejemplos_reales_de_aplicación_de_razonamiento_automático/README.md)  |                                                              | -                                                            |
-| [17-Manual de uso Backend SGI](./00-Análisis/Manual%20de%20usuario/Manual%20de%20usuario.md)                              |                                                              | -                                                            |
-| 18-Imágenes Docker de Backend SGI                            |                                                              | [ib-pentaho-docker](https://github.com/HerculesCRUE/ib-pentaho-docker), <br />[ib-wikibase-docker](https://github.com/HerculesCRUE/ib-wikibase-docker),<br />[ib-fuseki-docker](https://github.com/HerculesCRUE/ib-fuseki-docker),<br />[ib-web-publication-service](https://hub.docker.com/r/herculescrue/web-publication-service), <br />[ib-web-publication-backend](https://hub.docker.com/r/herculescrue/web-publication-backend), <br />[ib-discovery](https://hub.docker.com/r/herculescrue/discovery), <br />[ib-federation](https://hub.docker.com/r/herculescrue/federation), <br />[ib-uris-generator](https://hub.docker.com/r/herculescrue/uris-generator), <br />[ib-asio-ldp](https://hub.docker.com/r/herculescrue/asio-ldp), <br />[ib-dataset-importer](https://hub.docker.com/r/herculescrue/dataset-importer), <br />[ib-triples-storage-adapter](https://hub.docker.com/r/herculescrue/triples-storage-adapter), <br />[ib-service-discovery](https://hub.docker.com/r/herculescrue/service-discovery), <br />[ib-event-processor](https://hub.docker.com/r/herculescrue/event-processor), <br />[ib-input-processor](https://hub.docker.com/r/herculescrue/input-processor), <br />[ib-management-system](https://hub.docker.com/r/herculescrue/management-system), <br />[ib-api-exchange](https://hub.docker.com/r/herculescrue/api-exchange), <br />[ib-pdi](https://hub.docker.com/r/herculescrue/pdi), <br />[ib-simulator-importer](https://hub.docker.com/r/herculescrue/simulator-importer) |
-| 20-Resultados Benchmark                                      | N/A                                                          | [ib-benchmarks](https://github.com/HerculesCRUE/ib-benchmarks) |
-| [21-Librería de conexión a Triple Store](https://github.com/HerculesCRUE/ib-triples-storage-adapter/blob/master/README.md) |                                                              | [ib-triples-storage-adapter](https://github.com/HerculesCRUE/ib-triples-storage-adapter) |
-| [22-Librería de conversión a RDF](https://github.com/HerculesCRUE/ib-management-system)                              |   [Testing](https://reports.herculesasioizertis.desa.um.es/management-system/surefire/surefire-report.html)<br />[Cobertura](https://reports.herculesasioizertis.desa.um.es/management-system/jacoco/)<br />                                                           | [ib-management-system](https://github.com/HerculesCRUE/ib-management-system)                                                            |
-| [23-Librería de validación de RDF](./23-Librer%C3%ADa_de_validación_de_RDF/README.md)                             |                                                              | [https://github.com/HerculesCRUE/ib-hercules-rdf-validator-back](https://github.com/HerculesCRUE/ib-hercules-rdf-validator-back) [https://github.com/HerculesCRUE/ib-hercules-rdf-validator-client](https://github.com/HerculesCRUE/ib-hercules-rdf-validator-client)                                                            |
-| [24-Librería de descubrimiento](./24-Librería_de_descubrimiento/ASIO_Libreria_de_descubrimiento.md) | [Testing](https://reports.herculesasioizertis.desa.um.es/discovery/surefire/surefire-report.html)<br />[Cobertura](https://reports.herculesasioizertis.desa.um.es/discovery/jacoco/) | [ib-discovery](https://github.com/HerculesCRUE/ib-discovery) |
-| [25-Librería de publicación](https://github.com/HerculesCRUE/ib-web-publication-backend/blob/master/README.md)  | [Testing](https://reports.herculesasioizertis.desa.um.es/web-publication-backend/surefire/surefire-report.html)<br />[Cobertura](https://sonarcloud.io/component_measures?id=HerculesCRUE_ib-web-publication-backend&metric=coverage&view=list)<br />                                                             | [ib-web-publication-backend](https://github.com/HerculesCRUE/ib-web-publication-backend)                                                         |
-| [26-Test suite para publicación de datos](./26-Test_suite_para_publicación_de_datos/README.md) |                                                              | -                                                            |
-| [27 Manual Test Suite para publicación de datos](./27_Manual_Test_Suite_para_publicación_de_datos/README.md) | N/A                                                          | -                                                            |
-| [28-Material de formación](https://www.um.es/web/hercules/proyectos/asio/formacion/izertis) | N/A                                                          | [Sesiones de Formacion](https://www.um.es/web/hercules/proyectos/asio/formacion/izertis)                                                            |                                                        | -                                                            |
+![](./plots/radar_plot.png)
 
-## 2. Otros entregables
+De forma general, la conclusión de la evaluación FAIR es bastante positiva, dado que por la naturaleza del proyecto ASIO, la mayoría de indicadores se cumplen de-facto, por el uso de tecnologías de linked data 5 estrellas (OWL, SKOS, HTTP, RDF, etc).
 
-Relación de entregables adicionales del proyecto.
+En los siguientes apartados se detalla la evaluación de cada uno de los indicadores.
 
-| Documentación                                        | Pruebas | Repositorios |
-| ---------------------------------------------------- | ------- | ------------ |
-| [00-Análisis](./00-An%C3%A1lisis)                    | N/A     | Actual       |
-| [00-Arquitectura](./00-Arquitectura/architecture.md) | N/A     | Actual       |
-| [00-Testing](./00-Testing/testing.md)                | N/A     | Actual       |
-| [00-Pruebas Rendimiento](./00-Testing/Pruebas%20De%20Rendimiento.md)                | N/A     | Actual       |
+### Control de versiones
 
-## 3. Repositorios
+**Versión de la evaluación**: 2.0
 
-Relación de repositorios del proyecto y versiones (tags o releases) asociadas.
+**Sello de tiempo:** 16/04/2021 10:23:33.000
 
-| Repositorio                                                  | Descripción                                                  | **Hito 1** (05/2020)                                         | **Hito 1.1** (09/2020)                                       | **Hito 1.2** (12/2020)                                       | Hito 2 (03/2020) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---------------- |
-| [ib-asio-docs-](https://github.com/HerculesCRUE/ib-asio-docs-) | Almacenamiento y entrega de documentación                    | [v1.0](https://github.com/HerculesCRUE/ib-asio-docs-/tree/v1.0) |                                                              | -                                                            |                  |
-| [ib-hercules-ontology](https://github.com/HerculesCRUE/ib-hercules-ontology) | Development of the ontology for the Hercules project         | [v1.0.1](https://github.com/HerculesCRUE/ib-hercules-ontology/releases/tag/v1.0.1) | -                                                            | -                                                            |                  |
-| [ib-shex-lite](https://github.com/HerculesCRUE/ib-shex-lite) | Shape Expression Lite Language                               | -                                                            | [v1.1](https://github.com/HerculesCRUE/ib-shex-lite/tree/v1.1) | -                                                            |                  |
-| [ib-hercules-sync](https://github.com/HerculesCRUE/ib-hercules-sync) | Tools to synchronise data between the ontology files and Wikibase instance | -                                                            | [v1.0](https://github.com/HerculesCRUE/ib-hercules-sync/tree/v1.0) | -                                                            |                  |
-| [ib-benchmarks](https://github.com/HerculesCRUE/ib-benchmarks) | Benchmark propio para evaluar el mejor sistema de almacenamiento | [v1.0.0](https://github.com/HerculesCRUE/ib-benchmarks/tree/v1.0.0) | -                                                            | -                                                            |                  |
-| [ib-asio-ldp](https://github.com/HerculesCRUE/ib-asio-ldp)   | Plataforma Linked Data basada en Trellis LDP                 | [1.0-SNAPSHOT](https://github.com/HerculesCRUE/ib-asio-ldp/tree/1.0-SNAPSHOT) | -                                                            | -                                                            |                  |
-| [ib-dataset-importer](https://github.com/HerculesCRUE/ib-dataset-importer) | Importador de datos del Dataset de Universidad de Murcia     | [1.0-SNAPSHOT](https://github.com/HerculesCRUE/ib-dataset-importer/tree/1.0-SNAPSHOT) | -                                                            | [1.2-SNAPSHOT](https://github.com/HerculesCRUE/ib-dataset-importer/tree/1.2-SNAPSHOT) |                  |
-| [ib-dataset-domain-model](https://github.com/HerculesCRUE/ib-dataset-domain-model) | Modelo de dominio del Data set de Universidad de Murcia      | [1.0-SNAPSHOT](https://github.com/HerculesCRUE/ib-dataset-domain-model/tree/1.0-SNAPSHOT) | -                                                            | [1.2-SNAPSHOT](https://github.com/HerculesCRUE/ib-dataset-domain-model/tree/1.2-SNAPSHOT) |                  |
-| [ib-input-processor](https://github.com/HerculesCRUE/ib-input-processor) | Procesador de datos del módulo de entrada                    | [1.0-SNAPSHOT](https://github.com/HerculesCRUE/ib-input-processor/tree/1.0-SNAPSHOT) | -                                                            | [1.2-SNAPSHOT](https://github.com/HerculesCRUE/ib-input-processor/tree/1.2-SNAPSHOT) |                  |
-| [ib-domain-model](https://github.com/HerculesCRUE/ib-domain-model) | Modelo de dominio                                            | [1.0-SNAPSHOT](https://github.com/HerculesCRUE/ib-domain-model/tree/1.0-SNAPSHOT) | -                                                            | [1.2-SNAPSHOT](https://github.com/HerculesCRUE/ib-domain-model/tree/1.2-SNAPSHOT) |                  |
-| [ib-event-processor](https://github.com/HerculesCRUE/ib-event-processor) | Procesador de eventos del módulo de procesamiento            | [1.0-SNAPSHOT](https://github.com/HerculesCRUE/ib-event-processor/tree/1.0-SNAPSHOT	) | [1.1-SNAPSHOT](https://github.com/HerculesCRUE/ib-event-processor/tree/1.1-SNAPSHOT) | [1.2-SNAPSHOT](https://github.com/HerculesCRUE/ib-event-processor/tree/1.2-SNAPSHOT) |                  |
-| [ib-triples-storage-adapter](https://github.com/HerculesCRUE/ib-triples-storage-adapter) | Storage adapter para el almacenamiento de tripletas          | [1.0-SNAPSHOT](https://github.com/HerculesCRUE/ib-triples-storage-adapter/tree/1.0-SNAPSHOT) | [1.1-SNAPSHOT](https://github.com/HerculesCRUE/ib-triples-storage-adapter/tree/1.1-SNAPSHOT) | [1.2-SNAPSHOT](https://github.com/HerculesCRUE/ib-triples-storage-adapter/tree/1.2-SNAPSHOT) |                  |
-| [ib-management-system](https://github.com/HerculesCRUE/ib-management-system) | Sistema de gestión de datos del módulo de procesamiento      | [1.0-SNAPSHOT](https://github.com/HerculesCRUE/ib-management-system/tree/1.0-SNAPSHOT) | [1.1-SNAPSHOT](https://github.com/HerculesCRUE/ib-management-system/tree/1.1-SNAPSHOT) | [1.2-SNAPSHOT](https://github.com/HerculesCRUE/ib-management-system/tree/1.2-SNAPSHOT) |                  |
-| [ib-pentaho-docker](https://github.com/HerculesCRUE/ib-pentaho-docker) | Generación de imagen de Docker para Pentaho Data Integration versión 9.0 | [1.0](https://github.com/HerculesCRUE/ib-pentaho-docker/tree/1.0) | -                                                            | -                                                            |                  |
-| [ib-fuseki-docker](https://github.com/HerculesCRUE/ib-fuseki-docker) | Servidor SPARQL 1.1                                          | [1.0](https://github.com/HerculesCRUE/ib-fuseki-docker/tree/1.0) | -                                                            | -                                                            |                  |
-| [ib-discovery](https://github.com/HerculesCRUE/ib-discovery) | Librería de descubrimiento                                   | [1.0-SNAPSHOT](https://github.com/HerculesCRUE/ib-discovery/tree/1.0-SNAPSHOT) | [v1.1-SNAPSHOT](https://github.com/HerculesCRUE/ib-discovery/tree/v1.1-SNAPSHOT) | [v1.2.0](https://github.com/HerculesCRUE/ib-discovery/tree/v1.2.0) |                  |
-| [ib-wikibase-docker](https://github.com/HerculesCRUE/ib-wikibase-docker) | Generación de imagen Docker para Wikibase                    | [1.0](https://github.com/HerculesCRUE/ib-wikibase-docker/tree/1.0) | -                                                            | -                                                            |                  |
-| [ib-web-publication-service](https://github.com/HerculesCRUE/ib-web-publication-service) | Arquetipo para el Front desarrollado en Angular              | -                                                            | [1.0-SNAPSHOT](https://github.com/HerculesCRUE/ib-web-publication-service/tree/1.0-SNAPSHOT) | [1.2-SNAPSHOT](https://github.com/HerculesCRUE/ib-web-publication-service/tree/1.2-SNAPSHOT) |                  |
-| [ib-web-publication-backend](https://github.com/HerculesCRUE/ib-web-publication-backend) | Arquetipo Java para API Rest con base de datos relacional    | -                                                            | -                                                            | [1.2-SNAPSHOT](https://github.com/HerculesCRUE/ib-web-publication-backend/tree/1.2-SNAPSHOT) |                  |
-| [ib-simulator-importer](https://github.com/HerculesCRUE/ib-simulator-importer) | Importador de datos simulados                                | [1.0-SNAPSHOT](https://github.com/HerculesCRUE/ib-simulator-importer/tree/1.0-SNAPSHOT) | -                                                            | [1.2-SNAPSHOT](https://github.com/HerculesCRUE/ib-simulator-importer/tree/1.2-SNAPSHOT) |                  |
-| [ib-dataset-etl](https://github.com/HerculesCRUE/ib-dataset-etl) | Proyecto ETL                                                 | [1.0-SNAPSHOT](https://github.com/HerculesCRUE/ib-dataset-etl/releases/tag/1.0-SNAPSHOT) | -                                                            | [v1.2.0](https://github.com/HerculesCRUE/ib-dataset-etl/releases/tag/v1.2.0) |   [1.3-SNAPSHOT](https://github.com/HerculesCRUE/ib-dataset-etl/releases/tag/1.3-SNAPSHOT)                |
-| [ib-uris-generator](https://github.com/HerculesCRUE/ib-uris-generator) | Factoría de URIs                                             | [v.1.0.0](https://github.com/HerculesCRUE/ib-uris-generator/releases/tag/v1.0.0) | [v.1.1.0](https://github.com/HerculesCRUE/ib-uris-generator/tree/v1.1.0) | -                                                            |                  |
-| [ib-asio-abstractions](https://github.com/HerculesCRUE/ib-asio-abstractions) | Definición de clases y constantes comunes                    | [1.0-SNAPSHOT](https://github.com/HerculesCRUE/ib-asio-abstractions/tree/1.0-SNAPSHOT	) | [1.1-SNAPSHOT](https://github.com/HerculesCRUE/ib-asio-abstractions/tree/1.1-SNAPSHOT) | [1.2-SNAPSHOT](https://github.com/HerculesCRUE/ib-asio-abstractions/tree/1.2-SNAPSHOT) |                  |
-| [ib-asio-composeset](https://github.com/HerculesCRUE/ib-asio-composeset) | Despliegue en entorno de desarrollo para la Universidad de Murcia | -                                                            | -                                                            | -                                                            |                  |
-| [ib-api-exchange](https://github.com/HerculesCRUE/ib-api-exchange) | Sistema de gestión de datos del módulo de procesamiento para el proyecto Backend SGI (ASIO) | -                                                            | -                                                            | [1.2-SNAPSHOT](https://github.com/HerculesCRUE/ib-api-exchange/tree/1.2-SNAPSHOT) |                  |
-| [ib-hercules-rdf-validator-back](https://github.com/HerculesCRUE/ib-hercules-rdf-validator-back) | Librería de validación de RDF | -                                                            | -                                                            | - |                  |
-| [ib-hercules-rdf-validator-client](https://github.com/HerculesCRUE/ib-hercules-rdf-validator-client) | Cliente web de la librería de validación de RDF | -                                                            | -                                                            | - |                  |
+### Automatización de métricas
+
+La automatización cubre el 100% de las métricas.
+
+Para cada indicador descrito en los siguientes apartados se especifica los siguientes niveles:
+
+​	0 – No automatizable
+
+​	1 – En proceso de automatización
+
+​	2 – Automatizada
+
+### FINDABLE
+
+A continuación se describen los criterios de evaluación y resultados de los 7 indicadores FINDABLE, todos ellos de prioridad *essential*. 
+
+Todos los criterios se cumplen, por lo que la evaluación de este área es de nivel 5.
+
+#### RDA-F1-01M - Metadata is identified by a persistent identifier
+
+**Equivalencia FAIR**: F1
+
+**Prioridad RDA**: Essential
+
+**Evaluación**: 4 – Cumple totalmente
+
+Todos los datos y metadatos están identificados mediante URIs PURL ([http://purl.org](http://purl.org))
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-F1-01D - Data is identified by a persistent identifier
+
+**Equivalencia FAIR**: F1
+
+**Prioridad RDA**: Essential
+
+**Evaluación**: 4 – Cumple totalmente
+
+Todos los datos y metadatos están identificados mediante URIs PURL ([http://purl.org](http://purl.org))
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-F1-02M - Metadata is identified by a globally unique identifier
+
+**Equivalencia FAIR**: F1
+
+**Prioridad RDA**: Essential
+
+**Evaluación**: 4 – Cumple totalmente
+
+Todos los datos y metadatos están identificados mediante URIs PURL ([http://purl.org](http://purl.org))
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-F1-02D - Data is identified by a globally unique identifier
+
+**Equivalencia FAIR**: F1
+
+**Prioridad RDA**: Essential
+
+**Evaluación**: 4 – Cumple totalmente
+
+Todos los datos y metadatos están identificados mediante URIs PURL ([http://purl.org](http://purl.org))
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-F2-01M - Rich metadata is provided to allow discovery
+
+**Equivalencia FAIR**: F2
+
+**Prioridad RDA**: Essential
+
+**Evaluación**: 4 – Cumple totalmente
+
+Se proveen metadatos tanto a nivel de ontología como de los datos importados (OWL/SKOS, Wikibase, Trellis y Memento), si bien es necesario mejorar aspectos menores que mejoren la capacidad de descubrimiento.
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-F3-01M - Metadata includes the identifier for the data
+
+**Equivalencia FAIR**: F3
+
+**Prioridad RDA**: Essential
+
+**Evaluación**: 4 – Cumple totalmente
+
+Los metadatos incluyen referencias expícitas a los datos que describen.
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-F4-01M - Metadata is offered in such a way that it can be harvested and indexed
+
+**Equivalencia FAIR**: F4
+
+**Prioridad RDA**: Essential
+
+**Evaluación**: 4 – Cumple totalmente
+
+Los datos y metadatos están publicados mediante un grafo linked data 5 estrellas (HTTP/LDP).
+
+**Automatización:** 2 – Automatizada
+
+Los datos y metadatos insertados en cualquier triple store, están indexados por diseño del triple store. El proceso busca para el el servidor SPARQL, que este la antología y en caso de que para las todas tripletas de la ontologia este definido el Objecto, que es el que actua como indice en el grafo, entonces asume que es correcto.
+
+### ACCESIBLE
+
+A continuación se describen los criterios de evaluación y resultados de los 12 indicadores ACCESIBLE, de los cuales son 8 *essential*, 3 *important* y 1 *useful*. 
+
+Se cumplen todos los indicadores, por lo que el nivel de este área es 5.
+
+#### RDA-A1-01M - Metadata contains information to enable the user to get access to the data
+
+**Equivalencia FAIR**: A1
+
+**Prioridad RDA**: Important
+
+**Evaluación**: 4 – Cumple totalmente
+
+Se describe a nivel de metadatos el mecanismo de autenticación y autorización para poder tener acceso a los datos.
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-A1-02M - Metadata can be accessed manually (i.e. with human intervention)
+
+**Equivalencia FAIR**: A1
+
+**Prioridad RDA**: Essential
+
+**Evaluación**: 4 – Cumple totalmente
+
+Los datos y metadatos están publicados mediante un grafo linked data 5 estrellas (HTTP/LDP).
+
+**Automatización**: 0 – No automatizable
+
+El requisito especifica que los datos pueden ser accedidos de forma manual (con intervención humana), por lo que se preveía una evaluación manual para el hito 2, pero finalmente se realiza mediante un proceso automático que lee los datos de el frontal de Trellis, en HTML, y en caso de estar publicados se entiende que pueden ser accedidos manualmente.
+
+#### RDA-A1-02D - Data can be accessed manually (i.e. with human intervention)
+
+**Equivalencia FAIR**: A1
+
+**Prioridad RDA**: Essential
+
+**Evaluación**: 4 – Cumple totalmente
+
+Los datos y metadatos están publicados mediante un grafo linked data 5 estrellas (HTTP/LDP).
+
+**Automatización**: 0 – No automatizable
+
+El requisito especifica que los datos pueden ser accedidos de forma manual (con intervención humana), por lo que se preveía una evaluación manual para el hito 2, pero finalmente se realiza mediante un proceso automático que lee los datos de el frontal de Trellis, en HTML, y en caso de estar publicados se entiende que pueden ser accedidos manualmente.
+
+#### RDA-A1-03M - Metadata identifier resolves to a metadata record
+
+**Equivalencia FAIR**: A1
+
+**Prioridad RDA**: Essential
+
+**Evaluación**: 4 – Cumple totalmente
+
+Los datos y metadatos están publicados mediante un grafo linked data 5 estrellas (HTTP/LDP).
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-A1-03D - Data identifier resolves to a digital object
+
+**Equivalencia FAIR**: A1
+
+**Prioridad RDA**: Essential
+
+**Evaluación**: 4 – Cumple totalmente
+
+Los datos y metadatos están publicados mediante un grafo linked data 5 estrellas (HTTP/LDP).
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-A1-04M - Metadata is accessed through standardised protocol
+
+**Equivalencia FAIR**: A1
+
+**Prioridad RDA**: Essential
+
+**Evaluación**: 4 – Cumple totalmente
+
+Los datos y metadatos están publicados mediante un grafo linked data 5 estrellas (HTTP/LDP).
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-A1-04D - Data is accessible through standardised protocol
+
+**Equivalencia FAIR**: A1
+
+**Prioridad RDA**: Essential
+
+**Evaluación**: 4 – Cumple totalmente
+
+Los datos y metadatos están publicados mediante un grafo linked data 5 estrellas (HTTP/LDP).
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-A1-05D - Data can be accessed automatically (i.e. by a computer program)
+
+**Equivalencia FAIR**: A1
+
+**Prioridad RDA**: Important
+
+**Evaluación**: 4 – Cumple totalmente
+
+Los datos y metadatos están publicados mediante un grafo linked data 5 estrellas (HTTP/LDP).
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-A1.1-01M - Metadata is accessible through a free access protocol
+
+**Equivalencia FAIR**: A1
+
+**Prioridad RDA**: Essential
+
+**Evaluación**: 4 – Cumple totalmente
+
+Los datos y metadatos están publicados mediante un grafo linked data 5 estrellas (HTTP/LDP).
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-A1.1-01D - Data is accessible through a free access protocol
+
+**Equivalencia FAIR**: A1
+
+**Prioridad RDA**: Important
+
+**Evaluación**: 4 – Cumple totalmente
+
+Los datos y metadatos están publicados mediante un grafo linked data 5 estrellas (HTTP/LDP).
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-A1.2-02D - Data is accessible through an access protocol that supports authentication and authorisation
+
+**Equivalencia FAIR**: A1
+
+**Prioridad RDA**: Useful
+
+**Evaluación**: 4 – Cumple totalmente
+
+Los datos y metadatos están publicados mediante un grafo linked data 5 estrellas (HTTP/LDP).
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-A2-01M - Metadata is guaranteed to remain available after data is no longer available
+
+**Equivalencia FAIR**: A2
+
+**Prioridad RDA**: Essential
+
+**Evaluación**: 4 – Cumple totalmente
+
+La combinación de Trellis y Memento permite llevar un registro histórico de modificaciones que garantiza que los metadatos pervivan más allá del ciclo de vida del dato asociado.
+
+**Automatización**: 2 – Automatizada
+
+### INTEROPERABLE
+
+A continuación se describen los criterios de evaluación y resultados de los 12 indicadores INTEROPERABLE, de los cuales son 7 *important*, 5 *useful* y ninguno *essential*.
+
+Todos los criterios se cumplen, por lo que la evaluación de este área es de nivel 5.
+
+#### RDA-I1-01M - Metadata uses knowledge representation expressed in standardised format
+
+**Equivalencia FAIR**: I1
+
+**Prioridad RDA**: Important
+
+**Evaluación**: 4 – Cumple totalmente
+
+Los datos y metadatos están expresado mediante tecnología linked data (OWL, SKOS, DC, RDF, etc).
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-I1-01D - Data uses knowledge representation expressed in standardised format
+
+**Equivalencia FAIR**: I1
+
+**Prioridad RDA**: Important
+
+**Evaluación**: 4 – Cumple totalmente
+
+Los datos y metadatos están expresado mediante tecnología linked data (OWL, SKOS, DC, RDF, etc).
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-I1-02M - Metadata uses machine-understandable knowledge representation
+
+**Equivalencia FAIR**: I1
+
+**Prioridad RDA**: Important
+
+**Evaluación**: 4 – Cumple totalmente
+
+Los datos y metadatos están expresado mediante tecnología linked data (OWL, SKOS, DC, RDF, etc).
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-I1-02D - Data uses machine-understandable knowledge representation
+
+**Equivalencia FAIR**: I1
+
+**Prioridad RDA**: Important
+
+**Evaluación**: 4 – Cumple totalmente
+
+Los datos y metadatos están expresado mediante tecnología linked data (OWL, SKOS, DC, RDF, etc).
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-I2-01M - Metadata uses FAIR-compliant vocabularies
+
+**Equivalencia FAIR**: I2
+
+**Prioridad RDA**: Important
+
+**Evaluación**: 4 – Cumple totalmente
+
+Los datos y metadatos están expresado mediante tecnología linked data (OWL, SKOS, DC, RDF, etc).
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-I2-01D - Data uses FAIR-compliant vocabularies
+
+**Equivalencia FAIR**: I2
+
+**Prioridad RDA**: Useful
+
+**Evaluación**: 4 – Cumple totalmente
+
+Los datos y metadatos están expresado mediante tecnología linked data (OWL, SKOS, DC, RDF, etc).
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-I3-01M - Metadata includes references to other metadata
+
+**Equivalencia FAIR**: I3
+
+**Prioridad RDA**: Important
+
+**Evaluación**: 4 – Cumple totalmente
+
+La ontología referencia otras ontologías, como por ejemplo [PROV-O](https://www.w3.org/TR/prov-o/).
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-I3-01D - Data includes references to other data
+
+**Equivalencia FAIR**: I3
+
+**Prioridad RDA**: Useful
+
+**Evaluación**: 4 – Cumple totalmente
+
+Se referencian datos externos, como por ejemplo el uso de DOIs para enlazar documentos y artículos de investigación.
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-I3-02M - Metadata includes references to other data
+
+**Equivalencia FAIR**: I3
+
+**Prioridad RDA**: Useful
+
+**Evaluación**: 4 – Cumple totalmente
+
+*This indicator is about the way metadata is connected to other data, for example linking to previous or related research data that provides additional context to the data. Please note that this is not about the link from the metadata to the data it describes; that link is considered in principle F3 and in indicator RDA-F3-01M.*
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-I3-02D - Data includes qualified references to other data
+
+**Equivalencia FAIR**: I3
+
+**Prioridad RDA**: Useful
+
+**Evaluación**: 4 – Cumple totalmente
+
+*This  indicator is about the way data is connected to other data. The references  need to be qualified which means that the relationship role of the related  resource is specified, for example that a particular link is a specification  of a unit of measurement, or the identification of the sensor with which the  measurement was done.*
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-I3-02M - Metadata includes qualified references to other metadata
+
+**Equivalencia FAIR**: I3
+
+**Prioridad RDA**: Important
+
+**Evaluación**: 4 – Cumple totalmente
+
+*This  indicator is about the way metadata is connected to other metadata, for  example to descriptions of related resources that provide additional context  to the data. The references need to be qualified which means that the  relationship of the related resource is specified, for example person Y is  the author of dataset X.*
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-I3-04M - Metadata include qualified references to other data
+
+**Equivalencia FAIR**: I3
+
+**Prioridad RDA**: Useful
+
+**Evaluación**: 4 – Cumple totalmente
+
+*This  indicator is about the way metadata is connected to other data. The  references need to be qualified which means that the relationship role of the  related resource is specified, for example dataset X is derived from dataset  Y.*
+
+**Automatización**: 2 – Automatizada
+
+### REUSABLE
+
+A continuación se describen los criterios de evaluación y resultados de los 10 indicadores REUSABLE, de los cuales son 5 *essential*, 4 *important y 1 useful*.
+
+Se cumplen todos los indicadores, por lo que la evaluación de este área sería de nivel 5.
+
+#### RDA-R1-01M - Plurality of accurate and relevant attributes are provided to allow reuse
+
+**Equivalencia FAIR**: R1
+
+**Prioridad RDA**: Essential
+
+**Evaluación**: 4 – Cumple totalmente
+
+*The  indicator concerns the quantity but also the quality of metadata provided in  order to enhance data reusability. This indicator can be evaluated with the  help of standards registries such as the RDA-endorsed [FAIR Sharing](https://fairsharing.org/standards/?q=/format&selected_facets=type_exact:reporting%20guideline).*
+
+Se prevé ampliar este indicador mediante el mapeo de las áreas científicas y temáticas de la UNESCO que tiene publicadas la Universidad de Murcia.
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-R1.1-01M - Metadata includes information about the licence under which the data can be reused
+
+**Equivalencia FAIR**: R1
+
+**Prioridad RDA**: Essential
+
+**Evaluación**: 4 – Cumple totalmente
+
+Uso de licencia [Creative Commons](https://creativecommons.org/publicdomain/zero/1.0/).
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-R1.1-02M - Metadata refers to a standard reuse licence
+
+**Equivalencia FAIR**: R1
+
+**Prioridad RDA**: Important
+
+**Evaluación**: 4 – Cumple totalmente
+
+Uso de licencia [Creative Commons](https://creativecommons.org/publicdomain/zero/1.0/).
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-R1.1-03M - Metadata refers to a machine-understandable reuse licence
+
+**Equivalencia FAIR**: R1
+
+**Prioridad RDA**: Important
+
+**Evaluación**: 4 – Cumple totalmente
+
+Uso de licencia [Creative Commons](https://creativecommons.org/publicdomain/zero/1.0/).
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-R1.2-01M - Metadata includes provenance information according to community-specific standards
+
+**Equivalencia FAIR**: R2
+
+**Prioridad RDA**: Important
+
+**Evaluación**: 4 – Cumple totalmente
+
+Uso de [PROV-O](https://www.w3.org/TR/prov-o/).
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-R1.2-02M - Metadata includes provenance information according to a cross-community language
+
+**Equivalencia FAIR**: R2
+
+**Prioridad RDA**: Useful
+
+**Evaluación**: 4 – Cumple totalmente
+
+Uso de [PROV-O](https://www.w3.org/TR/prov-o/).
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-R1.3-01M - Metadata complies with a community standard
+
+**Equivalencia FAIR**: R3
+
+**Prioridad RDA**: Essential
+
+**Evaluación**: 4 – Cumple totalmente
+
+Los datos y metadatos están expresado mediante tecnología linked data (OWL, SKOS, DC, RDF, etc).
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-R1.3-01D - Data complies with a community standard
+
+**Equivalencia FAIR**: R3
+
+**Prioridad RDA**: Essential
+
+**Evaluación**: 4 – Cumple totalmente
+
+Los datos y metadatos están expresado mediante tecnología linked data (OWL, SKOS, DC, RDF, etc).
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-R1.3-02M - Metadata is expressed in compliance with a machine-understandable community standard
+
+**Equivalencia FAIR**: R3
+
+**Prioridad RDA**: Essential
+
+**Evaluación**: 4 – Cumple totalmente
+
+Los datos y metadatos están expresado mediante tecnología linked data (OWL, SKOS, DC, RDF, etc).
+
+**Automatización**: 2 – Automatizada
+
+#### RDA-R1.3-02D - Data is expressed in compliance with a machine-understandable community standard
+
+**Equivalencia FAIR**: R3
+
+**Prioridad RDA**: Important
+
+**Evaluación**: 4 – Cumple totalmente
+
+Los datos y metadatos están expresado mediante tecnología linked data (OWL, SKOS, DC, RDF, etc).
+
+**Automatización**: 2 – Automatizada
+
+# Fases del proyecto
+
+El proyecto consta de tres fases
+
+### Evaluación de métricas
+
+Se realizara la evaluación de las métricas FAIR, sobre la arquitectura real usada en el proyecto ASIO, para ello el proyecto permite desplegar las partes relevantes de dicha arquitectura de forma local mediante el despliegue del [Sandbox](#Sandbox)
+
+#### Sandbox
+
+Para generar un nuevo conjunto de métricas es necesario desplegar un entorno que emula las partes relevantes del proyecto ASIO, que influyen en la evaluación de las métricas FAIR. Estas son:
+
+- **Factoría de URIs:** Este componente software que genera los identificadores para los recursos, y añade un nivel de indirección que permite gestionar la persistencia (cambio de el contenido de un recurso, manteniendo su identificador publico, después de que el recurso haya cambiado), por lo que es relevante en todos aquellas métricas donde de una forma u otra, se evalúa la persistencia de los recursos y/o sus identificadores.
+- **MariaDB:** Es la capa de persistencia usada por la factoría de URIs y por lo tanto es una dependencia de esta.
+- **Trellis:** Es el servidor LDP que soporta el acceso a los recursos, soportando negociación de contenido tanto en formato como en versión, generando a su vez metadatos, orientados a la auditoria de datos, y versionado de recursos(Memento). Es de vital importancia para la evaluación de métricas FAIR ya que tanto los recursos y metadatos que serán evaluados, lo serán en el formato gestionado por Trellis.
+- **Fuseki + TDB:** Fuseki actúa como EndPoint SPAPQL 1.1, y TDB es el Triple Store que soporta el almacenamiento. Aunque no será evaluado directamente, es el motor de almacenamiento y acceso a datos usado por Trellis, por lo que es un fuerte dependencia de este.
+
+### Generación de datos
+
+Sobre la arquitectura antes descrita, se generaran conjuntos de datos sintéticos de todos los tipos que estarán presentes en los datos reales, es decir se generan entidades, propiedades e instancias. Sobre dichos conjuntos de datos se realizará la evaluación de métricas FAIR.
+
+### Representación de métricas y resultados finales
+
+Las métricas evaluadas sobre los datos  generaran los KPIs y sus representaciones.
