@@ -1,5 +1,4 @@
 
-
 ![](./images/logos_feder.png)
 
 # Manual de usuario
@@ -28,7 +27,7 @@
 
 ​	[2.2. Importador de CVNs](#importador-de-CVNs)
 
-	[2.3. Importador SGI](#importador-SGI)
+  [2.3. Importador SGI](#importador-SGI)
 
 [3. Trellis](#trellis)
 
