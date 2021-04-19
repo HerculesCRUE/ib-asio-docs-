@@ -24,9 +24,9 @@
 
    [2.1. Importador de Datasets](#importador-de-datasets)
 
-   [2.2. Importador de CVNs](#importador-de-CVNs)
+   [2.2. Importador de CVNs](#importador-de-cvns)
 
-   [2.3. Importador SGI](#importador-SGI)
+   [2.3. Importador SGI](#importador-sgi)
    
 [3. Trellis](#trellis)
 
