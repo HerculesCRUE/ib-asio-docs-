@@ -2,13 +2,13 @@
 
 | Entregable     | Métricas FAIR                                                |
 | -------------- | ------------------------------------------------------------ |
-| Fecha          | 19/06/2020                                                   |
-| Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
+| Fecha          | 16/04/2021                                                   |
+| Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](http://www.crue.org/SitePages/ProyectoHercules.aspx) |
 | Módulo         | Infraestructura Ontológica                                   |
 | Tipo           | Software y resultados                                        |
-| Objetivo       | Evaluar el cumplimiento de las métricas FAIR definidas en el documento de [Análisis de métodos FAIR](../05-An%C3%A1lisis_de_m%C3%A9todos_FAIR/ASIO_Izertis_AnalisisDeMetodosFAIR.md) sobre el proyecto ASIO, tanto a nivel de ontología como de conjuntos de datos. A partir de dicha evaluación se generan gráficas de nivel de cumplimiento por áreas e indicadores individuales de forma automática para su posterior integración en páginas web y/o informes. |
-| Estado         | **80%** La evaluación de los indicadores se ha realizado completamente y el software permite generar las gráficas necesarias, incluyendo pruebas unitarias pertinentes. La automatización actualmente cubre un 70,73% de las métricas y se prevé poder llegar hasta un 92,68%. |
-| Próximos pasos | A la finalización del proyecto se volverán a evaluar las métricas sobre el despliegue final, con previsión de obtener un nivel máximo de cumplimiento en todos los indicadores. Adicionalmente, queda abierta la posibilidad de desarrollar nuevos índices o KPIs mejorados, para la presentación de resultados por áreas y/o un índice global FAIR mediante ponderación de indicadores FAIR por prioridad. |
+| Objetivo       | Evaluar el cumplimiento de las métricas FAIR definidas en el documento de [Análisis de métodos FAIR](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/entregables_hito_1/05-An%C3%A1lisis_de_m%C3%A9todos_FAIR/ASIO_Izertis_AnalisisDeMetodosFAIR.md) sobre el proyecto ASIO, tanto a nivel de ontología como de conjuntos de datos. A partir de dicha evaluación se generan gráficas de nivel de cumplimiento por áreas e indicadores individuales de forma automática para su posterior integración en páginas web y/o informes. |
+| Estado         | **100%** La evaluación de los indicadores se ha realizado completamente y el software permite generar las gráficas necesarias, incluyendo pruebas unitarias pertinentes. La automatización cubre el 100% de las métricas. |
+| Próximos pasos | Finalizado                                                   |
 | Documentación  | [Manual de usuario](manual_usuario.md)<br />[Manual de despliegue](manual_despliegue.md)<br />[Documentación técnica](manual_tecnico.md) |
 
 ## Métricas FAIR
@@ -25,19 +25,17 @@ El resultado de la evaluación por áreas sería el siguiente:
 
 De forma general, la conclusión de la evaluación FAIR es bastante positiva, dado que por la naturaleza del proyecto ASIO, la mayoría de indicadores se cumplen de-facto, por el uso de tecnologías de linked data 5 estrellas (OWL, SKOS, HTTP, RDF, etc).
 
-Sólo en algunos casos, dado que el proyecto aún se encuenta en un estado parcial, algunos indicadores no se cumplen por falta de referencias explicitas a recursos externos, pero que se espera queden cubiertos sin gran complejidad para el hito 2.
-
 En los siguientes apartados se detalla la evaluación de cada uno de los indicadores.
 
 ### Control de versiones
 
-**Versión de la evaluación**: 1.0
+**Versión de la evaluación**: 2.0
 
-**Sello de tiempo:** 19/06/2020 12:43:23.000
+**Sello de tiempo:** 16/04/2021 10:23:33.000
 
 ### Automatización de métricas
 
-La automatización actualmente cubre un 70,73% de las métricas y se prevé poder llegar hasta un 92,68%.
+La automatización cubre el 100% de las métricas.
 
 Para cada indicador descrito en los siguientes apartados se especifica los siguientes niveles:
 
@@ -51,7 +49,7 @@ Para cada indicador descrito en los siguientes apartados se especifica los sigui
 
 A continuación se describen los criterios de evaluación y resultados de los 7 indicadores FINDABLE, todos ellos de prioridad *essential*. 
 
-Casi todos los criterios se cumplen, por lo que la evaluación de este área sería de nivel 5 en momento en que el criterio RDA-F2-01M quede totalmente implementado.
+Todos los criterios se cumplen, por lo que la evaluación de este área es de nivel 5.
 
 #### RDA-F1-01M - Metadata is identified by a persistent identifier
 
@@ -107,7 +105,7 @@ Todos los datos y metadatos están identificados mediante URIs PURL ([http://pur
 
 **Prioridad RDA**: Essential
 
-**Evaluación**: 3 – En proceso de implementación
+**Evaluación**: 4 – Cumple totalmente
 
 Se proveen metadatos tanto a nivel de ontología como de los datos importados (OWL/SKOS, Wikibase, Trellis y Memento), si bien es necesario mejorar aspectos menores que mejoren la capacidad de descubrimiento.
 
@@ -135,9 +133,9 @@ Los metadatos incluyen referencias expícitas a los datos que describen.
 
 Los datos y metadatos están publicados mediante un grafo linked data 5 estrellas (HTTP/LDP).
 
-**Automatización**: 0 – No automatizable
+**Automatización:** 2 – Automatizada
 
-Los datos y metadatos insertados en cualquier triple store, están indexados por diseño del triple store. No es viable un método automatizable para comprobar la existencia de dichos indices en cualquier triple store.
+Los datos y metadatos insertados en cualquier triple store, están indexados por diseño del triple store. El proceso busca para el el servidor SPARQL, que este la antología y en caso de que para las todas tripletas de la ontologia este definido el Objecto, que es el que actua como indice en el grafo, entonces asume que es correcto.
 
 ### ACCESIBLE
 
@@ -169,7 +167,7 @@ Los datos y metadatos están publicados mediante un grafo linked data 5 estrella
 
 **Automatización**: 0 – No automatizable
 
-El requisito especifica que los metadatos pueden ser accedidos de forma manual (con intervención humana), por lo tanto es necesaria una evaluación manual, y la UI (aun no desarrollada) para acceder a dichos metadatos. Es posible que en futuro, una vez desarrollada la UI, se pueda automatizar algún tipo de test que determine si esos metadatos son accesibles.
+El requisito especifica que los datos pueden ser accedidos de forma manual (con intervención humana), por lo que se preveía una evaluación manual para el hito 2, pero finalmente se realiza mediante un proceso automático que lee los datos de el frontal de Trellis, en HTML, y en caso de estar publicados se entiende que pueden ser accedidos manualmente.
 
 #### RDA-A1-02D - Data can be accessed manually (i.e. with human intervention)
 
@@ -183,7 +181,7 @@ Los datos y metadatos están publicados mediante un grafo linked data 5 estrella
 
 **Automatización**: 0 – No automatizable
 
-El requisito especifica que los datos pueden ser accedidos de forma manual (con intervención humana), por lo tanto es necesaria una evaluación manual, y la UI (aun no desarrollada) para acceder a dichos datos. Es posible que en futuro, una vez desarrollada la UI, se pueda automatizar algún tipo de test que determine si esos datos son accesibles.
+El requisito especifica que los datos pueden ser accedidos de forma manual (con intervención humana), por lo que se preveía una evaluación manual para el hito 2, pero finalmente se realiza mediante un proceso automático que lee los datos de el frontal de Trellis, en HTML, y en caso de estar publicados se entiende que pueden ser accedidos manualmente.
 
 #### RDA-A1-03M - Metadata identifier resolves to a metadata record
 
@@ -297,7 +295,7 @@ La combinación de Trellis y Memento permite llevar un registro histórico de mo
 
 A continuación se describen los criterios de evaluación y resultados de los 12 indicadores INTEROPERABLE, de los cuales son 7 *important*, 5 *useful* y ninguno *essential*.
 
-Se cumplen todos menos 1 indicador de tipo *important* y 4 *useful*, por lo que la evaluación de este área sería de nivel 3, la cual aumentaría a nivel 5 a la finalización del hito 2, tras resolver dichos indicadores.
+Todos los criterios se cumplen, por lo que la evaluación de este área es de nivel 5.
 
 #### RDA-I1-01M - Metadata uses knowledge representation expressed in standardised format
 
@@ -357,9 +355,7 @@ Los datos y metadatos están expresado mediante tecnología linked data (OWL, SK
 
 Los datos y metadatos están expresado mediante tecnología linked data (OWL, SKOS, DC, RDF, etc).
 
-**Automatización**: 1 – En proceso de automatización
-
-Seria posible automatizarlo en un futuro cuando las ontologias esten completas, y exista unión entre la infraestructura ontologia y la arqutectura semantica.
+**Automatización**: 2 – Automatizada
 
 #### RDA-I2-01D - Data uses FAIR-compliant vocabularies
 
@@ -371,9 +367,7 @@ Seria posible automatizarlo en un futuro cuando las ontologias esten completas, 
 
 Los datos y metadatos están expresado mediante tecnología linked data (OWL, SKOS, DC, RDF, etc).
 
-**Automatización**: 1 – En proceso de automatización
-
-Seria posible automatizarlo en un futuro cuando las ontologias esten completas, y exista unión entre la infraestructura ontologia y la arqutectura semantica.
+**Automatización**: 2 – Automatizada
 
 #### RDA-I3-01M - Metadata includes references to other metadata
 
@@ -393,7 +387,7 @@ La ontología referencia otras ontologías, como por ejemplo [PROV-O](https://ww
 
 **Prioridad RDA**: Useful
 
-**Evaluación**: 3 – En proceso de implementación
+**Evaluación**: 4 – Cumple totalmente
 
 Se referencian datos externos, como por ejemplo el uso de DOIs para enlazar documentos y artículos de investigación.
 
@@ -405,13 +399,11 @@ Se referencian datos externos, como por ejemplo el uso de DOIs para enlazar docu
 
 **Prioridad RDA**: Useful
 
-**Evaluación**: 2 – Planificado o bajo consideración
+**Evaluación**: 4 – Cumple totalmente
 
 *This indicator is about the way metadata is connected to other data, for example linking to previous or related research data that provides additional context to the data. Please note that this is not about the link from the metadata to the data it describes; that link is considered in principle F3 and in indicator RDA-F3-01M.*
 
-**Automatización**: 1 – En proceso de automatización
-
-De cara a la automatización requiere la integración de infraestructura ontologica y arquitectura semántica.
+**Automatización**: 2 – Automatizada
 
 #### RDA-I3-02D - Data includes qualified references to other data
 
@@ -419,13 +411,11 @@ De cara a la automatización requiere la integración de infraestructura ontolog
 
 **Prioridad RDA**: Useful
 
-**Evaluación**: 2 – Planificado o bajo consideración
+**Evaluación**: 4 – Cumple totalmente
 
 *This  indicator is about the way data is connected to other data. The references  need to be qualified which means that the relationship role of the related  resource is specified, for example that a particular link is a specification  of a unit of measurement, or the identification of the sensor with which the  measurement was done.*
 
-**Automatización**: 1 – En proceso de automatización
-
-De cara a la automatización requiere la integración de infraestructura ontologica y arquitectura semántica.
+**Automatización**: 2 – Automatizada
 
 #### RDA-I3-02M - Metadata includes qualified references to other metadata
 
@@ -433,13 +423,11 @@ De cara a la automatización requiere la integración de infraestructura ontolog
 
 **Prioridad RDA**: Important
 
-**Evaluación**: 2 – Planificado o bajo consideración
+**Evaluación**: 4 – Cumple totalmente
 
 *This  indicator is about the way metadata is connected to other metadata, for  example to descriptions of related resources that provide additional context  to the data. The references need to be qualified which means that the  relationship of the related resource is specified, for example person Y is  the author of dataset X.*
 
-**Automatización**: 1 – En proceso de automatización
-
-De cara a la automatización requiere la integración de infraestructura ontologica y arquitectura semántica.
+**Automatización**: 2 – Automatizada
 
 #### RDA-I3-04M - Metadata include qualified references to other data
 
@@ -447,13 +435,11 @@ De cara a la automatización requiere la integración de infraestructura ontolog
 
 **Prioridad RDA**: Useful
 
-**Evaluación**: 2 – Planificado o bajo consideración
+**Evaluación**: 4 – Cumple totalmente
 
 *This  indicator is about the way metadata is connected to other data. The  references need to be qualified which means that the relationship role of the  related resource is specified, for example dataset X is derived from dataset  Y.*
 
-**Automatización**: 1 – En proceso de automatización
-
-De cara a la automatización requiere la integración de infraestructura ontologica y arquitectura semántica.
+**Automatización**: 2 – Automatizada
 
 ### REUSABLE
 
@@ -485,9 +471,7 @@ Se prevé ampliar este indicador mediante el mapeo de las áreas científicas y 
 
 Uso de licencia [Creative Commons](https://creativecommons.org/publicdomain/zero/1.0/).
 
-**Automatización**: 1 – En proceso de automatización
-
-Es necesario previamente definir tipo de licencia de las ontologías y añadir los metadatos adecuados para publicar la información de dicha licencia
+**Automatización**: 2 – Automatizada
 
 #### RDA-R1.1-02M - Metadata refers to a standard reuse licence
 
@@ -499,9 +483,7 @@ Es necesario previamente definir tipo de licencia de las ontologías y añadir l
 
 Uso de licencia [Creative Commons](https://creativecommons.org/publicdomain/zero/1.0/).
 
-**Automatización**: 1 – En proceso de automatización
-
-Es necesario previamente definir tipo de licencia de las ontologías y añadir los metadatos adecuados para publicar la información de dicha licencia
+**Automatización**: 2 – Automatizada
 
 #### RDA-R1.1-03M - Metadata refers to a machine-understandable reuse licence
 
@@ -513,9 +495,7 @@ Es necesario previamente definir tipo de licencia de las ontologías y añadir l
 
 Uso de licencia [Creative Commons](https://creativecommons.org/publicdomain/zero/1.0/).
 
-**Automatización**: 1 – En proceso de automatización
-
-Es necesario previamente definir tipo de licencia de las ontologías y añadir los metadatos adecuados para publicar la información de dicha licencia
+**Automatización**: 2 – Automatizada
 
 #### RDA-R1.2-01M - Metadata includes provenance information according to community-specific standards
 
