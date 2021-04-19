@@ -28,9 +28,11 @@
 
 ​	[2.2. Importador de CVNs](#importador-de-CVNs)
 
-[2. Trellis](#trellis)
+	[2.3. Importador SGI](#importador-SGI)
 
-[2. Wikibase](#wikibase)
+[3. Trellis](#trellis)
+
+[4. Wikibase](#wikibase)
 
 
 
