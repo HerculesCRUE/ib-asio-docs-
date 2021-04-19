@@ -1,4 +1,3 @@
-
 ![](./images/logos_feder.png)
 
 # Manual de usuario
@@ -23,12 +22,12 @@
 
 [2. Importadores](#importadores)
 
-​	[2.1. Importador de Datasets](#importador-de-datasets)
+   [2.1. Importador de Datasets](#importador-de-datasets)
 
-​	[2.2. Importador de CVNs](#importador-de-CVNs)
+   [2.2. Importador de CVNs](#importador-de-CVNs)
 
-  [2.3. Importador SGI](#importador-SGI)
-
+   [2.3. Importador SGI](#importador-SGI)
+   
 [3. Trellis](#trellis)
 
 [4. Wikibase](#wikibase)
