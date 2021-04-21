@@ -81,7 +81,7 @@ El resultado de esta iteración es la regeneración de **todo el modelo de domin
 
 ## ShEx
 
-[ShEx Lite](https://www.weso.es/shex-lite/) es un subconjunto de una especificación de Shape Expressions que ofrece un API para generar las clases de dominio a partir de unos datos de entrada, y el resultado se enviará a donde indique el parámetro de salida de este método.
+[ShEx Lite](https://github.com/weso/shex-lite) es un subconjunto de una especificación de Shape Expressions que ofrece un API para generar las clases de dominio a partir de unos datos de entrada, y el resultado se enviará a donde indique el parámetro de salida de este método.
 
 ## Comunicación entre la infraestructura ontológica e infraestructura semántica
 

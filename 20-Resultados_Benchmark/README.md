@@ -3,13 +3,13 @@
 | Entregable     | Entregable de documentación y aplicación Benchmarks          |
 | -------------- | ------------------------------------------------------------ |
 | Fecha          | 25/05/2020                                                   |
-| Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](http://www.crue.org/SitePages/ProyectoHercules.aspx) |
+| Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://www.crue.org/proyecto/hercules/) |
 | Módulo         | Arquitectura Semántica                                       |
 | Tipo           | Software                                                     |
 | Objetivo       | El presente documento pretende ser la documentación técnica relativa a el entregable de Benchmarks. Para ello, se documentan tanto aspectos relativos al despliegue de la aplicación, como otros aspectos de interés. |
 | Estado         | Implementada al **100%**, según la funcionalidad prevista para cubrir lo expresado en el documento [Diseño de benchmark](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/arquitectura_semantica/benchmark/Dise%C3%B1o%20de%20Bechmark%20proyecto%20ASIO.md). |
 | Próximos pasos | En caso de encontrar argumentos de peso para ello, seria posible capturar métricas para otros triple stores |
-| Documentación  | [Diseño de benchmark](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/arquitectura_semantica/benchmark/Dise%C3%B1o%20de%20Bechmark%20proyecto%20ASIO.md) |
+| Documentación  | [Diseño de benchmark](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/00-Arquitectura/arquitectura_semantica/benchmark/Dise%C3%B1o%20de%20Bechmark%20proyecto%20ASIO.md) |
 
 # Benchmark y Memoria científico técnica
 
@@ -58,7 +58,7 @@ ng serve
 
 http://localhost:4200
 
-![image-20200525074916076](./images/app.png)
+
 
 También se encuentra desplegada en el entorno de desarrollo de la universidad de Murcia, accesible mediante el siguiente enlace
 

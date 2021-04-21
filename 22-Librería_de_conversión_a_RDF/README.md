@@ -93,11 +93,11 @@ No es necesario especificar la clase de inicio de la aplicación, ya que el fich
 
 Se incluyen los resultados del testing y cobertura en los siguientes enlaces:
 
-* [Testing TDD](http://herc-iz-front-desa.atica.um.es:8070/management-system/surefire/surefire-report.html)
+* [Testing TDD](https://reports.herculesasioizertis.desa.um.es/management-system/surefire/surefire-report.html)
 * [Cobertura TDD](https://sonarcloud.io/component_measures?id=HerculesCRUE_ib-management-system&metric=coverage&view=list)
-* [Testing BDD](docs/testing.md)
+* [Testing BDD](https://github.com/HerculesCRUE/ib-management-system/blob/master/docs/testing.md)
 
 ##  Documentación adicional
 
-* [Compilación](docs/build.md)
-* [Generación Docker](docs/docker.md)
+* [Compilación](https://github.com/HerculesCRUE/ib-management-system/blob/master/docs/build.md)
+* [Generación Docker](https://github.com/HerculesCRUE/ib-management-system/blob/master/docs/docker.md)

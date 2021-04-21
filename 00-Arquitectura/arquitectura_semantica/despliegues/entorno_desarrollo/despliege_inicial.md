@@ -909,7 +909,7 @@ Para conectar con la instancia de wikibase en el puerto 8181, es necesario estab
 
    - Crear tunel. En **Source Port** ponemos el puerto que vamos a utilizar para el túnel (por ejemplo el 8081), **destination** lo dejamos en blanco y en las opciones de abajo lo ponemos en **Dynamic** y en **AUTO**. Y luego seleccionamos ADD (para añadir la configuración)
 
-     ![tunel](https://www.redeszone.net/app/uploads-redeszone.net/manual_tunel_ssh_2.png)
+     ![tunel](./images/manual_tunel_ssh_2.png)
 
      
 
@@ -925,11 +925,11 @@ Para conectar con la instancia de wikibase en el puerto 8181, es necesario estab
 
      - Opciones, Avanzado, Red 
 
-       ![img](https://www.redeszone.net/content/uploads/manual_tunel_ssh_5.png)
+       ![img](./images/manual_tunel_ssh_5.png)
 
      - Configurar el proxy. **Configuración Manual del Proxy**, **Servidor SOCKS: 127.0.0.1** y el **puerto 8081** (el que pusimos anteriormente), elegimos **SOCKS v5** (comprobado que funciona).
 
-       ![img](https://www.redeszone.net/content/uploads/manual_tunel_ssh_6.png)
+       ![img](./images/manual_tunel_ssh_6.png)
 
      - Comprobar
 

@@ -199,7 +199,7 @@ T. Berners-Lee. Linked data - design issues, 2006.
 http://www.w3.org/DesignIssues/LinkedData.html
 
 I. Davis and L. Dodds. Linked data patterns, 2010.
-http://patterns.dataincubator.org/book/
+https://patterns.dataincubator.org/book/
 
 J. E. Labra Gayo, D. Kontokostas and S. Auer, Semantic Web, vol. 6, no. 4, pp. 319-337, 2015.
 http://www.semantic-web-journal.net/system/files/swj495.pdf

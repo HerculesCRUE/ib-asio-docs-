@@ -108,10 +108,10 @@ No es necesario especificar la clase de inicio de la aplicación, ya que el fich
 
 Se incluyen los resultados del testing y cobertura en los siguientes enlaces:
 
-- [Testing](http://herc-iz-front-desa.atica.um.es:8070/triples-storage-adapter/surefire/surefire-report.html)
+- [Testing](https://reports.herculesasioizertis.desa.um.es/triples-storage-adapter/surefire/surefire-report.html)
 - [Cobertura](https://sonarcloud.io/component_measures?id=HerculesCRUE_ib-triples-storage-adapter&metric=coverage&view=list)
 
 ## Documentación adicional
 
-- [Compilación](docs/build.md)
-- [Generación Docker](docs/docker.md)
+- [Compilación](https://github.com/HerculesCRUE/ib-triples-storage-adapter/tree/master/docs/build.md)
+- [Generación Docker](https://github.com/HerculesCRUE/ib-triples-storage-adapter/tree/master/docs/docker.md)
