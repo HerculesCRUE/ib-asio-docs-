@@ -1,6 +1,6 @@
 ![](./images/logos_feder.png)
 
-# Propuesta de solución para el front
+# Pantallas reales propuestas
 
 
 
@@ -20,43 +20,39 @@
 
 [2.3. Personal investigador](#personal-investigador)
 
+[2.3.1  Detalle de personal investigador](#detalle-de-personal-investigador)
+
+[2.4.  Áreas](#areas)
+
+[2.5.  Producción científica](#producción científica)
+
+[2.5.1.  Detalle de producción científica](#detalle-de-producción científica)
+
+[2.6.  Estadísticas](#estadísticas)
+
+[2.6.1. Detalle de acción  de investigación](#detalle-de-acción-de-investigación)
+
+
+
 
 
 
 Home
 ============
 
-El home de la web dispondrá de un menú superior con los accesos a las diferentes categorías y a la pantalla de consultas SparQL. También se mostrarán los iconos de login/acceso o la imagen del usuario identificado. Las opciones que no estén funcionando, se mostrarán desactivadas en gris, tanto en el home como en el menú lateral.
+El home de la web dispone de un menú superior con los accesos a las diferentes categorías y a la pantalla de consultas SparQL. También se mostrarán los iconos de login/acceso o la imagen del usuario identificado. Las opciones que no estén funcionando, se mostrarán desactivadas en gris, tanto en el home como en el menú lateral.
 
 
 
 Dentro del propio Home se podrán ver:
 
-- Buscador general de datos públicos
 - Las categorías, que serían:
-  - Estructuras de investigación:
-    - Centros
-    - Universidades
-    - Fundaciones
-    - Organismos
+  - Estructuras de investigación
   - Personal investigador
-  - Categorías:
-    - Disciplinas
-    - áreas
-    - Líneas de investigación
-    - Tópicos (topics)
+  - Áreas
   - Producción científica
-    - Artículos
-    - Libros
-    - Congresos
   - Acciones de investigación
-    - Proyectos
-    - Documentos
   - Estadísticas e indicadores
-    - Indicadores / tendencias (trends)
-    - Financiación (funding) / calidad / estadísticas
-    - Búsqueda de partners / estado de la técnica (state of the art)
-- Los servicios de los que dispone la web, como las consultas SparQL y gestiones propias de usuarios administradores. Por ejemplo la gestión de usuarios, que sólo sería visible para usuarios de tipo Gestor Asio.
 - Al final de la página se mostrarán los enlaces a información del proyecto en general:
   - Repositorios
   - Validadores
@@ -73,6 +69,16 @@ Dentro del propio Home se podrán ver:
 
 
 ![home - front](./images/screenshots/home.png)
+
+
+
+Una vez el usuario se logee, se mostrarán dos opciones más en el home:
+
+- Los servicios de los que dispone la web, como las consultas SparQL y gestiones propias de usuarios administradores. Por ejemplo la gestión de usuarios, que sólo sería visible para usuarios de tipo Gestor Asio.
+
+  
+
+![home - front](./images/screenshots/home-login.png)
 
 
 
@@ -104,7 +110,9 @@ En la categoría de estructura de investigación, podremos ver información gene
 
 - Fundaciones
 
-- Organismos
+- Empresa
+
+- etc
 
   
 
@@ -113,8 +121,6 @@ Se podrá acceder a ella a través de la pantalla home, o del menú superior.
 La pantalla dispondrá de una serie de filtros:
 
 - Las diferentes opciones que hay dentro de las estructuras de organización: Universidad, centro, etc. Si se selecciona una de estas sub-opciones, mostrará la información filtrada por ese tipo de estructura en la tabla.
-- Para poder filtrar universidades que posean sellos de calidad como Severo Ochoa.
-- Un filtro por centros que hayan realizado proyectos H2020 y/o proyectos del Plan Estatal.
 - Un buscador general por nombre de centro.
 
 
@@ -136,11 +142,13 @@ La información que se mostrará en esta página tratará de responder, entre ot
 
 ## Detalle de una estructura de investigación
 
-Pulsando sobre un centro de investigación en la pantalla de esta categoría, la web nos redirigirá a la información de ese centro de investigación. Para facilitar la visualización de los datos sobre la estructura de investigación, la información se mostrará agrupada por [tabs](https://getbootstrap.com/docs/4.0/components/navs/).
+Pulsando sobre un centro de investigación en la pantalla de esta categoría, la web nos redirigirá a la información de esa estrutura de investigación. Para facilitar la visualización de los datos sobre la estructura de investigación, la información se mostrará agrupada por [tabs](https://getbootstrap.com/docs/4.0/components/navs/).
 
 
 
 ### Sección de personal investigador
+
+
 
 ![Captura de detalle de una estructuras de investigación - tab personal investigador](./images/screenshots/detalle-estructuras-personal.png)
 
@@ -148,9 +156,21 @@ Pulsando sobre un centro de investigación en la pantalla de esta categoría, la
 
 
 
-### Sección de producción científica
+### Sección de publicaciones científicas
 
-![Captura de detalle de una estructuras de investigación - tab produccion cientifica](./images/screenshots/detalle-estructuras-produccion.png)
+
+
+![Captura de detalle de una estructuras de investigación - tab publicaciones científicas](./images/screenshots/detalle-estructuras-publicaciones-cientificas.png)
+
+
+
+
+
+### Sección de publicaciones académicas
+
+
+
+![Captura de detalle de una estructuras de investigación - tab publicaciones académicas](./images/screenshots/detalle-estructuras-publicaciones-academicas.png)
 
 
 
@@ -189,35 +209,27 @@ En esta pantalla se responderá a las siguientes preguntas de competencia:
 
 
 
-Se divide en dos secciones, una para documentos y otra para proyectos.
+Se divide en dos secciones, una para patentes y otra para proyectos.
 
 
 
-### Documentos
+### Acciones de investigación proyectos
 
 
 
-Se muestra un filtro, en forma de árbol al igual que las áreas, en el que se mostrarán los distintos tipos y subtipos de acciones de investigación posibles, todas subclases de la clase [Document](https://github.com/weso/hercules-ontology/blob/master/src/asio-core.ttl) de la ontología.
+La tabla podrá ser filtrada por año y por nombre.
 
 
 
-![](C:\Users\pteran\Documents\reposgit\asio-docs\00-Análisis\Diseño de pantallas\images\document-protege.png)
+![Captura de acciones de investigación - tab documentos](./images/screenshots/acciones-investigacion-proyectos.png)
 
 
 
-Además la tabla podrá ser filtrada por año y por nombre.
+### Acciones de investigación - patentes
 
+En esta sección de acciones de investigación se podrán ver las patentes filtradas por nombre y por ámbito.
 
-
-![Captura de acciones de investigación - tab documentos](./images/screenshots/acciones-investigacion-documentos.png)
-
-
-
-### Proyectos
-
-En esta sección de acciones de transferencia se podrán ver los proyectos filtrados por nombre y por ámbito.
-
-![Captura de acciones de investigación - tab proyectos](./images/screenshots/acciones-investigacion-proyectos.png)
+![Captura de acciones de investigación - tab proyectos](./images/screenshots/acciones-investigacion-patentes.png)
 
 
 
@@ -244,27 +256,33 @@ La información se muestra agrupada en tres secciones (tabs) :
 
   
 
-### Información general
+### Información general -patentes
 
 
 
-![Captura de detalle de acciones de investigación - tab información](./images/screenshots/detalle-acciones-investigacion-informacion.png)
+![Captura de detalle de acciones de investigación - tab información](./images/screenshots/detalle-acciones-investigacion-patentes.png)
 
 
 
-### Participantes
+### Información general -proyectos
+
+![Captura de detalle de acciones de investigación - tab información](./images/screenshots/detalle-acciones-investigacion-proyecto.png)
 
 
 
-![Captura de detalle de acciones de investigación - tab participantes](./images/screenshots/detalle-acciones-investigacion-participantes.png)
+### Información general -participantes en un proyecto
 
 
 
-### Entregables
+![Captura de detalle de acciones de investigación - tab participantes](./images/screenshots/detalle-acciones-investigacion-participantes-proyecto.png)
 
 
 
-![Captura de detalle de acciones de investigación - tab entregables](./images/screenshots/detalle-acciones-investigacion-entregables.png)
+### Información general - entregables en un proyecto
+
+
+
+![Captura de detalle de acciones de investigación - tab entregables](./images/screenshots/detalle-acciones-investigacion-entregables-proyecto.png)
 
 
 
@@ -302,3 +320,124 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 | CQ45. Investigadores que dirigen tesis en programas de doctorado diferentes a los de su Universidad, y cuántas de esas tesis dirigidas han obtenido mención cum laude. |
 |                                                              |
 
+
+
+## Detalle de personal investigador
+
+
+
+### Detalle de personal investigador - acciones de investigación
+
+
+
+![Captura de personal investigador](./images/screenshots/detalle-personal-investigador-acciones.png)
+
+
+
+### Detalle de personal investigador - eventos
+
+![Captura de personal investigador](./images/screenshots/detalle-personal-investigador-eventos.png)
+
+
+
+### Detalle de personal investigador - actividad empresarial
+
+
+
+![Captura de personal investigador](./images/screenshots/detalle-personal-investigador-actividad.png)
+
+
+
+### Detalle de personal investigador - trayectoria
+
+
+
+![Captura de personal investigador](./images/screenshots/detalle-personal-investigador-trayectoria.png)
+
+
+
+
+
+## Áreas
+
+
+
+En esta pantalla se muestra información sobre los datos del módulo vertical "áreas de conocimiento".
+
+
+
+![Captura áreas](./images/screenshots/areas.png)
+
+
+
+## Producción científica
+
+
+
+Se muestran los documentos y los eventos de investigaciones.
+
+
+
+### Producción científica - publicaciones científicas
+
+
+
+![Publicaciones científicas](./images/screenshots/produccion-cientifica-publicaciones-cientificas.png)
+
+
+
+
+
+### Producción científica - publicaciones académicas
+
+
+
+![Publicaciones académicas](./images/screenshots/produccion-cientifica-publicaciones-academicas.png)
+
+
+
+
+
+### Producción científica - otras publicaciones
+
+
+
+![Otros publicaciones](./images/screenshots/produccion-cientifica-otros-documentos.png)
+
+
+
+
+
+### Producción científica - eventos
+
+
+
+![Eventos](./images/screenshots/produccion-cientifica-eventos.png)
+
+
+
+## Detalle de producción científica
+
+
+
+### Detalle de producción científica - documentos
+
+
+
+![Captura de personal investigador](./images/screenshots/detalle-produccion-cientifica-documentos.png)
+
+
+
+### Detalle de producción científica - eventos
+
+
+
+![Captura de personal investigador](./images/screenshots/detalle-produccion-cientifica-eventos.png)
+
+
+
+## Estadísticas
+
+
+
+![Estadisticas](./images/screenshots/estadisticas.png)

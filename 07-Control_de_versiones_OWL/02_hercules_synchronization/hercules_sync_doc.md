@@ -334,9 +334,10 @@ In the following chapters we will provide several documents which provide additi
 >*Versión especializada en el entorno de despliegue de La Universidad de Murcia. Se recomienda abrir el manual en una pestaña del propio navegador donde se tiene abierta la cuenta de GitHub y para no perder el manual cada vez que se va a hacer click en un enlace realizarlo de modo que se abra en otra pestaña.*
 Para realizar la integración del sistema de sincronización con el sistema de control de versiones de la ontología (GitHub) vamos a crear un **webhook** en el repositorio y un **token de acceso personal** para nuestro usuario.
 #### Creación del webhook
+[Documentación GitHub](https://docs.github.com/es/developers/webhooks-and-events/creating-webhooks)
 Un webhook es una dirección web a la que GitHub mandará información cada vez que se produzca un cambio, en esta dirección estará escuchando el servicio de sincronización. Entonces,
- 1. Ir al repositorio donde está la ontología ([ib-hercules-ontology](https://github.com/HerculesCRUE/ib-hercules-ontology)) (https://github.com/HerculesCRUE/ib-hercules-ontology).
- 2. Acceder a la pestaña de [settings](https://github.com/HerculesCRUE/ib-hercules-ontology/settings) (https://github.com/HerculesCRUE/ib-hercules-ontology/settings).
+ 1. Ir al repositorio donde está la ontología
+ 2. Acceder a la pestaña de settings
  3. En el menú lateral izquierdo accederemos al elemento `Webhooks`. Y aremos click en `Add webhook` (situado en la parte superior derecha de la pantalla). Seguramente nos pedirá que introduzcamos nuestra contraseña, no pasa nada es el comportamiento esperado ya que estamos realizando una acción _sensible_.
  4. Ahora se debería de mostrar un formulario donde introduciremos los siguientes datos:
 
@@ -352,7 +353,7 @@ Un webhook es una dirección web a la que GitHub mandará información cada vez 
 Una vez realizados estos pasos nos aparecerá una vista con el webhook creado. Si el icono que precede a la url del webhook es una señal de warning no pasa nada, es que aún no se ha configurado el sistema de sincronización para atender a los datos enviados por ese webhook.
 #### Creación del token de acceso personal
 Un token de acceso personal es como una llave para autorizar sistemas externos a github a interactuar con el sistema. Para crear el token personal debemos de seguir los siguientes pasos:
- 1. Entramos en nuestra cuenta de github y accedemos a nuestros [settings](https://github.com/settings/profile)(https://github.com/settings/profile).
+ 1. Entramos en nuestra cuenta de github y accedemos a nuestros settings
  2. En el menú lateral izquierdo, hacemos click en `Developer settings` y de nuevo hacemos click en `Personal access tokens`. Si no se encuentra se puede acceder directamente desde este [enlace](https://github.com/settings/tokens)(https://github.com/settings/tokens).
  3. Realizamos click en el botón de `Generate new token`.
  4. Nos debería de aparecer un formulario que rellenaremos con los siguientes datos:

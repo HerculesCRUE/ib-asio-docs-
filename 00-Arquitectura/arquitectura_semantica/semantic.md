@@ -12,6 +12,6 @@ Descripción del contenido de la arquitectura semántica
 | [despliegues](./despliegues)                                      | Información referentes a los despliegues                               |
 | [dmp](./dmp)                                                      | Información relativa a la data                                         |
 | [arquitectura](./documento_arquitectura)                          | Análisis y elección de arquitectura                                    |
-| [federación](./federación)                                        | Análisis de alternativas para la federación de consultas               |
+| [federación](../Federación)                                        | Análisis de alternativas para la federación de consultas               |
 | [ldp](./ldp)                                                      | Análisis del cumplimiento LDP (Linked Data Platform)                   |
 | [plantilla_arc42](./plantilla_arc42)                              | Template para documentación                                            |

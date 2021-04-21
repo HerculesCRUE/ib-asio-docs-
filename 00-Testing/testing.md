@@ -6,7 +6,7 @@
 
 ### Plugins
 
-Se precisa instalar el [plugin cucumber](http://cucumber.github.com/cucumber-eclipse/update-site) para eclipse.
+Se precisa instalar el [plugin cucumber](https://github.com/cucumber/cucumber-eclipse) para eclipse.
 
 <img src="img/pluginCucumber.png"/>
 

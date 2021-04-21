@@ -31,5 +31,5 @@ Por otro lado, respecto a GitHub Packages, cabe destacar que se trata de un serv
 Como alternativa a GitHub Pacakges para el versioneado y almacenamiento de artefactos podríamos hacer uso de [Maven Repository](https://mvnrepository.com/), que se trata del repositorio central de maven donde los artefactos pueden ser almacenados y ser usados por Maven de manera sencilla. Otra posible solución podría ser la combinación de Maven Repository junto con GitHub Packages.
 ## Links
 * [ShEx-Lite](https://github.com/weso/shex-lite)
-* [GitHub Packages](https://docs.github.com/es/packages/publishing-and-managing-packages/about-github-packages)
+* [GitHub Packages](https://docs.github.com/es/packages/learn-github-packages/about-github-packages)
 * [Maven Repository](https://mvnrepository.com/)

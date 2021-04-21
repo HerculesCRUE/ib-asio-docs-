@@ -1,5 +1,3 @@
-
-
 ![](./images/logos_feder.png)
 
 # Manual de usuario
@@ -13,7 +11,7 @@
 | Módulo         | Manual de usuario                                            |
 | Tipo           | Documento                                                    |
 | Objetivo       | Documento con un manual de usuario que busca brindar asistencia a los sujetos que usan el sistema. |
-| Estado         | 100% para el hito 1                                          |
+| Estado         | 100%                                          |
 | Próximos pasos | Ampliar de forma acorde al avance del proyecto.              |
 
 
@@ -24,13 +22,15 @@
 
 [2. Importadores](#importadores)
 
-​	[2.1. Importador de Datasets](#importador-de-datasets)
+   [2.1. Importador de Datasets](#importador-de-datasets)
 
-​	[2.2. Importador de CVNs](#importador-de-CVNs)
+   [2.2. Importador de CVNs](#importador-de-cvns)
 
-[2. Trellis](#trellis)
+   [2.3. Importador SGI](#importador-sgi)
+   
+[3. Trellis](#trellis)
 
-[2. Wikibase](#wikibase)
+[4. Wikibase](#wikibase)
 
 
 
@@ -89,15 +89,25 @@ java -jar -Dspring.batch.job.names=importCvnJob {jar-name}.jar
 
 
 
+## Importador SGI
+
+El importador de SGI importa los datos a partir de unos servicios implementados por el protocolo OAI-PMH.
+
+El repositorio de este servicio se puede consultar en [oah-pmh](https://github.com/HerculesCRUE/oai-pmh). El proceso que hay que lanzar para iniciar el procesado de estos ficheros es: 
+
+```
+java -jar -Dspring.batch.job.names=importOaipmhJob {jar-name}.jar
+```
+
+
+
+
+
 # Trellis
 
 Para acceder a la máquina de Trellis se necesita usuario y contraseña de la UM y se accede a través de la URL:
 
-`http://herc-iz-front-desa.atica.um.es/`
-
-
-
-
+`https://ldp.herculesasioizertis.desa.um.es/`
 
 
 
@@ -116,7 +126,7 @@ Al pulsar sobre cualquiera de las entradas, se muestra el detalle:
 # Wikibase
 
 A través de la plataforma de Wikibase podemos acceder también a los datos importados:
-`http://herc-iz-front-desa.atica.um.es:8181/`
+`http://wb.herculesasioizertis.desa.um.es/`
 
 
 
@@ -132,7 +142,9 @@ Se pueden ver los detalles pulsando sobre estos datos, o sobre los resultados de
 
 
 
-A través de las consultas SparQL también se podrán obtener los datos que nos interesen.
+A través de las consultas SparQL también se podrán obtener los datos que nos interesen:
+
+`http://wbquery.herculesasioizertis.desa.um.es/`
 
 ![arquitectura](./images/consulta-wikibase.png)
 

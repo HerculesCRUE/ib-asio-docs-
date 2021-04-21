@@ -52,20 +52,20 @@ Se descarta el uso de la federación provista por SPARQL por los siguientes moti
 Adicionalmente, se han identificado tres retos tecnológicos, aún por resolver en el ecosistema SPARQL [Oguz et al., 2015]:
 
 * Gestión de metadatos: este reto implica la unificación y sincronización de un catálogo de metadatos común, que en el caso de ASIO se resuelve a través de la ontología común centralizada en el nodo maestro.
-* Caché de resultados: actualmente este reto se está abordando mediante el uso de Elasticsearch y Redis, desde el módulo de [Libería de descubrimiento](../../24-Librer%C3%ADa_de_descubrimiento/ASIO_Libreria_de_descubrimiento.md#integraci%C3%B3n-del-proceso-dentro-de-la-arquitectura-general-de-la-aplicaci%C3%B3n). Como próximos pasos se refactorizará dicho módulo para compartir la funcionalidad con el módulo final de federación de consultas.
+* Caché de resultados: actualmente este reto se está abordando mediante el uso de Elasticsearch y Redis, desde el módulo de [Libería de descubrimiento](../../24-Librer%C3%ADa_de_descubrimiento/README.md#integraci%C3%B3n-del-proceso-dentro-de-la-arquitectura-general-de-la-aplicaci%C3%B3n). Como próximos pasos se refactorizará dicho módulo para compartir la funcionalidad con el módulo final de federación de consultas.
 * Procesado adaptativo de consultas: principalmente vinculado a la planificación/optimización de consultas [Peng et al., 2019], quedando fuera del alcance del presente proyecto por ser parte del núcleo del planificador de consultas propio del triplestore empleado.
 
 ### Identificación
 
-Este subsistema hace uso de la Librería de descubrimiento, a partir del módulo de [Reconciliación de entidades](../../24-Librer%C3%ADa_de_descubrimiento/ASIO_Libreria_de_descubrimiento.md#reconciliaci%C3%B3n-de-entidades), para poder identificar entidades repetidas o similares.
+Este subsistema hace uso de la Librería de descubrimiento, a partir del módulo de [Reconciliación de entidades](../../24-Librer%C3%ADa_de_descubrimiento/README.md#reconciliaci%C3%B3n-de-entidades), para poder identificar entidades repetidas o similares.
 
 ### Agregación
 
 La versión más sencilla de la federación ofrece los resultados de forma directa, sin agregar. En caso de duplicados idénticos, se informa de todos los nodos que disponen de la entidad, sin repetirla. En caso de resultados similares (misma entidad, con diferente contenido) se listan todas las variantes y su procedencia.
 
-Esta versión simplificada es de interés para poder analizar de forma explícita el contenido ofrecido por cada nodo, si bien sería muy recomendable poder contar con un módulo de unificación (*merge*) de entidades, reutilizado los servicios ya desarrollados en el módulo de importación de datos, concretamente el [Merge Event Processor](../../24-Librer%C3%ADa_de_descubrimiento/ASIO_Libreria_de_descubrimiento.md#integraci%C3%B3n-del-proceso-dentro-de-la-arquitectura-general-de-la-aplicaci%C3%B3n), empleado en la Librería de descubrimiento..
+Esta versión simplificada es de interés para poder analizar de forma explícita el contenido ofrecido por cada nodo, si bien sería muy recomendable poder contar con un módulo de unificación (*merge*) de entidades, reutilizado los servicios ya desarrollados en el módulo de importación de datos, concretamente el [Merge Event Processor](../../24-Librer%C3%ADa_de_descubrimiento/README.md#integraci%C3%B3n-del-proceso-dentro-de-la-arquitectura-general-de-la-aplicaci%C3%B3n), empleado en la Librería de descubrimiento..
 
-Las consultas federadas sin agregación se emplean en la Librería de descubrimiento con el objetivo de consultar las entidades albergadas en diferentes nodos de la red durante el proceso de importación, a través del [Data Fetcher](../../24-Librer%C3%ADa_de_descubrimiento/ASIO_Libreria_de_descubrimiento.md#integraci%C3%B3n-del-proceso-dentro-de-la-arquitectura-general-de-la-aplicaci%C3%B3n). Para la siguiente entrega, se prevé refactorizar la implementación de la Librería de descubrimiento, en la que existe actualmente un alto grado de acoplamiento entre las funcionalidades de ambos módulos.
+Las consultas federadas sin agregación se emplean en la Librería de descubrimiento con el objetivo de consultar las entidades albergadas en diferentes nodos de la red durante el proceso de importación, a través del [Data Fetcher](../../24-Librer%C3%ADa_de_descubrimiento/README.md#integraci%C3%B3n-del-proceso-dentro-de-la-arquitectura-general-de-la-aplicaci%C3%B3n). Para la siguiente entrega, se prevé refactorizar la implementación de la Librería de descubrimiento, en la que existe actualmente un alto grado de acoplamiento entre las funcionalidades de ambos módulos.
 
 ## Referencias. 
 
