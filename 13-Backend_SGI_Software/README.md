@@ -9,9 +9,9 @@
 | Estado         | Completado                                                   |
 | Próximos pasos |                                                              |
 
-# Backend SGI
+# Backend SGI Software
 
-
+El Backend SGI está compuesto por los componentes que se detallan en la tabla que se muestra a continuación
 
 | Documentación                                                | Pruebas                                                      | Repositorios                                                 |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
