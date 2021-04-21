@@ -367,7 +367,7 @@ Un token de acceso personal es como una llave para autorizar sistemas externos a
  Una vez realizados estos pasos ya tenemos nuestro token creado, ahora tenemos que configurarlo en el repositorio de la ontología ([ib-hercules-ontology](https://github.com/HerculesCRUE/ib-hercules-ontology)) (https://github.com/HerculesCRUE/ib-hercules-ontology).
 #### Configuración del token de acceso
 Para realizar la configuración del token de acceso como secreto de nuestro repositorio de la ontología deberemos de:
- 1. Acceder a la configuración de `Secrets` del repositorio de la ontología. Se puede acceder directamente haciendo click [aquí](https://github.com/HerculesCRUE/ib-hercules-ontology/settings/secrets) (https://github.com/HerculesCRUE/ib-hercules-ontology/settings/secrets).
+ 1. Acceder a la configuración de `Secrets` del repositorio de la ontología. Se puede acceder directamente haciendo click settints/secrets.
  2. Hacemos click en `Add a new secret` y se despliega un formulario donde introduciremos:
 
 	 **Name:** `WESOBOT_ACCESS_TOKEN`

@@ -7,7 +7,7 @@
 | Módulo         | Arquitectura Semántica                                       |
 | Tipo           | Software                                                     |
 | Objetivo       | El presente documento pretende ser la documentación técnica relativa a el entregable de Benchmarks. Para ello, se documentan tanto aspectos relativos al despliegue de la aplicación, como otros aspectos de interés. |
-| Estado         | Implementada al **100%**, según la funcionalidad prevista para cubrir lo expresado en el documento [Diseño de benchmark](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/arquitectura_semantica/benchmark/Dise%C3%B1o%20de%20Bechmark%20proyecto%20ASIO.md). |
+| Estado         | Implementada al **100%**, según la funcionalidad prevista para cubrir lo expresado en el documento [Diseño de benchmark](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/00-Arquitectura/arquitectura_semantica/benchmark/Dise%C3%B1o%20de%20Bechmark%20proyecto%20ASIO.md). |
 | Próximos pasos | En caso de encontrar argumentos de peso para ello, seria posible capturar métricas para otros triple stores |
 | Documentación  | [Diseño de benchmark](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/00-Arquitectura/arquitectura_semantica/benchmark/Dise%C3%B1o%20de%20Bechmark%20proyecto%20ASIO.md) |
 

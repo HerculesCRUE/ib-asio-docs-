@@ -40,4 +40,4 @@ Se propone un proceso de adaptación para que todos los proyectos/repositorios u
 
 ## Estudio de herramientas
 
-Se ha confeccionado un documento incluyendo el [estudio de las herramientas a utilizar](./tooling).
+Se ha confeccionado un documento incluyendo el [estudio de las herramientas a utilizar](./tooling.md).
