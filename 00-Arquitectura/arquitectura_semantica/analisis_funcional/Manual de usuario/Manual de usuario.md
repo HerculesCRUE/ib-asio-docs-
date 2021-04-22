@@ -13,8 +13,8 @@
 | Módulo         | Manual de usuario                                            |
 | Tipo           | Documento                                                    |
 | Objetivo       | Documento con un manual de usuario que busca brindar asistencia a los sujetos que usan el sistema. |
-| Estado         | 100% para el hito 1                                          |
-| Próximos pasos | Ampliar de forma acorde al avance del proyecto.              |
+| Estado         | **100%**                                       |
+| Próximos pasos |             |
 
 
 

@@ -7,8 +7,8 @@
 | Módulo         | Infraestructura Ontológica                                   |
 | Tipo           | Archivo README; la documentación se encuentra en el archivo "ASIO_Izertis_ConversionDeRecursosAOWL.md" en la carpeta superior. |
 | Objetivo       | Pequeño documento de README explicando el contenido de la carpeta. |
-| Estado         | **100%**. El número de módulos verticales presentados en este hito 1 ha sido satisfecho. |
-| Próximos pasos | Con el fin de desarrollar futuros módulos verticales a entregar en el hito 2 se analizará la idoneidad de las herramientas listadas en el entregable. |
+| Estado         | **100%**.|
+| Próximos pasos |  |
 
 # README
 

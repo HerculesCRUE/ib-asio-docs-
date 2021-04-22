@@ -7,8 +7,8 @@
 | Módulo                           | Infraestructura Ontológica                                   |
 | Tipo                             | Entregable complementario a la documentación de la ontología, que se encuentra en la carpeta [Red de ontologías Hércules](../01-Red_de_Ontologías_Hércules). |
 | Objetivo                         | Documento donde se explica la aproximación para especificar, personalizando, las partes de la red de ontologías Hércules según los intereses del *stakeholder* en cuestión. |
-| Estado                           | **80%**. Se contemplaba un desarrollo de las ontologías del 80% para el hito 1 de proyecto y se considera alcanzado. |
-| Próximos pasos                   | Para el hito 2 se contempla continuar el desarrollo del 20% restante de las ontologías por medio del añadido de más módulos verticales que contemplen otras realidades más allá de las preguntas de competencia proporcionadas para el hito 1 y de acuerdo a los datasets proporcionados por la Universidad de Murcia y otros casos que se juzguen idóneos (Universidad de Oviedo u otras). |
+| Estado                           | **100%**.  |
+| Próximos pasos                   |  |
 | Repositorio de software asociado | El espacio de trabajo de las ontologías Hércules es accesible [aquí](https://github.com/HerculesCRUE/ib-hercules-ontology). |
 
 

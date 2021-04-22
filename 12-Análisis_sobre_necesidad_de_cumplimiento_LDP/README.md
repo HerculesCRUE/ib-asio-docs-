@@ -7,7 +7,7 @@
 | Módulo         | Arquitectura Semántica                                       |
 | Tipo           | Documentación                                                |
 | Objetivo       | El presente documento intenta determinar la idoneidad  de la aplicación del conjunto de reglas establecidas por la [LDP](https://www.w3.org/TR/ldp/), sobre las operaciones HTTP, sobre recursos semánticos basados en grafos RDF. En definitiva, el documento trata de analizar, pros y contras de su uso, ya sea de forma global o parcial, desde el punto de vista del proyecto ASIO. |
-| Estado         | Completado                                                   |
+| Estado         | **100%**                                                    |
 | Próximos pasos |                                                              |
 | Documentación  | [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/12-An%C3%A1lisis_sobre_necesidad_de_cumplimiento_LDP/Requisitos%20LDP%20Server/Requisitos%20funcionales%20para%20API%20REST%20LDP%20en%20proyecto%20ASIO%20de%20la%20UM.md)  [Propuesta de diseño API LDP y EndPoint SPARQL](../00-Análisis/Requisitos%20LDP%20Server/Propuesta%20de%20dise%C3%B1o%20API%20LDP%20y%20EndPoint%20SPARQL.md) |
 

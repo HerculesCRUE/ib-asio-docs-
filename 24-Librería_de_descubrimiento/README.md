@@ -7,8 +7,8 @@
 | Módulo         | Discovery                                                    |
 | Tipo           | Documentación                                                |
 | Objetivo       | Librería de descubrimiento para el proyecto Backend SGI (ASIO) |
-| Estado         | Completada                                                   |
-| Próximos pasos | Test con conjuntos de datos reales del proyecto ASIO         |
+| Estado         | **100%**                                                 |
+| Próximos pasos |         |
 | Documentación  | [Implementación de librería de descubrimiento](https://github.com/HerculesCRUE/ib-discovery/tree/master/docs) |
 
 # Librería de descubrimiento

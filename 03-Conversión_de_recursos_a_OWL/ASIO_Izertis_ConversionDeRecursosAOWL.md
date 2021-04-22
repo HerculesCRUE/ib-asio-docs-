@@ -9,8 +9,8 @@
 | Módulo         | Infraestructura Ontológica                                   |
 | Tipo           | Documento                                                    |
 | Objetivo       | Este documento enumera las herramientas consideradas para la conversión de recursos a OWL y describe el candidato utilizado para este primer hito. |
-| Estado         | **100%** El estado del documento se ajusta al 100% comprometido para el hito 1 del proyecto, si bien se contempla la utilización de otras herramientas para el hito 2. |
-| Próximos pasos | La utilización de otras herramientas para estos mismos fines con vistas al hito 2, se documentará debidamente. |
+| Estado         | **100%** |
+| Próximos pasos | |
 
 
 

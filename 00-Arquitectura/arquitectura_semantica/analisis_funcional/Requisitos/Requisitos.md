@@ -9,8 +9,8 @@
 | Módulo         | Análisis                                                     |
 | Tipo           | Documento                                                    |
 | Objetivo       | Documento que contiene el análisis                           |
-| Estado         | 100% para el hito 1                                          |
-| Próximos pasos | Actualizar de forma acorde al avance del proyecto.           |
+| Estado         | **100%**                                           |
+| Próximos pasos |        |
 
 
 # Documento de Análisis ASIO

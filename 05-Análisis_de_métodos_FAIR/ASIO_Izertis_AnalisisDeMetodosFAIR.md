@@ -7,7 +7,7 @@
 | Módulo         | Infraestructura Ontológica                                   |
 | Tipo           | Documento                                                    |
 | Objetivo       | Este documento recoge el análisis de métodos FAIR disponibles y establece las métricas y la metodología propuesta para la evaluación de métricas FAIR del proyecto, descrita en el entregable de [Métricas FAIR](../06-M%C3%A9tricas_FAIR). |
-| Estado         | **100%** El análisis de métodos FAIR se considera completo.  |
+| Estado         | **100%**   |
 | Próximos pasos | Se podría estudiar KPIs alternativos para la presentación de resultados por áreas y/o un índice global FAIR mediante ponderación de indicadores FAIR por prioridad. |
 
 # Análisis de métodos FAIR

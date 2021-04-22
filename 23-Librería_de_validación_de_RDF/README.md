@@ -7,7 +7,7 @@
 | Módulo         | Librería de validación de RDF                  |
 | Tipo           | Software                                                     |
 | Objetivo       | Servicio web en formato API para la validación de RDF |
-| Estado         | **100%** Todos los casos de usos de este sistema han sido implementados, así como la documentación asociada. |
+| Estado         | **100%**  |
 | API         | [https://github.com/HerculesCRUE/ib-hercules-rdf-validator-back](https://github.com/HerculesCRUE/ib-hercules-rdf-validator-back) |
 | Cliente         | [https://github.com/HerculesCRUE/ib-hercules-rdf-validator-client](https://github.com/HerculesCRUE/ib-hercules-rdf-validator-client) |
 

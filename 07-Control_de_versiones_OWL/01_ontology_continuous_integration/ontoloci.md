@@ -7,7 +7,7 @@
 | Módulo         | Infraestructura Ontológica |
 | Tipo           | Documentación / Métodos integración continua |
 | Objetivo       | Establecer los métodos de integración continua de ontologías y su integración con el sistema de control de versiones GitHub |
-| Estado         | **90%** En este documento se establecen los métodos de integración continua de ontologías. Además se explica como se integran estos métodos con el sistema de control de versiones de GitHub. Sin embago, estos métodos no han sido puestos en producción en el entorno de a Universidad de Murcia |
+| Estado         | **100%**   |
 |Repositorio de Software Asociado| **NINGUNO.** Se trata de un entregable de tipo documentación / métodos. |
 
 # Metodología para a integración continua de ontologías

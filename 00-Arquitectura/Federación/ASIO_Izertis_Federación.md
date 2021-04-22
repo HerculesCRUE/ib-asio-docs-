@@ -7,7 +7,7 @@
 | Módulo                             | Arquitectura Semántica                                       |
 | Tipo                               | Documento                                                    |
 | Objetivo                           | Este documento recoge el análisis de alternativas para la federación de consultas sobre una arquitectura de nodos distribuidos en la red HERCULES. |
-| Estado                             | **100%** implementada                                        |
+| Estado                             | **100%**                                        |
 | Próximos pasos                     | Si fuese necesario añadir mas conectores a datasets de la nube LOD |
 | Documentación de la implementación | [Build (Pasos para la compilación y ejecución)](https://github.com/HerculesCRUE/ib-federation/blob/master/docs/build.md). <br>[Docker (Pasos para la generación de una imagen y publicación)](https://github.com/HerculesCRUE/ib-federation/blob/master/docs/docker.md). <br/>[Manual de usuario (descripción a alto nivel)](https://github.com/HerculesCRUE/ib-federation/blob/master/docs/manual_de_usuario.md)<br>[Documentación tecnica (descripción a bajo nivel)](https://github.com/HerculesCRUE/ib-federation/blob/master/docs/documentacion-tecnica.md).<br>[Documentación API REST](https://github.com/HerculesCRUE/ib-federation/blob/master/docs/documentacion_api_rest.md) |
 

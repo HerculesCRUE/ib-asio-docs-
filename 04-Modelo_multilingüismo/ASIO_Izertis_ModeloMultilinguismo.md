@@ -7,8 +7,8 @@
 | Módulo         | Infraestructura Ontológica                                   |
 | Tipo           | Documento                                                    |
 | Objetivo       | Este documento recoge el modelo de multilingüismo aplicado a la infraestructura ontológica en sus dos primeras fases, a saber la creación de la ontología en OWL por un lado y, por el otro, su adaptación a la infraestructura de WikiBase/WikiMedia. No recoge, por tanto, el tratamiento posterior del multilingüismo una vez las URIs son pasadas por el tamiz de la [Factoría de URIs](https://github.com/HerculesCRUE/ib-uris-generator), tratamiento que se describe en el documento de [Buenas prácticas para URIs Hércules](../09-Buenas_pr%C3%A1cticas_para_URIs_H%C3%A9rcules/ASIO_Izertis_BuenasPracticasParaURIsHercules.md) y el [Esquema de URIs Hércules](../08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). |
-| Estado         | **100%** El estado del documento se ajusta al 100% comprometido para el hito 1 del proyecto. |
-| Próximos pasos | Como se apunta al final del documento, algunos casos extremos de sistemas de escritura que no se han podido resolver en este hito 1, se estudiarán a lo largo del hito 2 y serán debidamente documentados entonces. |
+| Estado         | **100%**  |
+| Próximos pasos | |
 
 
 
