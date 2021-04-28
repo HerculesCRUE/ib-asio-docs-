@@ -14,7 +14,7 @@
 
 # Modelo Multilingüismo 
 
-Este informe documenta los casos de uso y contextos que se utilizarán en el proyecto Hércules para poner a prueba modelos multilingües (y de multiescriptalismo).
+Este informe  documenta los casos de uso y contextos que se utilizarán en el proyecto Hércules para poner a prueba modelos multilingües (y de multiescriptalismo).
 La primera parte del informe se centra en el tratamiento dado a los recursos respecto a esos 3 aspectos en el ámbito estrictamente de la Web semántica con ejemplos relevantes del caso de estudio del proyecto.
 
 La segunda parte o final describe las dificultades que nos estamos encontrando ahora mismo para trastaladar esas reglas de modelo al universo de Wikibase.
