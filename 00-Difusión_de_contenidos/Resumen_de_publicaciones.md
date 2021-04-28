@@ -4,17 +4,19 @@
 | -------------- | ------------------------------------------------------------ |
 | Contenidos     | Este documento contiene un listado de las publicaciones que se han   realizado difundiendo los resultados del proyecto Hercules ASIO acometido por IZERTIS y el grupo de investigación WESO de la Universidad de Oviedo. Junto al listado de publicaciones se relacionan las diferentes partes del proyecto sobre las que trata cada publicacion. |
 | Estado del documento | **Enviado para revisar** |
-| Propietario | Guillermo Facundo Colunga (WGrupo de Investigación WESO, Universidad de Oviedo) |
+| Propietario | Guillermo Facundo Colunga (Grupo de Investigación WESO, Universidad de Oviedo) |
 
 |                |        Historial de Versiones                                |
 | -------------- | ------------------------------------------------------------ |
 |   28/04/2021   | Versión inicial.                                             |
+|   28/04/2021   | Arregladas tabla y algun typo.                               |
 
 
 # Memoria de publicaciones
 Durante el desarrollo de ASIO, enmarcado en el proyecto ASIO, se han realizado una serie de publicaciones sobre aquellos aspectos que se han considerado más relevantes, desde el punto de vista de la investigación. Las publicaciones realizadas siguen el formato de artículo científico. Y, se han presentado en diferentes conferencias a nivel internacional. En contrato, las publicaciones realizadas son las siguientes:
+
 |||
-|-:|-|
+|-|-|
 |**Título:**| Automatic synchronization of RDF graphs representing ontologies and Wikibase instances.
 |**Autores:**| Alejandro González Hevia, Guillermo Facundo Colunga, Emilio Rubiera Azcona y Jose Emilio Labra Gayo.|
 |**Conferencia:**| International Semantic Web Conference 2020|
