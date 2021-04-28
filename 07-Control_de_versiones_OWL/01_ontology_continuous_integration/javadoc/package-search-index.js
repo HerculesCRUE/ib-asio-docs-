@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"asio.ontology.test"},{"l":"es.weso.asio.ontology.test"},{"l":"es.weso.asio.ontology.test.manifest"},{"l":"es.weso.asio.ontology.test.manifest.impl"},{"l":"es.weso.asio.ontology.validate"},{"l":"es.weso.shexsjava"}]
