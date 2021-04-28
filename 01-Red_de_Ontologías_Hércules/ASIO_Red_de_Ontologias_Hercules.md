@@ -2,7 +2,8 @@
 
 | Entregable                       | Red de ontologías Hércules                                   |
 | -------------------------------- | ------------------------------------------------------------ |
-| Fecha                            | 25/05/2020                                                   |
+| Fecha                            | 25/05/2020 (entrega hito 1)                                                   |
+|Revisado por                      | Emilio Rubiera Azcona (28/04/2021)
 | Proyecto                         | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
 | Módulo                           | Infraestructura Ontológica                                   |
 | Tipo                             | Documento                                                    |
@@ -29,7 +30,7 @@ This document reports the current status of the ASIO ontology files and more spe
 8. [asio-module-universityhr-pt](../01-Red_de_Ontologías_Hércules/asio-module-universityhr-pt.ttl)
 9. [asio-module-universityhr-uk](../01-Red_de_Ontologías_Hércules/asio-module-universityhr-uk.ttl)
 
-The first one is the ***core*** ontology and the second one corresponds to the class-by-class ***alignements*** towards both external vocabularies and also between individuals within the vertical modules.
+The first one is the ***core*** ontology and the second one corresponds to the class-by-class ***alignments*** towards both external vocabularies and also between individuals within the vertical modules.
 
 In addition to these two files, a number of ***vertical modules*** have being released at the moment of this writing. The earliest release was the **geopolitical module** (the third file listed above) including so far the full list of world's countries, the geopolitical entities of Andorra, Spain and Portugal (France is the other country to be taken into account in this vertical module in the next update).
 
@@ -60,7 +61,7 @@ On the basis of this distinction, we develop an architecture of the ontological 
 
 ## 2. Core ontology
 
-### 2.1. prolegomena
+### 2.1. Prolegomena
 
 In any informational system, in this case an ontology, there must be non-modular processing –or what we call central processing, to distinguish it from modular processing, which is peripheral (our vertical modules).
 
@@ -68,11 +69,11 @@ To say that a part of the ontology is core (i.e. involves central processing act
 
 
 
-### 2.2. the core ontology at a glance
+### 2.2. The core ontology at a glance
 
 In this section, we are going to show the reader the classes through a screenshot from Protégé and some diagrams showing some of the classes and properties in use in a number of examples.
 
-These are the full list of classes (available also in the [LODE](https://essepuntato.it/lode/) generated HTML file accompaning this document), with the miniature on the left shwing just the superclasses and the two in the central and right part of the illustration the whole list of classes:
+These are the full list of classes (available also in the [LODE](https://essepuntato.it/lode/) generated HTML file accompaning this document), with the miniature on the left showing just the superclasses and the two in the central and right part of the illustration the whole list of classes:
 
 
 
@@ -91,11 +92,11 @@ As far as the different profiles and roles of a person are concerned, the next f
 
 ![1st-example](./images/roles.png)
 
-Person Daniel can seamlessly have a twofold role: a teaching role and a researching one, which can co-exist for that given individual. Besides that, thanks to the class *asio:Profile*, not featured in the diagram, a given person can combine and/split her different profiles according to a given context (class *asio:Context*).
+Person Daniel can seamlessly have a twofold role: a teaching role and a researching one, which can co-exist for that given individual. Besides that, thanks to the class *asio:Profile*, not featured in the diagram, a given person can combine and/or split her different profiles according to a given context (class *asio:Context*).
 
 Several other parts of the core ontology could be illustrated here by means of figures but, as we already include an extensive annex with competences questions answered through SPARQL queries, we are not going to be exhaustive here.
 
-As a final *graphical* example we are going to elaborate how the core ontology deals with a Patent shows the classes (Patent, Person, Organization), object and data properties involved in the modelling:
+As a final *graphical* example we are going to elaborate how the core ontology deals with a Patent by showing the classes (Patent, Person, Organization), object and data properties involved in the modelling:
 
 
 
@@ -115,7 +116,7 @@ As we already aforementioned, we are currently studying the segmentation of the 
 
 
 
-### 2.3. imported vocabularies
+### 2.3. Imported vocabularies
 
 Two external vocabularies are imported to deal with specific-knowledge domains of relevance for the project:
 
@@ -133,7 +134,7 @@ We can consider a temporary and sui generis semi-importation the usage of some c
 
 
 
-### 2.4. multilingualism in the core ontology
+### 2.4. Multilingualism in the core ontology
 
 The entire list of classes in the core ontology is enriched multilingually via the data property `rdfs:label` and, besides the two obvious working languages (English, Spanish), three more languages are included: Catalan, French and Portuguese, as corresponding to the three other countries that we take into account in addition to Spain for geographically modelling our domain: Andorra, France and Portugal.
 
@@ -172,7 +173,7 @@ asio:MastersThesis rdf:type owl:Class ;
 
 As we can see in the code snippet, for the case of this class, the Portuguese language does not show differences bewteen the Portugal and the Brasil locales (both use *dissertação de mestrado*) but its Angolan locale does distinguish itself (*Tese de mestrado*). In the case of the francophone locales for France, Belgium, Switzerland and Canada (Québec), they all match the *Mémoire de maîtrise* denomination. The same applies to the Anglo-Saxon world, for which we don't specify locale.
 
-In Spanish though the situation varies and we specify the Spain locale, *Trabajo de fin de máste*r, with a sad linguistic calque from English (*máster*), from the locales for Mexico, Argentina, Colombia or Cuba, more genuine linguistically speaking (*maestría*), or the case of Chile (*magíster*), more latinazing.
+In Spanish though the situation varies and we specify the Spain locale, *Trabajo de fin de máste*r, with a sad linguistic calque from English (*máster*), from the locales for Mexico, Argentina, Colombia or Cuba, more genuine linguistically speaking (*maestría*), or the case of Chile (*magíster*), more latinizing.
 
 Obviously, the granularity of detail regarding ***i18n*** and ***L10n*** applied to the core ontology in this release is still far from being concluded and at the time of this writing more candidate labels (preferent and alternative) and locales are being analysed and are expected to be included in the May release of the ontology.
 
@@ -209,7 +210,7 @@ On the other hand, the vertical modules are the ideal playground for testing mul
 
 
 
-### 4.1. geopolitical entities
+### 4.1. Geopolitical entities
 
 As we mentioned at the beginning of this document, the more advanced vertical module so far, already released in an early version, is the geopolitical one. It currently covers the full list of countries and the geopolitical subdivisions of:
 
@@ -225,21 +226,21 @@ The main goal of this vertical module, which is in a way also transversal, is to
 
 
 
-### 4.2. scientific domains
+### 4.2. Scientific domains
 
 **Note** that this vertical module is being implemented at the moment and it is not included in this release but, as it is already designed, we include already documentation about it. The transformation of the tabular data will be carried out in the next weeks so to be *plugged in* as vertical module, similarly to the geopoolitical one.
 
-#### 4.2.1 prolegomena
+#### 4.2.1 Prolegomena
 
 The [Spain's Ministry of Science, Innovation and Universities](http://www.ciencia.gob.es/), through its [State Research Agency](http://www.ciencia.gob.es/portal/site/MICINN/menuitem.8d78849a34f1cd28d0c9d910026041a0/?vgnextoid=664cfb7e04195510VgnVCM1000001d04140aRCRD), published a document featuring a number of [**Scientific domains**](http://www.ciencia.gob.es/stfls/MICINN/Ayudas/PE_2013_2016/PE_Promocion_e_Incorporacion_Talento_y_su_Empleabilidad/FICHEROS/SE_Incorporacion/Ayudas_contratos_RYC_2016/Clasificacion_areas_cientificas_2016_AEI.pdf) which are the basis for several ones among the competence questions provided by the University of Murcia in order to model the ontology.
 
-#### 4.2.2. modelling & transformation
+#### 4.2.2. Modelling & transformation
 
 After a thorough analysis of that document, a clear hierarchical structure of domains and subdomains was identified and it was deemed as seamlessly fitting a thesaurus-like structure and hence suitable to be ontologically transformed using the W3C's standard for controlled vocabularies: [SKOS-Core](https://www.w3.org/TR/swbp-skos-core-spec/).
 
 SKOS-Core is not just the most appropriate solution for such a document featuring a level-structure thesaurus-like fully exploiting its classes `skos:Concept` (for *agglutinating* concepts) and `skos:ConceptScheme` (in order to arrange concepts *knitting* them together into schemes of concepts), but it also provides means to include models densely multilingual, as checkable with some European thesauri such as [GEMET](https://www.eionet.europa.eu/gemet/en/about/) or [EuroVoc](https://data.europa.eu/euodp/en/data/dataset/eurovoc).
 
-#### 4.2.3. added value
+#### 4.2.3. Added value
 
 Hence, besides being able to seamlessly *assimilate* these **Scientific domains** within the ASIO ontology through an *ad hoc*, vertical module, we have improved the Ministry's document in a number of ways:
 
@@ -254,7 +255,7 @@ where still in a tabular format we can check out a first column with codes that 
 
 In addition to the ontological possibilities offered by SKOS (which is itself an ad hoc ontology) with respect to the ASIO core ontology, these mentioned multilingual labels provide idoneous raw materials to carry out extensively testing with respect to multilingualism, as detailed in the previous section and in a complementary deliverable (*ModeloMultilinguismo*).
 
-### 4.3 subject areas
+### 4.3 Subject areas
 The same exploitation have been used to created the related vertical module Subject areas, from the same [State Research Agency](http://www.ciencia.gob.es/portal/site/MICINN/menuitem.8d78849a34f1cd28d0c9d910026041a0/?vgnextoid=664cfb7e04195510VgnVCM1000001d04140aRCRD), which is used for slightly different cases with the core ontology, but which was modelled equally following the schema provided by SKOS.
 
 
@@ -266,7 +267,7 @@ It also includes a limited sample of subdivisions (schools, faculties, centres) 
 
 
 
-### 4.5. human resources from national university systems
+### 4.5. Human resources from national university systems
 
 A very complex issue to address among national university systems is human resources, specially those belonging to academia. Spain, for instance, shows a wide variety of positions that can be even wider when considering also some peculiarities at regional level. There are very specific cases in Andalusia, Catalonia or the Basque country.
 
@@ -332,13 +333,13 @@ Finally, it is worth mentioning that there is a property `asio:referenceLaw` spe
 
 
 
-### 4.6. other vertical modules being currently implemented
+### 4.6. Other vertical modules being currently implemented
 
 At the moment of this writing, we are studying the inclusion of more vertical modules. One candidate for milestone 2 could be *Spanish administrative entities*.
 This would be implemented to encompass all the relevant entities belonging to Spain's *administración autonómica* related to the geopolitical subdivisions of the previous vertical module, to which they are going to be seamlessly linked.
 The implementation of this vertical module will be also carried out using SKOS-Core as it shows a clear hierarchical structure and it will include the first-level bodies of *administración autonómica* (*conserjerías*), as available at Spain's administration portal [[1]](https://administracion.gob.es/pagFront/espanaAdmon/directorioOrganigramas/comunidadesAutonomas/comunidadesAutonomas.htm?idCCAA=14), and the second-level [[2]](https://administracion.gob.es/pagFront/espanaAdmon/directorioOrganigramas/fichaUnidadOrganica.htm?idUnidOrganica=123276&origenUO=comunidadesAutonomas&volver=comunidadesAutonomas&idCCAA=14), mainly *direcciones generales* and *consorcios*.
 
-### 4.7. vertical modules and customization
+### 4.7. Vertical modules and customization
 
 The bet on SKOS as main solution for these vertical modules (instead of focusing on other models less *accepted* standard-wise, as the aforementioned Lemon) has to do with customization.
 
