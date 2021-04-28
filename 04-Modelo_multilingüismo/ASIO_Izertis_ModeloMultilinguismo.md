@@ -108,9 +108,9 @@ garantizando también esa opacidad y asepsia de las URIs para luego recibir de m
 Etiquetas léxicas
 -----------------
 
-Si en un principio se pensó utilizar únicamente etiquetas `rdfs:label` para todas las URIs (según el patrón label everything[^2]) y con un valor literal en al menos 2 idiomas: español e inglés (de acuerdo al patrón multilingual labels[^3]) y recurrir a la propiedad de SKOS `skos:altLabel` para identificar alias o nombres alternativos.
+En un principio se pensó utilizar únicamente etiquetas `rdfs:label` para todas las URIs (según el patrón label everything[^2]) y con un valor literal en al menos 2 idiomas: español e inglés (de acuerdo al patrón multilingual labels[^3]) y recurrir a la propiedad de SKOS `skos:altLabel` para identificar alias o nombres alternativos.
 
-Sin embargo, las etiquetas léxicas de rdfs (como `rdfs:label`) podrían no ser suficientes en todos los casos hacer una duplicación por medio de las etiquetas léxicas de SKOS (como `skos:prefLabel`) podría resultar útil, sobre todo por ponerla en relación con posibles etiquetas alternativas, explicitadas por medio de `skos:altLabel`  o, incluso, `skos:hiddenLabel` y así mantener una relación léxica de sinonimia más lógica y *modelada*.
+Sin embargo, las etiquetas léxicas de rdfs (como `rdfs:label`) no siempre son suficientes en todos los casos y a menudo se lleva a cabo una duplicación por medio de las etiquetas léxicas de SKOS (como `skos:prefLabel`), sobre todo por ponerla en relación con posibles etiquetas alternativas, explicitadas por medio de `skos:altLabel`  o, incluso, `skos:hiddenLabel` y así mantener una relación léxica de sinonimia más lógica y *modelada*.
 
 Como decíamos en la introducción, en algún caso se utilizan propiedades del modelo de [Lemon](https://lemon-model.net/),   especialmente en algún ejemplo de multiescriptalismo. Asimismo, aunque no se ha contemplado en principio el uso de [SKOS-XL](https://www.w3.org/TR/skos-reference/skos-xl.html), cuya distinción entre etiquetas de *literalidad* y de *recursividad* resulta interesante y podría ser añadida a nuestro modelo en algún caso.
 
@@ -121,11 +121,11 @@ Como decíamos en la introducción, en algún caso se utilizan propiedades del m
 Propiedades de documentación
 ----------------------------
 
-La arquitectura ontólogica, más allá de las etiquetas léxicas propiamente dichas, puede beneficiarse de otras representaciones en lenguaje natural de cada recurso mediante propiedades de documentación pertenecientes a vocabularios como el propio [RDFS](https://www.w3.org/2001/sw/wiki/RDFS), [Dublin Core](https://dublincore.org/) o [SKOS-Core](https://www.w3.org/TR/swbp-skos-core-spec/).
+La arquitectura ontólogica, más allá de las etiquetas léxicas propiamente dichas, se beneficia de otras representaciones en lenguaje natural de cada recurso mediante propiedades de documentación pertenecientes a vocabularios como el propio [RDFS](https://www.w3.org/2001/sw/wiki/RDFS), [Dublin Core](https://dublincore.org/) o [SKOS-Core](https://www.w3.org/TR/swbp-skos-core-spec/).
 
-Recurrir a la etiqueta `rdfs:comment` para documentar y explicar las entidades es una buena práctica, así como tambén añadir metadatos a los archivos sobre autoría (`dc:creator`), descripciones (por ejemplo `dc:description`), dataciones, etc. Utilización de otras representaciones en lenguaje natural del recurso mediante las propiedades rdfs:comment, dc:description, etc.
+Recurrir a la etiqueta `rdfs:comment` para documentar y explicar las entidades es una buena práctica, así como tambén añadir metadatos a los archivos sobre autoría (`dc:creator`), descripciones (por ejemplo `dc:description`), dataciones, etc. Asimismo se utilizan otras representaciones en lenguaje natural del recurso mediante las propiedades rdfs:comment, dc:description, etc.
 
-También [SKOS-Core](https://www.w3.org/TR/swbp-skos-core-spec/) ofrece otras interesantes para nuestros intereses, sobre todo aplicables a los esquemas de conceptos que se explotarán en los módulos verticales de la ontología, como `skos:definition` o `skos:notation`.
+También [SKOS-Core](https://www.w3.org/TR/swbp-skos-core-spec/) ofrece otras interesantes para nuestros intereses, sobre todo aplicables a los esquemas de conceptos que se explotan en los módulos verticales de la ontología, como `skos:definition` o `skos:notation`.
 
 
 
@@ -133,31 +133,26 @@ También [SKOS-Core](https://www.w3.org/TR/swbp-skos-core-spec/) ofrece otras in
 Otros metadatos lingüísticos
 ----------------------------
 
-Utilización de metadatos lingüísticos cuando sea necesario (patrón *linguistic metadata*[^4]). Aunque para muchos recursos, puede ser suficiente disponer de una representación en lenguaje natural ligera con
-etiquetas como `rdfs:label`, `rdfs:comment`, etc. En algunos vocabularios puede ser interesante utilizar representaciones lingüísticas más ricas como puede ser el modelo Lemon[^5], que permite representar aspectos léxicos de forma semántica.
+En el modelo ontológico se lleva a cabo una utilización de metadatos lingüísticos cuando se juzga necesario enriquecer aún más el modelo (patrón *linguistic metadata*[^4]). Aunque para muchos recursos puede ser suficiente disponer de una representación en lenguaje natural ligera con
+etiquetas como `rdfs:label`, `rdfs:comment`, etc., para otros casos se explotan otros vocabularios para poder expresar representaciones lingüísticas más ricas como es el caso del modelo Lemon[^5], que permite representar aspectos léxicos de forma semántica.
 
-Sin embargo, Lemon puede no ser suficiente para representar todo el conocimiento léxico de forma semántica \[2\] y este tipo de representaciones es una línea de investigación activa. A modo de ejemplo, en el proyecto europeo Prêt-à-LLOD[^6] se está actualmente trabajando en la creación y representación de datos enlazados multilingües.
+Sin embargo, Lemon no siempre resulta suficiente para representar todo el conocimiento léxico de forma semántica[^2] y este tipo de representaciones es una línea de investigación activa. A modo de ejemplo, en el proyecto europeo Prêt-à-LLOD[^6] se está actualmente trabajando en la creación y representación de datos enlazados multilingües.
 
-A la hora de seleccionar vocabularios para reutilizar, elegir vocabularios multilingües en la medida que sea posible[^7].
+La política que se siguió en el modelo ontológico, especialmente en lo que se refiere a los módulos verticales, fue seleccionar siempre vocabularios reutilizables que fueran multilingües en la medida que sea posible[^7].
 
 
 *Multiescriptalismo*
 ====================
 
-Denominamos "multiescriptalismo", adaptando el neologismo en inglés "multiscriptalism" de Coulmas (1996), a la faceta múltiple de las lenguas que tiene que ver no con la lengua propiamente dicha, sino con
-el sistema o sistemas de escritura que una lengua puede utilizar, es decir, para referirnos a la diversidad de sistemas de escritura (alfabetos, silabarios, sistemas logográficos, etc.) que se pueden encontrar en las lenguas naturales y en otros tipos de lenguajes, como por ejemplo las notaciones fonéticas.
+Denominamos "multiescriptalismo", adaptando el neologismo en inglés "multiscriptalism" de Coulmas (1996), a la faceta múltiple de las lenguas que tiene que ver no con la lengua propiamente dicha, sino con el sistema o sistemas de escritura que una lengua puede utilizar, es decir, para referirnos a la diversidad de sistemas de escritura (alfabetos, silabarios, sistemas logográficos, etc.) que se pueden encontrar en las lenguas naturales y en otros tipos de lenguajes, como por ejemplo las notaciones fonéticas.
 
-Aunque las ontologías de ASIO en principio solamente contemplan el español y el inglés como lenguas *de trabajo*, una estructura ontológica rigurosa y bien diseñada siempre debería considerar e incluir un modelo
-de *internacionalización* (i18n) preparatorio para todas las localizaciones (l10n) que fueran necesarias.
+Aunque las ontologías de ASIO en principio solamente contemplan el español y el inglés como lenguas *de trabajo*, una estructura ontológica rigurosa y bien diseñada siempre debería considerar e incluir un modelo de *internacionalización* (i18n) preparatorio para todas las localizaciones (l10n) que fueran necesarias.
 
-Tener en mente estas características en las fases fundacionales del proyecto y crear una infraestructura ad hoc de antemano suele ahorrar mucho trabajo futuro, aparte de garantizar una reutilización mucho más
-global, que es uno de los leitmoif de la Web Semántica.
+Tener en mente estas características en las fases fundacionales del proyecto y crear una infraestructura ad hoc de antemano suele ahorrar mucho trabajo futuro, aparte de garantizar una reutilización mucho más global, que es uno de los leitmoif de la Web Semántica.
 
-En una infraestructura ontológica como ASIO, preparada para el multilingüismo, este aspecto no debería ser desdeñado, por lo que se intentará poner un especial énfasis desde el principio en facilitar la
-inclusión de todas las variedades de sistemas de escritura utilizados en lenguas naturales y artificiales que sean relevantes.
+En una infraestructura ontológica como ASIO, preparada para el multilingüismo, este aspecto no debería ser desdeñado, por lo que se intentará poner un especial énfasis desde el principio en facilitar la inclusión de todas las variedades de sistemas de escritura utilizados en lenguas naturales y artificiales que sean relevantes.
 
-Cabe destacar que para algún caso extremo de multiescriptalismo, sí se recurre al modelo [Lemon](https://lemon-model.net/). Éste es el caso de las trancripciones fonéticas en el [IPA](https://www.ipachart.com/
-) (alfabeto fonético internacional). Veamos algunos ejemplos complejos en los que se combinan un sistema de escritura exótico como el del IPA con lengua y con *locale*:
+Cabe destacar que para algún caso extremo de multiescriptalismo, sí se recurre al modelo [Lemon](https://lemon-model.net/). Éste es el caso de las trancripciones fonéticas en el [IPA](https://www.ipachart.com/) (alfabeto fonético internacional). Veamos algunos ejemplos complejos en los que se combinan un sistema de escritura exótico como el del IPA con lengua y con *locale*:
 
 
 
