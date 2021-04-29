@@ -4,8 +4,8 @@
 
 | Fecha        | 29/04/2021                                                   |
 | ------------ | ------------------------------------------------------------ |
-| Revisado por | Paloma TerÃ¡n PÃ©rez                                           |
-| MÃ³dulo       | Diccionario de tÃ©rminos de ASIO                              |
+| Revisado por | Paloma Terán PÃ©rez                                           |
+| Módulo       | Diccionario de tÃ©rminos de ASIO                              |
 | Tipo         | Documento                                                    |
 | Objetivo     | Documento que contiene los diferentes tÃ©rminos utilizados en ASIO |
 
@@ -13,17 +13,17 @@
 
 
 
-## DICCIONARIO DE Tï¿½RMINOS DE ASIO
+## DICCIONARIO DE TÉRMINOS DE ASIO
 
 
 
-* **Arquitectura semï¿½ntica de datos**. la arquitectura que se propone para el SGI
+* **Arquitectura semántica de datos**. la arquitectura que se propone para el SGI
 
-* **CRUE**. Conferencia de Rectores de las Universidades Espaï¿½olas
+* **CRUE**. Conferencia de Rectores de las Universidades Españolas
 
-* **CRUE-TIC**. Comisiï¿½n Sectorial de Tecnologï¿½as de la Informaciï¿½n y las Comunicaciones de la Conferencia de Rectores de las Universidades Espaï¿½olas.
+* **CRUE-TIC**. Comisión Sectorial de TecnologÃ­as de la Información y las Comunicaciones de la Conferencia de Rectores de las Universidades Españolas.
 
-* **CVN**. El Currï¿½culum Vï¿½tae Normalizado, CVN, es una Norma estï¿½ndar que define un mismo formato de presentaciï¿½n de los datos curriculares de los investigadores y que posibilita la interoperabilidad con las diferentes bases de datos de las instituciones. Sirve para que los investigadores puedan presentar su currï¿½culo en un formato digital ï¿½nico y comï¿½n que les permite actualizar de forma automï¿½tica su informaciï¿½n curricular, sin tener que volver a introducirla de nuevo. CVN facilita la presentaciï¿½n del currï¿½culum vï¿½tae de una forma unificada en las convocatorias de ayudas pï¿½blicas del Plan Estatal y autonï¿½micas. https://cvn.fecyt.es/presentacion/que-es-cvn
+* **CVN**. El Currículum Vitae Normalizado, CVN, es una Norma estándar que define un mismo formato de presentación de los datos curriculares de los investigadores y que posibilita la interoperabilidad con las diferentes bases de datos de las instituciones. Sirve para que los investigadores puedan presentar su currículo en un formato digital único y común que les permite actualizar de forma automï¿½tica su informaciï¿½n curricular, sin tener que volver a introducirla de nuevo. CVN facilita la presentaciï¿½n del currï¿½culum vï¿½tae de una forma unificada en las convocatorias de ayudas pï¿½blicas del Plan Estatal y autonï¿½micas. https://cvn.fecyt.es/presentacion/que-es-cvn
 
 * **DCAT.** Es una recomendaciï¿½n del W3C que permite crear catï¿½logos con descripciones de conjuntos de datos. La utilizaciï¿½n de una forma estï¿½ndar de descripciï¿½n de catï¿½logos aumenta la capacidad de descubrimiento y permite que las aplicaciones sean capaces de encontrar metadatos distribuidos por diferentes catï¿½logos. Tambiï¿½n permite la publicaciï¿½n descentralizada de catï¿½logos y facilita la bï¿½squeda federada de conjuntos de datos publicados en diferentes pï¿½ginas o portales.
 
