@@ -2,6 +2,17 @@
 
 ![](./images/logos_feder.png)
 
+
+
+| Fecha        | 29/04/2021                                                   |
+| ------------ | ------------------------------------------------------------ |
+| Revisado por | Paloma Terán Pérez                                           |
+| Módulo       | Diseño de pantallas                                          |
+| Tipo         | Documento                                                    |
+| Objetivo     | Documento con análisis y propuestas de pantallas que se pueden realizar en la aplicación |
+
+
+
 # Diseño de pantallas
 
 
@@ -40,6 +51,10 @@
 
 Introducción
 ============
+
+> Nota inicial: Este documento es un análisis previo, las pantallas finales no tienen que concordar con lo establecido en éste.
+
+
 
 El sistema Frontend de la aplicación se encargará de interactuar con los usuarios que intenten acceder al sistema, ya sean personas o máquinas. Se permitirá tanto la consulta de datos como la introducción de nuevos datos en el sistema mediante esta vía.
 

@@ -1,5 +1,18 @@
 ![](./images/logos_feder.png)
 
+
+
+| Fecha        | 29/04/2021                                           |
+| ------------ | ---------------------------------------------------- |
+| Revisado por | Paloma Terán Pérez                                   |
+| Módulo       | Propuesta de solución para el front                  |
+| Tipo         | Documento                                            |
+| Objetivo     | Documento con la propuesta de solución para el front |
+
+
+
+
+
 # Propuesta de solución para el front
 
 
@@ -32,6 +45,14 @@
 
 [2.6. Estadísticas](#estadísticas)
 
+
+
+
+
+Introducción
+============
+
+> Nota inicial: Este documento es un análisis previo, las pantallas finales no tienen que concordar con lo establecido en éste.
 
 
 
