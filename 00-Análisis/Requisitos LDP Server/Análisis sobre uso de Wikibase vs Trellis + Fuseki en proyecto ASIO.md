@@ -1,5 +1,18 @@
 ![](./images/logos_feder.png)
 
+
+
+
+
+| Fecha        | 29/04/2021                                                   |
+| ------------ | ------------------------------------------------------------ |
+| Revisado por | Paloma Terán Pérez                                           |
+| Módulo       | Análisis sobre uso de Wikibase vs Trellis + Fuseki           |
+| Tipo         | Documento                                                    |
+| Objetivo     | Documento con el análisis sobre el uso de Wikibase vs Trellis + Fuseki en proyecto ASIO |
+
+
+
 # Análisis sobre uso de Wikibase vs Trellis + Fuseki en proyecto ASIO
 
 - Status: Propuesta
@@ -33,7 +46,7 @@ La requisitos enumerados a continuación, podrían sufrir algún tipo de impacto
 
 | Requisito                                                    | Descripción                                                  | Pag.  Pliego | Bloque  Funcional                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------ | ----------------------------------------- |
-| **REQ 5.1.8** Gestión de  dataset                            | Permisos,   carga masiva, borrado, metadatos, etc. De este requisito se infiere la   necesidad proporcionar permisos de acceso a datos, de manera granular, y por   lo el cumplimiento del requisito de [Autorización y autentificación](#RANGE!Autentificación y autorización) | 65           | Seguridad                                 |
+| **REQ 5.1.8** Gestión de  dataset                            | Permisos,   carga masiva, borrado, metadatos, etc.. De este requisito se infiere la   necesidad proporcionar permisos de acceso a datos, de manera granular, y por   lo el cumplimiento del requisito de [Autorización y autentificación](#RANGE!Autentificación y autorización) | 65           | Seguridad                                 |
 | **REQ 5.1.9** Gestión de  usuarios, permisos y acceso de datos | Gestión de usuarios,  permisos y acceso de datos.            | 65           | Seguridad                                 |
 | **REQ 5.2.1** SPARQL endpoint                                | Para que humanos y máquinas exploten la información almacenada. REQ 10.2 | 66           | Seguridad                                 |
 | **REQ 7** Almacenamiento en  Triple Store                    |                                                              | 67           | Triple Store                              |

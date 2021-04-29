@@ -1,5 +1,18 @@
 ![](./images/logos_feder.png)
 
+
+
+| Fecha        | 29/04/2021                                                |
+| ------------ | --------------------------------------------------------- |
+| Revisado por | Paloma Terán Pérez                                        |
+| Módulo       | Linked Data Platform                                      |
+| Tipo         | Documento                                                 |
+| Objetivo     | Documento con la guía y normativa de Linked Data Platform |
+
+
+
+
+
 # Linked Data Platform
 
 

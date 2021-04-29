@@ -1,5 +1,16 @@
 ![](./images/logos_feder.png)
 
+
+
+| Fecha        | 29/04/2021                                                   |
+| ------------ | ------------------------------------------------------------ |
+| Revisado por | Paloma Terán Pérez                                           |
+| Módulo       | Requisitos funcionales para API REST LDP                     |
+| Tipo         | Documento                                                    |
+| Objetivo     | Documento con la especificación de los requisitos funcionales para API REST LDP |
+
+
+
 # Requisitos funcionales para API REST LDP en proyecto ASIO de la UM
 
 ## Introducción
@@ -12,7 +23,7 @@ El presente documento, tiene como propósito detallar los requerimientos funcion
 
 El presente documento especifica, el su primera versión, los requerimientos funcionales y no funcionales que se deben tener en cuenta, en el diseño e implementación o selección de un API REST LDP, impuestos principalmente por la [Linked Data Platform](https://www.w3.org/TR/ldp/), teniendo en cuenta asimismo el requisito deseable, de tener acceso a cualquier versión histórica de los documentos almacenados en dicho servidor [Memento](./Memento%20Gu%C3%ADa%20y%20Normativa.md).
 
-El presente documento pretende de esta forma servir de base y justificación, para cualquier decisión arquitectónica que a partir de la definición de dichos requisitos pueda derivarse, ya sea la implementación propia de un servidor linked data, ya sea la justificación de un determinado stack tecnológico que cumpla en gran medida los requisitos aquí enumerados.
+El presente documento pretende de esta forma servir de base y justificación, para cualquier decisión arquitectónica que a partir de la definición de dichos requisitos pueda derivarse, ya sea la implementación propia de un servidor Linked Data, ya sea la justificación de un determinado stack tecnológico que cumpla en gran medida los requisitos aquí enumerados.
 
 Por otro lado, se establecerá la base de los criterios de aceptación, que la herramienta una vez implementada (en caso de implementación propia), o integrada (en caso de selección de un herramienta externa), deberá cumplir.
 
@@ -145,7 +156,7 @@ Las reglas para los recursos de la [LDP](https://www.w3.org/TR/ldp/) intentar da
 - ¿Cómo puede el servidor facilitar al cliente la creación de recursos?
 - ¿Cómo puede un recurso de gran tamaño ser paginado?
 
-Adicionalmente a la parte normativa, la  [LDP](https://www.w3.org/TR/ldp/), ofrece una guia de mejores practicas que aborda cuestiones tales como:
+Adicionalmente a la parte normativa, la  [LDP](https://www.w3.org/TR/ldp/), ofrece una guía de mejores practicas que aborda cuestiones tales como:
 
 - ¿Qué tipos de valores literales deberían usarse?
 - ¿Hay algunos vocabularios típicos que deberían reutilizarse?
@@ -699,7 +710,7 @@ Algunas normativas fuera del alcance de la LDP, tienen especial relevancia, y es
 
 #### Relativas a HTTP 1.1
 
-- Los servidores LDP pueden admitir representaciones más allá de las necesarias para cumplir con esta especificación. Pueden ser formatos RDF tales como N3, NTriples u otros o No RDF tales como HTML, JSON, etc... La negociación HTTP, es usada para seleccionar el formato.
+- Los servidores LDP pueden admitir representaciones más allá de las necesarias para cumplir con esta especificación. Pueden ser formatos RDF tales como N3, NTriples u otros o No RDF tales como HTML, JSON, etc. La negociación HTTP, es usada para seleccionar el formato.
 - Los recursos RDF pueden modificarse usando métodos no descritos en este documento, por ejemplo mediante el uso de SPARQL, siempre y cuando estos métodos no entren en conflicto con las especificaciones de este documento.
 - Los documentos borrados deberían según las especificaciones de este documento, retornar un codigo 404 (Not Found) o 410 (Gone), pero el protocolo HTML, prevé otras opciones.
 - Los servidores LDP, pueden cambiar el estado de un recurso, especialmente cuando se usan métodos no seguros. Por ejemplo, es aceptable que el servidor elimine triples de otros recursos cuyo sujeto u objeto es el recurso eliminado como resultado de una solicitud HTTP DELETE exitosa. También es aceptable y común que los servidores LDP no hagan esto: el comportamiento del servidor puede variar, por lo que los clientes LDP no pueden depender de él.
@@ -808,7 +819,7 @@ Los clientes **PUEDEN** usar la cabecera **If-Match** y la cabecera **ETag** par
 
 ###### Requisito RF_01_03_06 [(4.2.4.6 LDP)](https://www.w3.org/TR/ldp/#ldpr-resource): Creación de recursos mediante el método PUT
 
-Los clientes **PUEDEN** elegir permitir o no la creación de nuevos recursos usando el metodo PUT .
+Los clientes **PUEDEN** elegir permitir o no la creación de nuevos recursos usando el método PUT .
 
 ##### Requisitos específicos de operaciones DELETE HTTP sobre Recursos
 
@@ -818,7 +829,7 @@ Para la operación de borrado sobre un recurso, perteneciente a un contenedor, s
 
 ##### Requisitos específicos de operaciones HEAD HTTP sobre Recursos
 
-Hay que tener en cuenta que la especificación LDP, se basan en las cabeceras HTTP, y la especificación del protocolo HTTP, prevé que las cabeceras de las operaciones HEAD, sean las mismas que las de la operación GET, sobre un mismo recurso, por lo tanto la implementación, tendra que tener en cuenta la normativa disponible en las operaciones sobre recursos con métodos [GET](#Requisitos específicos de operaciones GET HTTP sobre Recursos) y [OPTIONS](#Requisitos específicos de operaciones OPTIONS HTTP sobre Recursos), recogidas ambas en este mismo documento.
+Hay que tener en cuenta que la especificación LDP, se basan en las cabeceras HTTP, y la especificación del protocolo HTTP, prevé que las cabeceras de las operaciones HEAD, sean las mismas que las de la operación GET, sobre un mismo recurso, por lo tanto la implementación, tendrá que tener en cuenta la normativa disponible en las operaciones sobre recursos con métodos [GET](#Requisitos específicos de operaciones GET HTTP sobre Recursos) y [OPTIONS](#Requisitos específicos de operaciones OPTIONS HTTP sobre Recursos), recogidas ambas en este mismo documento.
 
 ###### **Requisito RF_01_04_01** [(4.2.6.1 LDP)](https://www.w3.org/TR/ldp/#ldpr-resource): Soporte a método HEAD
 
@@ -832,7 +843,7 @@ Los servidores tal como se advierte en el requisito  [RF_01_01_04](#Requisito RF
 
 ###### **Requisito RF_01_05_01** [(4.2.7.1 LDP)](https://www.w3.org/TR/ldp/#ldpr-resource): Cabecera Accept-Patch
 
-El servidor LPD que implemente el método PATCH **DEBE** debe incluir la cabecera **Accept-Patch** como respuesta a las peticiones OPTIONS, enumerando los media types soportados por el servidor.
+El servidor LPD que implemente el método PATCH **DEBE** debe incluir la cabecera **Accept-Patch** como respuesta a las peticiones OPTIONS, enumerando los Media Types soportados por el servidor.
 
 ##### Requisitos específicos de operaciones OPTIONS HTTP sobre Recursos
 
@@ -1010,7 +1021,7 @@ Cualquier restricción impuesta en la creación de un recurso, debe de ser adver
 
 Los servidores LDP **DEBERÍAN** crear nuevos recursos al enviar una representación de un BODY completo, en la operación POST realizada sobre un contenedor.
 
-Si el recurso se creo correctamente el servidor **DEBE** responder con un codigo 201 (Created), y la cabecera **Location** con la URI del recurso recién creado.
+Si el recurso se creo correctamente el servidor **DEBE** responder con un código 201 (Created), y la cabecera **Location** con la URI del recurso recién creado.
 
 Los clientes no deben de esperar ninguna representación del recurso, en el cuerpo del mensaje
 
@@ -1025,7 +1036,7 @@ Pueden añadiese otras tripletas si estas fueran necesarias.
 
 ###### Requisito RF_04_02_03  [(5.2.3.3 LDP)](https://www.w3.org/TR/ldp/#ldpc-container): POST sobre recursos No-RDF
 
-El servidor **PUEDE** aceptar POST de recursos No-RDF, sobre la URI del contenedor, para cualquier tipo de recurso,por ejemplo ficheros ficheros binarios. La normativa relativa al soporte del servidor a distintos media types, puede encontrarse en la sección [Cabecera Accept-Post](#Requisito RF_04_02_13  [(5.2.3.13 LDP)](https://www.w3.org/TR/ldp/#ldpc-container): Cabecera Accept-Post en operaciones POST) de este mismo documento.
+El servidor **PUEDE** aceptar POST de recursos No-RDF, sobre la URI del contenedor, para cualquier tipo de recurso,por ejemplo ficheros ficheros binarios. La normativa relativa al soporte del servidor a distintos Media Types, puede encontrarse en la sección [Cabecera Accept-Post](#Requisito RF_04_02_13  [(5.2.3.13 LDP)](https://www.w3.org/TR/ldp/#ldpc-container): Cabecera Accept-Post en operaciones POST) de este mismo documento.
 
 ###### Requisito RF_04_02_04  [(5.2.3.4 LDP)](https://www.w3.org/TR/ldp/#ldpc-container): Respeto por el modelo de interacción propuesto por el cliente
 
@@ -1033,8 +1044,8 @@ El servidor que crea exitosamente un recurso de una representación RDF, según 
 
 Si el modelo de interacción no pudiese respetarse, deberá fallar la petición. 
 
-- Si las cabeceras de la petición especifican un [Modelo de interación LDPR](#Requisito RF_01_01_04 [(4.2.1.4 LDP)](https://www.w3.org/TR/ldp/#ldpr-resource): Advertir de soporte LDP), entonces el servidor **DEBE** de tratar las posibles posteriores peticiones sobre ese recurso, siguiendo la normativa aplicable a un recurso LDPR. Cuando el servidor trata al recurso como un recurso LDPR, los clientes solo dependen de la normativa definida para los recursos LDPR, incluso si el contenido contiene una tripleta ldr:type, indicando que el recurso es un LDPC. Si la información del servidor, entra en conflicto con la información del recurso, se impone la información del servidor.
-- Si las cabeceras de la petición especifican un [Modelo de interación LDPC](#Requisito RF_04_01_04  [(5.2.1.4 LDP)](https://www.w3.org/TR/ldp/#ldpc-container): Advertir del soporte LDP para los contenedores), entonces el servidor **DEBE** de manejar todas las posteriores peticiones sobre el recurso como un LDPC.
+- Si las cabeceras de la petición especifican un [Modelo de interacción LDPR](#Requisito RF_01_01_04 [(4.2.1.4 LDP)](https://www.w3.org/TR/ldp/#ldpr-resource): Advertir de soporte LDP), entonces el servidor **DEBE** de tratar las posibles posteriores peticiones sobre ese recurso, siguiendo la normativa aplicable a un recurso LDPR. Cuando el servidor trata al recurso como un recurso LDPR, los clientes solo dependen de la normativa definida para los recursos LDPR, incluso si el contenido contiene una tripleta ldr:type, indicando que el recurso es un LDPC. Si la información del servidor, entra en conflicto con la información del recurso, se impone la información del servidor.
+- Si las cabeceras de la petición especifican un [Modelo de interacción LDPC](#Requisito RF_04_01_04  [(5.2.1.4 LDP)](https://www.w3.org/TR/ldp/#ldpc-container): Advertir del soporte LDP para los contenedores), entonces el servidor **DEBE** de manejar todas las posteriores peticiones sobre el recurso como un LDPC.
 - Esta especificación no define el comportamiento para otros casos.
 
 Los clientes deben usar la misma sintaxis, es decir la cabecera Link, con el valor que corresponda para especificar el modelo de interacción deseado, cuando creen un recurso, y los servidores deben de usarlo en sus respuestas.
@@ -1071,11 +1082,11 @@ El servidor **NO DEBERÍA** reusar URIs.
 
 ###### Requisito RF_04_02_012  [(5.2.3.12 LDP)](https://www.w3.org/TR/ldp/#ldpc-container): Metadatos RDF asociados a recursos No-RDF.
 
-Después de la creación exitosa por medio de una operación POST para un recurso No RDF (codigo 201-Created y la presencia de la cabecera Location indicando la URI del recurso recién creado), los servidores LDP **PUEDEN** crear un recurso RDF asociado LDP-RS, que contenga datos, acerca del recurso No RDF recién creado. Si lo crease, es servidor **DEBE** indicar su localización mediante el uso de la cabecera **Link**, apuntando a la nueva URI del recurso creado.
+Después de la creación exitosa por medio de una operación POST para un recurso No RDF (código 201-Created y la presencia de la cabecera Location indicando la URI del recurso recién creado), los servidores LDP **PUEDEN** crear un recurso RDF asociado LDP-RS, que contenga datos, acerca del recurso No RDF recién creado. Si lo crease, es servidor **DEBE** indicar su localización mediante el uso de la cabecera **Link**, apuntando a la nueva URI del recurso creado.
 
 ###### Requisito RF_04_02_13  [(5.2.3.13 LDP)](https://www.w3.org/TR/ldp/#ldpc-container): Cabecera Accept-Post en operaciones POST
 
-El servidor **DEBN** responder con la cabecera **Accept-Post** en las respuestas a las peticiones **OPTIONS**, incluyendo todos los media types soportados por la operación POST.
+El servidor **DEBN** responder con la cabecera **Accept-Post** en las respuestas a las peticiones **OPTIONS**, incluyendo todos los Media Types soportados por la operación POST.
 
 ###### Requisito RF_04_02_14  [(5.2.3.13 LDP)](https://www.w3.org/TR/ldp/#ldpc-container): Debe de soportarse la cabecera Content-Type con el valor application/ld+json
 
@@ -1089,7 +1100,7 @@ Cualquier restricción impuesta en la creación de un recurso, debe de ser adver
 
 ###### Requisito RF_04_03_01  [(5.2.4.1 LDP)](https://www.w3.org/TR/ldp/#ldpc-container): Servidores que no admiten PUT para actualizar tripletas de contención de LDPCs
 
-Los servidores que no admiten PUT para actualizar tripletas de contención de LDPCs **DEBERÁN** responder con el codigo 409 (Conflict)
+Los servidores que no admiten PUT para actualizar tripletas de contención de LDPCs **DEBERÁN** responder con el código 409 (Conflict)
 
 ###### Requisito RF_04_03_02  [(5.2.4.2 LDP)](https://www.w3.org/TR/ldp/#ldpc-container): No se deben reusar URIs
 
@@ -1109,7 +1120,7 @@ Cuando se borra un recurso No RDF, para el cual el servidor creo un recurso RDF,
 
 ##### Requisitos específicos de operaciones HEAD HTTP sobre Contenedores
 
-Hay que tener en cuenta que la especificación LDP, se basan en las cabeceras HTTP, y la especificación del protocolo HTTP, prevé que las cabeceras de las operaciones HEAD, sean las mismas que las de la operación GET, sobre un mismo recurso, por lo tanto la implementación, tendra que tener en cuenta la normativa disponible en las operaciones sobre recursos con métodos [GET](#Requisitos específicos de operaciones GET HTTP sobre Recursos) y [OPTIONS](#Requisitos específicos de operaciones OPTIONS HTTP sobre Recursos), recogidas ambas en este mismo documento.
+Hay que tener en cuenta que la especificación LDP, se basan en las cabeceras HTTP, y la especificación del protocolo HTTP, prevé que las cabeceras de las operaciones HEAD, sean las mismas que las de la operación GET, sobre un mismo recurso, por lo tanto la implementación, tendrá que tener en cuenta la normativa disponible en las operaciones sobre recursos con métodos [GET](#Requisitos específicos de operaciones GET HTTP sobre Recursos) y [OPTIONS](#Requisitos específicos de operaciones OPTIONS HTTP sobre Recursos), recogidas ambas en este mismo documento.
 
 ##### Requisitos específicos de operaciones PATCH HTTP sobre Contenedores
 
@@ -1185,7 +1196,7 @@ y esta tripleta será el predicado de membresía
 
 ###### Requisito RF_06_01_07  [(5.4.1.5 LDP)](https://www.w3.org/TR/ldp/#ldpc-container): Los contenedores deben comportarse como si usasen las tripletas (LDPC URI,`ldp:insertedContentRelation` , ldp:MemberSubject )
 
-Los LDP Direct Containers **DEBEN** comportarse como si usasen las tripletas (LDPC URI,`ldp:insertedContentRelation` , ldp:MemberSubject ) pero la LDP, no impone requerimientos para que estas se materialicen. El valor de ldp:MemberSubject significa que la member-derived-URI sera la del documento creado.
+Los LDP Direct Containers **DEBEN** comportarse como si usasen las tripletas (LDPC URI,`ldp:insertedContentRelation` , ldp:MemberSubject ) pero la LDP, no impone requerimientos para que estas se materialicen. El valor de ldp:MemberSubject significa que la member-derived-URI será la del documento creado.
 
 ##### Requisitos específicos para operaciones POST sobre Contenedores de tipo Direct Container
 
@@ -1285,7 +1296,7 @@ Cuando el servidor recibe en la cabecera Prefer parámetros conflictivos, no est
 
 ###### Requisito RF_09_01_01  [(7.2.2.4 LDP)](https://www.w3.org/TR/ldp/#prefer-parameters): tripletas contempladas por la LDP
 
-La especificación prevé los siguientes URIs para usar con include o omit:
+La especificación prevé los siguientes URIs para usar con *include* o *omit*:
 
 | [Containment triples](https://www.w3.org/TR/ldp/#dfn-containment-triples) | **http://www.w3.org/ns/ldp#PreferContainment**      |
 | ------------------------------------------------------------ | --------------------------------------------------- |
@@ -1302,4 +1313,4 @@ Sirve para que el cliente indique su preferencia de la porción de tripletas sob
 
 ###### Requisito RF_10_01_01  [(8.1 LDP)](https://www.w3.org/TR/ldp/#prefer-parameters): describeBy
 
-La relación A describedby B afirma que el recurso B proporciona una descripción del recurso A. No hay restricciones del formato de A y B
+La relación *A describedby B* afirma que el recurso B proporciona una descripción del recurso A. No hay restricciones del formato de A y B

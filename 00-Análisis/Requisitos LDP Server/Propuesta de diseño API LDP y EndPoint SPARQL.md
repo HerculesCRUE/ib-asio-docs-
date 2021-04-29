@@ -1,12 +1,24 @@
 ![](./images/logos_feder.png)
 
+
+
+| Fecha        | 29/04/2021                                                   |
+| ------------ | ------------------------------------------------------------ |
+| Revisado por | Paloma Terán Pérez                                           |
+| Módulo       | Propuesta de diseño API LDP y EndPoint SPARQL                |
+| Tipo         | Documento                                                    |
+| Objetivo     | Documento con la propuesta de diseño API LDP y EndPoint SPARQL |
+
+
+
 # Propuesta de diseño API LDP y EndPoint SPARQL
 
 ## Introducción
 
 ### Propósito
 
-
+> Nota inicial: Este documento tiene el propósito de la realización de un análisis previo y una propuesta.
+>
 
 El presente documento tiene como propósito establecer una arquitectura y una propuesta de solución funcional para un API LDP, que cubra los requisitos para el proyecto, expresados en el documento   [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM](./Requisitos%20funcionales%20para%20API%20REST%20LDP%20en%20proyecto%20ASIO%20de%20la%20UM.md). Según el diseño de la arquitectura general para el proyecto ASIO, el API LPD, y el End Point SPARQL, serán los dos únicos puntos de acceso, al triple store donde se almacenaran los datos, por lo tanto, tanto los servicios y micro servicios relacionados con el proceso de ingesta, como los aplicaciones que hagan un uso de los mismos, tendrán que  usarlos, convirtiéndose asi (tanto el API REST LDP como el Endpoint SPARQL) en un componente vital en la arquitectura, de forma que las restricciones y funcionalidades de los mismos, serán el Core que dirija el diseño de los componentes de la arquitectura completa de las solución.
 ### Alcance

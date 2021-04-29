@@ -1,5 +1,16 @@
 ![](./images/logos_feder.png)
 
+
+
+| Fecha        | 29/04/2021                                   |
+| ------------ | -------------------------------------------- |
+| Revisado por | Paloma Terán Pérez                           |
+| Módulo       | Memento Guía                                 |
+| Tipo         | Documento                                    |
+| Objetivo     | Documento con la guía y normativa de Memento |
+
+
+
 # Memento Guía
 
 #### ¿Que es Memento?
@@ -55,7 +66,7 @@ month = "Jan" | "Feb" | "Mar" | "Apr" | "May" | "Jun" |
 
 ##### Accept-Datetime
 
-Accept-Datetime, expresa el deseo de un cliente de acceder a un estado pasado del recurso evaluaado contra un TimeGate
+Accept-Datetime, expresa el deseo de un cliente de acceder a un estado pasado del recurso evaluado contra un TimeGate
 
 Ejemplo en petición
 
@@ -329,7 +340,7 @@ Se resumen varios casos en la tabla bajo estas líneas mapeando respuestas con l
   
   ```
 
-  Respuesta del servidor con el memento seleccionado, solo se muestran las cabeceras, pero se obtendría también el body del recurso
+  Respuesta del servidor con el memento seleccionado, sólo se muestran las cabeceras, pero se obtendría también el body del recurso
 
   ```bash
   HTTP/1.1 200 OK # Código 200
@@ -862,7 +873,6 @@ Avisar de "timegate" en la cabecera Link, cuando se produce un código 401 o 403
 #### Referencias
 
 [Memento specification]: https://tools.ietf.org/pdf/rfc7089.pdf	"Los Alamos National Laboratory"
-
 
 
 
