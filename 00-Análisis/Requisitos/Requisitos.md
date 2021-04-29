@@ -4,13 +4,13 @@
 
 | Entregable     | Documento de Análisis ASIO                                   |
 | -------------- | ------------------------------------------------------------ |
-| Fecha          | 25/05/2020                                                   |
+| Fecha          | 29/04/2021                                                   |
 | Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
 | Módulo         | Análisis                                                     |
 | Tipo           | Documento                                                    |
 | Objetivo       | Documento que contiene el análisis                           |
-| Estado         | **100%**                                       |
-| Próximos pasos |           |
+| Estado         | **100%**                                                     |
+| Próximos pasos |                                                              |
 
 
 # Documento de Análisis ASIO
@@ -175,5 +175,4 @@ Esto provoca la aparición del proyecto Hércules, que dará solución a la nece
 | Investigador  – otra Universidad              | Conocer y  poder comparar las idiosincrasias del sistema de gestión de investigación de  la Universidad de Murcia para poder compararlo con el suyo y poder mapear  ambos sistemas en caso de que disponga de otra infraestructura ontológica. |
 | Órganos de gobierno                           | Órganos de gobierno como ministerios, para los que Hércules puede aportar información útil. |
 | Otros organismos interesados                  | Organismos, como fundaciones o empresas públicas, interesadas en la información que pueda aportar el proyecto o su utilidad. |
-
 

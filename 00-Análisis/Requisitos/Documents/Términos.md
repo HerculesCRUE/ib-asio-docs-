@@ -1,5 +1,18 @@
 ![](./images/logos_feder.png)
 
+
+
+| Fecha        | 29/04/2021                                                   |
+| ------------ | ------------------------------------------------------------ |
+| Revisado por | Paloma Terán Pérez                                           |
+| Módulo       | Diccionario de términos de ASIO                              |
+| Tipo         | Documento                                                    |
+| Objetivo     | Documento que contiene los diferentes términos utilizados en ASIO |
+
+
+
+
+
 ## DICCIONARIO DE T�RMINOS DE ASIO
 
 
