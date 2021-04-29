@@ -44,12 +44,13 @@ Relación de entregables oficiales del proyecto en su estado actual.
 
 Relación de entregables adicionales del proyecto.
 
-| Documentación                                        | Pruebas | Repositorios |
-| ---------------------------------------------------- | ------- | ------------ |
-| [00-Análisis](./00-An%C3%A1lisis)                    | N/A     | Actual       |
-| [00-Arquitectura](./00-Arquitectura/architecture.md) | N/A     | Actual       |
-| [00-Testing](./00-Testing/testing.md)                | N/A     | Actual       |
-| [00-Pruebas Rendimiento](./00-Testing/Pruebas%20De%20Rendimiento.md)                | N/A     | Actual       |
+| Documentación                                                | Pruebas | Repositorios |
+| ------------------------------------------------------------ | ------- | ------------ |
+| [00-Análisis](./00-An%C3%A1lisis)                            | N/A     | Actual       |
+| [00-Arquitectura](./00-Arquitectura/architecture.md)         | N/A     | Actual       |
+| [00-Testing](./00-Testing/testing.md)                        | N/A     | Actual       |
+| [00-Pruebas Rendimiento](./00-Testing/Pruebas%20De%20Rendimiento.md) | N/A     | Actual       |
+| [00-Memoria de publicaciones](./00-Difusión_de_contenidos/Resumen_de_publicaciones.md) | N/A     | Actual       |
 
 ## 3. Repositorios
 
