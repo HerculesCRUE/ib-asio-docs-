@@ -1,5 +1,16 @@
 ![](./images/logos_feder.png)
 
+
+
+| Fecha        | 29/04/2021                                                   |
+| ------------ | ------------------------------------------------------------ |
+| Revisado por | Paloma Terán Pérez                                           |
+| Módulo       | Despliegue en entorno de desarrollo para la Universidad de Murcia |
+| Tipo         | Documento                                                    |
+| Objetivo     | Documento con las instrucciones de despliegue en entorno de desarrollo para la Universidad de Murcia |
+
+
+
 # Despliegue en entorno de desarrollo para la Universidad de Murcia
 
 ---
@@ -701,7 +712,7 @@ Los servicios desplegados son:
 
   `- titleDegreeJob`: job encargado de simular datos de tipo "Title - Degree" 
 
-  - Datos Inciales:
+  - Datos iniciales:
 
     - Nombre csv: **title_degree_initial.csv**
     - Dockerfile: **DockerfileTDIN**
@@ -716,7 +727,7 @@ Los servicios desplegados son:
 
   
 
-  Se crean 6 imagenes docker a partir de 6 Dockerfile, 2 por cada tipo de Job, una para los datos iniciales (simplificados a una sola propiedad y sin dependencias entre ellos, y otro para datos completos)
+  Se crean 6 imágenes docker a partir de 6 Dockerfile, 2 por cada tipo de Job, una para los datos iniciales (simplificados a una sola propiedad y sin dependencias entre ellos, y otro para datos completos)
 
   El contenido de los DockerFile:
 

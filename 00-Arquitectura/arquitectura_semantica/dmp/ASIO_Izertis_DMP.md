@@ -1,5 +1,16 @@
 ![](./images/logos_feder.png)
 
+
+
+| Fecha        | 29/04/2021                                 |
+| ------------ | ------------------------------------------ |
+| Revisado por | Paloma Terán Pérez                         |
+| Módulo       | Plan de Gobierno de Datos                  |
+| Tipo         | Documento                                  |
+| Objetivo     | Documento con el plan de Gobierno de Datos |
+
+
+
 # Plan de Gobierno de Datos
 
 A medida que las organizaciones fundamentan sus decisiones e iniciativas en datos, surgen preguntas como ¿de dónde provienen los datos? ¿tienen la calidad necesaria? ¿qué metadatos están disponibles? ¿quién es el responsable? ¿quién debería tener acceso? ¿están estos datos alineados las políticas de la organización? ¿tienen todas las áreas de la organización la misma visión sobre los datos?

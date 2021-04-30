@@ -1,5 +1,16 @@
 ![](./resources/logos_feder.png)
 
+
+
+| Fecha        | 29/04/2021                                                   |
+| ------------ | :----------------------------------------------------------- |
+| Revisado por | Paloma Terán Pérez                                           |
+| Módulo       | Auditoría de calidad de código                               |
+| Tipo         | Documento                                                    |
+| Objetivo     | Documento con información sobre la auditoría de calidad de código |
+
+
+
 # Auditoría de calidad de código
 
 ## Introducción

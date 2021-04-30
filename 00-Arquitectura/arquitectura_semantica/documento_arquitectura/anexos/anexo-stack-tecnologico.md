@@ -1,8 +1,19 @@
 ![](../images/logos_feder.png)
 
+
+
+| Fecha        | 29/04/2021                                                   |
+| ------------ | ------------------------------------------------------------ |
+| Revisado por | Paloma Terán Pérez                                           |
+| Módulo       | Anexo - Información básica sobre tecnologías                 |
+| Tipo         | Documento                                                    |
+| Objetivo     | Documento con el Anexo - Información básica sobre tecnologías |
+
+
+
 # Anexo - Información básica sobre tecnologías
 
-Este documento pretende recopilar la información básica sobre las tecnologías utilizadas para el desarrollo de la infraestructura semática.
+Este documento pretende recopilar la información básica sobre las tecnologías utilizadas para el desarrollo de la infraestructura semántica.
 
 ## Spring
 
@@ -35,7 +46,7 @@ Las ventajas que nos proporcionaría Spring para este tipo de proyectos serían 
 
 ## Docker
 
-Docker es un conjutno de herramientas que se usan para virtualizar a nivel de sistema operativo con el objetivo de distribuir paquetes de software mediante contenedores.
+Docker es un conjunto de herramientas que se usan para virtualizar a nivel de sistema operativo con el objetivo de distribuir paquetes de software mediante contenedores.
 
 ![Logo Docker](../images/docker.png)
 
@@ -43,11 +54,11 @@ Las ventajas que aporta son las siguientes:
 
 - Los contenedores se encuentran aislados unos de los otros
 - Contienen todo el software que es necesario para la correcta ejecución del software
-- La plataforma es capaz de ejecutar cualquier tipo de aplicación que corra en un contenedor, independiementemente de como esté desarrollada
+- La plataforma es capaz de ejecutar cualquier tipo de aplicación que corra en un contenedor, independientemente de como esté desarrollada
 
 ## Kubernetes
 
-Kubernetes es una plataforma opensource para orquestar contenedores como por ejemplo Docker. Las aplicaciones de un entorno productivo real puedean abarcar varios contenedores, los cuales hay que alojarlos en varios nodos físicos con varias instancias de cada uno. Kubernetes ofrede la capacidad de organización y gestión necesaria para implementar contenedores para soportar grandes cargas de trabajo. 
+Kubernetes es una plataforma opensource para orquestar contenedores como por ejemplo Docker. Las aplicaciones de un entorno productivo real pueden abarcar varios contenedores, los cuales hay que alojarlos en varios nodos físicos con varias instancias de cada uno. Kubernetes ofrede la capacidad de organización y gestión necesaria para implementar contenedores para soportar grandes cargas de trabajo. 
 
 ![Logo Kubernetes](../images/kubernetes.png)
 

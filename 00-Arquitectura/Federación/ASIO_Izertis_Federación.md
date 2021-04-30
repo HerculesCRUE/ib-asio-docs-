@@ -2,12 +2,13 @@
 
 | Entregable                         | Arquitectura Semántica - Federación de Consultas             |
 | ---------------------------------- | ------------------------------------------------------------ |
-| Fecha                              | 16/12/2020                                                   |
+| Fecha                              | 29/04/2021                                                   |
+| Revisado por                       | Paloma Terán Pérez                                           |
 | Proyecto                           | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://www.crue.org/proyecto/hercules/) |
 | Módulo                             | Arquitectura Semántica                                       |
 | Tipo                               | Documento                                                    |
 | Objetivo                           | Este documento recoge el análisis de alternativas para la federación de consultas sobre una arquitectura de nodos distribuidos en la red HERCULES. |
-| Estado                             | **100%**                                        |
+| Estado                             | **100%**                                                     |
 | Próximos pasos                     | Si fuese necesario añadir mas conectores a datasets de la nube LOD |
 | Documentación de la implementación | [Build (Pasos para la compilación y ejecución)](https://github.com/HerculesCRUE/ib-federation/blob/master/docs/build.md). <br>[Docker (Pasos para la generación de una imagen y publicación)](https://github.com/HerculesCRUE/ib-federation/blob/master/docs/docker.md). <br/>[Manual de usuario (descripción a alto nivel)](https://github.com/HerculesCRUE/ib-federation/blob/master/docs/manual_de_usuario.md)<br>[Documentación tecnica (descripción a bajo nivel)](https://github.com/HerculesCRUE/ib-federation/blob/master/docs/documentacion-tecnica.md).<br>[Documentación API REST](https://github.com/HerculesCRUE/ib-federation/blob/master/docs/documentacion_api_rest.md) |
 

@@ -5,12 +5,14 @@
 | Entregable     | Documento de Análisis ASIO                                   |
 | -------------- | ------------------------------------------------------------ |
 | Fecha          | 29/04/2021                                                   |
+| Revisado por   | Paloma Terán Pérez                                           |
 | Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
 | Módulo         | Análisis                                                     |
 | Tipo           | Documento                                                    |
 | Objetivo       | Documento que contiene el análisis                           |
 | Estado         | **100%**                                                     |
 | Próximos pasos |                                                              |
+
 
 
 # Documento de Análisis ASIO

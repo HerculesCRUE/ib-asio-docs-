@@ -1,5 +1,16 @@
 ![](./images/logos_feder.png)
 
+
+
+| Fecha        | 29/04/2021                                                   |
+| ------------ | :----------------------------------------------------------- |
+| Revisado por | Paloma Terán Pérez                                           |
+| Módulo       | Elección de infraestructura para Autenticación y Autorización |
+| Tipo         | Documento                                                    |
+| Objetivo     | Documento con la elección de infraestructura para Autenticación y Autorización |
+
+
+
 # Elección de infraestructura para Autenticación y Autorización
 
 ## Introducción
@@ -42,7 +53,7 @@ Como protocolo de funcionamiento, SIR2 proporciona varios, ente los que se encue
 - eduGAIN
 - OpenID
 
-En el caso de SIR, a priori es posible recuperar toda aquella información que el IdP esté en condiciones de enviar. En el caso de la Universidad de Murcia, se deberá inclur en el perfil la información de autorizaicón
+En el caso de SIR, a priori es posible recuperar toda aquella información que el IdP esté en condiciones de enviar. En el caso de la Universidad de Murcia, se deberá incluir en el perfil la información de autorización
 
 Vas a poder recuperar de SIR lo que cada IdP esté en condiciones de enviar a SIR. En el caso de la UMU podemos incluir en el perfil la información que os pasé en el perfil de ejemplo.
 
@@ -66,7 +77,7 @@ SAML es el acrónimo de Security Assertion Markup Language, el cual es un están
 
 El formato que utiliza es basado en el lenguaje de marcado XML.
 
-El caso de uso más comun es para el intercambio de información en un SSO. 
+El caso de uso más común es para el intercambio de información en un SSO. 
 
 ![Flujo de autenticación SAML](./images/saml.png)
 
@@ -88,7 +99,7 @@ El valor del parámetro `SAMLRequest` está codificado en Base64 y contiene el v
 
 **3. Realizar petición al servicio SSO**
 
-El usuario realiza una reques a la URL obtenida del paso anterior. El servicio SSO procesa el parámetro `AuthRequest` y realiza la verifiación de seguridad. En caso que el usuario no disponga de una autenticación, lo identifica. 
+El usuario realiza una reques a la URL obtenida del paso anterior. El servicio SSO procesa el parámetro `AuthRequest` y realiza la verificación de seguridad. En caso que el usuario no disponga de una autenticación, lo identifica. 
 
 **4. Respuesta vía formulario XHTML**
 
@@ -197,7 +208,7 @@ OpenID Connect (OIDC) es una caopa de identidad añadida sobre OAuth 2.0, permit
 
 ## Unificación de métodos de acceso
 
-Con el fin de que la aplicación esté desacoplada de cómo se realiza el acceso y autorización, se buscan soluciones que permitan integrar todos los mecanismos a los que sea necesario dar soporte en la actualida y en un futuro. Se valorarán los siguiente
+Con el fin de que la aplicación esté desacoplada de cómo se realiza el acceso y autorización, se buscan soluciones que permitan integrar todos los mecanismos a los que sea necesario dar soporte en la actualidad y en un futuro. Se valorarán los siguiente
 
 - OpenAM
 - KeyCloak
@@ -215,7 +226,7 @@ Open AM es un IAM opensource que permite centralizar diferentes mecanismos de ac
 
 #### Licenciamiento
 
-OpenAM está licenciada bajo CDDL (Common Development and Distribution License), sobre la cual existe cierta controversia acerca de la copmatibilidad con GPL. Aunque en el año 2005 Open Source Initiative aprovó esta licencia, la Free Software Foundation (FSF) la considera una licencia free software, pero incompatible con GPL.
+OpenAM está licenciada bajo CDDL (Common Development and Distribution License), sobre la cual existe cierta controversia acerca de la compatibilidad con GPL. Aunque en el año 2005 Open Source Initiative aprovó esta licencia, la Free Software Foundation (FSF) la considera una licencia free software, pero incompatible con GPL.
 
 #### Conclusión
 
@@ -223,7 +234,7 @@ Aunque requiere cierta dificultad tanto en la configuración y administración, 
 
 ### Keycloak
 
-Keycloak, al igual que OpenAM es un un IAM opensource orientado a aplicaciones y servicios. Aunque es oepnsource, es un poroyecto que está bajo el paraguas de RedHat, lo cual es una garantía de mantenibilidad.
+Keycloak, al igual que OpenAM es un un IAM opensource orientado a aplicaciones y servicios. Aunque es opensource, es un proyecto que está bajo el paraguas de RedHat, lo cual es una garantía de mantenibilidad.
 
 Entre las características que incluye se pueden encontrar:
 
@@ -231,7 +242,7 @@ Entre las características que incluye se pueden encontrar:
 - Integración y federación con sistemas de login de terceros, incluyendo Login social
 - Uso de protocolos estándar: OpenID Connect, OAuth 2.0, SAML 2.0
 - Brocker de identidad: IdPs OpenID Connect y SAML 2.0
-- Cónfiguración de diferentes métodos de acceso
+- Configuración de diferentes métodos de acceso
 - Customización de pantallas de registro y login
 - SSO
 - Integración con LDAP y Active Directory
@@ -247,7 +258,7 @@ También cabe resaltar que es bastante sencillo de configurar de forma gráfica 
 
 Los usuarios locales podrán ser dados de alta desde dos caminos:
 
-- Creados por un administrdor de Keycloak
+- Creados por un administrador de Keycloak
 - Autoregistro del usuario: en este caso el usuario tendrá un rol por defecto
 
 En ambos casos el administrador podrá gestionar los datos del usuario incluyendo los roles de los mismos.
@@ -258,7 +269,7 @@ Keycloak permite integración con IdPs externos que usen SAML o OpenID Connect.
 
 #### Idendity broker
 
-Un Idendity Broker es un servicio intermediario que conecta a los proveedores de servicios con uno o varios proveedores de identidad. El broker es responsable de creaer una relación de confianza con el IdP externo para poder utilizar sus identidades para acceder a los servicios expuestos por el proveedor de servicio.
+Un Idendity Broker es un servicio intermediario que conecta a los proveedores de servicios con uno o varios proveedores de identidad. El broker es responsable de crear una relación de confianza con el IdP externo para poder utilizar sus identidades para acceder a los servicios expuestos por el proveedor de servicio.
 
 Desde la perspectiva del usuario, un broker de identidad proporciona una forma centralizada de administrar las identidades en diferentes dominios de seguridad. Una cuenta existente se puede vincular con una o más identidades de diferentes proveedores de identidad o incluso crearse basándose en la información de identidad obtenida de ellos.
 

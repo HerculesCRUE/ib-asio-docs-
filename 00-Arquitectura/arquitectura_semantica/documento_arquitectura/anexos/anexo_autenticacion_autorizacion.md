@@ -1,10 +1,21 @@
+![](../images/logos_feder.png)
+
+| Fecha        | 29/04/2021                                                   |
+| ------------ | :----------------------------------------------------------- |
+| Revisado por | Paloma Terán Pérez                                           |
+| Módulo       | Autenticación y autorización                                 |
+| Tipo         | Documento                                                    |
+| Objetivo     | Documento con información sobre autenticación y autorización |
+
+
+
 # Autenticación y autorización
 
 Servidor de autorización: keycloak
 
 ## Keycloak
 
-Keycloak es un servidor de autenticación y autorización opensource que permite single sign-on con gestión de identidad y acceso para aplicacion esy servicios. Entre sus principales características incluye:
+Keycloak es un servidor de autenticación y autorización opensource que permite single sign-on con gestión de identidad y acceso para aplicación y servicios. Entre sus principales características incluye:
 
 * Registro de usuarios
 * Login con redes sociales
@@ -13,7 +24,7 @@ Keycloak es un servidor de autenticación y autorización opensource que permite
 * Integración con LDAP y Kerberos
 * Multitenancy
 
-Kekcloak provée los siguientes endpoints o protocolos:
+Kekcloak provee los siguientes endpoints o protocolos:
 
 * OpenID Connect
 * SAML 2.0
@@ -24,7 +35,7 @@ Será preciso seguir una serie de pasos para llegar a configurar Keycloak para s
 
 #### Creación Realm
 
-Un realm gestiona un conjunto de usuarios, credenciales, roles y grupos. Realms están aislados unos de los otros y pueden unicamente manejar y autenticar a los usuarios que conocen. En primer lugar será necesario crar un Realm, para lo cual simplemente habrá que indicarle un nombre.
+Un realm gestiona un conjunto de usuarios, credenciales, roles y grupos. Realms están aislados unos de los otros y pueden únicamente manejar y autenticar a los usuarios que conocen. En primer lugar será necesario crear un Realm, para lo cual simplemente habrá que indicarle un nombre.
 
 #### Creación de cliente
 
@@ -48,7 +59,7 @@ En caso necesario se crearán los roles pertinentes, los cuales se asignarán po
 
 #### Creación de mappers
 
-Los tokens de acceso de Keycloak son JWT, el cuial incluye una serie de claims que permiten dar autorización al usuario. Mediante los mappers es posible añadir nuevos claimos o incluso renombrar alcuno existente.
+Los tokens de acceso de Keycloak son JWT, el cual incluye una serie de claims que permiten dar autorización al usuario. Mediante los mappers es posible añadir nuevos claims o incluso renombrar alguno existente.
 
 Por ejemplo, el campo username es retornado en un claim llamado `preferred_username`. En el caso de Spring Security OAuth2 se espera que el username venga en el claim llamado `user_name`. Para ello se crearía dentro del Client un mapper con los siguiente parámetros:
 
@@ -79,7 +90,7 @@ JSON Web Key Set (JWKS) es un conjunto de claves que contienen las claves públi
 
 ## Trellis
 
-Trellis disponde un sistema de autenticación, ya sea mediante autenticación básica o mediante JWT, pero no realiza redirección hacia login, por lo que se necesita disponer de la autenticación para poder devolver el recurso. El motivo por el que no realiza es redirección es porque Trellis no está concebido como servicio Web para la consulta de la información, si no que al tratarse de un Linked Data Platform (LDP), está pensado para la obtención de los recursos en diferentes formatos, ya sea HTML, Turtle, etc.
+Trellis dispone de un sistema de autenticación, ya sea mediante autenticación básica o mediante JWT, pero no realiza redirección hacia login, por lo que se necesita disponer de la autenticación para poder devolver el recurso. El motivo por el que no realiza es redirección es porque Trellis no está concebido como servicio Web para la consulta de la información, si no que al tratarse de un Linked Data Platform (LDP), está pensado para la obtención de los recursos en diferentes formatos, ya sea HTML, Turtle, etc.
 
 ### JWT
 
@@ -187,7 +198,7 @@ Como ejemplo de integración de un servicio OpenID Connect, se verá cómo se re
 
 1. Creación de Realm, por ejemplo con nombre `myrealm`
 2. Creación de client, por ejemplo con nombre `mediawiki`
-  1. Se deberá indicar en el parámetro `Valid Redirect URIs` una expresión regular que incluya la URI de redireción válida para la instancia de Wikibase, por ejemplo `*`
+  1. Se deberá indicar en el parámetro `Valid Redirect URIs` una expresión regular que incluya la URI de redirección válida para la instancia de Wikibase, por ejemplo `*`
   2. Marcar el parámetro `Access Type` como `confidential`, para que requiera una secret para poder interactuar con el servidor de autenticación, este secret se obtendrá de la pestaña `Credentials`, la cual aparecerá tras guardar los cambios.
 3. Crear un usuario
 

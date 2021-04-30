@@ -1,5 +1,16 @@
 ![](./images/logos_feder.png)
 
+
+
+| Fecha        | 29/04/2021                                  |
+| ------------ | ------------------------------------------- |
+| Revisado por | Paloma Terán Pérez                          |
+| Módulo       | Recomendaciones URIs                        |
+| Tipo         | Documento                                   |
+| Objetivo     | Documento con recomendaciones para las URIs |
+
+
+
 # Recomendaciones URIs
 
 - Evitar declarar el nombre del proyecto u organización que genera la URI si no aporta nada al significado de la misma

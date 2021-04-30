@@ -1,5 +1,16 @@
 ![](./images/logos_feder.png)
 
+
+
+| Fecha        | 29/04/2021                                    |
+| ------------ | --------------------------------------------- |
+| Revisado por | Paloma Terán Pérez                            |
+| Módulo       | Wikibase vs Trellis                           |
+| Tipo         | Documento                                     |
+| Objetivo     | Documento con análisis de Wikibase vs Trellis |
+
+
+
 # Análisis sobre uso de Wikibase vs Trellis + Fuseki en proyecto ASIO
 
 - Status: Propuesta

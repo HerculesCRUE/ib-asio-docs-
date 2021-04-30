@@ -11,8 +11,6 @@
 
 
 
-
-
 # Propuesta de solución para el front
 
 

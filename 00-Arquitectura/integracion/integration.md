@@ -1,5 +1,16 @@
 ![](./resources/logos_feder.png)
 
+
+
+| Fecha        | 29/04/2021                                                   |
+| ------------ | :----------------------------------------------------------- |
+| Revisado por | Paloma Terán Pérez                                           |
+| Módulo       | Integración entre la arquitectura ontológica y la arquitectura semántica |
+| Tipo         | Documento                                                    |
+| Objetivo     | El objetivo de este documento es explicar el diseño arquitectónico entre la infraestructura ontológica y la infraestructura semántica, describiendo los procesos que se tienen que llevar a cabo tras los cambios que pueden surgir en la red de ontologías. |
+
+
+
 # Integración entre la arquitectura ontológica y la arquitectura semántica
 
 ## Introducción
@@ -69,7 +80,7 @@ Estas modificaciones en la ontología dan como resultado un listado de cambios a
 
 #### Procesos automáticos
 
-La construcción y el despliegue de la ontología están controlados a traves de [workflows de integración continua](https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow) de GitHub. Son las que se encargan de mantener actualizada la ontología en Wikibase.
+La construcción y el despliegue de la ontología están controlados a través de [workflows de integración continua](https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow) de GitHub. Son las que se encargan de mantener actualizada la ontología en Wikibase.
 
 ![](resources/workflow.png)
 

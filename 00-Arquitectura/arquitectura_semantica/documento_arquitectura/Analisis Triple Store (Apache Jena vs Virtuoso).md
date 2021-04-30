@@ -1,5 +1,16 @@
 ![](./images/logos_feder.png)
 
+
+
+| Fecha        | 29/04/2021                                        |
+| ------------ | ------------------------------------------------- |
+| Revisado por | Paloma Terán Pérez                                |
+| Módulo       | Apache Jena vs Virtuoso                           |
+| Tipo         | Documento                                         |
+| Objetivo     | Documento con análisis de Apache Jena vs Virtuoso |
+
+
+
 ## Apache Jena
 
 Es un Framework de código abierto para la web semántica.
@@ -480,7 +491,6 @@ En definitiva, por flexibilidad y facilidad de integración con otros sistemas, 
 <td>2017-10-27</td>
 <td style="background: #9FF; color: black; vertical-align: middle; text-align: center;" class="free table-free"><a href="/wiki/Apache_2_License" class="mw-redirect" title="Apache 2 License">Apache 2</a>
 </td></tr></tbody><tfoot></tfoot></table>
-
 
 
 

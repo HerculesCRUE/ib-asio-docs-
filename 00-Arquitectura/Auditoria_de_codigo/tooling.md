@@ -1,3 +1,16 @@
+![](./resources/logos_feder.png)
+
+
+
+| Fecha        | 29/04/2021                               |
+| ------------ | :--------------------------------------- |
+| Revisado por | Paloma Terán Pérez                       |
+| Módulo       | Estudio de herramientas                  |
+| Tipo         | Documento                                |
+| Objetivo     | Documento con el estudio de herramientas |
+
+
+
 # Estudio de herramientas
 
 ## Automatización
@@ -22,9 +35,9 @@ Herramientas de automatización hay muchas, algunas de las más conocidas son:
 
 ### Jenkins
 
-[Jenkins](https://www.jenkins.io/) es un servidor de automatización Open Source, que se puede encargar de automatizar contrucción, testing y despliegue facilitando así tanto la integración contínua (CI) como la entrega contínua (CD). 
+[Jenkins](https://www.jenkins.io/) es un servidor de automatización Open Source, que se puede encargar de automatizar construcción, testing y despliegue facilitando así tanto la integración continua (CI) como la entrega continua (CD). 
 
-Jenkins es muy potente ya que es fácilmente configurable y da soporte para la relización de tareas muy complejas, pero requiere de tener una instalación propia en un servidor (ya sea on-premise o IaaS).
+Jenkins es muy potente ya que es fácilmente configurable y da soporte para la realización de tareas muy complejas, pero requiere de tener una instalación propia en un servidor (ya sea on-premise o IaaS).
 
 ### Travis CI
 

@@ -1,5 +1,18 @@
 ![](./resources/logos_feder.png)
 
+
+
+
+
+| Fecha        | 29/04/2021                                                   |
+| ------------ | :----------------------------------------------------------- |
+| Revisado por | Paloma Terán Pérez                                           |
+| Módulo       | Plan de calidad de Infraestructura Ontológica                |
+| Tipo         | Documento                                                    |
+| Objetivo     | Documento con el borrador del plan de calidad de Infraestructura Ontológica |
+
+
+
 Plan de calidad de Infraestructura Ontológica (Borrador) 
 ========================================================
 

@@ -1,5 +1,18 @@
 ![](./resources/logos_feder.png)
 
+
+
+| Fecha        | 29/04/2021                                                   |
+| ------------ | :----------------------------------------------------------- |
+| Revisado por | Paloma Terán Pérez                                           |
+| Módulo       | Generación delmodelo de dominio                              |
+| Tipo         | Documento                                                    |
+| Objetivo     | ShEx-Lite — Sistema de Traducción de Shape Expressions a Objetos Planos de Java |
+
+
+
+
+
 # ShEx-Lite — Sistema de Traducción de Shape Expressions a Objetos Planos de Java
 
 ## Datos del módulo

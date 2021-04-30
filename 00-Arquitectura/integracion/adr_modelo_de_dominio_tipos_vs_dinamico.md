@@ -1,3 +1,14 @@
+![](./resources/logos_feder.png)
+
+| Fecha        | 29/04/2021                                                   |
+| ------------ | :----------------------------------------------------------- |
+| Revisado por | Paloma Terán Pérez                                           |
+| Módulo       | ADR — Modelo de dominio basado en tipos vs modelo de dominio dinámico |
+| Tipo         | Documento                                                    |
+| Objetivo     | ADR — Modelo de dominio basado en tipos vs modelo de dominio dinámico |
+
+
+
 # ADR — Modelo de dominio basado en tipos vs modelo de dominio dinámico
 
 - **Estado:** Accepted
@@ -8,7 +19,7 @@
 
 En el sistema diseñado inicialmente en la propuesta se plantea que una herramienta genere el modelo de dominio que usará la Arquitectura Semántica. Esta herramienta generaría el modelo de dominio a partir de la infraestructura ontológica. Para ser más concretos a partir de las Shape Expressions.
 
-Así mismo se decidió que se empleara Java como lenguaje de programación para el proyecto. Java es un lenguaje orientado a objetos con lo que se conoce como un ssistema de tipos fuerte. Esto significa que el sistema de tipo "no" puede sufrir cambios en tiempo de ejecución.
+Así mismo se decidió que se empleara Java como lenguaje de programación para el proyecto. Java es un lenguaje orientado a objetos con lo que se conoce como un sistema de tipos fuerte. Esto significa que el sistema de tipo "no" puede sufrir cambios en tiempo de ejecución.
 
 Por lo tanto se tiene la disyuntiva de que empleando el lenguaje de programación Java y la propuesta inicial se hace inviable que la Arquitectura Semántica pueda sincronizar su modelo de dominio con la Infraestructura Ontológica en tiempo de ejecución.
 

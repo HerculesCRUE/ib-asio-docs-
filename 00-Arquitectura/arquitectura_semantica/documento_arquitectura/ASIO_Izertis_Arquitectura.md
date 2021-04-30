@@ -1,5 +1,16 @@
 ![](./images/logos_feder.png)
 
+
+
+| Fecha        | 29/04/2021                |
+| ------------ | ------------------------- |
+| Revisado por | Paloma Terán Pérez        |
+| Módulo       | Arquitectura ASIO         |
+| Tipo         | Documento                 |
+| Objetivo     | Documento de Arquitectura |
+
+
+
 **Acerca de arc42**
 
 arc42, La plantilla de documentación para arquitectura de sistemas y de
@@ -62,9 +73,9 @@ Para la VISTA se basa en JSF1.2, Facelets y Rich Faces.
 
 Para el MODELO/CONTROL: se basa en JPA 1.0 y EJB 3.0 (Hibernate).
 
-Otras tecnologías incluidas son BIRT para generación de informes, TestNG 5 para pruebas unitarias, Hudson como servidor de integración continua, servidor Archiva de repositorios Maven, Apache CSF para la SOA y Chckstyle, Findbug y EMMA como pluggins de Eclipse para la mejora de la calidad del software. Estas tecnologías serán completadas con otras herramientas que propone Izertis para garantizar la calidad de la solución planteada.
+Otras tecnologías incluidas son BIRT para generación de informes, TestNG 5 para pruebas unitarias, Hudson como servidor de integración continua, servidor Archiva de repositorios Maven, Apache CSF para la SOA y Chckstyle, Findbug y EMMA como plugins de Eclipse para la mejora de la calidad del software. Estas tecnologías serán completadas con otras herramientas que propone Izertis para garantizar la calidad de la solución planteada.
 
-Dadas las características y naturaleza de la aplicacion que se va a desarrollar se opta por no seguir las indicaciones del Framework, debido a las siguientes circunstancias:
+Dadas las características y naturaleza de la aplicación que se va a desarrollar se opta por no seguir las indicaciones del Framework, debido a las siguientes circunstancias:
 
 - Arquitectura basada en microservicios y teniendo en cuanta que el Framework de la Universidad de Murcia no está totalmente preparado para dar soporte a este tipo de aplicaciones
 - Utilización de sistemas de almacenamiento adecuados para Ontologías
@@ -322,7 +333,7 @@ Además, todos estos elementos estarán acompañados por una capa de negociació
 
 Para el acceso a este módulo existirá una capa de seguridad (autenticación y autorización) que garantizará que cada uno de los usuarios puede ejecutar las acciones que permite su rol.
 
-**Implementación:** Para su implementación se desarrollarán una serie de microservicios. Se debería disponer de unos servicios lo más atómico posible, sobre todo en el caso de los microservicios dedicados a interacturar con los sistemas de almacenamiento, los cuales van a estar muy ligados a las APIs provistas por estos.
+**Implementación:** Para su implementación se desarrollarán una serie de microservicios. Se debería disponer de unos servicios lo más atómico posible, sobre todo en el caso de los microservicios dedicados a interactuar con los sistemas de almacenamiento, los cuales van a estar muy ligados a las APIs provistas por estos.
 
 **Lenguaje:** Para la implementación de los microservicios involucrados en este módulo se recomienda lenguaje de la JVM, por compatibilidad con librerías, principalmente Java o Scala. En el caso de los frontales se utilizará una tecnología SPA, siendo elegida en este caso Angular
 
@@ -371,7 +382,7 @@ Este módulo estará formado por las siguientes piezas:
 
 ### Frontend
 
-El sistema Frontend se encargará de interatuar con los usuarios que utilicen la aplicación de gestión. 
+El sistema Frontend se encargará de interactuar con los usuarios que utilicen la aplicación de gestión. 
 
 - **Lenguaje:** Para la implementación se utilizará una tecnología SPA, siendo elegida en este caso Angular
 - **Input:** Información obtenida de un usuario
@@ -426,7 +437,7 @@ SAML es el acrónimo de Security Assertion Markup Language, el cual es un están
 
 El formato que utiliza es basado en el lenguaje de marcado XML.
 
-El caso de uso más comun es para el intercambio de información en un SSO. 
+El caso de uso más común es para el intercambio de información en un SSO. 
 
 ![Flujo de autenticación SAML](./images/saml.png)
 
@@ -448,7 +459,7 @@ El valor del parámetro `SAMLRequest` está codificado en Base64 y contiene el v
 
 **3. Realizar petición al servicio SSO**
 
-El usuario realiza una reques a la URL obtenida del paso anterior. El servicio SSO procesa el parámetro `AuthRequest` y realiza la verifiación de seguridad. En caso que el usuario no disponga de una autenticación, lo identifica. 
+El usuario realiza una request a la URL obtenida del paso anterior. El servicio SSO procesa el parámetro `AuthRequest` y realiza la verificación de seguridad. En caso que el usuario no disponga de una autenticación, lo identifica. 
 
 **4. Respuesta vía formulario XHTML**
 
@@ -489,7 +500,7 @@ Que el usuario esté identificado en el sistema no es suficiente para que el sis
 El sistema de autorización tiene que conseguir una serie de objetivos:
 
 - Identificar el rol del usuario
-- Realizar la autorización entre los difrentes módulos del sistema
+- Realizar la autorización entre los diferentes módulos del sistema
 
 ### Identificación del rol del usuario
 
@@ -514,7 +525,7 @@ Este es el mecanismo más recomendado al ser el más ágil.
 
 #### Funcionamiento en SIR
 
-En el caso de SIR, a priori es posible recuperar toda aquella información que el IdP esté en condiciones de enviar. En el caso de la Universidad de Murcia, se deberá inclur en el perfil la información de autorizaicón
+En el caso de SIR, a priori es posible recuperar toda aquella información que el IdP esté en condiciones de enviar. En el caso de la Universidad de Murcia, se deberá incluir en el perfil la información de autorización
 
 Vas a poder recuperar de SIR lo que cada IdP esté en condiciones de enviar a SIR. En el caso de la UMU podemos incluir en el perfil la información que os pasé en el perfil de ejemplo.
 
@@ -530,7 +541,7 @@ En un arquitectura monolítica, al ser una aplicación única no existe este pro
 
 Como se indicó anteriormente, como servicio de autenticación / autorización se utilizará SIR, el cual funciona bajo el protocolo SAML2. El principal problema de este protocolo no está pensado para trabajar entre microservicios, si no entre un user-agent y un proveedor de servicio, por lo que resulta demasiado pesado al tratarse de un intercambio de información mediante XML.
 
-Como alternativa para la autorización, la recomendacion es la utilización de OAuth2 junto con JWT, el cual se ha convertido en el estándar de facto en el mundo de microservicios.
+Como alternativa para la autorización, la recomendación es la utilización de OAuth2 junto con JWT, el cual se ha convertido en el estándar de facto en el mundo de microservicios.
 
 #### OAuth2
 
@@ -651,7 +662,7 @@ Se indican a continuación la arquitectura de despliegue dentro de Kubernetes, i
 - Services
 - Ingress
 
-Asociado a cada uno de los pods se incluye por cada uno la imagen base que se debe utilitzar para la contrucción de la imagen Docker de despliegue. Por norma general se utilitzará la siguiente:
+Asociado a cada uno de los pods se incluye por cada uno la imagen base que se debe utilizar para la construcción de la imagen Docker de despliegue. Por norma general se utilizará la siguiente:
 
 - Pods Java: openjdk:11, la cual es la imagen base para openjdk 11
 - Pods Elasticsearch: elasticsearch:6.7, imagen base para la versión 6.7 de Elasticsearch
@@ -662,8 +673,8 @@ Asociado a cada uno de los pods se incluye por cada uno la imagen base que se de
 
 En cuanto a la decisión sobre la utilización de deployments o statefulset, la justificación es la siguiente:
 
-- Deployments: por norma general se utilitzará para el despliegue de los microservicios de la aplciación, al ser la forma más estándar de configuar una aplicación con múltiples réplicas en Kubernetes
-- Statefulset: se utilitzará para todos aquellos elementos que requieran de ordenamiento y unicidad de los Pods. Este es el caso de los Servicios de almacenamiento de datos o motores de búsqueda
+- Deployments: por norma general se utilizará para el despliegue de los microservicios de la aplicación, al ser la forma más estándar de configurar una aplicación con múltiples réplicas en Kubernetes
+- Statefulset: se utilizará para todos aquellos elementos que requieran de ordenamiento y unicidad de los Pods. Este es el caso de los Servicios de almacenamiento de datos o motores de búsqueda
 - Cronjob: se utilizará para el despliegue de aquellas tareas que se tengan que ejecutar periódicamente en base a una programación
 
 # Conceptos Transversales (Cross-cutting)
@@ -734,7 +745,7 @@ A continuación, se enumeran algunos de los Triple-stores considerados:
 
 ## Elección de arquitectura semántica
 
-La arquitectura semántica pretende cubrir cómo se va a proceder al guardado de datos, así como a exponer los mismos para la utilización posteror por los distintos tipos de usuarios. Se deberían cubrir los siguientes aspectos:
+La arquitectura semántica pretende cubrir cómo se va a proceder al guardado de datos, así como a exponer los mismos para la utilización posterior por los distintos tipos de usuarios. Se deberían cubrir los siguientes aspectos:
 
 - Facilitar la generación de RDF a partir de POJOs
 - Almacenamiento de la información en triple store
@@ -784,14 +795,14 @@ A continuación, se definen una serie de escenarios de calidad relacionados con 
 
 | Código | Estímulo | Respuesta esperada |
 | ------ | -------- | ------------------ |
-| E1 | Un usuario quiere conocer los tipos de gasto realizados por área y tipo de proyecto	La información es encontrable mediante consultas SPARQL |
-| E2 | Un usuario o sistema quiere conocer información a de las áreas de investigación, tipología de proyectos, origen de fondos, etc. tanto unidimensionales como multidimensionales.	La estructura jerárquica de las ontologías permitirá modificar el nivel de profundidad de los análisis |
-| E3 | Un usuario quiere llevar a cabo búsqueda de socios	Es posible recibir la información de los posibles socios filtrando por las características deseadas |
-| E4 | Creación de mapa de conocimiento a nivel nacional	La interoperabilidad entre las distintas instancias hace que sea posible la búsqueda de distintos perfiles de conocimiento |
-| E5 | Sólo personas autorizadas tendrán acceso a la gestión de datasets	El sistema cuenta con una gestión de usuarios en la que sólo aquellos con el rol gestor tendrán permitida esas tareas |
-| E6 | Un gestor quiere dar de alta/baja usuarios con distintos roles	El gestor tendrá los permisos adecuados en el sistema para poder dar hacer modificaciones con los perfiles de usuarios |
-| E7 | Un usuario quiere importar datos csv de otros sistemas	El sistema se adaptará a la incorporación de nuevos datos mediante distintos conversores |
-| E8 | Un usuario quiere realizar la sincronización con otras instancias	El backend cuenta con un módulo que permite ejecutar la sincronización con otras instancias. |
+| E1 | Un usuario quiere conocer los tipos de gasto realizados por área y tipo de proyecto	La información es encontrable mediante consultas SPARQL ||
+| E2 | Un usuario o sistema quiere conocer información a de las áreas de investigación, tipología de proyectos, origen de fondos, etc. tanto unidimensionales como multidimensionales.	La estructura jerárquica de las ontologías permitirá modificar el nivel de profundidad de los análisis ||
+| E3 | Un usuario quiere llevar a cabo búsqueda de socios	Es posible recibir la información de los posibles socios filtrando por las características deseadas ||
+| E4 | Creación de mapa de conocimiento a nivel nacional	La interoperabilidad entre las distintas instancias hace que sea posible la búsqueda de distintos perfiles de conocimiento ||
+| E5 | Sólo personas autorizadas tendrán acceso a la gestión de datasets	El sistema cuenta con una gestión de usuarios en la que sólo aquellos con el rol gestor tendrán permitida esas tareas ||
+| E6 | Un gestor quiere dar de alta/baja usuarios con distintos roles	El gestor tendrá los permisos adecuados en el sistema para poder dar hacer modificaciones con los perfiles de usuarios ||
+| E7 | Un usuario quiere importar datos csv de otros sistemas	El sistema se adaptará a la incorporación de nuevos datos mediante distintos conversores ||
+| E8 | Un usuario quiere realizar la sincronización con otras instancias	El backend cuenta con un módulo que permite ejecutar la sincronización con otras instancias. ||
 
 # Riesgos y deuda técnica
 
@@ -804,7 +815,7 @@ En este apartado se identifican algunos riesgos detectados en el desarrollo del 
 
 ## Esquema de URIS
 
-- Riesgo: incapacidad para realizar un esquema de URIs y API correcto desde el princpio.
+- Riesgo: incapacidad para realizar un esquema de URIs y API correcto desde el principio.
 - Plan: se establecerán mecanismos que permitan afrontar cambios posteriores y establecer sistema de realimentación. Se planteará que el sistema sea abierto para que sea posible su ampliación, como por ejemplo, a nuevos idiomas.
 
 ## Entidades de dominio
@@ -845,7 +856,7 @@ En este apartado se identifican algunos riesgos detectados en el desarrollo del 
 ## Trellis
 
 - Riesgo: Trellis parece estar en una versión "prerelease" lo cual podría suponer un problema al poder existir partes poco maduras
-- Plan: Anque el riesgo existe, al disponer Trellis de una arquitectura muy mnodular, y también al exponer todos sus módulos a traveés de repositorios públicos, es muy fácil recomponer la aplicación reutilizando los módulos necesarios y sustituyendo aquellos por implementacions propias que lo adapten a la solución
+- Plan: Aunque el riesgo existe, al disponer Trellis de una arquitectura muy modular, y también al exponer todos sus módulos a través de repositorios públicos, es muy fácil recomponer la aplicación reutilizando los módulos necesarios y sustituyendo aquellos por implementaciones propias que lo adapten a la solución
 
 ## Apache Kafka
 
@@ -857,4 +868,4 @@ En este apartado se identifican algunos riesgos detectados en el desarrollo del 
 ## Integración SAML y JWT
 
 - Riesgo: La traducción entre tokens de SAML y JWT puede traer complicaciones ya que es posible que se pierda cierta información en el proceso
-- Plan: aunque es cierto que el riesgo existe, existen documentación disponible que plantea este escenario y resolviendolo de una forma adecuada.
+- Plan: aunque es cierto que el riesgo existe, existen documentación disponible que plantea este escenario y resolviéndolo de una forma adecuada.

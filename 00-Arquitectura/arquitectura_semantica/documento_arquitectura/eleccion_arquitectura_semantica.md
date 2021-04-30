@@ -1,5 +1,14 @@
 ![](./images/logos_feder.png)
 
+| Fecha        | 29/04/2021                                                   |
+| ------------ | ------------------------------------------------------------ |
+| Revisado por | Paloma Terán Pérez                                           |
+| Módulo       | Elección arquitectura semántica                              |
+| Tipo         | Documento                                                    |
+| Objetivo     | Documento con el análisis de las alternativas que existen para crear la arquitectura semántica |
+
+
+
 # Elección arquitectura semántica
 
 El presente documento pretende mostrar las alternativas que existen para crear la arquitectura semántica de cara a almacenar los datos correspondientes al proyecto ASIO. Esta arquitectura debería cubrir los siguientes aspectos:
@@ -41,7 +50,7 @@ La arquitectura de Apache Jena se basa en diferentes elementos que todos juntos 
 
 ![Arquitectura Apache Jena](https://jena.apache.org/images/jena-architecture.png)
 
-Las características más destacables de Jena son las siguienes
+Las características más destacables de Jena son las siguientes
 
 - RDF API: Es el core de Jena, permitiendo la generación de modelos RDF 
 - Ejecución de consultas SPARQL 
@@ -92,7 +101,7 @@ model.write(System.out, "TURTLE");
 
 #### Triple stores
 
-Jena utiliza como triple store por defecto TDB. Para ello disponede los conectores oportunos para facilitar la utlización de este sistema. Por ejemplo
+Jena utiliza como triple store por defecto TDB. Para ello dispone de los conectores oportunos para facilitar la utilización de este sistema. Por ejemplo
 
 ```java
 String directory = "MyDatabases/DB1";
@@ -385,7 +394,7 @@ En la tabla comparativa se hace referencia a que RDF4J dispone de conectores ya 
 * Strabon
 * Openlink Virtuoso RDF4J Provider
 
-Mediante la utilización del API de SAIL, es posible conectarse a los stores mediante los conectores que proveen de forma nativa estos fabricantes. En otros casos es posible utilizar un conector SPARQL siempre que se disponga deuna implementación compatible con la especificación [SPARQL 1.1](https://www.w3.org/TR/sparql11-protocol/), para lo cual RDF4J también ofrece compatibilidad con [SPARQL 1.1 Graph Store HTTP Protocol](https://www.w3.org/TR/sparql11-http-rdf-update/).
+Mediante la utilización del API de SAIL, es posible conectarse a los stores mediante los conectores que proveen de forma nativa estos fabricantes. En otros casos es posible utilizar un conector SPARQL siempre que se disponga de una implementación compatible con la especificación [SPARQL 1.1](https://www.w3.org/TR/sparql11-protocol/), para lo cual RDF4J también ofrece compatibilidad con [SPARQL 1.1 Graph Store HTTP Protocol](https://www.w3.org/TR/sparql11-http-rdf-update/).
 
 Más información:
 
@@ -394,7 +403,7 @@ Más información:
 * https://rdf4j.org/documentation/programming/repository/
 * http://graphdb.ontotext.com/documentation/free/architecture-components.html#architecture-components-rdf4j
 
-En el caso de Jena, la opción siempre sería ir mediante un endpoint SPARQL, lo cual no hace que no sea posible la conexión, incluso algunos de los fabricantes ofrecen compatibilidad, pero la forma de trabajar puede hacer un poco más limitada esta conectividad. Este es el caso por ejemplo de GraphDB en el que se  indica que es compatible con Jena 2.7, mediante la utlización de un adaptador, en este caso lo que está haciendo es generar una implementación de `Dataset` envolviendo un repositorio SAIL de RDF4J.
+En el caso de Jena, la opción siempre sería ir mediante un endpoint SPARQL, lo cual no hace que no sea posible la conexión, incluso algunos de los fabricantes ofrecen compatibilidad, pero la forma de trabajar puede hacer un poco más limitada esta conectividad. Este es el caso por ejemplo de GraphDB en el que se  indica que es compatible con Jena 2.7, mediante la utilización de un adaptador, en este caso lo que está haciendo es generar una implementación de `Dataset` envolviendo un repositorio SAIL de RDF4J.
 
 * http://graphdb.ontotext.com/documentation/free/using-graphdb-with-jena.html
 
@@ -543,11 +552,11 @@ Trellis viene empaquetado listo para su utilización con los componentes estánd
 </dependency>
 ```
 
-Trellis también provee de todas sus libererías subidas a repositorios Maven con lo cual sería muy sencillo utlizarlas para componer un empaquetado "custom". Esto facilitaría también el intercambio de ciertas piezas como puede ser la capa de persistencia para permitir así cumplir con el requisito de que la plataforma sea capaz de soportar el intercambio de triplestore, lo cual se explicará en la sección siguiente.
+Trellis también provee de todas sus librerías subidas a repositorios Maven con lo cual sería muy sencillo utilizarlas para componer un empaquetado "custom". Esto facilitaría también el intercambio de ciertas piezas como puede ser la capa de persistencia para permitir así cumplir con el requisito de que la plataforma sea capaz de soportar el intercambio de triplestore, lo cual se explicará en la sección siguiente.
 
 ##### Intercambio de las capas de persistencia
 
-Como se ha comentado en secciones anteriores, Trellis por defecto soporta la persistencia en triplestore y en base de datos relacional, siendo posibles en este último tanto Postgres como MySQL. Para este cometido Trellis provee de dos distribucions empaquetadas por defecto, tanto para instalación manual como en formato Docker.
+Como se ha comentado en secciones anteriores, Trellis por defecto soporta la persistencia en triplestore y en base de datos relacional, siendo posibles en este último tanto Postgres como MySQL. Para este cometido Trellis provee de dos distribuciones empaquetadas por defecto, tanto para instalación manual como en formato Docker.
 
 En el caso de la implementación triplestore, es capaz de soportar mediante configuración los siguientes Triplestores:
 
@@ -2912,7 +2921,7 @@ Para generar el empaquetado con todas estas librerías se utiliza el [framework 
 
 Una aplicación Dropwizard dispone de su propia subclase de `io.dropwizard.Configuration` la cual dispone de los parámetros específicos del entorno.  Trellis dispone de la implementación base `org.trellisldp.dropwizard.config.TrellisConfiguration` la cual será preciso extender.  
 
-Será preciso también crear una clase que extendienda la clase es.um.asio.ldp.app.TrellisApplication, la cual a su vez extiende `io.dropwizard.Application<T>`, la cual tiene estará parametrizada con la clase de configuración indicada anteriormente. Esta será la clase que contenta el método `main` de la aplicación y por tanto la que hay que ejecutar para arrancar el servicio.
+Será preciso también crear una clase que extienda la clase es.um.asio.ldp.app.TrellisApplication, la cual a su vez extiende `io.dropwizard.Application<T>`, la cual tiene estará parametrizada con la clase de configuración indicada anteriormente. Esta será la clase que contenta el método `main` de la aplicación y por tanto la que hay que ejecutar para arrancar el servicio.
 
 ##### Comentarios sobre la adaptación
 

@@ -1,3 +1,18 @@
+
+
+![](./images/logos_feder.png)
+
+
+
+| Fecha        | 29/04/2021                             |
+| ------------ | -------------------------------------- |
+| Revisado por | Paloma Terán Pérez                     |
+| Módulo       | Buenas practicas en URIs               |
+| Tipo         | Documento                              |
+| Objetivo     | Documento con buenas practicas en URIs |
+
+
+
 # Buenas practicas en URIs
 
 ## Objetivo

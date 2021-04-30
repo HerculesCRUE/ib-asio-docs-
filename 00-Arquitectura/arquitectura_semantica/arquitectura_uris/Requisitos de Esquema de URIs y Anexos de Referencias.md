@@ -1,4 +1,13 @@
+![](./images/logos_feder.png)
 
+
+
+| Fecha        | 29/04/2021                                                   |
+| ------------ | ------------------------------------------------------------ |
+| Revisado por | Paloma Terán Pérez                                           |
+| Módulo       | Requisitos del esquema de URIs y anexos de referencias       |
+| Tipo         | Documento                                                    |
+| Objetivo     | Documento con requisitos del esquema de URIs y anexos de referencias |
 
 ### Requisitos
 
@@ -137,7 +146,7 @@ A los recursos de información de carácter publico por parte de cualquier órga
     * Usar una estructura consistente, extensible y persistente.
     * Las URIs seguirán una estructura comprensible y relevante, de forma que el identificador ofrezca información semántica autocontenida que permita inferir información del propio recurso y su procedencia
     * No se debe exponer información de la implementación técnica de los recursos.
-    * Las URIs deben de ser persistentes, es decir una vez creada, no debe variar y el contenido siempre a de ser accesible. En caso de que sea necesario cambiar o eliminar un recurso, hay que informar sobre el estado mediante el codigo HTTP 3xx para redirecciones, y HTTP 410 para recursos que han desaparecido permanentemente.
+    * Las URIs deben de ser persistentes, es decir una vez creada, no debe variar y el contenido siempre a de ser accesible. En caso de que sea necesario cambiar o eliminar un recurso, hay que informar sobre el estado mediante el código HTTP 3xx para redirecciones, y HTTP 410 para recursos que han desaparecido permanentemente.
 
   * Estructura básica:
 
@@ -180,7 +189,7 @@ A los recursos de información de carácter publico por parte de cualquier órga
 
       * Si solo se dispone de un catalogo, se podrá representar **http://{base}/catalogo**
       * En caso de que se disponga de mas de un catalogo se usar el patrón **http://{base}/catalogo/{sector}**
-      * Los conjuntos de datos incluidos en cada catalogo, se identificaran mediante un URI unico para cada conjunto de datos: **http://{base}/catalogo/{dataset}** o en su defecto, utiizando la nomenclatura de identificadores de fragmentos (#): **http://{base}/catalogo#{dataset}**
+      * Los conjuntos de datos incluidos en cada catalogo, se identificaran mediante un URI único para cada conjunto de datos: **http://{base}/catalogo/{dataset}** o en su defecto, utilizando la nomenclatura de identificadores de fragmentos (#): **http://{base}/catalogo#{dataset}**
 
     * URI para identificar **vocabularios**
 
@@ -539,7 +548,7 @@ Esquema de URIs, Buenas practicas y factoría de URIS
   - Establecer y seguir un esquema (ej. http://{dominio}/{tipo}/{concepto}/{referencia}), que sea permanente en el tiempo.
   - Reutilizar identificadores existentes: Si la entidad tiene un identificador,este puede ser usado como identificador de la URI, siempre que no cambie la semántica original
   - Múltiples representaciones con negociación de contenido
-  - redirecciones 303 para objetos del mundo real: Para las peticiones  de tipo type=id, redirigir a la representacion del recurso type=doc
+  - redirecciones 303 para objetos del mundo real: Para las peticiones  de tipo type=id, redirigir a la representación del recurso type=doc
   - Use un servicio dedicado, independiente del organizador de datos  
 
 - Negaciones:
@@ -573,7 +582,7 @@ Esquema de URIs, Buenas practicas y factoría de URIS
     - No contienen palabras clave
     - No contienen extensiones de archivos
     - No contenga www
-    - Solo minusculas
+    - Solo minúsculas
     - No contiene acentos ni espacios
     - Reemplazar símbolos especiales por guiones o guiones bajos.
 
@@ -645,5 +654,5 @@ Esquema de URIs, Buenas practicas y factoría de URIS
 
 ### Dudas
 
-- El pliego menciona que el requisito 15.1 es de obligado cumplimiento para todas las universidades que quieran publicar datos como parte de la iniciativa Hércules. ¿la publicación no se realizara exclusivamente por medio de los importadores, y estos, mediante su interacción con la Factoría de URIS implementaran de facto el cumplimiento del requisito 15.1?. Si existen otras vias ¿Cuales son?¿como y donde aseguraremos el cumplimiento de la normativa de URIS en ese/esos caso/s?
+- El pliego menciona que el requisito 15.1 es de obligado cumplimiento para todas las universidades que quieran publicar datos como parte de la iniciativa Hércules. ¿la publicación no se realizara exclusivamente por medio de los importadores, y estos, mediante su interacción con la Factoría de URIS implementaran de facto el cumplimiento del requisito 15.1?. Si existen otras vías ¿Cuales son?¿como y donde aseguraremos el cumplimiento de la normativa de URIS en ese/esos caso/s?
 

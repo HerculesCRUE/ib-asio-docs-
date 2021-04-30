@@ -1,8 +1,19 @@
+![](C:/Users/pteran/Documents/reposgit/asio-docs/00-Arquitectura/arquitectura_semantica/documento_arquitectura/images/logos_feder.png)
+
+| Fecha        | 29/04/2021                                                   |
+| ------------ | ------------------------------------------------------------ |
+| Revisado por | Paloma Terán Pérez                                           |
+| Módulo       | RDF Anidados                                                 |
+| Tipo         | Documento                                                    |
+| Objetivo     | Documento con el análisis sobre la generación y almacenamiento de documentos RDF's con objetos anidados |
+
+
+
 # Generación y almacenamiento de documentos RDF's con objetos anidados
 
 # Problema
 
-A la hora de crear documentos RDF con objetos anidados se pueden dar situaciones en las que se están intentando generar documentos RDF con objetos que hacen referencia a otros, los cuales no han sido persitidos aún. Ejemplo, supongamos que intentamos generar el RDF del primero objeto que nos llega de la cola kafka, en este caso un objeto de tipo proyecto:
+A la hora de crear documentos RDF con objetos anidados se pueden dar situaciones en las que se están intentando generar documentos RDF con objetos que hacen referencia a otros, los cuales no han sido persistidos aún. Ejemplo, supongamos que intentamos generar el RDF del primero objeto que nos llega de la cola kafka, en este caso un objeto de tipo proyecto:
 
 ```jsx
 {

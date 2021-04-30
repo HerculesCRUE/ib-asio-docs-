@@ -1,5 +1,16 @@
 ![](./images/logos_feder.png)
 
+
+
+| Fecha        | 29/04/2021                            |
+| ------------ | ------------------------------------- |
+| Revisado por | Paloma Terán Pérez                    |
+| Módulo       | Arquitectura de URIs                  |
+| Tipo         | Documento                             |
+| Objetivo     | Documento con la Arquitectura de URIs |
+
+
+
 # Arquitectura de URIs
 
 ## Objetivo
@@ -157,7 +168,7 @@ Con el fin de garantizar coherencia en la implementación del patrón descrito, 
   - Han de ser lo mas cortos posibles, conservando su semántica, y haciendo que sean lo más representativos, y intuitivos posibles
   - Usar siempre minúsculas, salvo para los conceptos que podrán tener la primera letra en mayúscula.
   - Eliminar caracteres propios de el idioma, tales como acentos, o signos de puntuación.
-  - Usar el guión medio (-) como separador de palabras.
+  - Usar el guion medio (-) como separador de palabras.
   - Evitar abreviaturas, salvo que esta sea evidente.
 - Para los componentes que definen instancias (referencia), mirar la sección de [identificadores](#Identificadores (URIs)).
 
