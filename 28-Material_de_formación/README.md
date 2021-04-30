@@ -13,23 +13,23 @@
 # Material de formación
 
 
-|                                 | **SESIÓN: Proyecto ASIO (Código: I00)**                      |                                                              |                                                              |
-| ------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **Unidad de conocimiento**      | **Contenido**                                                | **ENLACE AL VIDEO**                                          | **RECURSOS**                                                 |
-| Proyecto ASIO                   | Contexto del programa Hércules.<br />Proyecto ASIO. Retos tecnológicos | [Enlace desarrollo](https://tv.um.es/v?143791)<br />Enlace sistemas | [Presentación Proyecto ASIO](./Recursos/1. Introducción HERCULES-ASIO.pptx) |
-| Introducción a la web semántica | Ecosistema de la web semántica.<br />Open Linked Data        | [Enlace](https://tv.um.es/v?143792)                          |                                                              |
-| Tecnologías semánticas          | Introducción al subsistema Arquitectura Semántica.<br />Arquitectura centralizada vs. descentralizada | [Enlace](https://tv.um.es/v?143793)                          |                                                              |
-| Knowledge graphs                | Introducción al subsistema Infraestructura Ontológica.<br />Aplicación de conceptos FAIR | [Enlace](https://tv.um.es/v?143794)                          |                                                              |
+|                                 | **SESIÓN: Proyecto ASIO (Código: I00)**                      |                                     |                                                              |
+| ------------------------------- | ------------------------------------------------------------ | ----------------------------------- | ------------------------------------------------------------ |
+| **Unidad de conocimiento**      | **Contenido**                                                | **ENLACE AL VIDEO**                 | **RECURSOS**                                                 |
+| Proyecto ASIO                   | Contexto del programa Hércules.<br />Proyecto ASIO. Retos tecnológicos | [Enlace](https://tv.um.es/v?143791) | [Presentación Proyecto ASIO](./Recursos/1. Introducción HERCULES-ASIO.pptx) |
+| Introducción a la web semántica | Ecosistema de la web semántica.<br />Open Linked Data        | [Enlace](https://tv.um.es/v?143792) |                                                              |
+| Tecnologías semánticas          | Introducción al subsistema Arquitectura Semántica.<br />Arquitectura centralizada vs. descentralizada | [Enlace](https://tv.um.es/v?143793) |                                                              |
+| Knowledge graphs                | Introducción al subsistema Infraestructura Ontológica.<br />Aplicación de conceptos FAIR | [Enlace](https://tv.um.es/v?143794) |                                                              |
 
 
-|                                                              | **SESIÓN: Visión general de la arquitectura semántica (Código: I01)**                      |                                     |                                                              |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ----------------------------------- | ------------------------------------------------------------ |
-| **Unidad de conocimiento**                                   | **Contenido**                                                | **ENLACE AL VIDEO**                 | **RECURSOS**                                                 |
-| Visión general de la arquitectura                            | Decisiones de arquitectura.<br />Arquitectura de microservicios.<br />Recorrido por el subsistema de Arquitectura Semántica.<br />Stack tecnológico | [Enlace](https://tv.um.es/v?143811) | [Presentación sesión](./Recursos/Formación - Visión General Arquitectura Semántica.pptx) |
-| Entrada de datos en el sistema                               | Orígenes de datos.<br />Obtención de datos.<br />Transformación de la información.<br /> | [Enlace](https://tv.um.es/v?143812) |                                                              |
-| Módulos de gestión                                           | Procesamiento en streaming.<br />Generación de RDF.<br />Relación con la factoría de URIs | [Enlace](https://tv.um.es/v?143814) |                                                              |
-| Almacenamiento de datos                                      | Conexión con almacenamiento en Triple Store.<br />Almacenamiento en sistema LDP.<br /> | [Enlace](https://tv.um.es/v?143816) |                                                              |
-| Módulos auxiliares                                           | Autenticación y autorización federada.<br />Generación de Deltas. Introducción a la integración con la Infraestructura Ontológica | [Enlace](https://tv.um.es/v?143817) |                                                              |
+|                                   | **SESIÓN: Visión general de la arquitectura semántica (Código: I01)** |                                                              |                                                              |
+| --------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **Unidad de conocimiento**        | **Contenido**                                                | **ENLACE AL VIDEO**                                          | **RECURSOS**                                                 |
+| Visión general de la arquitectura | Decisiones de arquitectura.<br />Arquitectura de microservicios.<br />Recorrido por el subsistema de Arquitectura Semántica.<br />Stack tecnológico | [Enlace desarrollo](https://tv.um.es/v?143811)<br />[Enlace sistemas](https://tv.um.es/v?143795) | [Presentación sesión](./Recursos/Formación - Visión General Arquitectura Semántica.pptx) |
+| Entrada de datos en el sistema    | Orígenes de datos.<br />Obtención de datos.<br />Transformación de la información.<br /> | [Enlace desarrollo](https://tv.um.es/v?143812)<br />[Enlace sistemas](https://tv.um.es/v?143796) |                                                              |
+| Módulos de gestión                | Procesamiento en streaming.<br />Generación de RDF.<br />Relación con la factoría de URIs | [Enlace desarrollo](https://tv.um.es/v?143814)<br />[Enlace sistemas](https://tv.um.es/v?143797) |                                                              |
+| Almacenamiento de datos           | Conexión con almacenamiento en Triple Store.<br />Almacenamiento en sistema LDP.<br /> | [Enlace desarrollo](https://tv.um.es/v?143816)<br />[Enlace sistemas](https://tv.um.es/v?143798) |                                                              |
+| Módulos auxiliares                | Autenticación y autorización federada.<br />Generación de Deltas. Introducción a la integración con la Infraestructura Ontológica | [Enlace desarrollo](https://tv.um.es/v?143817)<br />[Enlace sistemas](https://tv.um.es/v?143799) |                                                              |
 
 |                                                              | **SESIÓN: Visión general de la Infraestructura Ontológica (Código: I02)** |                                     |                                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ----------------------------------- | ------------------------------------------------------------ |
@@ -60,4 +60,4 @@
 
 
 
-En el siguiente enlace se podrán localizar todas las sesiones de formacion en la web de la Universidad de Murcia [Sesiones de Formación](https://www.um.es/web/hercules/proyectos/asio/formacion/izertis)
+En el siguiente enlace se podrán localizar todas las sesiones de formación en la web de la Universidad de Murcia [Sesiones de Formación](https://www.um.es/web/hercules/proyectos/asio/formacion/izertis)
