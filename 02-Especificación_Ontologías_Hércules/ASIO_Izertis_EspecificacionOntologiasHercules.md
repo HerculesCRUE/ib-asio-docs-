@@ -2,13 +2,14 @@
 
 | Entregable                       | Especificación de las ontologías Hércules                    |
 | -------------------------------- | ------------------------------------------------------------ |
-| Fecha                            | 25/05/2020                                                   |
+| Fecha                            | 03/05/2021                                                   |
+| Revisado por                     | Paloma Terán Pérez                                           |
 | Proyecto                         | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
 | Módulo                           | Infraestructura Ontológica                                   |
 | Tipo                             | Entregable complementario a la documentación de la ontología, que se encuentra en la carpeta [Red de ontologías Hércules](../01-Red_de_Ontologías_Hércules). |
 | Objetivo                         | Documento donde se explica la aproximación para especificar, personalizando, las partes de la red de ontologías Hércules según los intereses del *stakeholder* en cuestión. |
-| Estado                           | **100%**.  |
-| Próximos pasos                   |  |
+| Estado                           | **100%**.                                                    |
+| Próximos pasos                   |                                                              |
 | Repositorio de software asociado | El espacio de trabajo de las ontologías Hércules es accesible [aquí](https://github.com/HerculesCRUE/ib-hercules-ontology). |
 
 
@@ -69,7 +70,7 @@ A modo de ejemplo, se incluyen *datasets* equivalentes de los casos de figuras a
 
 El modelo del Reino Unido incluido en los módulos verticales es solamente un ejemplo que recoge la [generality of the universities](https://web.archive.org/web/20181010061700/http://www.impacte.eu/system/files/%5Bsite%3Acurrent-group%5D/uk.pdf) y no las figuras de Oxford, por ejemplo, que son muy específicas.
 
-Como ejemplo de especificación de mapeos entre conceptos de los módulos verticales, se incluyeron algunos casos rudimentarios, solo a modo ilustrativo, ya que el conocimiento más específico del dominio sería más propio de los *stakeholders*. Establecer estos mapeos no es una tarea trivial y serían en efecto los expertos de dominio, los candidatos más indóneos para llevar a cabo esta tarea. 
+Como ejemplo de especificación de mapeos entre conceptos de los módulos verticales, se incluyeron algunos casos rudimentarios, solo a modo ilustrativo, ya que el conocimiento más específico del dominio sería más propio de los *stakeholders*. Establecer estos mapeos no es una tarea trivial y serían en efecto los expertos de dominio, los candidatos más idóneos para llevar a cabo esta tarea. 
 
 Veamos un ejemplo de mapeo entre una figura española y una figura portuguesa:
 
@@ -85,7 +86,7 @@ asioModules:ES_UNIVERSITY_HR_ESPLEM
       skos:prefLabel "Profesor emérito"@es , "Profesor emérito"@gl , "Profesor eméritu"@ast , "Irakasle emeritua"@eu , "Professor emèrit"@ca .
 ```
 
-para la cual se usa la propiedad de SKOS  `skos:closeMatch`, que indica la proximidad conceptual entre profesores eméritos de ambos países. No osamos aventurarnos a un mapeo por medio de la propiedad `skos:exactMatch` sin ser completamente espertos de ambas realidades nacionales.
+para la cual se usa la propiedad de SKOS  `skos:closeMatch`, que indica la proximidad conceptual entre profesores eméritos de ambos países. No osamos aventurarnos a un mapeo por medio de la propiedad `skos:exactMatch` sin ser completamente expertos de ambas realidades nacionales.
 
 Otro mapeo similar se puede trazar respecto al código de cada figura:
 
@@ -99,9 +100,9 @@ asioModules:ES_UNIVERSITY_HR_CODE_ESPLEM
       skos:prefLabel "ESPLEM" .
 ```
 
-Finalmente, cabe añadir otro detalle a tener en cuenta respecto a las instancias de estos módulos verticales de recursos humanos. El tipo de estas figuras se establece tanto como instancias de la clase `skos:Concept` como de la clase `asio:Role`. De esta manera se proporciona una suerte de conciliación entre las instancias del core ontológico y las de estos módulos verticales independientes y semi-autónomos (que podrían ser desenchufados y reciclados si fuera necesiario.
+Finalmente, cabe añadir otro detalle a tener en cuenta respecto a las instancias de estos módulos verticales de recursos humanos. El tipo de estas figuras se establece tanto como instancias de la clase `skos:Concept` como de la clase `asio:Role`. De esta manera se proporciona una suerte de conciliación entre las instancias del core ontológico y las de estos módulos verticales independientes y semi-autónomos (que podrían ser desenchufados y reciclados si fuera necesario.
 
-Otro tipo de roles también incluídos simultáneamente como instancias de las clases `skos:Concept` y `asio:Role`, son los denominados rangos académicos dentro de una universidad. Se incluyó por el momento una lista limitada con casos como los de *chancellor*, *vice-chancellor*, *dean*, etc. para el caso del Reino Unido y *rector*, *decano*, *director de departamento*, *secretario*, etc. para España.
+Otro tipo de roles también incluidos simultáneamente como instancias de las clases `skos:Concept` y `asio:Role`, son los denominados rangos académicos dentro de una universidad. Se incluyó por el momento una lista limitada con casos como los de *chancellor*, *vice-chancellor*, *dean*, etc. para el caso del Reino Unido y *rector*, *decano*, *director de departamento*, *secretario*, etc. para España.
 
 Estos individuos se incluyen actualmente en los módulos de RRHH pero no se descarta que sean movidos en el futuro a módulos específicos de tipo administrativo.
 
@@ -109,7 +110,7 @@ Finalmente, cabe mencionar también que la propiedad `asio:referenceLaw` se util
 
 ## 4. conclusiones
 
-El documento presenta la solución propuesta de especificación de la ontología por medio de los módulos verticales como detentores de la realidad de los *stakeholders* y proporciona ejemplos de cómo llevar a cabo esa especificación por medio de ejemplos reales ya incluídos en el modelo ontológico.
+El documento presenta la solución propuesta de especificación de la ontología por medio de los módulos verticales como detentores de la realidad de los *stakeholders* y proporciona ejemplos de cómo llevar a cabo esa especificación por medio de ejemplos reales ya incluidos en el modelo ontológico.
 
 Las correspondencias entre entidades para facilitar la especificación de las posibles ontologías de stakeholders que cuentan con sus propias ontologías se facilita por medio de los siguientes procedimientos:
 
