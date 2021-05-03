@@ -131,6 +131,9 @@
 | Sistema de integración continua de ontologías                | Vista en detalle de los módulos del sistema. | [Enlace](https://tv.um.es/v?144334) |                       |
 | Sistema de integración continua de ontologías                | Ejemplo de modificación del sistema.         | [Enlace](https://tv.um.es/v?144335) |                       |
 
+En el siguiente enlace se podrán localizar todas las sesiones de formación en la web de la Universidad de Murcia [Sesiones de Formación](https://www.um.es/web/hercules/proyectos/asio/formacion/izertis).
 
-En el siguiente enlace se podrán localizar todas las sesiones de formación en la web de la Universidad de Murcia [Sesiones de Formación](https://www.um.es/web/hercules/proyectos/asio/formacion/izertis)
+
+
+También puede resultar interesante el Manual de [Usuario de la aplicación](../00-Análisis/Manual de usuario/Manual de usuario.md).
 
