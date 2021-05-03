@@ -3,7 +3,7 @@
 | Entregable                       | Red de ontologías Hércules                                   |
 | -------------------------------- | ------------------------------------------------------------ |
 | Fecha                            | 25/05/2020 (entrega hito 1)                                                   |
-|Revisado por                      | Emilio Rubiera Azcona (28/04/2021)
+|Revisado por                      | Emilio Rubiera Azcona (28/04/2021)|
 | Proyecto                         | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
 | Módulo                           | Infraestructura Ontológica                                   |
 | Tipo                             | Documento                                                    |
@@ -36,7 +36,7 @@ In addition to these two files, a number of ***vertical modules*** have being re
 
 Two other vertical modules, related within each other, are the **scientific domains** and the **subject areas**, 4th and 5th respectively. Both are controlled vocabularies including scientific domains and fields used in different requirements by the core ontology.
 
-The sixth vertical module, **universities**, includes the full list of universities from Spain as well as a limited sample of university subdivisions (centres, campus, faculties, etc.) corresponding to the Murcia, Oviedo, Santiago de Compostela and Basque country universities.
+The sixth vertical module, **universities**, includes the full list of universities from Spain as well as a limited sample of university subdivisions (centers, campus, faculties, etc.) corresponding to the Murcia, Oviedo, Santiago de Compostela and Basque country universities.
 
 Finally, the 7th, 8th and 9th files corresponds to **human resources** belonging to the university systems of Spain, Portugal and the United Kingdom.
 
@@ -47,7 +47,7 @@ The current working space for the ASIO ontologies can be accessed [here](https:/
 
 ## 1. Introduction
 
-The ASIO ontologies are standardised data schemas (or "vocabularies") designed to address the Research Management of the [CRUE](https://tic.crue.org/hercules/)'s Spanish University System (Sistema Universitario Español) through the particular case of the University of Murcia but always applying an encompassing model capable of addressing the rest of universities of the CRUE and even more belonging to the European level.
+The ASIO ontologies are standardized data schemas (or "vocabularies") designed to address the Research Management of the [CRUE](https://tic.crue.org/hercules/)'s Spanish University System (Sistema Universitario Español) through the particular case of the University of Murcia but always applying an encompassing model capable of addressing the rest of universities of the CRUE and even more belonging to the European level.
 
 In this brief section we are going to explain the large-scale organization of the ASIO ontology, which is split into a central and peripheral components, loosely inspiring ourselves in Fodor (1983). To do so we need to distinguish between two fundamentally different types of information processing (relying upon information architecture and datasets).
 
@@ -73,7 +73,7 @@ To say that a part of the ontology is core (i.e. involves central processing act
 
 In this section, we are going to show the reader the classes through a screenshot from Protégé and some diagrams showing some of the classes and properties in use in a number of examples.
 
-These are the full list of classes (available also in the [LODE](https://essepuntato.it/lode/) generated HTML file accompaning this document), with the miniature on the left showing just the superclasses and the two in the central and right part of the illustration the whole list of classes:
+These are the full list of classes (available also in the [LODE](https://essepuntato.it/lode/) generated HTML file accompanying this document), with the miniature on the left showing just the superclasses and the two in the central and right part of the illustration the whole list of classes:
 
 
 
@@ -86,7 +86,7 @@ For instance, the participation in a project by a consortium of a company and a 
 
 ![1st-example](./images/project-participation.png)
 
-where the specific case of the Hércules project is illustrated and both participants, a company such as Izertis and a research group from the University of Oviedo, WESO, are highlited.
+where the specific case of the Hércules project is illustrated and both participants, a company such as Izertis and a research group from the University of Oviedo, WESO, are highlighted.
 
 As far as the different profiles and roles of a person are concerned, the next figure illustrates how a single person can play different roles:
 
@@ -138,7 +138,7 @@ We can consider a temporary and sui generis semi-importation the usage of some c
 
 The entire list of classes in the core ontology is enriched multilingually via the data property `rdfs:label` and, besides the two obvious working languages (English, Spanish), three more languages are included: Catalan, French and Portuguese, as corresponding to the three other countries that we take into account in addition to Spain for geographically modelling our domain: Andorra, France and Portugal.
 
-The motivation of this choice is, on the one hand, geopolitical, as Catalan, French and Portuguese are languages in contact with Spanish through land borders (Andorra, France, Portugal) and, on the other hand, practical, as those three languages are more or less mastered by members of the development team, something that ensures a *direct* multilingual treatment. Note that Catalan is also a coofficial language in some Autonomous Communities of Spain.
+The motivation of this choice is, on the one hand, geopolitical, as Catalan, French and Portuguese are languages in contact with Spanish through land borders (Andorra, France, Portugal) and, on the other hand, practical, as those three languages are more or less mastered by members of the development team, something that ensures a *direct* multilingual treatment. Note that Catalan is also a co-official language in some Autonomous Communities of Spain.
 
 The Iberian peninsula as a *multilingual* whole, besides English as a *lingua franca* and French as a relevant neighboring language, is taken hence as a *scale model* of the multilingual nature of the European Union, and *exploited* as an intuitive advancement from the ultralocal reality to the global context, something that the British sociologist Roland Robertson coined *glocalization* (Kumaravadivelu, 2008:45).
 
@@ -171,15 +171,15 @@ asio:MastersThesis rdf:type owl:Class ;
                               "Treball de fi de màster"@ca-AD .
 ```
 
-As we can see in the code snippet, for the case of this class, the Portuguese language does not show differences bewteen the Portugal and the Brasil locales (both use *dissertação de mestrado*) but its Angolan locale does distinguish itself (*Tese de mestrado*). In the case of the francophone locales for France, Belgium, Switzerland and Canada (Québec), they all match the *Mémoire de maîtrise* denomination. The same applies to the Anglo-Saxon world, for which we don't specify locale.
+As we can see in the code snippet, for the case of this class, the Portuguese language does not show differences between the Portugal and the Brasil locales (both use *dissertação de mestrado*) but its Angolan locale does distinguish itself (*Tese de mestrado*). In the case of the francophone locales for France, Belgium, Switzerland and Canada (Québec), they all match the *Mémoire de maîtrise* denomination. The same applies to the Anglo-Saxon world, for which we don't specify locale.
 
 In Spanish though the situation varies and we specify the Spain locale, *Trabajo de fin de máste*r, with a sad linguistic calque from English (*máster*), from the locales for Mexico, Argentina, Colombia or Cuba, more genuine linguistically speaking (*maestría*), or the case of Chile (*magíster*), more latinizing.
 
-Obviously, the granularity of detail regarding ***i18n*** and ***L10n*** applied to the core ontology in this release is still far from being concluded and at the time of this writing more candidate labels (preferent and alternative) and locales are being analysed and are expected to be included in the May release of the ontology.
+Obviously, the granularity of detail regarding ***i18n*** and ***L10n*** applied to the core ontology in this release is still far from being concluded and at the time of this writing more candidate labels (preferent and alternative) and locales are being analyzed and are expected to be included in the May release of the ontology.
 
 
 
-## 3. Alignements with other vocabularies
+## 3. Alignments with other vocabularies
 
 In addition to reusing specific classes and properties or importing full external vocabularies of interest, as described above, the ASIO ontology also provides mappings to classes considered equivalent to the ones defined in the specification.
 
@@ -228,7 +228,7 @@ The main goal of this vertical module, which is in a way also transversal, is to
 
 ### 4.2. Scientific domains
 
-**Note** that this vertical module is being implemented at the moment and it is not included in this release but, as it is already designed, we include already documentation about it. The transformation of the tabular data will be carried out in the next weeks so to be *plugged in* as vertical module, similarly to the geopoolitical one.
+**Note** that this vertical module is being implemented at the moment and it is not included in this release but, as it is already designed, we include already documentation about it. The transformation of the tabular data will be carried out in the next weeks so to be *plugged in* as vertical module, similarly to the geopolitical one.
 
 #### 4.2.1 Prolegomena
 
@@ -244,10 +244,10 @@ SKOS-Core is not just the most appropriate solution for such a document featurin
 
 Hence, besides being able to seamlessly *assimilate* these **Scientific domains** within the ASIO ontology through an *ad hoc*, vertical module, we have improved the Ministry's document in a number of ways:
 
-- processing and transforming it from an only-reading format (PDF), which would be categorised as simply [linked data](https://www.w3.org/DesignIssues/LinkedData.html) of low-quality or 1-star ("Available on the web (whatever format) *but with an open licence, to be Open Data*"), to a high-quality, or [5-star quality](https://www.w3.org/community/webize/2014/01/17/what-is-5-star-linked-data/), linked data format ("non-proprietary format (e.g. CSV instead of excel), open standards from W3C (RDF and SPARQL) to identify things and link your data to other people’s data to provide context").
-- exploiting the full possibilities of multiligualism provided by SKOS with the aim of internationalising and localising the dataset, understanding here *internationalising* and *localising* as the processes to design an IT resource as fully adaptable to different languages and regions without later having to reengineering or changing the code. This way, the language labels for the scientific domains, originally just in Spanish, have been adapted to a multilingual context which not only covers English as *lingua franca* but also three languages in contact with Spanish through land borders (Catalan, French and Portuguese) and a number of cooficial regional languages (the aforementioned Catalan but also Basque and Galician) and even some linguistic varieties with a certain recognition at regional level (Aragonese, Asturian, Occitan).
+- processing and transforming it from an only-reading format (PDF), which would be categorized as simply [linked data](https://www.w3.org/DesignIssues/LinkedData.html) of low-quality or 1-star ("Available on the web (whatever format) *but with an open licence, to be Open Data*"), to a high-quality, or [5-star quality](https://www.w3.org/community/webize/2014/01/17/what-is-5-star-linked-data/), linked data format ("non-proprietary format (e.g. CSV instead of excel), open standards from W3C (RDF and SPARQL) to identify things and link your data to other people’s data to provide context").
+- exploiting the full possibilities of multiligualism provided by SKOS with the aim of internationalizing and localizing the dataset, understanding here *internationalizing* and *localizing* as the processes to design an IT resource as fully adaptable to different languages and regions without later having to reengineering or changing the code. This way, the language labels for the scientific domains, originally just in Spanish, have been adapted to a multilingual context which not only covers English as *lingua franca* but also three languages in contact with Spanish through land borders (Catalan, French and Portuguese) and a number of coofficial regional languages (the aforementioned Catalan but also Basque and Galician) and even some linguistic varieties with a certain recognition at regional level (Aragonese, Asturian, Occitan).
 
-An graphical example of the preprocesse file corresponding to the first-level of the scientific domains can be seen here:
+An graphical example of the preprocessed file corresponding to the first-level of the scientific domains can be seen here:
 
 ![1st-example](./images/sc-do-1st.png)
 
@@ -256,13 +256,13 @@ where still in a tabular format we can check out a first column with codes that 
 In addition to the ontological possibilities offered by SKOS (which is itself an ad hoc ontology) with respect to the ASIO core ontology, these mentioned multilingual labels provide idoneous raw materials to carry out extensively testing with respect to multilingualism, as detailed in the previous section and in a complementary deliverable (*ModeloMultilinguismo*).
 
 ### 4.3 Subject areas
-The same exploitation have been used to created the related vertical module Subject areas, from the same [State Research Agency](http://www.ciencia.gob.es/portal/site/MICINN/menuitem.8d78849a34f1cd28d0c9d910026041a0/?vgnextoid=664cfb7e04195510VgnVCM1000001d04140aRCRD), which is used for slightly different cases with the core ontology, but which was modelled equally following the schema provided by SKOS.
+The same exploitation have been used to created the related vertical module Subject areas, from the same [State Research Agency](http://www.ciencia.gob.es/portal/site/MICINN/menuitem.8d78849a34f1cd28d0c9d910026041a0/?vgnextoid=664cfb7e04195510VgnVCM1000001d04140aRCRD), which is used for slightly different cases with the core ontology, but which was modeled equally following the schema provided by SKOS.
 
 
 ### 4.4. Spanish universities
 
 Another vertical module includes the entire list of the universities of Spain, for which some rich data was retrieved from the [RUCT](https://www.educacion.gob.es/ruct/consultacentros.action?actual=centros) portal.
-Initially also modelled using SKOS, it included encompassing *metadata* about each institution, such as specific codes for each centre, multilingual labels when applicable and other information.
+Initially also modeled using SKOS, it included encompassing *metadata* about each institution, such as specific codes for each centre, multilingual labels when applicable and other information.
 It also includes a limited sample of subdivisions (schools, faculties, centres) from the universities of Murcia, Oviedo, Santiago de Compostela and the Basque Country, and it receives as well special care regarding multilingualism, official codes from the Ministry, etc.
 
 
@@ -271,7 +271,7 @@ It also includes a limited sample of subdivisions (schools, faculties, centres) 
 
 A very complex issue to address among national university systems is human resources, specially those belonging to academia. Spain, for instance, shows a wide variety of positions that can be even wider when considering also some peculiarities at regional level. There are very specific cases in Andalusia, Catalonia or the Basque country.
 
-Those Spanish regional peculiarities are specified in this vertical module by means of the property `asio:geodivision`, which maps the resource to our geopolitical vertical module. This way, when no specific geodivision of a country is attached to an academic position, its generaility at the national level is understood. However, when a position is specific to some Autonomous Community of Spain, property `asio:geodivision` specifies it.
+Those Spanish regional peculiarities are specified in this vertical module by means of the property `asio:geodivision`, which maps the resource to our geopolitical vertical module. This way, when no specific geodivision of a country is attached to an academic position, its generality at the national level is understood. However, when a position is specific to some Autonomous Community of Spain, property `asio:geodivision` specifies it.
 
 Let's have a look at an example: 
 
@@ -295,7 +295,7 @@ On the other hand, equivalent datasets are provided for the case of academic pos
 
 As far as the UK dataset is concerned, it is limited to the [generality of the universities](https://web.archive.org/web/20181010061700/http://www.impacte.eu/system/files/%5Bsite%3Acurrent-group%5D/uk.pdf) and does not include the Oxford positions, sometimes very specific.
 
-Some rudimentary mappings are provided between academic positions belonging to different countries  to test the model and illustrate the procedure to do so. Obviously, establishing these mappings is not a trivial task, and experts in human resources familiar with the diverses university systems would be the best candidates for that. However, 
+Some rudimentary mappings are provided between academic positions belonging to different countries  to test the model and illustrate the procedure to do so. Obviously, establishing these mappings is not a trivial task, and experts in human resources familiar with the divers university systems would be the best candidates for that. However, 
 
 An example of a mapping inclusion between a Spanish position and a Portuguese is the following:
 
@@ -349,7 +349,7 @@ Modifying and maintaining an ontology is not something simple or trivial, the co
 
 With a structured model such as the one provided by SKOS, the inclusions of new concepts can be carried out in a more safe way and using a SKOS editor can be easily made by stakeholders.
 
-Finally, it is worth mentioning that a design pattern taken into account in this modularisation was [Using SKOS Concept](http://ontologydesignpatterns.org/wiki/Community:Using_SKOS_Concept).
+Finally, it is worth mentioning that a design pattern taken into account in this modularization was [Using SKOS Concept](http://ontologydesignpatterns.org/wiki/Community:Using_SKOS_Concept).
 
 
 
