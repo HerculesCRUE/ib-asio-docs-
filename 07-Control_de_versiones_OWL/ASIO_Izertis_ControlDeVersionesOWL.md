@@ -2,7 +2,8 @@
 
 | Entregable     | Control de versiones sobre ontologías OWL                    |
 | -------------- | ------------------------------------------------------------ |
-| Fecha          | 17/06/2020                                                   |
+| Fecha          | 03/05/2021                                          |
+| Revisado por | Paloma Terán Pérez |
 | Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
 | Módulo         | Infraestructura Ontológica                                   |
 | Tipo           | Método y Software |
@@ -83,7 +84,7 @@ Múltiples versiones de la misma ontología están fijadas a existir y deben ser
 
 Por lo tanto, la gestión de cambios es un problema clave para poder soportar la evolución de ontologías. En [[1]](#1), se combinan los conceptos de evolución y versionado en un único concepto: “la habilidad de gestionar cambios en la ontología y sus efectos con la creación y mantenimiento de diferentes variantes de la ontología”.
 
-A continuación, se procederá a proponer el esquema llevado a cabo para la propagación de cambios de la ontología a los artefactos dependientes, y en caso concreto a la arquitéctura semántica. La propuesta realizada se basa en toda la información presentada hasta el momento. 
+A continuación, se procederá a proponer el esquema llevado a cabo para la propagación de cambios de la ontología a los artefactos dependientes, y en caso concreto a la arquitectura semántica. La propuesta realizada se basa en toda la información presentada hasta el momento. 
 
 En primer lugar, se mostrará el proceso general con el flujo de operaciones que se llevan a cabo cuando se produce un cambio en la ontología. A continuación, se hará una enumeración de los tipos de operaciones de modificación de la ontología planteados, y los posibles efectos que éstos tendrían en las instancias que dependen de ésta. Por último, se propondrán los puntos de comunicación entre la Infraestructura Ontológica y la Arquitectura Semántica para poder llevar a cabo estos cambios.
 
