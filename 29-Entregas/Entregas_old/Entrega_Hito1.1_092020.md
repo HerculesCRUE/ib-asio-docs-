@@ -1,4 +1,4 @@
-![](./images/logos_feder.png)
+![](../images/logos_feder.png)
 
 # Hito 1.1. Septiembre 2020
 

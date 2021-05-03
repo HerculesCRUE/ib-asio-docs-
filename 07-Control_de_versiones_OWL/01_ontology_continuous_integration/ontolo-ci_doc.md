@@ -1,15 +1,17 @@
 ![](./images/logos_feder.png)
 
-| Entregable     | Control de Versiones sobre ontologías OWL - Sistema de integración continua                           |
-| -------------- | ------------------------------------------------------------ |
-| Fecha          | 03/03/2021                                               |
-| Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
-| Módulo         | Infraestructura Ontológica                                   |
-| Tipo           | Método y Software                                        |
-| Objetivo       | Este documento consiste en la especificación del sistema de sincronización continua de ontologías. |
-| Estado         | **100%**  |
-| Próximos pasos ||
-|Repositorio de Software Asociado|https://github.com/HerculesCRUE/ontolo-ci |<!-- slide -->
+| Entregable                       | Control de Versiones sobre ontologías OWL - Sistema de integración continua |
+| -------------------------------- | ------------------------------------------------------------ |
+| Fecha                            | 03/05/2021                                                   |
+| Revisado por                     | Paloma Terán Pérez                                           |
+| Proyecto                         | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
+| Módulo                           | Infraestructura Ontológica                                   |
+| Tipo                             | Método y Software                                            |
+| Objetivo                         | Este documento consiste en la especificación del sistema de sincronización continua de ontologías. |
+| Estado                           | **100%**                                                     |
+| Próximos pasos                   |                                                              |
+| Repositorio de Software Asociado | https://github.com/HerculesCRUE/ontolo-ci                    |
+
 
 
 
@@ -34,10 +36,13 @@ En esta sección enumeraremos los objetivos de máxima calidad para la arquitect
 | 1 | Tolerancia a fallos | En caso de que falle uno de los componentes que rodean al sistema de integración continua, el sistema debe poder seguir funcionando y mantener los demás objetivos de calidad siempre que sea posible. |
 
 ### Partes interesadas (Stakeholders)
- Role/Nombre   | Descripción                   | Expectativas              |
-| ----------- | ------------------------- | ------------------------- |
-| Expertos de dominio | Usuario que modifica el contenido de la ontología a través de la interfaz de usuario proporcionada por el servicio de publicación de ontologías. | Cuando se realiza un cambio a través de la interfaz de usuario, el contenido de las ontologías en el sistema de control de versiones debe ser coherente con estos cambios. |
+
+| Role/Nombre             | Descripción                                                  | Expectativas                                                 |
+| ----------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Expertos de dominio     | Usuario que modifica el contenido de la ontología a través de la interfaz de usuario proporcionada por el servicio de publicación de ontologías. | Cuando se realiza un cambio a través de la interfaz de usuario, el contenido de las ontologías en el sistema de control de versiones debe ser coherente con estos cambios. |
 | Ingeniero de ontologías | Usuario que modifica el contenido de la ontología directamente desde el sistema de control de versiones. | Cuando se modifica la ontología sobre el sistema de control de versiones, el sistema de integración continua debe realizar una ejecución automática de los test que validan la ontología |
+
+
 
 
 ## Restricciones de Arquitectura
@@ -48,7 +53,10 @@ En esta sección enumeraremos los objetivos de máxima calidad para la arquitect
 |     R3    | El sistema debe poder ejecutarse desde la línea de comandos |
 |     R4    | El sistema de versiones de control utilizado para almacenar las ontologías estará basado en git. |
 
+
+
 ## Alcance y Contexto del Sistema
+
 Los distintos módulos software que componen un proyecto suelen utilizar sistemas de integración continua que permiten mantener el software continuamente testeado ejecutando los test de manera automática cada vez que se produzcan cambios sobre el software.
 
 La integración continua de software dispone de un gran ecosistema de herramientas como [Travis](https://travis-ci.com/plans) o [Circle-ci](https://circleci.com/) que nos permiten llevar a cabo dicho propósito. Sin embargo, a la hora de testear ontologías, no existe ninguna herramienta que nos permita realizar un proceso de integración continua de la misma. Es entonces cuando surge la necesidad de crear un sistema que cumpla dicha necesidad.

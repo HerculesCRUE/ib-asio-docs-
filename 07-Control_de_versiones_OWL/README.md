@@ -2,13 +2,14 @@
 
 | Entregable     | Control de versiones sobre ontologías OWL                    |
 | -------------- | ------------------------------------------------------------ |
-| Fecha          | 17/06/2020                                                   |
+| Fecha          | 03/05/2021                                          |
+| Revisado por | Paloma Terán Pérez |
 | Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
 | Módulo         | Infraestructura Ontológica                                   |
 | Tipo           | Método y Software |
 | Objetivo       | El objetivo de este documento es la especificación de las decisiones tomadas para intentar solucionar los problemas que emergen cuando se intenta mantener un control de versiones efectivo durante el desarrollo de ontologías. |
 | Estado         | **100%** Se han analizado y aplicado ya varias soluciones para los problemas que emergen al mantener un control de versiones sobre ontologías OWL. Se han definido 5 niveles de soluciones, de los cuales 3 se encuentran ya en funcionamiento, y cubren la funcionalidad propuesta para este entregable. También se han definido tanto un sistema de integración continua en el que se validan automáticamente los cambios producidos en la ontología a partir de una serie de Shape Expressions, como un sistema de sincronización de cambios de la ontología con un triplestore. Ambos sistemas se encuentran implementados y en funcionamiento. Por último, se detallan las medidas a llevar a cabo para controlar la propagación de cambios de una ontología a otros artefactos dependientes y, en especial, a la arquitectura semántica. |
-| Documentación adicional | [Metodología y erramienta de integración continua de ontologías - (Actualizado 16/12/2020)](01_ontology_continuous_integration/ontoloci.md)<br />[Documentación del sistema de sincronización (incluye manuales y especificación del sistema)](02_hercules_synchronization/hercules_sync_doc.md) |
+| Documentación adicional | [Metodología y erramienta de integración continua de ontologías - (Actualizado 16/12/2020)](./01_ontology_continuous_integration/ontoloci-ci_doc.md)<br />[Documentación del sistema de sincronización (incluye manuales y especificación del sistema)](02_hercules_synchronization/hercules_sync_doc.md) |
 
 # Control de versiones sobre ontologías OWL.
 Este documento se centra en explicar las decisiones tomadas para intentar solucionar los problemas que emergen cuando se intenta mantener un control de versiones efectivo durante el desarrollo de ontologías.
@@ -25,9 +26,9 @@ A continuación describiremos la solución que hemos planteado para solucionar l
 A nivel de la ontología, planteamos una solución sintáctica que es obligar el uso del editor [Protégé](https://protege.stanford.edu) por parte de los contribuidores de la ontología. En las últimas versiones de Protégé, basado en OWLAPI, se mantiene un orden determinista en la serialización de las ontologías que permite un mayor seguimiento de las diferencias entre versiones. Información adicional sobre el algoritmo implementado para mantener un orden determinista puede ser consultada a través del [siguiente issue](https://github.com/owlcs/owlapi/issues/273) del repositorio de OWLAPI. Además, en el [siguiente artículo](https://cgi.csc.liv.ac.uk/~valli/OWLED2015/OWLED_2015_paper_12.pdf) se especifica en detalle las optimizaciones llevadas a cabo en los algoritmos de serialización de ontologías.
 
 ### Nivel 2: Sistema de control de versiones
-El propio sistema de control de versiones (en nuestro caso GitHub, basado en Git) también hay bastantes soluciones dispobibles para el problema presente.
+El propio sistema de control de versiones (en nuestro caso GitHub, basado en Git) también hay bastantes soluciones disponibles para el problema presente.
 
-Una de las soluciones que hemos llevado a cabo es el almacenamiento de forma independiente de cada una de las versiones de la ontología a traves de la rama donde ésta se encuentra publicada (gh-pages). Cada vez que se crea una nueva release en GitHub, se lanza un sistema de scripts que se encarga de mergear cada uno de los grafos procedentes de la ontología (core + módulos verticales + alignments) y de serializar el grafo mergeado en la rama gh-pages, junto con la información del día en el que se produjo esa versión. Esta serialización se lleva a cabo con la librería [rdflib](https://rdflib.readthedocs.io/en/stable/) de Python, y está implementada de forma determinista.
+Una de las soluciones que hemos llevado a cabo es el almacenamiento de forma independiente de cada una de las versiones de la ontología a través de la rama donde ésta se encuentra publicada (gh-pages). Cada vez que se crea una nueva release en GitHub, se lanza un sistema de scripts que se encarga de mergear cada uno de los grafos procedentes de la ontología (core + módulos verticales + alignments) y de serializar el grafo mergeado en la rama gh-pages, junto con la información del día en el que se produjo esa versión. Esta serialización se lleva a cabo con la librería [rdflib](https://rdflib.readthedocs.io/en/stable/) de Python, y está implementada de forma determinista.
 
 Por último, la organización de carpetas correspondientes a la publicación de la ontología sigue un criterio de nombrado ya utilizado por ejemplo en las [SPAR Ontologies](https://sparontologies.github.io/article/spar-iswc2018/), que facilita el acceso y uso de cada una de las versiones por parte de los consumidores.
 
@@ -45,7 +46,7 @@ Desde este sistemas sería posible añadir metadatos adicionales en el momento d
 Actualmente este nivel todavía no se encuentra implementado en el sistema de sincronización, pero es algo que tenemos contemplado y nuestra idea es implementar este nivel de cara a futuras versiones del sistema de sincronización.
 
 ### Nivel 5: Sincronización desde Wikibase
-Este nivel se correspondería con la sincronización de cambios que se produzcan en Wikibase al sistema de control de versiones donde se almacena la ontología (sincionización hacia atrás).
+Este nivel se correspondería con la sincronización de cambios que se produzcan en Wikibase al sistema de control de versiones donde se almacena la ontología (sincronización hacia atrás).
 
 Por ejemplo, sería posible añadir metadatos a la propia ontología indicando la versión y la procedencia de estos cambios.
 
@@ -83,7 +84,7 @@ Múltiples versiones de la misma ontología están fijadas a existir y deben ser
 
 Por lo tanto, la gestión de cambios es un problema clave para poder soportar la evolución de ontologías. En [[1]](#1), se combinan los conceptos de evolución y versionado en un único concepto: “la habilidad de gestionar cambios en la ontología y sus efectos con la creación y mantenimiento de diferentes variantes de la ontología”.
 
-A continuación, se procederá a proponer el esquema llevado a cabo para la propagación de cambios de la ontología a los artefactos dependientes, y en caso concreto a la arquitéctura semántica. La propuesta realizada se basa en toda la información presentada hasta el momento. 
+A continuación, se procederá a proponer el esquema llevado a cabo para la propagación de cambios de la ontología a los artefactos dependientes, y en caso concreto a la arquitectura semántica. La propuesta realizada se basa en toda la información presentada hasta el momento. 
 
 En primer lugar, se mostrará el proceso general con el flujo de operaciones que se llevan a cabo cuando se produce un cambio en la ontología. A continuación, se hará una enumeración de los tipos de operaciones de modificación de la ontología planteados, y los posibles efectos que éstos tendrían en las instancias que dependen de ésta. Por último, se propondrán los puntos de comunicación entre la Infraestructura Ontológica y la Arquitectura Semántica para poder llevar a cabo estos cambios.
 
@@ -91,7 +92,7 @@ En primer lugar, se mostrará el proceso general con el flujo de operaciones que
 En el siguiente diagrama de alto nivel se muestra el flujo de operaciones realizadas a lo largo del ciclo de vida de la evolución de la ontología:
 ![](./resources/BPMN_evolucion_onto.png)
 
-Como podemos ver, este proceso comienza con la modificación de los ficheros de la ontología por parte de un ingeniero de ontologías. Una vez que se realizan los cambios, comienza el proceso de integración continua donde se validan estos cambios (para más información, se puede consultar la [documentación correspondiente](./01_ontology_continuous_integration/readme.md) del sistema de validación). Este es un proceso importante en el que nos aseguramos de la consistencia de la ontología tras realizar las modificaciones. En caso de que la integración continua pase correctamente, los administradores del repositorio tendrán la última palabra para poder permitir o denegar el pusheo de los cambios propuestos al propio repositorio, todo esto a través del sistema de pull requests de GitHub.
+Como podemos ver, este proceso comienza con la modificación de los ficheros de la ontología por parte de un ingeniero de ontologías. Una vez que se realizan los cambios, comienza el proceso de integración continua donde se validan estos cambios (para más información, se puede consultar la [documentación correspondiente](./01_ontology_continuous_integration/ontolo-ci_doc.md) del sistema de validación). Este es un proceso importante en el que nos aseguramos de la consistencia de la ontología tras realizar las modificaciones. En caso de que la integración continua pase correctamente, los administradores del repositorio tendrán la última palabra para poder permitir o denegar el pusheo de los cambios propuestos al propio repositorio, todo esto a través del sistema de pull requests de GitHub.
 
 El subproceso descrito previamente se podrá repetir n veces más. Cuando los administradores lo consideren conveniente, podrán proponer una nueva release del sistema con los cambios previamente introducidos. Esta propuesta tendrá un componente humano de aprobación, que añadirá una capa más de protección ante cambios no deseados. En caso de que la propuesta se apruebe, se procederá a la creación de la nueva release.
 
