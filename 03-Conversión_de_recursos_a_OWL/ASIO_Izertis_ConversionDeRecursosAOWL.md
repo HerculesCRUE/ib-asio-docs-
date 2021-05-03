@@ -30,11 +30,11 @@ Sin embargo, para esta fase inicial del proyecto se desestimó el uso de esta he
 
 Otra posibilidad que se valoró fue [Open Refine](https://openrefine.org/) con la que también se contaba con alguna familiaridad.
 
-La tercera herramienta considerada, [Tablines](https://bitbucket.org/alfonso_noriega/tablines/src/default/), fue originalmente desarrollada en la Fundación CTIC, en Asturias, con la participación de uno de los integrantes actuales del grupo WESO, y fue la que finalmente se utilizó en el hito 1 del proyecto, sobre todo por el conocimiento del lenguaje necesario para crear los programas de transformación de ese integrante del equipo.
+La tercera herramienta considerada, [Tablines](https://github.com/weso/tablines), fue originalmente desarrollada en la Fundación CTIC, en Asturias, con la participación de uno de los integrantes actuales del grupo WESO, y fue la que finalmente se utilizó en el hito 1 del proyecto, sobre todo por el conocimiento del lenguaje necesario para crear los programas de transformación de ese integrante del equipo.
 
 Sin embargo, esta decisión de utilizar Tablines se limita únicamente al primer hito del proyecto debido a la contingencia de los compromisos intermedios de evaluación.
 
-Para la continuación del proyecto la apuesta sigue siendo ShExML una herramienta propia del equipo.
+Para la continuación del proyecto la apuesta sigue siendo ShExML una herramienta totalmente desarrollada por el equipo.
 
 
 
