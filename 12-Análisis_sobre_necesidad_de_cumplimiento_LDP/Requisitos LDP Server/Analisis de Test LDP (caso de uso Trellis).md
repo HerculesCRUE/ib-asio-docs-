@@ -1,5 +1,16 @@
 ![](./images/logos_feder.png)
 
+
+
+| Fecha        | 03/05/2021                                                   |
+| ------------ | ------------------------------------------------------------ |
+| Revisado por | Paloma Terán Pérez                                           |
+| Módulo       | Errores en test                                              |
+| Tipo         | Documento                                                    |
+| Objetivo     | Documento con un análisis de test LDP (Caso de uso Trellis) - errores en test |
+
+
+
 # Errores en test
 
 ## Generales
@@ -133,7 +144,7 @@ Pero existen normativas más concretas que en este caso, que entran en contradic
 
 > Cada contenedor LDP Direct Container, **DEBE** de estar conforme a los [Requisitos Generales de los Contenedores](#Requisitos Generales sobre Contenedores). El cliente **DEBE**  poder inferir la tripleta (Uri Contenedor Básico, rdf:type, ldp:Container), aunque esta puede no estar presente.
 
-Y por otro lado en los ejemplos de la LPD, se pueden ver cabeceras **type:BasicContainer** identicas a las ofrecidas por Trellis
+Y por otro lado en los ejemplos de la LPD, se pueden ver cabeceras **type:BasicContainer** idénticas a las ofrecidas por Trellis
 
 ```http
 <!--Header-->
@@ -206,9 +217,9 @@ Por lo tanto se estima que la implementación del test no es la mejor posible, y
 
 **Requisito:**   LDP servers that allow member creation via POST SHOULD NOT re-use URIs.
 
-**Causa:** Funciona correctamente cuando no se usa la cabecera Slug, pero no cumple el requisito cuando se usa la cabecera Slug. Probablemente esto este en conflicto con el cumplimiento del estandar memento, ya que este prevee distintos estados para una entidad en distintas lineas temporales, y por lo tanto, se debe de permitir la reutilización de URIs.
+**Causa:** Funciona correctamente cuando no se usa la cabecera Slug, pero no cumple el requisito cuando se usa la cabecera Slug. Probablemente esto este en conflicto con el cumplimiento del estándar memento, ya que este prevee distintos estados para una entidad en distintas líneas temporales, y por lo tanto, se debe de permitir la reutilización de URIs.
 
-**Solución:** No se puede solucionar sin re-implementar el servidor LDP, Trellis no lo cumple. **Quizas no se pueda realizar conservando las propiedades del estandar memento.**
+**Solución:** No se puede solucionar sin re-implementar el servidor LDP, Trellis no lo cumple. **Quizás no se pueda realizar conservando las propiedades del estándar memento.**
 
 **DIAGNOSTICO**: Fallo leve (es un SHOULD)
 
@@ -222,9 +233,9 @@ Por lo tanto se estima que la implementación del test no es la mejor posible, y
 >
 > Los clientes **PUEDEN** usar la cabecera **If-Match** y la cabecera **ETag** para garantizar que no se actualiza un recurso, que pueda haber cambiado desde que el cliente obtuvo su representación. El servidor **PUEDE** requerir el uso de ambas cabeceras. El servidor LDP **DEBE**  responder con el código 412 (Condition Failed), si falla por causa del ETag, y no existen otros errores. Los servidores que requieran el ETag, y este no este presente, **DEBEN** responder con el código 428 (Precondition Required) si esta es la única razón.
 
-**Causa:** El servidor LDP, no aplica la cabecera If-Match. Probablemente esto este en conflicto con el cumplimiento del estandar memento, ya que este prevee distintos estados para una entidad en distintas lineas temporales, y por lo tanto, carece de sentido en este contexto el uso de la cabecera If-Match.
+**Causa:** El servidor LDP, no aplica la cabecera If-Match. Probablemente esto este en conflicto con el cumplimiento del estándar memento, ya que este prevee distintos estados para una entidad en distintas líneas temporales, y por lo tanto, carece de sentido en este contexto el uso de la cabecera If-Match.
 
-**Solución:** No se puede solucionar sin re-implementar el servidor LDP, Trellis no lo cumple.  Quizas no se pueda realizar conservando las propiedades del estandar memento.
+**Solución:** No se puede solucionar sin re-implementar el servidor LDP, Trellis no lo cumple.  Quizás no se pueda realizar conservando las propiedades del estándar memento.
 
 **DIAGNOSTICO**: Fallo leve (es un SHOULD)
 
@@ -305,9 +316,9 @@ Como un BasicContainer es una sub-clase de RDFSource, pues en mi opinión, cumpl
 >
 > Los servidores que admiten PUT para creación de recursos **NO DEBERÍAN** reusar URIs.
 
-**Causa:** En este caso, el servidor esta claramente reusando la URI, por lo que podría interpretarse como un fallo. Probablemente esto este en conflicto con el cumplimiento del estandar memento, ya que este prevee distintos estados para una entidad en distintas lineas temporales, y por lo tanto, se debe de permitir la reutilización de URIs.
+**Causa:** En este caso, el servidor esta claramente reusando la URI, por lo que podría interpretarse como un fallo. Probablemente esto este en conflicto con el cumplimiento del estándar memento, ya que este prevee distintos estados para una entidad en distintas líneas temporales, y por lo tanto, se debe de permitir la reutilización de URIs.
 
-**Solución:** No se puede solucionar sin re-implementar el servidor LDP, Trellis no lo cumple. **Quizas no se pueda realizar conservando las propiedades del estandar memento.**
+**Solución:** No se puede solucionar sin re-implementar el servidor LDP, Trellis no lo cumple. **Quizás no se pueda realizar conservando las propiedades del estandar memento.**
 
 **DIAGNOSTICO**: Fallo leve
 
@@ -335,9 +346,9 @@ Como un BasicContainer es una sub-clase de RDFSource, pues en mi opinión, cumpl
 
 **Requisito:**   LDP servers that allow member creation via POST SHOULD NOT re-use URIs.
 
-**Causa:** Funciona correctamente cuando no se usa la cabecera Slug, pero no cumple el requisito cuando se usa la cabecera Slug. Probablemente esto este en conflicto con el cumplimiento del estandar memento, ya que este prevee distintos estados para una entidad en distintas lineas temporales, y por lo tanto, se debe de permitir la reutilización de URIs.
+**Causa:** Funciona correctamente cuando no se usa la cabecera Slug, pero no cumple el requisito cuando se usa la cabecera Slug. Probablemente esto este en conflicto con el cumplimiento del estándar memento, ya que este prevee distintos estados para una entidad en distintas líneas temporales, y por lo tanto, se debe de permitir la reutilización de URIs.
 
-**Solución:** No se puede solucionar sin re-implementar el servidor LDP, Trellis no lo cumple. **Quizas no se pueda realizar conservando las propiedades del estandar memento.**
+**Solución:** No se puede solucionar sin re-implementar el servidor LDP, Trellis no lo cumple. **Quizás no se pueda realizar conservando las propiedades del estándar memento.**
 
 **DIAGNOSTICO**: Fallo leve (es un SHOULD)
 
@@ -351,9 +362,9 @@ Como un BasicContainer es una sub-clase de RDFSource, pues en mi opinión, cumpl
 >
 > Los clientes **PUEDEN** usar la cabecera **If-Match** y la cabecera **ETag** para garantizar que no se actualiza un recurso, que pueda haber cambiado desde que el cliente obtuvo su representación. El servidor **PUEDE** requerir el uso de ambas cabeceras. El servidor LDP **DEBE**  responder con el código 412 (Condition Failed), si falla por causa del ETag, y no existen otros errores. Los servidores que requieran el ETag, y este no este presente, **DEBEN** responder con el código 428 (Precondition Required) si esta es la única razón.
 
-**Causa:** El servidor LDP, no aplica la cabecera If-Match. Probablemente esto este en conflicto con el cumplimiento del estandar memento, ya que este prevee distintos estados para una entidad en distintas lineas temporales, y por lo tanto, carece de sentido en este contexto el uso de la cabecera If-Match.
+**Causa:** El servidor LDP, no aplica la cabecera If-Match. Probablemente esto este en conflicto con el cumplimiento del estándar memento, ya que este prevee distintos estados para una entidad en distintas lineas temporales, y por lo tanto, carece de sentido en este contexto el uso de la cabecera If-Match.
 
-**Solución:** No se puede solucionar sin re-implementar el servidor LDP, Trellis no lo cumple.  Quizas no se pueda realizar conservando las propiedades del estandar memento.
+**Solución:** No se puede solucionar sin re-implementar el servidor LDP, Trellis no lo cumple.  Quizás no se pueda realizar conservando las propiedades del estándar memento.
 
 **DIAGNOSTICO**: Fallo leve (es un SHOULD)
 
@@ -462,9 +473,9 @@ Como un BasicContainer es una sub-clase de RDFSource, pues en mi opinión, cumpl
 >
 > Los servidores que admiten PUT para creación de recursos **NO DEBERÍAN** reusar URIs.
 
-**Causa:** En este caso, el servidor esta claramente reusando la URI, por lo que podría interpretarse como un fallo. Probablemente esto este en conflicto con el cumplimiento del estandar memento, ya que este prevee distintos estados para una entidad en distintas lineas temporales, y por lo tanto, se debe de permitir la reutilización de URIs.
+**Causa:** En este caso, el servidor esta claramente reusando la URI, por lo que podría interpretarse como un fallo. Probablemente esto este en conflicto con el cumplimiento del estándar memento, ya que este prevee distintos estados para una entidad en distintas líneas temporales, y por lo tanto, se debe de permitir la reutilización de URIs.
 
-**Solución:** No se puede solucionar sin re-implementar el servidor LDP, Trellis no lo cumple. **Quizas no se pueda realizar conservando las propiedades del estandar memento.**
+**Solución:** No se puede solucionar sin re-implementar el servidor LDP, Trellis no lo cumple. **Quizás no se pueda realizar conservando las propiedades del estándar memento.**
 
 **DIAGNOSTICO**: Fallo leve
 
@@ -476,9 +487,9 @@ Como un BasicContainer es una sub-clase de RDFSource, pues en mi opinión, cumpl
 
 **Requisito:**   LDP servers that allow member creation via POST SHOULD NOT re-use URIs.
 
-**Causa:** Funciona correctamente cuando no se usa la cabecera Slug, pero no cumple el requisito cuando se usa la cabecera Slug. Probablemente esto este en conflicto con el cumplimiento del estandar memento, ya que este prevee distintos estados para una entidad en distintas lineas temporales, y por lo tanto, se debe de permitir la reutilización de URIs.
+**Causa:** Funciona correctamente cuando no se usa la cabecera Slug, pero no cumple el requisito cuando se usa la cabecera Slug. Probablemente esto este en conflicto con el cumplimiento del estándar memento, ya que este prevee distintos estados para una entidad en distintas líneas temporales, y por lo tanto, se debe de permitir la reutilización de URIs.
 
-**Solución:** No se puede solucionar sin re-implementar el servidor LDP, Trellis no lo cumple. **Quizas no se pueda realizar conservando las propiedades del estandar memento.**
+**Solución:** No se puede solucionar sin re-implementar el servidor LDP, Trellis no lo cumple. **Quizás no se pueda realizar conservando las propiedades del estandar memento.**
 
 **DIAGNOSTICO**: Fallo leve (es un SHOULD)
 
@@ -492,9 +503,9 @@ Como un BasicContainer es una sub-clase de RDFSource, pues en mi opinión, cumpl
 >
 > Los clientes **PUEDEN** usar la cabecera **If-Match** y la cabecera **ETag** para garantizar que no se actualiza un recurso, que pueda haber cambiado desde que el cliente obtuvo su representación. El servidor **PUEDE** requerir el uso de ambas cabeceras. El servidor LDP **DEBE**  responder con el código 412 (Condition Failed), si falla por causa del ETag, y no existen otros errores. Los servidores que requieran el ETag, y este no este presente, **DEBEN** responder con el código 428 (Precondition Required) si esta es la única razón.
 
-**Causa:** El servidor LDP, no aplica la cabecera If-Match. Probablemente esto este en conflicto con el cumplimiento del estandar memento, ya que este prevee distintos estados para una entidad en distintas lineas temporales, y por lo tanto, carece de sentido en este contexto el uso de la cabecera If-Match.
+**Causa:** El servidor LDP, no aplica la cabecera If-Match. Probablemente esto este en conflicto con el cumplimiento del estándar memento, ya que este prevee distintos estados para una entidad en distintas líneas temporales, y por lo tanto, carece de sentido en este contexto el uso de la cabecera If-Match.
 
-**Solución:** No se puede solucionar sin re-implementar el servidor LDP, Trellis no lo cumple.  Quizas no se pueda realizar conservando las propiedades del estandar memento.
+**Solución:** No se puede solucionar sin re-implementar el servidor LDP, Trellis no lo cumple.  Quizás no se pueda realizar conservando las propiedades del estándar memento.
 
 **DIAGNOSTICO**: Fallo leve (es un SHOULD)
 
@@ -591,9 +602,9 @@ Como un BasicContainer es una sub-clase de RDFSource, pues en mi opinión, cumpl
 >
 > Los servidores que admiten PUT para creación de recursos **NO DEBERÍAN** reusar URIs.
 
-**Causa:** En este caso, el servidor esta claramente reusando la URI, por lo que podría interpretarse como un fallo. Probablemente esto este en conflicto con el cumplimiento del estandar memento, ya que este prevee distintos estados para una entidad en distintas lineas temporales, y por lo tanto, se debe de permitir la reutilización de URIs.
+**Causa:** En este caso, el servidor esta claramente reusando la URI, por lo que podría interpretarse como un fallo. Probablemente esto este en conflicto con el cumplimiento del estándar memento, ya que este prevee distintos estados para una entidad en distintas líneas temporales, y por lo tanto, se debe de permitir la reutilización de URIs.
 
-**Solución:** No se puede solucionar sin re-implementar el servidor LDP, Trellis no lo cumple. **Quizas no se pueda realizar conservando las propiedades del estandar memento.**
+**Solución:** No se puede solucionar sin re-implementar el servidor LDP, Trellis no lo cumple. **Quizás no se pueda realizar conservando las propiedades del estándar memento.**
 
 **DIAGNOSTICO**: Fallo leve
 

@@ -1,5 +1,18 @@
 ![](./images/logos_feder.png)
 
+
+
+
+
+| Fecha        | 03/05/2021                                                   |
+| ------------ | ------------------------------------------------------------ |
+| Revisado por | Paloma Terán Pérez                                           |
+| Módulo       | Requisitos funcionales para API REST LDP en proyecto ASIO de la UM |
+| Tipo         | Documento                                                    |
+| Objetivo     | El presente documento, tiene como propósito detallar los requerimientos funcionales para la implementación de un API REST para recursos RDF y NO-RDF, que cumpla, en la mayor medida posible, los estándares  impuestos por la [Linked Data Platform](https://www.w3.org/TR/ldp/), que define un conjunto de normativas, estándares y buenas practicas sobre recursos Web, algunos basados en RDF, para proporciona runa arquitectura que permita la consulta, creación, modificación y borrado, de datos vinculados en la Web, intentando asimismo, incorporar otros estándares, como es el estándar [Memento](https://tools.ietf.org/pdf/rfc7089.pdf), que establece un protocolo para la gestión del histórico de documentos, permitiendo de esta forma, recuperar cualquier versión anterior. |
+
+
+
 # Requisitos funcionales para API REST LDP en proyecto ASIO de la UM
 
 ## Introducción
@@ -99,7 +112,7 @@ Todas aquellas tripletas, pertenecientes al LDPC, que permiten listar los LDPR q
 
 #### Minimal-container triples (Tripletas mínimas del contenedor)
 
-Son aquellas tripletas del contenedor, que serán retornadas cuando el contenedor esta vacío, es decir, aquellas que no tienen relación con los documentos que este contiene. Actualmente esta definición es equivalente al conjunto total de tripletas, menos las tripletas de contención, menos lso predicados de pertenencia.
+Son aquellas tripletas del contenedor, que serán retornadas cuando el contenedor esta vacío, es decir, aquellas que no tienen relación con los documentos que este contiene. Actualmente esta definición es equivalente al conjunto total de tripletas, menos las tripletas de contención, menos los predicados de pertenencia.
 
 ### Convenciones usadas en este documento
 
@@ -145,7 +158,7 @@ Las reglas para los recursos de la [LDP](https://www.w3.org/TR/ldp/) intentar da
 - ¿Cómo puede el servidor facilitar al cliente la creación de recursos?
 - ¿Cómo puede un recurso de gran tamaño ser paginado?
 
-Adicionalmente a la parte normativa, la  [LDP](https://www.w3.org/TR/ldp/), ofrece una guia de mejores practicas que aborda cuestiones tales como:
+Adicionalmente a la parte normativa, la  [LDP](https://www.w3.org/TR/ldp/), ofrece una guía de mejores practicas que aborda cuestiones tales como:
 
 - ¿Qué tipos de valores literales deberían usarse?
 - ¿Hay algunos vocabularios típicos que deberían reutilizarse?
@@ -545,7 +558,7 @@ La especificación prevé los siguientes URLs para usar con include o omit:
 
 ###### Ejemplo
 
-Dado el contenido del siguiente contenedor
+Dado el contenido del siguiente contenedor:
 
 ```bash
 # The following is the representation of
@@ -818,7 +831,7 @@ Para la operación de borrado sobre un recurso, perteneciente a un contenedor, s
 
 ##### Requisitos específicos de operaciones HEAD HTTP sobre Recursos
 
-Hay que tener en cuenta que la especificación LDP, se basan en las cabeceras HTTP, y la especificación del protocolo HTTP, prevé que las cabeceras de las operaciones HEAD, sean las mismas que las de la operación GET, sobre un mismo recurso, por lo tanto la implementación, tendra que tener en cuenta la normativa disponible en las operaciones sobre recursos con métodos [GET](#Requisitos específicos de operaciones GET HTTP sobre Recursos) y [OPTIONS](#Requisitos específicos de operaciones OPTIONS HTTP sobre Recursos), recogidas ambas en este mismo documento.
+Hay que tener en cuenta que la especificación LDP, se basan en las cabeceras HTTP, y la especificación del protocolo HTTP, prevé que las cabeceras de las operaciones HEAD, sean las mismas que las de la operación GET, sobre un mismo recurso, por lo tanto la implementación, tendrá que tener en cuenta la normativa disponible en las operaciones sobre recursos con métodos [GET](#Requisitos específicos de operaciones GET HTTP sobre Recursos) y [OPTIONS](#Requisitos específicos de operaciones OPTIONS HTTP sobre Recursos), recogidas ambas en este mismo documento.
 
 ###### **Requisito RF_01_04_01** [(4.2.6.1 LDP)](https://www.w3.org/TR/ldp/#ldpr-resource): Soporte a método HEAD
 
@@ -994,7 +1007,7 @@ Las URIs validas para distintos tipos de contenedores son
 
 ###### Requisito RF_04_01_05  [(5.2.1.5 LDP)](https://www.w3.org/TR/ldp/#ldpc-container): Respetar sugerencias de cliente
 
-Los servidores LDP **DEBERÍAN** de respetar sobre los contenedores, todas las sugerencias del cliente, por ejemplo, retornar solo un subconjunto de las propiedades, en las que el cliente esta realmente interesado en procesar, reduciendo asi el conjunto de tripletas que serán retornadas, especialmente para contenedores con un alto numero de tripletas.
+Los servidores LDP **DEBERÍAN** de respetar sobre los contenedores, todas las sugerencias del cliente, por ejemplo, retornar solo un subconjunto de las propiedades, en las que el cliente esta realmente interesado en procesar, reduciendo así el conjunto de tripletas que serán retornadas, especialmente para contenedores con un alto numero de tripletas.
 
 ##### Requisitos específicos de operaciones GET HTTP sobre Contenedores
 
@@ -1010,7 +1023,7 @@ Cualquier restricción impuesta en la creación de un recurso, debe de ser adver
 
 Los servidores LDP **DEBERÍAN** crear nuevos recursos al enviar una representación de un BODY completo, en la operación POST realizada sobre un contenedor.
 
-Si el recurso se creo correctamente el servidor **DEBE** responder con un codigo 201 (Created), y la cabecera **Location** con la URI del recurso recién creado.
+Si el recurso se creo correctamente el servidor **DEBE** responder con un código 201 (Created), y la cabecera **Location** con la URI del recurso recién creado.
 
 Los clientes no deben de esperar ninguna representación del recurso, en el cuerpo del mensaje
 
@@ -1109,7 +1122,7 @@ Cuando se borra un recurso No RDF, para el cual el servidor creo un recurso RDF,
 
 ##### Requisitos específicos de operaciones HEAD HTTP sobre Contenedores
 
-Hay que tener en cuenta que la especificación LDP, se basan en las cabeceras HTTP, y la especificación del protocolo HTTP, prevé que las cabeceras de las operaciones HEAD, sean las mismas que las de la operación GET, sobre un mismo recurso, por lo tanto la implementación, tendra que tener en cuenta la normativa disponible en las operaciones sobre recursos con métodos [GET](#Requisitos específicos de operaciones GET HTTP sobre Recursos) y [OPTIONS](#Requisitos específicos de operaciones OPTIONS HTTP sobre Recursos), recogidas ambas en este mismo documento.
+Hay que tener en cuenta que la especificación LDP, se basan en las cabeceras HTTP, y la especificación del protocolo HTTP, prevé que las cabeceras de las operaciones HEAD, sean las mismas que las de la operación GET, sobre un mismo recurso, por lo tanto la implementación, tendrá que tener en cuenta la normativa disponible en las operaciones sobre recursos con métodos [GET](#Requisitos específicos de operaciones GET HTTP sobre Recursos) y [OPTIONS](#Requisitos específicos de operaciones OPTIONS HTTP sobre Recursos), recogidas ambas en este mismo documento.
 
 ##### Requisitos específicos de operaciones PATCH HTTP sobre Contenedores
 

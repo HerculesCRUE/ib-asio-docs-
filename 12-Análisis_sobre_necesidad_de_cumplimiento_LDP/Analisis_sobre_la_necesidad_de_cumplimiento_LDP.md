@@ -2,12 +2,13 @@
 
 | Entregable     | Documentación de la librería factoría de URIs                |
 | -------------- | ------------------------------------------------------------ |
-| Fecha          | 25/05/2020                                                   |
+| Fecha          | 03/05/2021                                                   |
+| Revisado por   | Paloma Terán Pérez                                           |
 | Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
 | Módulo         | Arquitectura Semántica                                       |
 | Tipo           | Documentación                                                |
 | Objetivo       | El presente documento intenta determinar la idoneidad  de la aplicación del conjunto de reglas establecidas por la [LDP](https://www.w3.org/TR/ldp/), sobre las operaciones HTTP, sobre recursos semánticos basados en grafos RDF. En definitiva, el documento trata de analizar, pros y contras de su uso, ya sea de forma global o parcial, desde el punto de vista del proyecto ASIO. |
-| Estado         | **100%**                                                    |
+| Estado         | **100%**                                                     |
 | Próximos pasos |                                                              |
 | Documentación  | [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/12-An%C3%A1lisis_sobre_necesidad_de_cumplimiento_LDP/Requisitos%20LDP%20Server/Requisitos%20funcionales%20para%20API%20REST%20LDP%20en%20proyecto%20ASIO%20de%20la%20UM.md)  [Propuesta de diseño API LDP y EndPoint SPARQL](../00-Análisis/Requisitos%20LDP%20Server/Propuesta%20de%20dise%C3%B1o%20API%20LDP%20y%20EndPoint%20SPARQL.md) |
 
@@ -51,7 +52,7 @@ Previsiblemente y siguiendo el diseño de la arquitectura, los componentes de la
 Es conveniente profundizar un poco en la función de componentes, dentro de la arquitectura, para mejorar la comprensión del presente documento:
 
 - Por un lado los componentes que actúan como clientes del API LDP son:
-  - Procesador de eventos: Recibe a partir de la cola kafka, los datos ingestados, en formato POJO, y a priori, (junto con el Store Adapter) realiza la conversión a RDF, para invocar a el API LDP, para realizar sobre el triple store la operación requerida sobre el dato (inserción, modificación o borrado).
+  - Procesador de eventos: Recibe a partir de la cola kafka, los datos ingeridos, en formato POJO, y a priori, (junto con el Store Adapter) realiza la conversión a RDF, para invocar a el API LDP, para realizar sobre el triple store la operación requerida sobre el dato (inserción, modificación o borrado).
   - Servicio de publicación Web: Básicamente es una aplicación Front-end, que permite a un usuario, interactuar con los datos RDF, almacenados en el triple store, haciendo uso de las operaciones definidas en el API LDP, y permitiendo a su vez la negociación de contenidos.
 
 * Por otro, el componente que permite interactuar con el triple store es:

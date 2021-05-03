@@ -1,5 +1,16 @@
 ![](./images/logos_feder.png)
 
+
+
+| Fecha        | 03/05/2021                                                   |
+| ------------ | ------------------------------------------------------------ |
+| Revisado por | Paloma Terán Pérez                                           |
+| Módulo       | Propuesta de diseño API LDP y EndPoint SPARQL                |
+| Tipo         | Documento                                                    |
+| Objetivo     | Documento con la propuesta de diseño API LDP y EndPoint SPARQL |
+
+
+
 # Propuesta de diseño API LDP y EndPoint SPARQL
 
 ## Introducción

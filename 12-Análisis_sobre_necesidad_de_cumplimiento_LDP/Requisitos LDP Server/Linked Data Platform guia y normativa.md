@@ -1,5 +1,16 @@
 ![](./images/logos_feder.png)
 
+| Fecha        | 03/05/2021                                                   |
+| ------------ | ------------------------------------------------------------ |
+| Revisado por | Paloma Terán Pérez                                           |
+| Módulo       | Linked Data Platform                                         |
+| Tipo         | Documento                                                    |
+| Objetivo     | Documento con un conjunto de reglas para operaciones HTTP sobre recursos Web basados en RDF, que proporcionan mecanismos para leer o escribir datos en la Web |
+
+
+
+
+
 # Linked Data Platform
 
 
@@ -110,7 +121,7 @@ Los contenedores agrupan recursos de un mismo contexto y dan solución a los sig
 - Permite realizar un GET para obtener la lisa de recursos
 - Obtener información acerca de los recursos del contenedor
 - Asegurar que los datos de un recurso son fácilmente accesibles
-- Expresar un order en las entradas del contenedor
+- Expresar un *order* en las entradas del contenedor
 
 El contenido de un contenedor, se expresa como un conjunto de tripletas. Existen tipos específicos de contenedores que permiten a los miembros del contenedor especificar pertenecía al mismo. En este caso suelen seguir el patrón (URI del recurso, ldp:member, URI contenedor)
 
@@ -158,7 +169,7 @@ Un POST de un nuevo recurso añadirá su URL a la lista de recursos contenidos
 
 Los **contenedores directos** permiten construcciones mas complejas, donde se puede definir condiciones jerárquicas en ambos sentidos,  es decir ldp:membershipResource apuntaría al contenedor padre y ldp:hasMemberRelation a los contenedores/recursos hijos.
 
-El ejemplo ilustra sobre un recurso raiz, `http://example.org/netWorth/nw1` que en este caso modela el balance de un individuo.
+El ejemplo ilustra sobre un recurso raíz, `http://example.org/netWorth/nw1` que en este caso modela el balance de un individuo.
 
 Petición a  `http://example.org/netWorth/nw1/`
 
@@ -198,7 +209,7 @@ Transfer-Encoding: chunked <!--Codigifación de transferencia fragmentada-->
 
 En el ejemplo se puede observar que todos comparten el mismo sujeto (<`http://example.org/netWorth/nw1/`>) y varios el mismo predicado (o:asset y o:liability). Si hiciéramos un contenedor básico, se duplicaría mucha información.
 
-Accediendo a los assets
+Accediendo a los *assets*
 
 Petición a  `http://example.org/netWorth/nw1/assets/`
 
@@ -488,8 +499,8 @@ Es **opcional** soportar el método, pero en caso de soportase, ha de cumplir la
 10. Los servidores pueden asignar URIs al recurso creado en ausencia de sugerencias del cliente (por medio de la cabecera slug)
 11. Los servidores deben de permitir  los clientes, crear nuevos recursos, sin un conocimiento expreso del funcionamiento del servidor, ya que tal como se ha indicado anteriormente, el servidor ha de exponer sus restricciones, si las hubiese.
 12. Los servidores pueden permitir a los clientes en operaciones POST, sugerir la URI del recurso, por medio de la cabecera slug, en cualquier caso la decisión final de la URI, será establecida por el servidor.
-13. Los servidores no deberan de reutilizar las URIs
-14. Después de la creación de un recurso no RDF (LDP-NR) además de el codigo 201 Created y la cabecera Location con la URI del nuevo recurso, el servidor, pude crear un recurso RDF (LDP-RS) con información sobre el recurso creado. En ese caso, debe indicar su localización por medio de la cabecera Link, con el recurso LDP-NR, un valor de el tipo de relacion de describedBy, y la URI del LDP-RS que lo describe.
+13. Los servidores no deberán de reutilizar las URIs
+14. Después de la creación de un recurso no RDF (LDP-NR) además de el código 201 Created y la cabecera Location con la URI del nuevo recurso, el servidor, pude crear un recurso RDF (LDP-RS) con información sobre el recurso creado. En ese caso, debe indicar su localización por medio de la cabecera Link, con el recurso LDP-NR, un valor de el tipo de relación de describedBy, y la URI del LDP-RS que lo describe.
 15. Los servidores deben de incluir la cabecera Accept-Post, listando todos los media types aceptados por el servidor
 
 ###### Normativa PUT
@@ -624,7 +635,7 @@ El encabezado Accept-Post, debe de retornarse en la petición OPTIONS, para cual
 
 ##### Prefer
 
-Sirve para que el cliente indique su preferencia de la porcion de tripletas sobre el recurso que quiere obtener
+Sirve para que el cliente indique su preferencia de la porción de tripletas sobre el recurso que quiere obtener
 
 ###### include
 

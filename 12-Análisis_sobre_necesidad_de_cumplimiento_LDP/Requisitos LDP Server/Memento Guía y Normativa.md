@@ -1,5 +1,16 @@
 ![](./images/logos_feder.png)
 
+
+
+| Fecha        | 03/05/2021                                |
+| ------------ | ----------------------------------------- |
+| Revisado por | Paloma Terán Pérez                        |
+| Módulo       | Memento Guía                              |
+| Tipo         | Documento                                 |
+| Objetivo     | Documento con la guía y normativa Memento |
+
+
+
 # Memento Guía
 
 #### ¿Que es Memento?
@@ -22,7 +33,7 @@ Los componentes u objetivos principales de Memento son:
 * **Recurso Original (Original Resource):** Recurso que existe o ha existido, del cual es posible obtener acceso a  alguno de sus estados
 * **Memento**: Un memento de un recurso, es el estado del recurso en el instante T.
 * **TimeGate:** El timeGate de un Original Resource, es aquel recurso que es capaz se soportar una negociación por tiempo, que dará acceso a alguno de los estados anteriores del recurso.
-* **TimeMap**: Un TimeMap de un Original Resource, es un recurso que dispne de una lista de URIs Memento.
+* **TimeMap**: Un TimeMap de un Original Resource, es un recurso que dispone de una lista de URIs Memento.
 * **URI-R**: Uri de un recurso original
 * **URI-G**: Uri de un TimeGate
 * **URI-M**: Uri de un Memento
@@ -121,7 +132,7 @@ Se usa para apuntar desde un Timegate, un Memento, o un recurso original al meme
 
 E un enlace tipo memento debe de incluirse el tipo "datetime", que coincidirá con el atributo "Memento-Datetime", de el memento del Link, que es el header Memento-Datetime, cuando el memento es desreferenciado.
 
-EL link puede incluir el atributo "licence", que asocia el MEmento con la licencia. Este debe de ser una URI
+EL link puede incluir el atributo "licence", que asocia el Memento con la licencia. Este debe de ser una URI
 
 ##### Negociación de Datetime (ejemplo)
 
@@ -862,7 +873,6 @@ Avisar de "timegate" en la cabecera Link, cuando se produce un código 401 o 403
 #### Referencias
 
 [Memento specification]: https://tools.ietf.org/pdf/rfc7089.pdf	"Los Alamos National Laboratory"
-
 
 
 

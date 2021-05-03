@@ -1,5 +1,16 @@
 ![](./images/logos_feder.png)
 
+
+
+| Fecha        | 03/05/2021                                                   |
+| ------------ | ------------------------------------------------------------ |
+| Revisado por | Paloma Terán Pérez                                           |
+| Módulo       | Análisis sobre uso de Wikibase vs Trellis + Fuseki en proyecto ASIO |
+| Tipo         | Documento                                                    |
+| Objetivo     | Documento con un análisis sobre el encaje de Wikibase en la solución ASIO, problemas derivados, y planteamiento de soluciones alternativas. |
+
+
+
 # Análisis sobre uso de Wikibase vs Trellis + Fuseki en proyecto ASIO
 
 - Status: Propuesta
@@ -275,7 +286,7 @@ Estimación de ajuste a requisitos: **BAJO**
 
 #### Opción 2: Fuseki + Trellis
 
-El uso de un EndPoint que implemente el protocolo SPARQL, permite abstraer a el servidor LDP (Trellis), del sistema de almacenamiento usado, recayendo asi la flexibilidad de elección de uno u otro triple store en Fuseki.
+El uso de un EndPoint que implemente el protocolo SPARQL, permite abstraer a el servidor LDP (Trellis), del sistema de almacenamiento usado, recayendo así la flexibilidad de elección de uno u otro triple store en Fuseki.
 
 Apache Fuseki en principio parece una herramienta bastante flexible, al ser capaz de soportar conectores para múltiples Triple Stores y obedecer el protocolo SPAPQL/1.1, que permite su sencilla integración con un servidor LDP (en este caso Trellis)
 
@@ -370,7 +381,7 @@ De hecho se valora la opción de Wikibase para un perfil de usuario de administr
 
 La elección de mantener ambas arquitecturas para fines distintos (Wikibase para la parte publica y/o administración) y Trellis + Fuseki para la parte general, nos permite, como se ha comentado anteriormente, complementar las ventajas de ambas soluciones, y reevaluar su encaje futuro en el proyecto una vez implementada de forma completa la solución con un conjunto de datos reales. 
 
-Hemos buscado en la elección la flexibilidad necesaria para que en próximos pasos, podamos añadir o sustituir los componentes que creamos puedan tener un encaje interesante para el proyecto, como por ejemplo distintos triple stores ([TDB](https://jena.apache.org/documentation/tdb/), [Amazon Neptune](https://aws.amazon.com/es/neptune/), [StarDog](https://www.stardog.com/), [BlazeGraph](https://blazegraph.com/)...) o incluso podría se interesante la inclusión de bases de datos orientadas a grafos ([Neo4j]([https://neo4j.com/download-neo4j-now/?utm_source=google&utm_medium=ppc&utm_campaign=*EU%20-%20Search%20-%20Branded&utm_adgroup=*EU%20-%20Search%20-%20Branded%20-%20Neo4j%20-%20Exact&utm_term=neo4j&gclid=Cj0KCQjwsYb0BRCOARIsAHbLPhHX0Gd7zsyKDDE_XMkbATcudWgxT_NZ6js9R_5Jh8s0Z_zoVYU0_wwaAgQYEALw_wcB](https://neo4j.com/download-neo4j-now/?utm_source=google&utm_medium=ppc&utm_campaign=*EU - Search - Branded&utm_adgroup=*EU - Search - Branded - Neo4j - Exact&utm_term=neo4j&gclid=Cj0KCQjwsYb0BRCOARIsAHbLPhHX0Gd7zsyKDDE_XMkbATcudWgxT_NZ6js9R_5Jh8s0Z_zoVYU0_wwaAgQYEALw_wcB))). 
+Hemos buscado en la elección la flexibilidad necesaria para que en próximos pasos, podamos añadir o sustituir los componentes que creamos puedan tener un encaje interesante para el proyecto, como por ejemplo distintos Triple Stores ([TDB](https://jena.apache.org/documentation/tdb/), [Amazon Neptune](https://aws.amazon.com/es/neptune/), [StarDog](https://www.stardog.com/), [BlazeGraph](https://blazegraph.com/)...) o incluso podría se interesante la inclusión de bases de datos orientadas a grafos ([Neo4j]([https://neo4j.com/download-neo4j-now/?utm_source=google&utm_medium=ppc&utm_campaign=*EU%20-%20Search%20-%20Branded&utm_adgroup=*EU%20-%20Search%20-%20Branded%20-%20Neo4j%20-%20Exact&utm_term=neo4j&gclid=Cj0KCQjwsYb0BRCOARIsAHbLPhHX0Gd7zsyKDDE_XMkbATcudWgxT_NZ6js9R_5Jh8s0Z_zoVYU0_wwaAgQYEALw_wcB](https://neo4j.com/download-neo4j-now/?utm_source=google&utm_medium=ppc&utm_campaign=*EU - Search - Branded&utm_adgroup=*EU - Search - Branded - Neo4j - Exact&utm_term=neo4j&gclid=Cj0KCQjwsYb0BRCOARIsAHbLPhHX0Gd7zsyKDDE_XMkbATcudWgxT_NZ6js9R_5Jh8s0Z_zoVYU0_wwaAgQYEALw_wcB))). 
 
 En definitiva, esta decisión, solo pretende una base solida, sobre la que poder integrar tanto los componentes propios ya en desarrollo, como aquellos que durante las siguientes fases del proyecto, consideremos que puedan ofrecer una importante aportación.  
 
