@@ -2,12 +2,13 @@
 
 | Entregable     | Análisis de Métodos FAIR                                     |
 | -------------- | ------------------------------------------------------------ |
-| Fecha          | 19/06/2020                                                   |
+| Fecha          | 03/05/2021                                                   |
+| Revisado por   | Paloma Terán Pérez                                           |
 | Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
 | Módulo         | Infraestructura Ontológica                                   |
 | Tipo           | Documento                                                    |
 | Objetivo       | Este documento recoge el análisis de métodos FAIR disponibles y establece las métricas y la metodología propuesta para la evaluación de métricas FAIR del proyecto, descrita en el entregable de [Métricas FAIR](../06-M%C3%A9tricas_FAIR). |
-| Estado         | **100%**   |
+| Estado         | **100%**                                                     |
 | Próximos pasos | Se podría estudiar KPIs alternativos para la presentación de resultados por áreas y/o un índice global FAIR mediante ponderación de indicadores FAIR por prioridad. |
 
 # Análisis de métodos FAIR
@@ -202,7 +203,7 @@ La publicación de ontologías se rije por el [modelo de cinco niveles de apertu
 
 Los procedimientos propuestos para publicar las ontologías de la ROH de acuerdo a los principios FAIR se detallan, métrica a métrica, en el documento de [Métricas FAIR](../06-M%C3%A9tricas_FAIR/README.md). De modo general, dicha publicación sigue las siguientes pautas:
 - Todos los datos y metadatos están identificados mediante URIs PURL ([http://purl.org](http://purl.org/)).
-- Los metadatos incluyen referencias expícitas a los datos que describen.
+- Los metadatos incluyen referencias explícitas a los datos que describen.
 - Se proveen metadatos tanto a nivel de ontología como de los datos importados (OWL/SKOS, Wikibase, Trellis y Memento).
 - Los datos y metadatos están publicados mediante un grafo linked data 5 estrellas (HTTP/LDP) y expresados mediante tecnología linked data (OWL, SKOS, DC, RDF, etc).
 - La combinación de Trellis y Memento permite llevar un registro histórico de modificaciones que garantiza que los metadatos pervivan más allá del ciclo de vida del dato asociado.
