@@ -133,3 +133,4 @@ Básicamente, para añadir nuevas métricas, los pasos necesarios son los siguie
 4. Invocar la función **__get_evaluation(hits,fails)**, pasando cumplimientos e incumplimientos para obtener resultado de la evaluacion
 5. (Opcional) Llamar a la función **print_leyend(principle, indicator_id, type, description, result)**, para mostrar log en pantalla.
 6. Invocar al metodo **__update_metric_with_result(indicator_id, result)**, para actualizar el fichero **FAIR_evaluation_out.csv**, con el valor del resultado de la evaluación, para el INDICATOR_ID pasado por parámetro. 
+

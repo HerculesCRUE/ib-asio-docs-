@@ -1,13 +1,14 @@
 ![](./images/logos_feder.png)
 
-| Entregable | Esquema de URIs Hércules                                     |
-| ---------- | ------------------------------------------------------------ |
-| Fecha      | 25/05/2020                                                   |
-| Proyecto   | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
-| Módulo     | Infraestructura Ontológica                                   |
-| Tipo       | Documento                                                    |
-| Objetivo   | Este documento recoge la definición del esquema de URIs Hércules siguiendo las recomendaciones de [Buenas prácticas para URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/09-Buenas_pr%C3%A1cticas_para_URIs_H%C3%A9rcules/ASIO_Izertis_BuenasPracticasParaURIsHercules.md) y el [Modelo Multilingüismo](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/04-Modelo_multiling%C3%BCismo/ASIO_Izertis_ModeloMultilinguismo.md). |
-| Estado     | **100%** La definición del esquema de URIs Hércules se considera finalizado. |
+| Entregable   | Esquema de URIs Hércules                                     |
+| ------------ | ------------------------------------------------------------ |
+| Fecha        | 03/05/2021                                                   |
+| Revisado por | Paloma terán Pérez                                           |
+| Proyecto     | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
+| Módulo       | Infraestructura Ontológica                                   |
+| Tipo         | Documento                                                    |
+| Objetivo     | Este documento recoge la definición del esquema de URIs Hércules siguiendo las recomendaciones de [Buenas prácticas para URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/09-Buenas_pr%C3%A1cticas_para_URIs_H%C3%A9rcules/ASIO_Izertis_BuenasPracticasParaURIsHercules.md) y el [Modelo Multilingüismo](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/04-Modelo_multiling%C3%BCismo/ASIO_Izertis_ModeloMultilinguismo.md). |
+| Estado       | **100%** La definición del esquema de URIs Hércules se considera finalizado. |
 
 
 # Esquema de URIs Hércules

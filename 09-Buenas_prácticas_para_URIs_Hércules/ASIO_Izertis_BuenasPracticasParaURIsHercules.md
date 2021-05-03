@@ -1,13 +1,14 @@
 ![](./images/logos_feder.png)
 
-| Entregable | Buenas practicas para URIs Hércules                          |
-| ---------- | ------------------------------------------------------------ |
-| Fecha      | 19/06/2020                                                   |
-| Proyecto   | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
-| Módulo     | Infraestructura Ontológica                                   |
-| Tipo       | Documento                                                    |
-| Objetivo   | Establecer un conjunto de buenas practicas en el uso y diseño de URIs, que tiene como fin establecer un marco para tal propósito,  que ofrezca al proyecto (al menos en lo concerniente a las URIs) estándares que aumenten la calidad, persistencia y claridad de las URIs aplicables en el proceso de creación, mantenimiento y gestión de las URIs definidas en el [Esquema de URIs Hércules](../08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). Adicionalmente esta política de URIs se ha plasmado en el [Contrato de persistencia de URIs Hércules](./ASIO_Izertis_Contrato_BuenasPracticasParaURIsHercules.md), en el que las universidades que deseen publicar datos se deben comprometer a mantener las URIs y a actuar de acuerdo a lo definido en dicho contrato si los recursos cambian. |
-| Estado     | **100%** El análisis y redacción de buenas prácticas se considera finalizado. |
+| Entregable   | Buenas practicas para URIs Hércules                          |
+| ------------ | ------------------------------------------------------------ |
+| Fecha        | 03/05/2021                                                   |
+| Revisado por | Paloma Terán Pérez                                           |
+| Proyecto     | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
+| Módulo       | Infraestructura Ontológica                                   |
+| Tipo         | Documento                                                    |
+| Objetivo     | Establecer un conjunto de buenas practicas en el uso y diseño de URIs, que tiene como fin establecer un marco para tal propósito,  que ofrezca al proyecto (al menos en lo concerniente a las URIs) estándares que aumenten la calidad, persistencia y claridad de las URIs aplicables en el proceso de creación, mantenimiento y gestión de las URIs definidas en el [Esquema de URIs Hércules](../08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). Adicionalmente esta política de URIs se ha plasmado en el [Contrato de persistencia de URIs Hércules](./ASIO_Izertis_Contrato_BuenasPracticasParaURIsHercules.md), en el que las universidades que deseen publicar datos se deben comprometer a mantener las URIs y a actuar de acuerdo a lo definido en dicho contrato si los recursos cambian. |
+| Estado       | **100%** El análisis y redacción de buenas prácticas se considera finalizado. |
 
 
 
@@ -95,7 +96,7 @@ Las buenas prácticas en representación de recursos definen las recomendaciones
    - Evitando que la generación de contenido dinámico use siempre la fecha actual como fecha de última actualización.
    - Haciendo que las cabeceras de las peticiones GET y HEAD sean idénticas.
 4. **Servir información junto al recurso de el tipo de contenido y codificación de caracteres**
-   - Usar la cabecera *Content-typ*e para informar del formato del contenido servido
+   - Usar la cabecera *Content-typ*e para informar del formato del contenido servido.
    - Informar del conjunto de caracteres usado al menos de una de las siguientes maneras:
      - Con el parámetro *charset* en la cabecera *Content-type*
      - Con meta-información en el documento servido

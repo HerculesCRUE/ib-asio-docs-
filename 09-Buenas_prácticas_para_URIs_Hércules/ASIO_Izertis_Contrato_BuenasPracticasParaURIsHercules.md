@@ -1,13 +1,14 @@
 ![](./images/logos_feder.png)
 
-| Entregable | Contrato de persistencia de URIs Hércules                    |
-| ---------- | ------------------------------------------------------------ |
-| Fecha      | 19/06/2020                                                   |
-| Proyecto   | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
-| Módulo     | Infraestructura Ontológica                                   |
-| Tipo       | Documento                                                    |
-| Objetivo   | Borrador de contrato de presistencia de URIs, partiendo del contrato [URI persistence policy del W3C](https://www.w3.org/Consortium/Persistence), con el objetivo de ser revisado y publicado por la UM. Este contrato se basa en el conjunto de [Buenas practicas para URIs Hércules](./ASIO_Izertis_Contrato_BuenasPracticasParaURIsHercules.md), aplicables en el proceso de creación, mantenimiento y gestión de las URIs definidas en el [Esquema de URIs Hércules](../08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). |
-| Estado     | **100%** El borrador de contrato de buenas prácticas se considera finalizado. |
+| Entregable   | Contrato de persistencia de URIs Hércules                    |
+| ------------ | ------------------------------------------------------------ |
+| Fecha        | 03/05/2021                                                   |
+| Revisado por | Paloma Terán Pérez                                           |
+| Proyecto     | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
+| Módulo       | Infraestructura Ontológica                                   |
+| Tipo         | Documento                                                    |
+| Objetivo     | Borrador de contrato de presistencia de URIs, partiendo del contrato [URI persistence policy del W3C](https://www.w3.org/Consortium/Persistence), con el objetivo de ser revisado y publicado por la UM. Este contrato se basa en el conjunto de [Buenas practicas para URIs Hércules](./ASIO_Izertis_Contrato_BuenasPracticasParaURIsHercules.md), aplicables en el proceso de creación, mantenimiento y gestión de las URIs definidas en el [Esquema de URIs Hércules](../08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). |
+| Estado       | **100%** El borrador de contrato de buenas prácticas se considera finalizado. |
 
 
 
