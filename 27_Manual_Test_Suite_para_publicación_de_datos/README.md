@@ -1,13 +1,14 @@
 ![](./img/logos_feder.png)
 
-| Entregable     | Manual Test Suite para publicación de datos                         |
-| -------------- | ------------------------------------------------------------ |
-| Fecha          | 15/04/2021                                                   |
-| Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://www.crue.org/proyecto/hercules/) |
-| Módulo         | Manual Test Suite para publicación de datos                 |
-| Tipo           | Documento                                                     |
-| Objetivo       | Manual Test Suite para publicación de datos  |
-| Estado         | **100%**  |
+| Entregable   | Manual Test Suite para publicación de datos                  |
+| ------------ | ------------------------------------------------------------ |
+| Fecha        | 03/04/2021                                                   |
+| Revisado por | Paloma Terán Pérez                                           |
+| Proyecto     | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://www.crue.org/proyecto/hercules/) |
+| Módulo       | Manual Test Suite para publicación de datos                  |
+| Tipo         | Documento                                                    |
+| Objetivo     | Manual Test Suite para publicación de datos                  |
+| Estado       | **100%**                                                     |
 
 
 
@@ -78,5 +79,5 @@ En estos casos básicamente el servidor permite la reutilización de URIs. La im
 
   En este caso el test falla por que se expresa la preferencia de obtener solo las tripletas de pertenencia, y se recuperan todas las tripletas. 
 
-  Podría evaluarse la opción de re-implementar la parte de Trellis, que gestio
+  Podría evaluarse la opción de re-implementar la parte de Trellis, que gestiona este caso, pero probablemente la inversión en tiempo sea mayor al beneficio obtenido, teniendo en cuenta que únicamente afecta a la parte SHOULD, del requisito, y que funcionalmente el comportamiento es correcto (solo afecta en algo de sobrecarga en un caso de uso poco probable).
 
