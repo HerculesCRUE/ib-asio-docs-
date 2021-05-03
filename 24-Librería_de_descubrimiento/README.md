@@ -2,13 +2,14 @@
 
 | Entregable     | Documentación de la librería de descubrimiento               |
 | -------------- | ------------------------------------------------------------ |
-| Fecha          | 17/12/2020                                                   |
+| Fecha          | 03/05/2021                                                   |
+| Revisado por   | Paloma Terán Pérez                                           |
 | Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://www.crue.org/proyecto/hercules/) |
 | Módulo         | Discovery                                                    |
 | Tipo           | Documentación                                                |
 | Objetivo       | Librería de descubrimiento para el proyecto Backend SGI (ASIO) |
-| Estado         | **100%**                                                 |
-| Próximos pasos |         |
+| Estado         | **100%**                                                     |
+| Próximos pasos |                                                              |
 | Documentación  | [Implementación de librería de descubrimiento](https://github.com/HerculesCRUE/ib-discovery/tree/master/docs) |
 
 # Librería de descubrimiento
@@ -37,7 +38,7 @@ El modulo debe abordar tres funcionalidades independientes pero relacionadas. To
 | **REQ 8.3.2.1** Fuentes de descubrimiento de enlaces potenciales | Descubrir enlaces potenciales, dentro del propio Backend SGI, otros Backend SGI y/o otros datasets de la nube LOD. | 72           | Descubrimiento    |
 | **REQ 8.3.2.2** Descubrimiento de enlaces                    | Descubrir enlaces entre entidades propias, y las fuentes mencionadas en el punto 8.3.2.1 | 72           | Descubrimiento    |
 | **REQ 8.3.2.3** Lista de Datasets                            | Presentar lista de datasets de la nube LOD u otras infraestructuras que en principio podrían enlazar lo datos del Backend SGI. | 72           | Descubrimiento    |
-| **REQ 8.3.2.4** Ejemplos concretos de enlaces                | Cada dataset propuesto incluira ejemplos concretos de posibles enlaces | 72           | Descubrimiento    |
+| **REQ 8.3.2.4** Ejemplos concretos de enlaces                | Cada dataset propuesto incluirá ejemplos concretos de posibles enlaces | 72           | Descubrimiento    |
 | **REQ 8.3.2** Detección de equivalencias                     | Apartado 17.3.3 del pliego que describe los requisitos relativos a la detección de equivalencias, dentro del módulo de descubrimiento | 72           | Descubrimiento    |
 | **REQ 8.3.2.1** Razonamiento automático                      | Uso del Razonamiento automático para buscar equivalencias semánticas entre entidades de diferentes Backend SGI | 72           | Descubrimiento    |
 | **REQ 8.3.2.2** Adición de equivalencias al Triple Store     | Las equivalencias descubiertas se añadirán como axiomas/triples al Backend SGI en el que se esté trabajando, para que puedan ser explotadas en el futuro. | 72           | Descubrimiento    |
@@ -452,7 +453,7 @@ Para ello buscaremos construir una query dinámicamente en elasticsearch basánd
 
 
 
-Tras todos estos paso,  habremos reducido considerablemente las instancias donde buscar similitud, (empíricamente, la mayoría de las veces ronda las 5 evaluaciones y sabemos por que asi lo hemos limitado, que nunca deben de superar las 50).
+Tras todos estos paso,  habremos reducido considerablemente las instancias donde buscar similitud, (empíricamente, la mayoría de las veces ronda las 5 evaluaciones y sabemos por que así lo hemos limitado, que nunca deben de superar las 50).
 
 Esto convierte el segundo ultimo termino de la formula de calculo de complejidad en una constante, que sabemos que oscilara entre un promedio de 5 instancias a un máximo de 50. En lo sucesivo lo llamaremos EBR (Espacio de búsqueda reducido).
 
@@ -508,7 +509,7 @@ Por ello la librería de descubrimiento implementa un modelo de datos lo sufrien
 
 Este modelo de datos, tiene dos grandes partes diferenciadas:
 
-* **Metadatos:** Relativos a datos de ubicación de la información, auditoría, etc...
+* **Metadatos:** Relativos a datos de ubicación de la información, auditoría, etc.
 
   * **entityId:** Identificador de la instancia.
   * **localURI:** URI local de acceso al recurso en el triple store
@@ -599,7 +600,7 @@ La solución propuesta, será implementada como una tarea programada. Esta tarea
 * Pertenecientes a la librería de descubrimiento:
   * **Modelo de dominio:** Modela todas las entidades necesarias para la librería de descubrimiento entre ellas:
 
-    * **Paquete appstate** modela el estado de la aplicacion
+    * **Paquete appstate** modela el estado de la aplicación.
 
       ![App state](./img/app_state.png)
 
@@ -632,7 +633,7 @@ La solución propuesta, será implementada como una tarea programada. Esta tarea
 
       ![Repositories](./img/repositories.png)
 
-  * **Servicios:** Conjunto de servicios que contienen la logica de aplicación
+  * **Servicios:** Conjunto de servicios que contienen la lógica de aplicación
 
     * **DataHandlerService:** Servicio encargado de **orquestar:** el flujo de datos de la aplicación y las comparaciones de entidades, haciendo las invocaciones precisas a los otros servicios mencionados a continuación.
 
@@ -640,11 +641,11 @@ La solución propuesta, será implementada como una tarea programada. Esta tarea
 
     * **ElasticSeachService:** Servicio encargado de realizar las peticiones oportunas al repositorio de ElasticSearch (de forma asíncrona y concurrente) e implementar la lógica de negocio que proceda.
 
-    * **RedisService:** Servicio encargado de realizar las peticiones oportunas al repositorio de Redis (de forma asíncrona y concurrente) e implementar la logica de negocio que proceda.
+    * **RedisService:** Servicio encargado de realizar las peticiones oportunas al repositorio de Redis (de forma asíncrona y concurrente) e implementar la lógica de negocio que proceda.
 
     * **JobHandlerService:** Servicio encargado de gestionar las distintas peticiones realizadas a la librería de descubrimiento por medio de su API Rest, crear los Jobs mínimos, para asegurarse no procesar la misma petición varias veces y de procesar las respuestas (para todos los clientes que las hubiesen requerido) ya sean síncronas (HTTP) o asíncronas (Kakfa y/o Webhook).
 
-    * **KafkaHandler:** Servicio encargado de actuar como subscriptor y publicador para todos los topics que la aplicación requiera y de enviar los eventos precisos al resto de componentes de la aplicación que asi lo requieran.
+    * **KafkaHandler:** Servicio encargado de actuar como subscriptor y publicador para todos los topics que la aplicación requiera y de enviar los eventos precisos al resto de componentes de la aplicación que así lo requieran.
 
       **SchemaService:** Servicio encargado de interpretar cualquier URI creada por la factoría de URIs, pudiendo extraer la información implícita de los componentes de dicha URI.
 
@@ -803,7 +804,7 @@ Wikidata actúa como almacenamiento central para los datos estructurados de sus 
 
 **Descripción:** ORCID  es una organización sin fines de lucro que ayuda a crear un mundo en el que todos los que participan en investigación, becas e innovación están identificados y conectados de manera única con sus contribuciones y afiliaciones, a través de disciplinas, fronteras y tiempo.
 
-**Extracción de información:** ORCID a priori contiene información de Investigadores y nos permite extraer dicha información y la información relativa a sus publicaciones por su API, bien haciendo búsquedas por el nombre de el investigador, bien mediante su codigo ORCID.
+**Extracción de información:** ORCID a priori contiene información de Investigadores y nos permite extraer dicha información y la información relativa a sus publicaciones por su API, bien haciendo búsquedas por el nombre de el investigador, bien mediante su código ORCID.
 
 **Próximos pasos:** A priori no ofrece mas información útil.
 

@@ -1,13 +1,14 @@
 ![](./img/logos_feder.png)
 
-| Entregable     | Ejemplos reales de aplicación de razonamiento automático     |
-| -------------- | ------------------------------------------------------------ |
-| Fecha          | 15/04/2021                                                   |
-| Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://www.crue.org/proyecto/hercules/) |
-| Módulo         | Ejemplos reales de aplicación de razonamiento automático                 |
-| Tipo           | Software                                                     |
-| Objetivo       | Documentar el razonamiento automático implementado por el triplestore empleado en el proyecto ASIO. |
-| Estado         | **100%** |
+| Entregable   | Ejemplos reales de aplicación de razonamiento automático     |
+| ------------ | ------------------------------------------------------------ |
+| Fecha        | 03/05/2021                                                   |
+| Revisado por | Paloma Terán Pérez                                           |
+| Proyecto     | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://www.crue.org/proyecto/hercules/) |
+| Módulo       | Ejemplos reales de aplicación de razonamiento automático     |
+| Tipo         | Software                                                     |
+| Objetivo     | Documentar el razonamiento automático implementado por el triplestore empleado en el proyecto ASIO. |
+| Estado       | **100%**                                                     |
 
 
 # Ejemplos reales de aplicación de razonamiento automático
