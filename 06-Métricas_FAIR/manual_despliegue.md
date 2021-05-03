@@ -1,11 +1,12 @@
 ![](./images/logos_feder.png)
 
-| Documento | [Métricas FAIR](README.md) - Manual de despliegue            |
-| --------- | ------------------------------------------------------------ |
-| Fecha     | 25/05/2020                                                   |
-| Proyecto  | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
-| Módulo    | Infraestructura Ontológica                                   |
-| Tipo      | Manual de despliegue                                         |
+| Documento    | [Métricas FAIR](README.md) - Manual de despliegue            |
+| ------------ | ------------------------------------------------------------ |
+| Fecha        | 03/05/2021                                                   |
+| Revisado por | Paloma Terán Pérez                                           |
+| Proyecto     | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
+| Módulo       | Infraestructura Ontológica                                   |
+| Tipo         | Manual de despliegue                                         |
 
 
 # Métricas FAIR - Manual de despliegue

@@ -1,11 +1,12 @@
 ![](./images/logos_feder.png)
 
-| Documento | [Métricas FAIR](README.md) - Manual de usuario               |
-| --------- | ------------------------------------------------------------ |
-| Fecha     | 25/05/2020                                                   |
-| Proyecto  | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
-| Módulo    | Infraestructura Ontológica                                   |
-| Tipo      | Manual de usuario                                            |
+| Documento    | [Métricas FAIR](README.md) - Manual de usuario               |
+| ------------ | ------------------------------------------------------------ |
+| Fecha        | 03/05/2021                                                   |
+| Revisado por | Paloma Terán Pérez                                           |
+| Proyecto     | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
+| Módulo       | Infraestructura Ontológica                                   |
+| Tipo         | Manual de usuario                                            |
 
 # Métricas FAIR - Manual de usuario
 
@@ -94,7 +95,7 @@ El script main.py es el punto de entrada principal de la aplicación, que invoca
   
   ~~~
 
-- **Evaluación de métricas:** Siempre se reevaluaran las métricas al invocar el script main.py. Esto generara un fichero con los resultados en la ruta data, llamado  **FAIR_evaluation_out.csv** con lso resultados obtenidos.
+- **Evaluación de métricas:** Siempre se reevaluaran las métricas al invocar el script main.py. Esto generara un fichero con los resultados en la ruta data, llamado  **FAIR_evaluation_out.csv** con los resultados obtenidos.
 
 * **Generación de visualización:** Es posible indicar que se cree la visualización mediante una invocación al Script main.py por medio del parámetro -v . Esto invocará el script `fairviz.py` se encarga de procesar el fichero CSV (generado en el punto anterior) que contiene los resultados de la evaluación de los indicadores FAIR para generar una gráfica de barras de niveles FAIR por área, así como gráficas radar de progreso por cada indicador, agrupadas por áreas.
 
