@@ -17,33 +17,43 @@
 
 **Índice**
 
-[1. Home](#home)
+[1. Introducción](#introducción)
 
-[2. Categorías](#categorías)
+[2. Home](#home)
 
-[2.1. Estructura de investigación](#estructura-de-investigación)
+[3. Categorías](#categorías)
 
-[2.2. Detalle de una estructura de investigación](#detalle-de-una-estructura-de-investigación)
+[3.1. Estructura de investigación](#estructura-de-investigación)
 
-[2.2. Acciones de investigación](#acciones-de-investigación)
+[3.2. Detalle de una estructura de investigación](#detalle-de-una-estructura-de-investigación)
 
-[2.2.1. Detalle de una acción de investigación](#detalle-de-una-acción-de-investigación)
+[3.2. Acciones de investigación](#acciones-de-investigación)
 
-[2.3. Personal investigador](#personal-investigador)
+[3.2.1. Detalle de una acción de investigación](#detalle-de-una-acción-de-investigación)
 
-[2.3.1  Detalle de personal investigador](#detalle-de-personal-investigador)
+[3.3. Personal investigador](#personal-investigador)
 
-[2.4.  Áreas](#areas)
+[3.3.1  Detalle de personal investigador](#detalle-de-personal-investigador)
 
-[2.5.  Producción científica](#producción científica)
+[3.4.  Áreas](#areas)
 
-[2.5.1.  Detalle de producción científica](#detalle-de-producción científica)
+[3.5.  Producción científica](#producción científica)
 
-[2.6.  Estadísticas](#estadísticas)
+[3.5.1.  Detalle de producción científica](#detalle-de-producción científica)
 
-[2.6.1. Detalle de acción  de investigación](#detalle-de-acción-de-investigación)
+[3.6.  Estadísticas](#estadísticas)
+
+[3.6.1. Detalle de acción  de investigación](#detalle-de-acción-de-investigación)
 
 
+
+# Introducción
+
+En este documento se pueden encontrar capturas de pantalla realizadas de la parte frontal de la aplicación, a partir del [análissis](./Categorías y buscador.md) realizado previamente. Es importante recalcar que estas pantallas han ido evolucionándo acorde a la ontolología fusionada, y no tienen por qué coincidir con los mocks de pantallas realizados en el analisis.
+
+
+
+El enlace al frontal lo tenemos aquí: [https://app.herculesasioizertis.desa.um.es/](https://app.herculesasioizertis.desa.um.es/)
 
 
 
