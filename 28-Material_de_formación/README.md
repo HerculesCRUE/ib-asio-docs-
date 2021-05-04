@@ -73,7 +73,7 @@
 |                                                              | **SESIÓN: Componentes Frontend (Código: I11)** |                                                              |              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------ |
 | **Unidad de conocimiento**                                   | **Contenido**                                                | **ENLACE AL VIDEO**                                          | **RECURSOS** |
-| Estructura del proyecto                                      | Angular y librerías utilizadas<br />Módulos y componentes<br />Home y menu lateral | [Enlace desarrollo](https://tv.um.es/v?144343)<br />[Enlace sistema](https://tv.um.es/v?144336) | [Presentación sesión](./Recursos/HERCULES_Formación Front.pptx) |
+| Estructura del proyecto                                      | Angular y librerías utilizadas<br />Módulos y componentes<br />Home y menu lateral | [Enlace desarrollo](https://tv.um.es/v?144343)<br />[Enlace sistema](https://tv.um.es/v?144336) | [Presentación sesión](./Recursos/HERCULES_formación_front.pptx) |
 | Pantallas                                                    | Componente de la tabla<br />Componente de gráficas<br />Pantalla SPARQL<br />Pantallas de categorías y detalle |                 |                     |
 | Testing y calidad                                            | Test de componentes<br />Sonar |                 |                     |
 | Creación de una nueva pantalla parte1                        | Crear la estructura<br />Añadir enlaces al menú |                 |                     |
