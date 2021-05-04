@@ -109,11 +109,9 @@ Una vez el usuario se logee, se mostrarán dos opciones más en el home:
 
 En cada categoría se mostrarán una serie de filtros, algunos comunes para varias categorías.
 
-Para el filtro por áreas, se utilizará un componente para mostrar un árbol y se utilizará el módulo vertical "[subject áreas](https://github.com/weso/hercules-ontology/blob/master/src/asio-module-subjectareas.ttl)":
+Para el filtro por áreas, se utilizará un componente para mostrar un árbol y se utilizará el módulo vertical "[knowledge areas](https://github.com/HerculesCRUE/ROH/tree/main/roh/modules/knowledge-area)":
 
 
-
-![](./images/areas.png)
 
 
 
