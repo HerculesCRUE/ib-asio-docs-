@@ -25,7 +25,7 @@
 
 [3.1. Estructura de investigación](#estructura-de-investigación)
 
-[3.2. Detalle de una estructura de investigación](#detalle-de-una-estructura-de-investigación)
+[3.1.1. Detalle de una estructura de investigación](#detalle-de-una-estructura-de-investigación)
 
 [3.2. Acciones de investigación](#acciones-de-investigación)
 
@@ -37,17 +37,15 @@
 
 [3.4.  Áreas](#areas)
 
-[3.5.  Producción científica](#producción científica)
+[3.5.  Producción científica](#producción-científica)
 
-[3.5.1.  Detalle de producción científica](#detalle-de-producción científica)
+[3.5.1.  Detalle de producción científica](#detalle-de-producción-científica)
 
 [3.6.  Estadísticas](#estadísticas)
 
-[3.6.1. Detalle de acción  de investigación](#detalle-de-acción-de-investigación)
 
 
-
-# Introducción
+# 1. Introducción
 
 En este documento se pueden encontrar capturas de pantalla realizadas de la parte frontal de la aplicación, a partir del [análissis](./Categorías y buscador.md) realizado previamente. Es importante recalcar que estas pantallas han ido evolucionándo acorde a la ontolología fusionada, y no tienen por qué coincidir con los mocks de pantallas realizados en el analisis.
 
@@ -58,7 +56,7 @@ El enlace al frontal lo tenemos aquí: [https://app.herculesasioizertis.desa.um.
 
 
 
-Home
+2. Home
 ============
 
 El home de la web dispone de un menú superior con los accesos a las diferentes categorías y a la pantalla de consultas SparQL. También se mostrarán los iconos de login/acceso o la imagen del usuario identificado. Las opciones que no estén funcionando, se mostrarán desactivadas en gris, tanto en el home como en el menú lateral.
@@ -105,7 +103,7 @@ Una vez el usuario se logee, se mostrarán dos opciones más en el home:
 
 
 
-# Categorías
+# 3. Categorías
 
 
 
@@ -119,7 +117,7 @@ Para el filtro por áreas, se utilizará un componente para mostrar un árbol y 
 
 
 
-## Estructura de investigación
+## 3.1. Estructura de investigación
 
 
 
@@ -161,7 +159,7 @@ La información que se mostrará en esta página tratará de responder, entre ot
 
 
 
-## Detalle de una estructura de investigación
+## 3.1.1. Detalle de una estructura de investigación
 
 Pulsando sobre un centro de investigación en la pantalla de esta categoría, la web nos redirigirá a la información de esa estrutura de investigación. Para facilitar la visualización de los datos sobre la estructura de investigación, la información se mostrará agrupada por [tabs](https://getbootstrap.com/docs/4.0/components/navs/).
 
@@ -226,7 +224,7 @@ En esta pantalla se responderá a las siguientes preguntas de competencia:
 
 
 
-## Acciones de investigación
+## 3.2. Acciones de investigación
 
 
 
@@ -265,7 +263,7 @@ En esta página se trata de mostrar la información de las preguntas de competen
 
 
 
-## Detalle de una acción de investigación
+## 3.2.1. Detalle de una acción de investigación
 
 La información se muestra agrupada en tres secciones (tabs) :
 
@@ -320,7 +318,7 @@ Se responden a las siguientes preguntas de competencia, a modo consulta:
 
 
 
-## Personal investigador
+## 3.3. Personal investigador
 
 
 
@@ -343,7 +341,7 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 
 
 
-## Detalle de personal investigador
+## 3.3.1. Detalle de personal investigador
 
 
 
@@ -379,7 +377,7 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 
 
 
-## Áreas
+## 3.4. Áreas
 
 
 
@@ -391,7 +389,7 @@ En esta pantalla se muestra información sobre los datos del módulo vertical "�
 
 
 
-## Producción científica
+## 3.5. Producción científica
 
 
 
@@ -437,7 +435,7 @@ Se muestran los documentos y los eventos de investigaciones.
 
 
 
-## Detalle de producción científica
+## 3.5.1. Detalle de producción científica
 
 
 
@@ -457,7 +455,7 @@ Se muestran los documentos y los eventos de investigaciones.
 
 
 
-## Estadísticas
+## 3.6. Estadísticas
 
 
 
