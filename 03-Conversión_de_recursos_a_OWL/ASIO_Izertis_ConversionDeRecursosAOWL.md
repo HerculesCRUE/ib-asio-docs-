@@ -4,7 +4,7 @@
 
 | Entregable     | Conversión de recursos a OWL                                 |
 | -------------- | ------------------------------------------------------------ |
-| Fecha          | 03/09/2020 (hito 1)                                          |
+| Fecha          | 03/09/2020                                          |
 | Revisado por   | Emilio Rubiera Azcona 03/05/2021                             |
 | Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
 | Módulo         | Infraestructura Ontológica                                   |
