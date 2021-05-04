@@ -17,7 +17,7 @@
 
 **Índice**
 
-[1. Introducción](#1.-introducción)
+[1. Introducción](#introducción)
 
 [2. Home](#home)
 
@@ -224,7 +224,7 @@ En esta pantalla se responderá a las siguientes preguntas de competencia:
 
 
 
-## 3.2. Acciones de investigación
+## Acciones de investigación
 
 
 
@@ -263,7 +263,7 @@ En esta página se trata de mostrar la información de las preguntas de competen
 
 
 
-## 3.2.1. Detalle de una acción de investigación
+## Detalle de una acción de investigación
 
 La información se muestra agrupada en tres secciones (tabs) :
 
@@ -318,7 +318,7 @@ Se responden a las siguientes preguntas de competencia, a modo consulta:
 
 
 
-## 3.3. Personal investigador
+## Personal investigador
 
 
 
@@ -341,7 +341,7 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 
 
 
-## 3.3.1. Detalle de personal investigador
+## Detalle de personal investigador
 
 
 
@@ -377,7 +377,7 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 
 
 
-## 3.4. Áreas
+## Áreas
 
 
 
@@ -389,7 +389,7 @@ En esta pantalla se muestra información sobre los datos del módulo vertical "�
 
 
 
-## 3.5. Producción científica
+## Producción científica
 
 
 
@@ -435,7 +435,7 @@ Se muestran los documentos y los eventos de investigaciones.
 
 
 
-## 3.5.1. Detalle de producción científica
+## Detalle de producción científica
 
 
 
@@ -455,7 +455,7 @@ Se muestran los documentos y los eventos de investigaciones.
 
 
 
-## 3.6. Estadísticas
+## Estadísticas
 
 
 
