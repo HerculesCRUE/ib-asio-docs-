@@ -1,15 +1,19 @@
 ![](../images/logos_feder.png)
 
+
+
 | Entregable     | **Memoria de publicaciones**                                 |
 | -------------- | ------------------------------------------------------------ |
-| Contenidos     | Este documento contiene un listado de las publicaciones que se han   realizado difundiendo los resultados del proyecto Hercules ASIO acometido por IZERTIS y el grupo de investigación WESO de la Universidad de Oviedo. Junto al listado de publicaciones se relacionan las diferentes partes del proyecto sobre las que trata cada publicacion. |
-| Estado del documento | **Enviado para revisar** |
-| Propietario | Guillermo Facundo Colunga (Grupo de Investigación WESO, Universidad de Oviedo) |
+| Fecha          | 04/05/2021                                                   |
+| Revisado por   | Paloma Terán Pérez                                           |
+| Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
+| Módulo         | **Memoria de publicaciones**                                 |
+| Tipo           | Documento                                                    |
+| Objetivo       | Documento que contiene un listado de las publicaciones que se han realizado durante el desarrollo del proyecto ASIO, cuyo objetivo ha sido la difusión de los resultados del proyecto Hércules ASIO, acometido por IZERTIS y el grupo de investigación WESO de la Universidad de Oviedo. Junto al listado de publicaciones se relacionan las diferentes partes del proyecto sobre las que trata cada publicación. |
+| Estado         | **100%**                                                     |
+| Próximos pasos |                                                              |
 
-|                |        Historial de Versiones                                |
-| -------------- | ------------------------------------------------------------ |
-|   28/04/2021   | Versión inicial.                                             |
-|   28/04/2021   | Arregladas tabla y algun typo.                               |
+
 
 
 # Memoria de publicaciones
@@ -17,7 +21,7 @@ Durante el desarrollo de ASIO, enmarcado en el proyecto ASIO, se han realizado u
 
 |||
 |-|-|
-|**Título:**| Automatic synchronization of RDF graphs representing ontologies and Wikibase instances.
+|**Título:**| Automatic synchronization of RDF graphs representing ontologies and Wikibase instances.|
 |**Autores:**| Alejandro González Hevia, Guillermo Facundo Colunga, Emilio Rubiera Azcona y Jose Emilio Labra Gayo.|
 |**Conferencia:**| International Semantic Web Conference 2020|
 |**Enlace:**| http://ceur-ws.org/Vol-2773/paper-07.pdf|
