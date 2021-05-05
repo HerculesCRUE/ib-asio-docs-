@@ -173,28 +173,6 @@ Pulsando sobre un centro de investigación en la pantalla de esta categoría, la
 
 
 
-### Sección de publicaciones científicas
-
-
-
-![Captura de detalle de una estructuras de investigación - tab publicaciones científicas](./images/screenshots/detalle-estructuras-publicaciones-cientificas.png)
-
-
-
-
-
-### Sección de publicaciones académicas
-
-
-
-![Captura de detalle de una estructuras de investigación - tab publicaciones académicas](./images/screenshots/detalle-estructuras-publicaciones-academicas.png)
-
-
-
-### Sección de proyectos
-
-![Captura de detalle de una estructuras de investigación - tab proyectos](./images/screenshots/detalle-estructuras-proyecto.png)
-
 
 
 ### Sección de patentes
@@ -263,7 +241,7 @@ En esta página se trata de mostrar la información de las preguntas de competen
 
 ## Detalle de una acción de investigación
 
-La información se muestra agrupada en tres secciones (tabs) :
+La información de las patentes se muestra en una única pestaña, en cambio, la de los proyectos, se muestra agrupada en tres secciones (tabs) :
 
 - Información general del proyecto
 
@@ -292,16 +270,6 @@ La información se muestra agrupada en tres secciones (tabs) :
 
 
 ![Captura de detalle de acciones de investigación - tab participantes](./images/screenshots/detalle-acciones-investigacion-participantes-proyecto.png)
-
-
-
-### Información general - entregables en un proyecto
-
-
-
-![Captura de detalle de acciones de investigación - tab entregables](./images/screenshots/detalle-acciones-investigacion-entregables-proyecto.png)
-
-
 
 
 
@@ -348,6 +316,22 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 
 
 ![Captura de personal investigador](./images/screenshots/detalle-personal-investigador-acciones.png)
+
+
+
+### Detalle de personal investigador - publicaciones científicas
+
+
+
+![Captura de personal investigador](./images/screenshots/detalle-personal-investigador-publicaciones-cientificas.png)
+
+
+
+### Detalle de personal investigador - publicaciones académicas
+
+
+
+![Captura de personal investigador](./images/screenshots/detalle-personal-investigador-publicaciones-academicas.png)
 
 
 
