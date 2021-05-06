@@ -6,14 +6,16 @@
 
 
 
-| Fecha                 | 3/5/2021                           |
-| --------------------- | ---------------------------------- |
-| Titulo                | Manual de Despliegue               |
-| Descripción           | Manual genérico para el despliegue |
-| Versión               | 1                                  |
-| Módulo                | Documentación                      |
-| Tipo                  | Manual                             |
-| Cambios de la Versión | Creación del documento             |
+| Entregable     | Manual de usuario                                            |
+| -------------- | ------------------------------------------------------------ |
+| Fecha          | 03/05/2021                                                   |
+| Revisado por   | Daniel Ruiz Santamaría                                       |
+| Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
+| Módulo         | Manual de despliegue                                         |
+| Tipo           | Documento                                                    |
+| Objetivo       | Documento con el manual genérico para el despliegue          |
+| Estado         | **100%**                                                     |
+| Próximos pasos |                                                              |
 
 
 
@@ -91,7 +93,7 @@ Para el caso de nuevos despliegues, se recomienda tomar como referencia, los des
 
 ### 2.4 Descripción de servicios
 
-El el siguiente apartado se enumeraran los servicios desplegados en cada una de las maquinas, asi como la información mas relevante de cada servicio.
+El el siguiente apartado se enumeraran los servicios desplegados en cada una de las maquinas, así como la información mas relevante de cada servicio.
 
 En algunos casos se usara la variable **$entorno** en las imágenes docker, que representa la rama y por lo tanto el entorno donde son desplegados, que habitualmente será develop para el entorno de **desarrollo**, o master para el entorno de **producción**.
 
@@ -153,7 +155,7 @@ Generalmente en esta maquina están desplegados todos los servicios relativos a 
 * **Puertos:** 
   * **Externos:** 2181
   * **Internos:** 2181
-* **Descripción:** Actua como broker para [Kafka](#Kafka).
+* **Descripción:** Actúa como broker para [Kafka](#Kafka).
 * **Tipo:** Esencial. Requerido por [Kafka](#Kafka)
 * **Dependencias:** No
 * **Imagen-docker:**  bitnami/zookeeper:3.5.6
@@ -275,7 +277,7 @@ Generalmente en esta maquina están desplegados todos los servicios relativos a 
 
 #### 2.4.2 Servicios desplegados en FRONT
 
-Generalmente en esta maquina están desplegados todos los servicios relativos a frontales o servicios expuestos. Existen dependencias de otros servicios con los servicios desplegados en esta maquina (se detalla en cada caso), por lo tanto es conveniente desplegar los servicios aquí descritos, despues de desplegar los servicios de [DB](#Servicios-desplegados-en-DB) y antes de desplegar los servicios de [Back](#Servicios-desplegados-en-BACK).
+Generalmente en esta maquina están desplegados todos los servicios relativos a frontales o servicios expuestos. Existen dependencias de otros servicios con los servicios desplegados en esta maquina (se detalla en cada caso), por lo tanto es conveniente desplegar los servicios aquí descritos, después de desplegar los servicios de [DB](#Servicios-desplegados-en-DB) y antes de desplegar los servicios de [Back](#Servicios-desplegados-en-BACK).
 
 ##### Nginx
 
@@ -773,7 +775,7 @@ Generalmente en esta maquina están desplegados todos los servicios relativos a 
 * **Imagen-docker:** herculescrue/triples-storage-adapter:{$entorno}
 * **Ficheros (rutas relativas a la carpeta ./deploy):**
   * **Despliegue:** docker-compose.yml
-  * **Variables de entorno:** ./env/global.env (para variables globales), ./env/global-api.env (para variables de aplicación en APIs), ./env/storage-adapter.env (para generales para el almacenamineto) y ./env/trellis-storage-adapter.env (para variables especificas del servicio)
+  * **Variables de entorno:** ./env/global.env (para variables globales), ./env/global-api.env (para variables de aplicación en APIs), ./env/storage-adapter.env (para generales para el almacenamineto) y ./env/trellis-storage-adapter.env (para variables específicas del servicio)
   * **Configuración:** -
 
 ##### PDI
@@ -1090,7 +1092,7 @@ Instalar docker-compose
 sudo pip install docker-compose
 ```
 
-Comprobar instalacion
+Comprobar instalación
 
 ```
 docker-compose version
