@@ -73,6 +73,23 @@ Otro de los puntos a testear en la plataforma, además de los endpoints que dan 
 
 
 
+### Hardware y e infraestructura
+
+
+
+El hardware e infraestructura dónde se encuentran los servicios sobre la que se lanzan las pruebas de rendimiento es:
+
+| Nombre           | FRONT                                                        |
+| ---------------- | ------------------------------------------------------------ |
+| **SO**           | CentOS Linux release 7.7.1908                                |
+| **MEMORIA**      | 16GB                                                         |
+| **PROCESADOR**   | Intel Core i7 9xx (Nehalem Class Core i7)                    |
+| **CORES**        | 4                                                            |
+| **ARQUITECTURA** | 64                                                           |
+| **PUERTOS**      | 22, 443, 80, 55555, 3030, 8081, 8070, 80, 81, 8080, 9321, 9326 |
+
+
+
 
 
 ## Metodología
