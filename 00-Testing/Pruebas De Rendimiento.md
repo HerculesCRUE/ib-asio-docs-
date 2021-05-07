@@ -17,6 +17,8 @@
 
 [1. Introducción](#introducción)
 
+[1.1 Hardware e infraestructura](#Hardware_e_infraestructura)
+
 [2. Metodología](#metodología)
 
 [2. Tipos de pruebas](#tipos-de-pruebas)
@@ -73,9 +75,7 @@ Otro de los puntos a testear en la plataforma, además de los endpoints que dan 
 
 
 
-### Hardware y e infraestructura
-
-
+### Hardware e infraestructura
 
 El hardware e infraestructura dónde se encuentran los servicios sobre la que se lanzan las pruebas de rendimiento es:
 
