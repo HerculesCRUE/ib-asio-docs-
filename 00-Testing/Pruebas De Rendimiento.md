@@ -617,40 +617,57 @@ En las siguientes imágenes se pueden ver los resultados en gráfica y tabla. Se
 
 
 
-![Resultados de los test de carga de pico en la tabla](./img/jmeter/tabla-test-pico.JPG)
-
-
-
 Los resultados obtenidos se pueden ver en la siguiente tabla:
 
 
 
 | Label                                 | # Samples | Average | Min  | Max   | Std. Dev. | Error % | Throughput | Received KB/sec | Sent KB/sec | Avg. Bytes |
 | ------------------------------------- | --------- | ------- | ---- | ----- | --------- | ------- | ---------- | --------------- | ----------- | ---------- |
-| /api/university/quality               | 932       | 1061    | 85   | 21056 | 2736.44   | 0.751%  | .51756     | 0.81            | 0.31        | 1597.9     |
-| /api/university/financing             | 929       | 799     | 83   | 21057 | 2309.42   | 0.323%  | .51662     | 0.80            | 0.32        | 1592.3     |
-| /api/organization/search              | 1852      | 930     | 107  | 21057 | 2296.75   | 0.864%  | 1.03292    | 2.66            | 0.64        | 2637.3     |
-| /api/organization/-1/T3JnYW5pemF0aW9u | 926       | 756     | 97   | 21028 | 1884.83   | 0.324%  | .51743     | 0.21            | 0.37        | 406.1      |
-| /api/person/area                      | 1835      | 930     | 118  | 21054 | 2481.15   | 0.599%  | 1.02583    | 1.84            | 0.65        | 1837.5     |
-| /api/academicpublication/search       | 5400      | 943     | 131  | 21057 | 2312.12   | 0.370%  | 3.01335    | 9.57            | 2.13        | 3253.7     |
-| /api/project/search                   | 5260      | 882     | 133  | 21072 | 1915.71   | 0.266%  | 2.94337    | 11.36           | 1.91        | 3953.2     |
-| /api/document/search                  | 5395      | 999     | 154  | 21057 | 2429.43   | 0.556%  | 3.03127    | 8.38            | 2.06        | 2830.4     |
-| /api/patent/area                      | 2645      | 749     | 96   | 21064 | 1960.72   | 0.340%  | 1.48840    | 3.93            | 0.94        | 2703.7     |
-| /api/patent/search                    | 5254      | 862     | 117  | 21050 | 1940.21   | 0.419%  | 2.96051    | 6.25            | 1.93        | 2161.5     |
-| /api/researchstaff/search             | 2656      | 1392    | 276  | 21057 | 2511.71   | 0.602%  | 1.50866    | 4.56            | 0.98        | 3092.9     |
-| /main/categories/scientist/1          | 906       | 563     | 42   | 21053 | 2803.16   | 0.993%  | .52101     | 0.64            | 0.34        | 1251.6     |
-| /api/otherpublication/search          | 3568      | 934     | 131  | 21052 | 2463.34   | 0.673%  | 2.04898    | 4.92            | 1.31        | 2459.0     |
-| /api/event/search                     | 3554      | 972     | 154  | 21058 | 2501.65   | 0.760%  | 2.04592    | 5.46            | 1.26        | 2734.3     |
-| /api/booksection/search/              | 2673      | 932     | 108  | 21066 | 2510.72   | 0.599%  | 1.55593    | 1.18            | 1.09        | 778.8      |
-| /api/document/M-21543-97/Qm9vaw==     | 892       | 979     | 134  | 21048 | 2752.89   | 0.785%  | .52015     | 0.37            | 0.36        | 725.3      |
-| /api/event/48/Q29uZmVyZW5jZQ==        | 874       | 702     | 113  | 21030 | 1656.16   | 0.114%  | .52020     | 0.39            | 0.35        | 760.5      |
-| /api/project/byModality               | 1724      | 743     | 100  | 21054 | 1944.25   | 0.580%  | 1.02695    | 1.59            | 0.62        | 1589.7     |
-| /api/patent/1                         | 859       | 652     | 101  | 21043 | 1534.80   | 0.349%  | .51687     | 0.34            | 0.30        | 678.8      |
-| /api/project/1                        | 842       | 949     | 123  | 21048 | 2161.05   | 0.356%  | .51383     | 0.36            | 0.32        | 718.8      |
-| /api/person/search                    | 840       | 1279    | 343  | 21059 | 2151.42   | 0.595%  | .51333     | 1.61            | 0.32        | 3202.2     |
-| token                                 | 836       | 4618    | 277  | 21068 | 6782.50   | 8.014%  | .51094     | 1.92            | 0.17        | 3841.1     |
-| sparql                                | 832       | 1930    | 91   | 21046 | 3345.59   | 8.534%  | .51236     | 0.37            | 1.21        | 744.4      |
-| TOTAL                                 | 51484     | 1003    | 42   | 21072 | 2482.43   | 0.765%  | 28.49969   | 67.80           | 19.28       | 2436.2     |
+| /api/university/organizationByType    | 1092      | 476     | 84   | 19276 | 1486.73   | 0.458%  | .60818     | 0.58            | 0.38        | 974.3      |
+| /api/organization/search              | 1092      | 343     | 96   | 19255 | 1011.84   | 0.275%  | .60821     | 1.57            | 0.38        | 2636.0     |
+| /api/organization/-1/T3JnYW5pemF0aW9u | 1091      | 379     | 87   | 19274 | 1445.71   | 0.367%  | .61140     | 0.56            | 0.43        | 940.5      |
+| /api/person/area                      | 2176      | 313     | 84   | 19256 | 1015.01   | 0.092%  | 1.21465    | 0.47            | 0.78        | 400.4      |
+| /api/academicpublication/search       | 7491      | 434     | 119  | 21049 | 1240.40   | 0.133%  | 4.17929    | 12.32           | 2.98        | 3017.5     |
+| /api/project/search                   | 6184      | 404     | 116  | 21028 | 1286.53   | 0.323%  | 3.45685    | 10.81           | 2.24        | 3201.3     |
+| /api/document/search                  | 7491      | 463     | 140  | 21050 | 1154.02   | 0.107%  | 4.18881    | 9.86            | 2.87        | 2410.4     |
+| /api/patent/area                      | 3099      | 340     | 86   | 19265 | 1195.88   | 0.258%  | 1.73665    | 5.75            | 1.10        | 3392.0     |
+| /api/patent/search                    | 7260      | 384     | 100  | 31434 | 1245.75   | 0.275%  | 4.07718    | 6.03            | 2.69        | 1514.4     |
+| /api/researchstaff/search             | 3166      | 478     | 164  | 21048 | 1308.79   | 0.221%  | 1.78850    | 3.20            | 1.17        | 1829.5     |
+| /api/person/3519                      | 1086      | 483     | 204  | 16083 | 855.23    | 0.000%  | .61881     | 0.41            | 0.41        | 683.0      |
+| /api/event/search                     | 5297      | 488     | 145  | 21050 | 1226.48   | 0.132%  | 3.00584    | 7.60            | 1.91        | 2589.0     |
+| /api/otherpublication/search          | 4231      | 408     | 122  | 21051 | 1024.77   | 0.047%  | 2.42000    | 5.80            | 1.56        | 2456.2     |
+| /api/booksection/search/              | 3174      | 371     | 95   | 15680 | 981.37    | 0.000%  | 1.83737    | 1.37            | 1.29        | 766.0      |
+| /api/document/M-21543-97/Qm9vaw==     | 1062      | 382     | 124  | 15496 | 941.66    | 0.000%  | .61609     | 0.43            | 0.43        | 708.0      |
+| /api/event/48/Q29uZmVyZW5jZQ==        | 1020      | 384     | 100  | 19227 | 1249.27   | 0.098%  | .60205     | 0.45            | 0.41        | 760.2      |
+| /api/project/byModality               | 2013      | 390     | 89   | 19274 | 1474.11   | 0.397%  | 1.18991    | 2.80            | 0.72        | 2405.3     |
+| /api/patent/1                         | 1000      | 384     | 91   | 19272 | 1399.61   | 0.200%  | .60046     | 0.40            | 0.35        | 675.6      |
+| /api/project/1                        | 994       | 353     | 98   | 19265 | 1211.95   | 0.302%  | .60061     | 0.24            | 0.38        | 405.8      |
+| /api/person/search                    | 992       | 503     | 191  | 19250 | 1425.94   | 0.403%  | .60318     | 1.08            | 0.38        | 1825.7     |
+| TOTAL                                 | 61011     | 416     | 84   | 31434 | 1212.30   | 0.187%  | 33.87244   | 70.56           | 22.41       | 2133.0     |
+
+
+
+Teniendo en cuenta que los test se han lanzado entre las 14:45 del 10/05/2021 y las 15:15 del 10/05/2021, se puede ver que hay picos durante esos minutos tanto en uso de memoria, CPU y disco como en el número de procesos, pero sin que afecte de forma alarmante en la latencia o el porcentaje de error de la respuesta de los servicios. El resultado de la monitorización del sistema durante los test de carga se puede ver en las siguientes imágenes:
+
+![Resultado general de la monitorización de test de pico](./img/jmeter/general-state-test-pico.png)
+
+
+
+![Resultado de la monitorización de la ocupación de memoria de test de pico](./img/jmeter/memory-state-test-pico.png)
+
+
+
+![Resultado de la monitorización de el uso de CPU de test de pico](./img/jmeter/cpu-state-test-pico.png)
+
+
+
+![Resultado de la monitorización de el estado del disco de test de pico](./img/jmeter/disk-state-test-pico.png)
+
+
+
+![Resultado de la monitorización de los procesos de test de pico](./img/jmeter/processes-state-test-pico.png)
+
+
 
 
 
