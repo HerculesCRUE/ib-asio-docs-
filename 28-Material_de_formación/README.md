@@ -17,7 +17,7 @@
 |                                 | **SESIÓN: Proyecto ASIO (Código: I00)**                      |                                     |                                                              |
 | ------------------------------- | ------------------------------------------------------------ | ----------------------------------- | ------------------------------------------------------------ |
 | **Unidad de conocimiento**      | **Contenido**                                                | **ENLACE AL VIDEO**                 | **RECURSOS**                                                 |
-| Proyecto ASIO                   | Contexto del programa Hércules.<br />Proyecto ASIO. Retos tecnológicos | [Enlace](https://tv.um.es/v?143791) | [Presentación Proyecto ASIO](./Recursos/Introduccion_HERCULES-ASIO) |
+| Proyecto ASIO                   | Contexto del programa Hércules.<br />Proyecto ASIO. Retos tecnológicos | [Enlace](https://tv.um.es/v?143791) | [Presentación Proyecto ASIO](./Recursos/Introduccion_HERCULES-ASIO.pptx) |
 | Introducción a la web semántica | Ecosistema de la web semántica.<br />Open Linked Data        | [Enlace](https://tv.um.es/v?143792) |                                                              |
 | Tecnologías semánticas          | Introducción al subsistema Arquitectura Semántica.<br />Arquitectura centralizada vs. descentralizada | [Enlace](https://tv.um.es/v?143793) |                                                              |
 | Knowledge graphs                | Introducción al subsistema Infraestructura Ontológica.<br />Aplicación de conceptos FAIR | [Enlace](https://tv.um.es/v?143794) |                                                              |
