@@ -124,6 +124,10 @@ Esta prueba puede mostrar los **tiempos de respuesta** de cada una de las accion
 
 
 
+Para la visualización del estado de la memoria, CPUs, Disco, etc durante la realización de las distintas pruebas de carga, se ha utilizado [influxdb](https://www.influxdata.com/), que permite monitorizar el estado del sistema con gráficas y otro tipo de información gráfica, de forma personalizada.
+
+
+
 #### Pruebas de Carga sobre el API
 
 Sobre los distintos endpoints detallados en el Anexo se configurarán llamadas mediante JMeter. Dichas llamadas simularán el flujo de un usuario realizando consultas a través del frontal:
@@ -504,38 +508,55 @@ En las siguientes imágenes se pueden ver los resultados en gráfica y tabla. Se
 
 
 
-![Resultados de los test de carga en la tabla](./img/jmeter/tabla-test-estabilidad.JPG)
-
 
 
 Los resultados obtenidos se pueden ver en la siguiente tabla:
 
-| Label                                 | # Samples | Average | Min  | Max   | Std. Dev. | Error %  | Throughput | Received KB/sec | Sent KB/sec | Avg. Bytes |
-| ------------------------------------- | --------- | ------- | ---- | ----- | --------- | -------- | ---------- | --------------- | ----------- | ---------- |
-| /api/university/quality               | 1500      | 824     | 85   | 21051 | 2182.20   | 0.400%   | .50804     | 0.79            | 0.31        | 1593.3     |
-| /api/university/financing             | 1500      | 1085    | 110  | 21060 | 2442.06   | 100.000% | .50784     | 0.35            | 0.31        | 698.8      |
-| /api/organization/search              | 3000      | 855     | 109  | 21055 | 2132.44   | 0.600%   | 1.01447    | 2.61            | 0.63        | 2636.6     |
-| /api/organization/-1/T3JnYW5pemF0aW9u | 1500      | 746     | 102  | 21058 | 2066.85   | 0.533%   | .50779     | 0.20            | 0.36        | 411.4      |
-| /api/person/area                      | 3000      | 719     | 118  | 21054 | 2057.25   | 0.500%   | 1.00509    | 1.92            | 0.64        | 1955.8     |
-| /api/academicpublication/search       | 9000      | 796     | 132  | 21062 | 2176.29   | 0.522%   | 2.96096    | 9.41            | 2.09        | 3253.2     |
-| /api/project/search                   | 9000      | 806     | 134  | 21068 | 2114.83   | 0.578%   | 2.92102    | 11.27           | 1.89        | 3949.9     |
-| /api/document/search                  | 9000      | 822     | 150  | 21058 | 2207.38   | 0.678%   | 2.97148    | 8.21            | 2.01        | 2830.5     |
-| /api/patent/area                      | 4500      | 730     | 96   | 21051 | 2206.93   | 0.600%   | 1.47089    | 4.06            | 0.92        | 2823.5     |
-| /api/patent/search                    | 9000      | 797     | 117  | 21059 | 2228.35   | 0.667%   | 2.93179    | 6.26            | 1.91        | 2185.0     |
-| /api/researchstaff/search             | 4500      | 1030    | 259  | 21066 | 2145.20   | 0.511%   | 1.46791    | 4.28            | 0.96        | 2983.6     |
-| /main/categories/scientist/1          | 1500      | 332     | 43   | 21053 | 1943.41   | 0.467%   | .50893     | 0.62            | 0.33        | 1242.8     |
-| /api/otherpublication/search          | 6000      | 776     | 132  | 21060 | 2139.83   | 0.633%   | 2.00276    | 4.81            | 1.28        | 2458.9     |
-| /api/event/search                     | 6000      | 875     | 156  | 21054 | 2351.90   | 0.700%   | 2.00240    | 5.35            | 1.23        | 2734.2     |
-| /api/booksection/search/              | 4500      | 842     | 110  | 21066 | 2520.60   | 0.733%   | 1.52065    | 1.16            | 1.06        | 781.7      |
-| /api/document/M-21543-97/Qm9vaw==     | 1500      | 845     | 130  | 21061 | 2603.41   | 1.200%   | .50843     | 0.36            | 0.35        | 734.4      |
-| /api/event/48/Q29uZmVyZW5jZQ==        | 1500      | 694     | 110  | 21046 | 2015.86   | 0.467%   | .51044     | 0.38            | 0.35        | 768.0      |
-| /api/project/byModality               | 3000      | 643     | 101  | 21056 | 1848.94   | 0.433%   | 1.01261    | 1.68            | 0.62        | 1695.3     |
-| /api/patent/1                         | 1500      | 792     | 100  | 21051 | 2367.31   | 0.667%   | .51075     | 0.34            | 0.30        | 685.9      |
-| /api/project/1                        | 1500      | 705     | 116  | 21053 | 1767.91   | 0.400%   | .51035     | 0.36            | 0.32        | 719.8      |
-| /api/person/search                    | 1500      | 1100    | 354  | 21046 | 1804.27   | 0.267%   | .51046     | 1.54            | 0.32        | 3093.5     |
-| token                                 | 1500      | 4771    | 281  | 21063 | 6664.66   | 8.467%   | .51064     | 1.91            | 0.17        | 3835.8     |
-| sparql                                | 1500      | 1623    | 92   | 21057 | 3525.87   | 9.733%   | .51193     | 0.38            | 1.20        | 767.6      |
-| TOTAL                                 | 87000     | 891     | 43   | 21068 | 2427.23   | 2.607%   | 27.90746   | 66.24           | 18.87       | 2430.6     |
+| Label                                 | # Samples | Average | Min  | Max  | Std. Dev. | Error % | Throughput | Received KB/sec | Sent KB/sec | Avg. Bytes |
+| ------------------------------------- | --------- | ------- | ---- | ---- | --------- | ------- | ---------- | --------------- | ----------- | ---------- |
+| /api/university/organizationByType    | 15        | 131     | 94   | 320  | 63.14     | 0.000%  | .00224     | 0.00            | 0.00        | 965.0      |
+| /api/organization/search              | 15        | 153     | 110  | 383  | 70.54     | 0.000%  | .00224     | 0.01            | 0.00        | 2635.0     |
+| /api/organization/-1/T3JnYW5pemF0aW9u | 15        | 111     | 97   | 126  | 8.54      | 0.000%  | .00224     | 0.00            | 0.00        | 933.0      |
+| /api/person/area                      | 29        | 109     | 92   | 242  | 26.61     | 0.000%  | .00433     | 0.00            | 0.00        | 398.0      |
+| /api/academicpublication/search       | 85        | 166     | 123  | 451  | 51.74     | 0.000%  | .01268     | 0.04            | 0.01        | 3308.0     |
+| /api/project/search                   | 85        | 169     | 124  | 454  | 51.53     | 0.000%  | .01268     | 0.04            | 0.01        | 3202.0     |
+| /api/document/search                  | 84        | 203     | 156  | 562  | 66.56     | 0.000%  | .01266     | 0.03            | 0.01        | 2688.0     |
+| /api/patent/area                      | 42        | 128     | 88   | 394  | 69.67     | 0.000%  | .00630     | 0.02            | 0.00        | 3393.0     |
+| /api/patent/search                    | 84        | 155     | 107  | 412  | 61.11     | 0.000%  | .01259     | 0.02            | 0.01        | 1661.3     |
+| /api/researchstaff/search             | 42        | 230     | 188  | 442  | 51.75     | 0.000%  | .00630     | 0.01            | 0.00        | 1827.0     |
+| /main/categories/scientist/1          | 14        | 46      | 43   | 55   | 2.88      | 0.000%  | .00213     | 0.00            | 0.00        | 1235.0     |
+| /api/otherpublication/search          | 56        | 170     | 139  | 327  | 42.03     | 0.000%  | .00848     | 0.02            | 0.01        | 2456.0     |
+| /api/event/search                     | 56        | 225     | 154  | 834  | 132.50    | 0.000%  | .00847     | 0.02            | 0.01        | 2733.0     |
+| /api/booksection/search/              | 42        | 120     | 103  | 147  | 10.65     | 0.000%  | .00640     | 0.00            | 0.00        | 766.0      |
+| /api/document/M-21543-97/Qm9vaw==     | 14        | 154     | 143  | 168  | 8.12      | 0.000%  | .00214     | 0.00            | 0.00        | 708.0      |
+| /api/event/48/Q29uZmVyZW5jZQ==        | 14        | 140     | 110  | 268  | 36.59     | 0.000%  | .00213     | 0.00            | 0.00        | 758.0      |
+| /api/project/byModality               | 28        | 122     | 95   | 294  | 36.33     | 0.000%  | .00425     | 0.01            | 0.00        | 2403.0     |
+| /api/patent/1                         | 14        | 116     | 107  | 137  | 7.39      | 0.000%  | .00213     | 0.00            | 0.00        | 671.0      |
+| /api/project/1                        | 14        | 126     | 111  | 141  | 8.56      | 0.000%  | .00213     | 0.00            | 0.00        | 398.0      |
+| /api/person/search                    | 14        | 267     | 233  | 419  | 44.94     | 0.000%  | .00213     | 0.00            | 0.00        | 1821.0     |
+| TOTAL                                 | 762       | 164     | 43   | 834  | 72.89     | 0.000%  | .11348     | 0.25            | 0.07        | 2212.3     |
+
+
+
+Teniendo en cuenta que los test se han lanzado entre las 00:00 del 10/05/2021 y las 02:00 del 10/05/2021, el resultado de la monitorización del sistema durante los test de carga se puede ver en las siguientes imágenes:
+
+![Resultado general de la monitorización de test de estabilidad](./img/jmeter/general-state-test-estabilidad.png)
+
+
+
+![Resultado de la monitorización de la ocupación de memoria de test de estabilidad](./img/jmeter/memory-state-test-estabilidad.png)
+
+
+
+![Resultado de la monitorización de el uso de CPU de test de estabilidad](./img/jmeter/cpu-state-test-estabilidad.png)
+
+
+
+![Resultado de la monitorización de el estado del disco de test de estabilidad](./img/jmeter/disk-state-test-estabilidad.png)
+
+
+
+![Resultado de la monitorización de los procesos de test de estabilidad](./img/jmeter/processes-state-test-estabilidad.png)
 
 
 
