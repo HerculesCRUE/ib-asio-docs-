@@ -233,10 +233,9 @@ Sobre los distintos endpoints detallados en el Anexo se configurarán llamadas m
 - Filtrado de la Categoría X
 - Acceso al detalle de la entidad X
 
-Cada uno de los usuarios (hilos) configurados en JMeter realizará un total de 15 acciones de las detalladas anteriormente.
+Cada uno de los usuarios (hilos) configurados en JMeter realizará un número de acciones indeterminado para que las pruebas finalicen al acabar el tiempo independientemente del numero de acciones.
 
 - Usuarios Concurrentes: 100
-- Acciones Por Usuario: 15
 - Tiempo de la prueba: 2 horas
 
 Las ejecuciones de cada hilo se establecerán en bucle para de esta forma establecer un flujo constante durante el tiempo de la prueba.
@@ -345,7 +344,7 @@ Sobrecada una de las apis se ha añadido un timer aleatorio con máximo 3 segund
 
 
 
-Se ha dejado el fichero creado para pruebas en el repositorio en el siguiente [link](./test-jMeter-ASIO.jmx).
+**Se ha dejado el fichero creado para pruebas en el repositorio en el siguiente [link](./test-jMeter-ASIO.jmx).**
 
 
 
@@ -521,7 +520,7 @@ Se han configurado, tal y como se explica en el apartado [pruebas de estabilidad
 
 - Número de hilos (usuarios): 100
 - Ramp-up period: 1 segundo
-- Loop count: 15
+- Loop count: Infinite
 - Se ha marcado la casilla "Especify threat lifetime" para limitar el tiempo que se va a estar ejecutando el hilo y se han marcado los valores:
   - Duration:  7200 seconds
   - Startup delay: 0 seconds
