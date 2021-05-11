@@ -543,33 +543,33 @@ En las siguientes imágenes se pueden ver los resultados en gráfica y tabla. Se
 
 Los resultados obtenidos se pueden ver en la siguiente tabla:
 
-| Label                                 | # Samples | Average | Min  | Max  | Std. Dev. | Error % | Throughput | Received KB/sec | Sent KB/sec | Avg. Bytes |
-| ------------------------------------- | --------- | ------- | ---- | ---- | --------- | ------- | ---------- | --------------- | ----------- | ---------- |
-| /api/university/organizationByType    | 15        | 131     | 94   | 320  | 63.14     | 0.000%  | .00224     | 0.00            | 0.00        | 965.0      |
-| /api/organization/search              | 15        | 153     | 110  | 383  | 70.54     | 0.000%  | .00224     | 0.01            | 0.00        | 2635.0     |
-| /api/organization/-1/T3JnYW5pemF0aW9u | 15        | 111     | 97   | 126  | 8.54      | 0.000%  | .00224     | 0.00            | 0.00        | 933.0      |
-| /api/person/area                      | 29        | 109     | 92   | 242  | 26.61     | 0.000%  | .00433     | 0.00            | 0.00        | 398.0      |
-| /api/academicpublication/search       | 85        | 166     | 123  | 451  | 51.74     | 0.000%  | .01268     | 0.04            | 0.01        | 3308.0     |
-| /api/project/search                   | 85        | 169     | 124  | 454  | 51.53     | 0.000%  | .01268     | 0.04            | 0.01        | 3202.0     |
-| /api/document/search                  | 84        | 203     | 156  | 562  | 66.56     | 0.000%  | .01266     | 0.03            | 0.01        | 2688.0     |
-| /api/patent/area                      | 42        | 128     | 88   | 394  | 69.67     | 0.000%  | .00630     | 0.02            | 0.00        | 3393.0     |
-| /api/patent/search                    | 84        | 155     | 107  | 412  | 61.11     | 0.000%  | .01259     | 0.02            | 0.01        | 1661.3     |
-| /api/researchstaff/search             | 42        | 230     | 188  | 442  | 51.75     | 0.000%  | .00630     | 0.01            | 0.00        | 1827.0     |
-| /main/categories/scientist/1          | 14        | 46      | 43   | 55   | 2.88      | 0.000%  | .00213     | 0.00            | 0.00        | 1235.0     |
-| /api/otherpublication/search          | 56        | 170     | 139  | 327  | 42.03     | 0.000%  | .00848     | 0.02            | 0.01        | 2456.0     |
-| /api/event/search                     | 56        | 225     | 154  | 834  | 132.50    | 0.000%  | .00847     | 0.02            | 0.01        | 2733.0     |
-| /api/booksection/search/              | 42        | 120     | 103  | 147  | 10.65     | 0.000%  | .00640     | 0.00            | 0.00        | 766.0      |
-| /api/document/M-21543-97/Qm9vaw==     | 14        | 154     | 143  | 168  | 8.12      | 0.000%  | .00214     | 0.00            | 0.00        | 708.0      |
-| /api/event/48/Q29uZmVyZW5jZQ==        | 14        | 140     | 110  | 268  | 36.59     | 0.000%  | .00213     | 0.00            | 0.00        | 758.0      |
-| /api/project/byModality               | 28        | 122     | 95   | 294  | 36.33     | 0.000%  | .00425     | 0.01            | 0.00        | 2403.0     |
-| /api/patent/1                         | 14        | 116     | 107  | 137  | 7.39      | 0.000%  | .00213     | 0.00            | 0.00        | 671.0      |
-| /api/project/1                        | 14        | 126     | 111  | 141  | 8.56      | 0.000%  | .00213     | 0.00            | 0.00        | 398.0      |
-| /api/person/search                    | 14        | 267     | 233  | 419  | 44.94     | 0.000%  | .00213     | 0.00            | 0.00        | 1821.0     |
-| TOTAL                                 | 762       | 164     | 43   | 834  | 72.89     | 0.000%  | .11348     | 0.25            | 0.07        | 2212.3     |
+| Label                                 | # Samples | Average | Min  | Max   | Std. Dev. | Error % | Throughput | Received KB/sec | Sent KB/sec | Avg. Bytes |
+| ------------------------------------- | --------- | ------- | ---- | ----- | --------- | ------- | ---------- | --------------- | ----------- | ---------- |
+| /api/university/organizationByType    | 4422      | 285     | 84   | 8576  | 371.29    | 0.000%  | .61547     | 0.58            | 0.38        | 965.0      |
+| /api/organization/search              | 4422      | 306     | 98   | 10084 | 402.01    | 0.000%  | .61534     | 1.58            | 0.39        | 2635.0     |
+| /api/organization/-1/T3JnYW5pemF0aW9u | 4422      | 271     | 86   | 9887  | 339.83    | 0.000%  | .61497     | 0.56            | 0.44        | 933.0      |
+| /api/person/area                      | 8825      | 259     | 83   | 8990  | 319.03    | 0.000%  | 1.22659    | 0.48            | 0.79        | 398.0      |
+| /api/academicpublication/search       | 30777     | 349     | 118  | 12955 | 337.93    | 0.000%  | 4.27930    | 12.63           | 3.06        | 3021.8     |
+| /api/project/search                   | 26216     | 321     | 116  | 9638  | 312.13    | 0.000%  | 3.64586    | 11.40           | 2.37        | 3202.0     |
+| /api/document/search                  | 30773     | 388     | 141  | 9650  | 344.43    | 0.000%  | 4.28089    | 10.09           | 2.94        | 2413.2     |
+| /api/patent/area                      | 13119     | 267     | 85   | 9180  | 313.79    | 0.000%  | 1.82579    | 6.05            | 1.15        | 3393.0     |
+| /api/patent/search                    | 30597     | 308     | 100  | 15414 | 345.48    | 0.000%  | 4.26018    | 6.36            | 2.81        | 1529.7     |
+| /api/researchstaff/search             | 13133     | 389     | 158  | 9719  | 329.26    | 0.000%  | 1.83183    | 3.27            | 1.20        | 1827.0     |
+| /api/person/3519                      | 4402      | 428     | 195  | 5241  | 297.41    | 0.000%  | .61475     | 0.41            | 0.41        | 683.0      |
+| /api/event/search                     | 21945     | 387     | 138  | 9161  | 305.14    | 0.000%  | 3.06538    | 7.76            | 1.95        | 2591.6     |
+| /api/otherpublication/search          | 17553     | 349     | 123  | 17489 | 386.31    | 0.000%  | 2.45591    | 5.89            | 1.58        | 2456.0     |
+| /api/booksection/search/              | 13169     | 305     | 94   | 9782  | 396.67    | 0.000%  | 1.84709    | 1.38            | 1.30        | 766.0      |
+| /api/document/M-21543-97/Qm9vaw==     | 4392      | 320     | 123  | 9240  | 406.75    | 0.000%  | .61642     | 0.43            | 0.43        | 708.0      |
+| /api/event/48/Q29uZmVyZW5jZQ==        | 4367      | 286     | 100  | 8873  | 409.66    | 0.000%  | .61521     | 0.46            | 0.42        | 758.0      |
+| /api/project/byModality               | 8707      | 263     | 88   | 15350 | 329.85    | 0.000%  | 1.22726    | 2.88            | 0.75        | 2403.0     |
+| /api/patent/1                         | 4348      | 265     | 90   | 8736  | 305.91    | 0.000%  | .61411     | 0.40            | 0.36        | 671.0      |
+| /api/project/1                        | 4329      | 275     | 99   | 5971  | 265.61    | 0.000%  | .61318     | 0.24            | 0.39        | 398.0      |
+| /api/person/search                    | 4328      | 399     | 184  | 17477 | 373.69    | 0.000%  | .61308     | 1.09            | 0.39        | 1821.0     |
+| TOTAL                                 | 254246    | 333     | 83   | 17489 | 344.62    | 0.000%  | 35.30878   | 73.64           | 23.38       | 2135.8     |
 
 
 
-Teniendo en cuenta que los test se han lanzado entre las 00:00 del 10/05/2021 y las 02:00 del 10/05/2021, el resultado de la monitorización del sistema durante los test de carga se puede ver en las siguientes imágenes:
+Teniendo en cuenta que los test se ha estado ejecutando entre las 10:15 del 11/05/2021 y las 12:15 del 11/05/2021, podemos observar en las siguientes imágenes que el sistema sufrió un aumento considerable del uso de recursos, pero a pesar de esto, como podemos ver en la tabla superior, durante las dos horas que duraron los test no ha fallado ningún servicio:
 
 ![Resultado general de la monitorización de test de estabilidad](./img/jmeter/general-state-test-estabilidad.png)
 
