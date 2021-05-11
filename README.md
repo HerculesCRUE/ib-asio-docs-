@@ -51,7 +51,7 @@ Relación de entregables adicionales del proyecto.
 | [00-Testing](./00-Testing/testing.md)                        | N/A     | Actual       |
 | [00-Pruebas Rendimiento](./00-Testing/Pruebas%20De%20Rendimiento.md) | N/A     | Actual       |
 | [00-Memoria de publicaciones](./00-Difusión_de_contenidos/Resumen_de_publicaciones.md) | N/A     | Actual       |
-| [00-Manual de despliegue](./00-Arquitectura/Manual de despliegue) | N/A     | Actual       |
+| [00-Manual de despliegue](./00-Arquitectura/Manual de despliegue/Manual de Despliegue.md) | N/A     | Actual       |
 
 ## 3. Repositorios
 
