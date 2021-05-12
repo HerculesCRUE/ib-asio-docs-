@@ -208,6 +208,8 @@ An extra vertical module, called *Spain's university staffing*, is located withi
 
 On the other hand, the vertical modules are the ideal playground for testing multilingualism and multiscriptalism, as, just as an example, the geopolitical module is fully multilingual (as well as *mutilocale* and *multiscriptalist*).
 
+Finally, it is worth mentioning that a design pattern taken into account in this modularization was [Using SKOS Concept](http://ontologydesignpatterns.org/wiki/Community:Using_SKOS_Concept).
+
 
 
 ### 4.1. Geopolitical entities
@@ -268,61 +270,15 @@ It also includes a limited sample of subdivisions (schools, faculties, centres) 
 
 ### 4.5. Human resources from national university systems
 
-A very complex issue to address among national university systems is human resources, specially those belonging to academia. Spain, for instance, shows a wide variety of positions that can be even wider when considering also some peculiarities at regional level. There are very specific cases in Andalusia, Catalonia or the Basque country.
+A very complex issue to address among national university systems is human resources, specially those belonging to academia. Spain, for instance, shows a wide variety of positions that can be even wider when considering also some peculiarities at regional level. There are very specific cases in Andalusia, Catalonia, Galicia or the Basque country.
 
 Those Spanish regional peculiarities are specified in this vertical module by means of the property `asio:geodivision`, which maps the resource to our geopolitical vertical module. This way, when no specific geodivision of a country is attached to an academic position, its generality at the national level is understood. However, when a position is specific to some Autonomous Community of Spain, property `asio:geodivision` specifies it.
-
-Let's have a look at an example: 
-
-```turtle
-asioModules:ES_UNIVERSITY_HR_ESLPC
-      a       owl:NamedIndividual , asio:Role , skos:Concept ;
-      rdfs:label "Profesor catedrático laboral"@es ;
-      asio:country euCountry:ESP ;
-      asio:geoDivision asioModules:ES_DIVISION_LEVEL_1_ES_CT ;
-      asio:hasCode asioModules:ES_UNIVERSITY_HR_CODE_ESLPC ;
-      skos:inScheme asioModules:ESUniversityHumanResourcesList ;
-      skos:notation "ESLPC" ;
-      skos:prefLabel "Profesor catedrático laboral"@es , "Profesor catedrático laboral"@gl , "Profesor catedráticu llaboral"@ast , "Professor catedràtic laboral"@ca .
-```
-
-As we can see, the position "Professor catedràtic laboral" is specified for just Catalonia, as Carreras i Barnés (2012) told us and in the vertical module it comes pointed out through the code line `asio:geoDivision asioModules:ES_DIVISION_LEVEL_1_ES_CT ;`, linking directly to the Autonomous Community of Catalonia in our geopolitical vertical module.
-
-Similar examples, such as the Basque positions *Ivef* and *Nautical* *professors* are delimited in the same way.
 
 On the other hand, equivalent datasets are provided for the case of academic positions in Portugal and the United Kingdom. Portugal has dramatically streamlined the variety of university positions in a very efficient way, as its [Estatuto da carreira docente universitária](https://fne.pt/uploads/documentos/1433262954_9365_ECDU_versao_consolidada.pdf) explains and no complex diversity as the Spanish one is found there.
 
 As far as the UK dataset is concerned, it is limited to the [generality of the universities](https://web.archive.org/web/20181010061700/http://www.impacte.eu/system/files/%5Bsite%3Acurrent-group%5D/uk.pdf) and does not include the Oxford positions, sometimes very specific.
 
-Some rudimentary mappings are provided between academic positions belonging to different countries  to test the model and illustrate the procedure to do so. Obviously, establishing these mappings is not a trivial task, and experts in human resources familiar with the divers university systems would be the best candidates for that. However, 
-
-An example of a mapping inclusion between a Spanish position and a Portuguese is the following:
-
-```turtle
-asioModules:ES_UNIVERSITY_HR_ESPLEM
-      a       owl:NamedIndividual , asio:Role , skos:Concept ;
-      rdfs:label "Profesor emérito"@es ;
-      asio:country euCountry:ESP ;
-      asio:hasCode asioModules:ES_UNIVERSITY_HR_CODE_ESPLEM ;
-      skos:inScheme asioModules:ESUniversityHumanResourcesList ;
-      skos:closeMatch asioModules:PT_UNIVERSITY_HR_PTPEM ;
-      skos:notation "ESPLEM" ;
-      skos:prefLabel "Profesor emérito"@es , "Profesor emérito"@gl , "Profesor eméritu"@ast , "Irakasle emeritua"@eu , "Professor emèrit"@ca .
-```
-
-where the SKOS property `skos:closeMatch` indicates the conceptual proximity of *professors emeriti* from Spain and Portugal. We did not dare to use `skos:exactMatch` without being HR experts.
-
-A similar mapping is provided as far as the code is concerned:
-
-```turtle
-asioModules:ES_UNIVERSITY_HR_CODE_ESPLEM
-      a       skos:Concept ;
-      rdfs:label "ESPLEM" ;
-      asio:codeOf asioModules:ES_UNIVERSITY_HR_ESPLEM ;
-      skos:closeMatch asioModules:PT_UNIVERSITY_HR_CODE_PTPEM ;
-      skos:inScheme asioModules:ESUniversityHumanResourcesCodesList ;
-      skos:prefLabel "ESPLEM" .
-```
+Some rudimentary mappings are provided between academic positions belonging to different countries  to test the model and illustrate the procedure to do so. Obviously, establishing these mappings is not a trivial task, and experts in human resources familiar with the divers university systems would be the best candidates for that. 
 
 A final note must be added regarding these HRs vertical modules. The type of each of these positions is established as instances of the class `skos:Concept` but also as instances of the class `asio:Role`. This way a conciliation between core instances and an independent, semi-autonomous ontological vertical module (which can be easily unplugged and recycled if necessary) is obtained. Although not used, we took into account the ontology design pattern [AcademicRoles](http://ontologydesignpatterns.org/wiki/Community:AcademicRoles).
 
@@ -340,17 +296,6 @@ The implementation of this vertical module will be also carried out using SKOS-C
 
 However, with the implementation of the third merged ontology, this specific vertical stopped being relevant, as other solutions were proposed there.
 
-### 4.7. Vertical modules and customization
-
-The bet on SKOS as main solution for these vertical modules (instead of focusing on other models less *accepted* standard-wise, as the well-know vocabulary [Lemon](https://lemon-model.net)) has to do with customization.
-
-The ontological model proposed here leaves all the customizable parts of the ontology specifically within these vertical modules so stakeholders can adapt or add part of their *reality* in an easier way.
-
-Modifying and maintaining an ontology is not something simple or trivial, the consequences of a modification can dramatically affect the whole model ruining it. That is why in this proposal those ad-hoc modifications are limited to these vertical modules, so the core ontology remains always intact or at the mercy of just ontology engineers.
-
-With a structured model such as the one provided by SKOS, the inclusions of new concepts can be carried out in a more safe way and using a SKOS editor can be easily made by stakeholders.
-
-Finally, it is worth mentioning that a design pattern taken into account in this modularization was [Using SKOS Concept](http://ontologydesignpatterns.org/wiki/Community:Using_SKOS_Concept).
 
 
 
