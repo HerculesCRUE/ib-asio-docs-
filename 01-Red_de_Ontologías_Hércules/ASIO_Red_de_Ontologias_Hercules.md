@@ -204,7 +204,7 @@ As far as the **vertical modules** are concerned another five final candidates a
 - Spanish universities
 - human resources from some national university systems (Spain, Portugal and others)
 
-An extra vertical module, called *Spain's university staffing*, is currently located within the core ontology as instances of the class `asio:Role`, but it is currently being migrated as an independent vertical module, so other equivalent university staffing from other countries can be plugged in an easier way by replicating the provided framework and populating it with the reality of, for instance, Portugal's university staffing or France's.
+An extra vertical module, called *Spain's university staffing*, is located within the core ontology as instances of the class `asio:Role`, but also replciated as an independent vertical module, so other equivalent university staffing from other countries can be plugged in an easier way by replicating the provided framework and populating it with the reality of, for instance, Portugal's university staffing or France's.
 
 On the other hand, the vertical modules are the ideal playground for testing multilingualism and multiscriptalism, as, just as an example, the geopolitical module is fully multilingual (as well as *mutilocale* and *multiscriptalist*).
 
@@ -212,13 +212,13 @@ On the other hand, the vertical modules are the ideal playground for testing mul
 
 ### 4.1. Geopolitical entities
 
-As we mentioned at the beginning of this document, the more advanced vertical module so far, already released in an early version, is the geopolitical one. It currently covers the full list of countries and the geopolitical subdivisions of:
+This vertical module covers the full list of countries and the geopolitical subdivisions of:
 
-- Andorra: implementing just the first-level subdivisions (*parròquies*)
+- Andorra: implementing just the first-level subdivisions (*parròquies*).
+- France: implementing just the first and second subdivisions (*régions* and *départements*).
 - Portugal: implementing both the first (*distritos e regiões*) and the second-level (*municípios*) subdivisions.
-- Spain: covering the first (*comunidades autónomas*) and the second (*provincias*). The third-level subdivisions (*municipios*) are already implemented and ready to be plugged in but have not being added yet.
+- Spain: covering the first (*comunidades autónomas*), the second (*provincias*) and the third-level subdivisions (*municipios*).
 
-At the moment of this writing France and its subdivisions (*régions* and *départements*) are being transformed and is expected to be released in the next weeks, linked to the other datasets.
 
 SKOS-Core was also chosen to model a clearly hierarchical domain and the dataset is massively enriched multilingually and ponderously linked to relevant national and international vocabularies. 
 
@@ -228,7 +228,6 @@ The main goal of this vertical module, which is in a way also transversal, is to
 
 ### 4.2. Scientific domains
 
-**Note** that this vertical module is being implemented at the moment and it is not included in this release but, as it is already designed, we include already documentation about it. The transformation of the tabular data will be carried out in the next weeks so to be *plugged in* as vertical module, similarly to the geopolitical one.
 
 #### 4.2.1 Prolegomena
 
