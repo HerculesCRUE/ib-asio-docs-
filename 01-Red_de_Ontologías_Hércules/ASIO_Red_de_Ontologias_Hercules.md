@@ -187,7 +187,7 @@ To do so, the second file ([asio-mappings.ttl](asio-mappings.ttl)) gathers toget
 
 The same applies to relevant properties belonging to concurrent vocabularies, which are being mapped in this file using `owl:equivalentProperty`.
 
-More details about these alignments, carried out following consolidated recommendations (Vandenbussche et al.: 2014), will be provided in more consolidated documentation to be generated soon, but right now it suffices to access the file using a source code editor and have a look at the large list of equivalences, chiefly focusing on concomitant vocabularies such as CERIF, VIVO or the SPAR family of ontologies but also going beyond these ones.
+These alignments were carried out following consolidated recommendations (Vandenbussche et al.: 2014) and to check them in more detail it suffices to access the file using a source code editor and have a look at the large list of equivalences, chiefly focusing on concomitant vocabularies such as CERIF, VIVO or the SPAR family of ontologies but also going beyond these ones.
 
 In addition to these external mappings, the file also contains some *inner* ones. An example of this would be the human resources from some university national systems included in the corresponding vertical modules. The mappings are still state-of-the-art ones as studying and comparing the academic reality of new countries demands a thorough analysis that was not within the reach of this first milestone of the project. However, mappings between academic positions from Spain and Portugal are provided and also matching positions available in the VIVO ontology. As exact matches for these positions are difficult to provide, even among similar countries such as Spain and Portugal, most of the samples exploit the SKOS property `skos:closeMatch`.
 
@@ -238,7 +238,7 @@ The [Spain's Ministry of Science, Innovation and Universities](http://www.cienci
 
 After a thorough analysis of that document, a clear hierarchical structure of domains and subdomains was identified and it was deemed as seamlessly fitting a thesaurus-like structure and hence suitable to be ontologically transformed using the W3C's standard for controlled vocabularies: [SKOS-Core](https://www.w3.org/TR/swbp-skos-core-spec/).
 
-SKOS-Core is not just the most appropriate solution for such a document featuring a level-structure thesaurus-like fully exploiting its classes `skos:Concept` (for *agglutinating* concepts) and `skos:ConceptScheme` (in order to arrange concepts *knitting* them together into schemes of concepts), but it also provides means to include models densely multilingual, as checkable with some European thesauri such as [GEMET](https://www.eionet.europa.eu/gemet/en/about/) or [EuroVoc](https://data.europa.eu/euodp/en/data/dataset/eurovoc).
+SKOS-Core is not just the most appropriate solution for such a document featuring a level-structure thesaurus-like fully exploiting its classes `skos:Concept` (for *agglutinating* concepts) and `skos:ConceptScheme` (in order to arrange concepts *knitting* them together into schemes of concepts), but it also provides means to include models densely multilingual, as checkable with some European thesauri such as [GEMET](https://www.eionet.europa.eu/gemet/en/about/) or [EuroVoc](https://eur-lex.europa.eu/browse/eurovoc.html).
 
 #### 4.2.3. Added value
 
@@ -253,7 +253,7 @@ An graphical example of the preprocessed file corresponding to the first-level o
 
 where still in a tabular format we can check out a first column with codes that will be used in the opaque URIs of the concepts and the encompassing multilingual labels in Aragonese, Asturian, Catalan, English, Spanish, Extremaduran, Basque, French, Galician, Occitan, Portuguese, phonetic transcription of Spanish according to the Spain locale, phonetic transcription of English according to the British locale and phonetic transcription of English according to the General American locale.
 
-In addition to the ontological possibilities offered by SKOS (which is itself an ad hoc ontology) with respect to the ASIO core ontology, these mentioned multilingual labels provide idoneous raw materials to carry out extensively testing with respect to multilingualism, as detailed in the previous section and in a complementary deliverable (*ModeloMultilinguismo*).
+In addition to the ontological possibilities offered by SKOS (which is itself an ad hoc ontology) with respect to the ASIO core ontology, these mentioned multilingual labels provide idoneous raw materials to carry out extensively testing with respect to multilingualism, as detailed in the previous section and in a complementary deliverable on multilingualism.
 
 ### 4.3 Subject areas
 The same exploitation have been used to created the related vertical module Subject areas, from the same [State Research Agency](http://www.ciencia.gob.es/portal/site/MICINN/menuitem.8d78849a34f1cd28d0c9d910026041a0/?vgnextoid=664cfb7e04195510VgnVCM1000001d04140aRCRD), which is used for slightly different cases with the core ontology, but which was modeled equally following the schema provided by SKOS.
@@ -333,15 +333,17 @@ Finally, it is worth mentioning that there is a property `asio:referenceLaw` spe
 
 
 
-### 4.6. Other vertical modules being currently implemented
+### 4.6. Other vertical modules considered
 
-At the moment of this writing, we are studying the inclusion of more vertical modules. One candidate for milestone 2 could be *Spanish administrative entities*.
+Other vertical modules were also considered. One candidate was *Spanish administrative entities*.
 This would be implemented to encompass all the relevant entities belonging to Spain's *administración autonómica* related to the geopolitical subdivisions of the previous vertical module, to which they are going to be seamlessly linked.
 The implementation of this vertical module will be also carried out using SKOS-Core as it shows a clear hierarchical structure and it will include the first-level bodies of *administración autonómica* (*conserjerías*), as available at Spain's administration portal [[1]](https://administracion.gob.es/pagFront/espanaAdmon/directorioOrganigramas/comunidadesAutonomas/comunidadesAutonomas.htm?idCCAA=14), and the second-level [[2]](https://administracion.gob.es/pagFront/espanaAdmon/directorioOrganigramas/fichaUnidadOrganica.htm?idUnidOrganica=123276&origenUO=comunidadesAutonomas&volver=comunidadesAutonomas&idCCAA=14), mainly *direcciones generales* and *consorcios*.
 
+However, with the implementation of the third merged ontology, this specific vertical stopped being relevant, as other solutions were proposed there.
+
 ### 4.7. Vertical modules and customization
 
-The bet on SKOS as main solution for these vertical modules (instead of focusing on other models less *accepted* standard-wise, as the aforementioned Lemon) has to do with customization.
+The bet on SKOS as main solution for these vertical modules (instead of focusing on other models less *accepted* standard-wise, as the well-know vocabulary [Lemon](https://lemon-model.net)) has to do with customization.
 
 The ontological model proposed here leaves all the customizable parts of the ontology specifically within these vertical modules so stakeholders can adapt or add part of their *reality* in an easier way.
 
