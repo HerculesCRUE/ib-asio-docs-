@@ -112,7 +112,7 @@ In this example, an instance of the class *asio:Patent*, the "SELF-GENERATING AU
 and also to a patent assignee, in this case the company Robocoder Corporation.
 On the other hand, any patent has always a patent number, a patent application number, a date, a nationality, etc.
 
-As we already aforementioned, we are currently studying the segmentation of the core ontology into horizontal modules and it is precisely the part involving patents a clear candidate to integrate an *ad hoc* horizontal module, given its autonomous nature. Other theme areas show as well some topic independence, and in future releases of the core, these areas will be *severed* and separate.
+At some momento it was analysed the possibility of segmentatiing the core ontology into other horizontal modules and it was precisely the part involving patents a clear candidate to integrate an *ad hoc* horizontal module, given its autonomous nature. Finally it was decided to leave them within the core ontology.
 
 
 
@@ -130,13 +130,13 @@ These two vocabularies are used by the ASIO ontology to relate the core ontology
 
 The **technology readiness levels (TRLs)**, initially developed at NASA during the 1970s and from there included by the European Commission's EU Horizon 2020 program (Mihaly, 2017), are a method for estimating the maturity of technologies during the acquisition phase of a program. They condition therefore any European project proposal and development and are currently a critical factor for research projects. The ASIO ontology takes advantage of this mini-ontology part of the SWEET ontology family by importing it. The SWEET [HTR](https://esipfed.github.io/stc/sweet_lode/humanTechReadiness.html) ontology is mapped to the ASIO ontology through the property `asio:hasTRL`.
 
-We can consider a temporary and sui generis semi-importation the usage of some classes and object properties belonging to the [ORKG ontology](https://gitlab.com/TIBHannover/orkg/orkg-ontology/-/blob/master/orkg-core.ttl) that we included in the core ontology, all of them having to do with research. These entities are included as a first approach in order to enable a collaboration with the people responsible for that vocabulary, with whom we are in contact.
+We can consider a temporary and sui generis semi-importation the usage of some classes and object properties belonging to the [ORKG ontology](https://gitlab.com/TIBHannover/orkg/orkg-ontology/-/blob/master/orkg-core.ttl) that we included in the core ontology, all of them having to do with research.
 
 
 
 ### 2.4. Multilingualism in the core ontology
 
-The entire list of classes in the core ontology is enriched multilingually via the data property `rdfs:label` and, besides the two obvious working languages (English, Spanish), three more languages are included: Catalan, French and Portuguese, as corresponding to the three other countries that we take into account in addition to Spain for geographically modelling our domain: Andorra, France and Portugal.
+The entire list of classes in the core ontology is enriched multilingually via the data property `rdfs:label` and, besides the two obvious working languages (English, Spanish), three more languages are included: Catalan, French and Portuguese, as corresponding to the three other countries that we take into account in addition to Spain for geographically modelling our domain: Andorra, France and Portugal. Whenever it was possible, labels in Basque and in Galician were also added to enrich the model.
 
 The motivation of this choice is, on the one hand, geopolitical, as Catalan, French and Portuguese are languages in contact with Spanish through land borders (Andorra, France, Portugal) and, on the other hand, practical, as those three languages are more or less mastered by members of the development team, something that ensures a *direct* multilingual treatment. Note that Catalan is also a co-official language in some Autonomous Communities of Spain.
 
@@ -377,13 +377,15 @@ Vandenbussche, P.; Atemezing, G.; Poveda-Villalón, M.; Vatant, B. (2014). *Pier
 This annex provides a list of the competence questions provided by the University of Murcia and the current responses for them by the ASIO ontology.
 For each one it is included links to the issue where it was discussed and solved the answer and also to query (sometimes multiple ones) to finally solved the competence question.
 
+*Note* that the competence questions were provided in Spanish and we leave them in that language here even if the rest of the document is in English.
+
 ### General questions
 
 | Competence question                                          | Comment                                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | CQ01. Como usuario requiero obtener un listado de los centros/estructuras de investigación que trabajan en un área/disciplina específica. | [issue](https://github.com/weso/hercules-ontology/issues/9), [query1](https://tinyurl.com/ycalwrym) & [query2](https://tinyurl.com/yanx4dhq) |
 | CQ02. Como usuario requiero obtener un listado de los investigadores de un centro/estructura de investigación de un área/disciplina específica. Este listado podrá filtrarse según el tipo de investigador ya sea docente, personal investigador en formación, etc. | [issue](https://github.com/weso/hercules-ontology/issues/11) & [query](https://tinyurl.com/yal7vbhs) |
-| CQ03. Como usuario requiero obtener el Top 10 (o el número que se considere relevante pues será parametrizable) de los investigadores de un centro/estructura de investigación ordenados por el número de citas, número de publicaciones, h-index, etc. en un área/disciplina específica. [*As a user I would like to obtain the Top 10 (or any relevant number, as this would be a parameter) research centers/strutures who have quality seals associated, such as the Severo Ochoa seal*.] | [issue](https://github.com/weso/hercules-ontology/issues/10), [query1](https://tinyurl.com/y7z7dkvx) & [query2](https://tinyurl.com/y7t2gq79) |
+| CQ03. Como usuario requiero obtener el Top 10 (o el número que se considere relevante pues será parametrizable) de los investigadores de un centro/estructura de investigación ordenados por el número de citas, número de publicaciones, h-index, etc. en un área/disciplina específica. | [issue](https://github.com/weso/hercules-ontology/issues/10), [query1](https://tinyurl.com/y7z7dkvx) & [query2](https://tinyurl.com/y7t2gq79) |
 | CQ04. Como usuario requiero obtener el Top 10 (o el número que se considere relevante pues será parametrizable) de centros/estructuras de investigación que posean sellos de calidad asociados, por ejemplo: el sello Severo Ochoa. | [issue](https://github.com/weso/hercules-ontology/issues/16), [query1](https://tinyurl.com/st6zmg7) & [query2](https://tinyurl.com/t872gck) |
 | CQ05. Como usuario requiero obtener un listado de los centros/estructuras de investigación que hayan realizado proyectos H2020 y/o proyectos del Plan Estatal. | [issue](https://github.com/weso/hercules-ontology/issues/12) & [query](https://tinyurl.com/ybslb9ks) |
 | CQ06. Como usuario requiero obtener un listado de la producción científica en un determinado rango de fechas de un centro/estructura de investigación en un área/disciplina. Para cada resultado se incluirán algunos metadatos importantes de la producción como, por ejemplo, DOI, año de publicación, etc. | [issue](https://github.com/weso/hercules-ontology/issues/17) & [query](https://tinyurl.com/y7bb7g54) |
