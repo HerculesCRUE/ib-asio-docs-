@@ -24,7 +24,7 @@ Como veremos más adelante, el modelo propuesto trata de minimizar los cambios d
 
 ## 2. Módulos verticales y *personalización*
 
-La apuesta por [SKOS](https://www.w3.org/TR/swbp-skos-core-spec/) como solución principal para los módulos verticales, en lugar de centrarnos en otras propuestas menos estandarizadas, como, por ejemplo, el modelo [Lemon](https://lemon-model.net/) que mencionábamos en el documento de la red de ontologías, tiene que ver precisamente con la personalización (*customisation*) de determinadas áreas del dominio formalizado.
+La apuesta por [SKOS](https://www.w3.org/TR/swbp-skos-core-spec/) como solución principal para los módulos verticales tiene que ver precisamente con la personalización (*customisation*) de determinadas áreas del dominio formalizado.
 
 El modelo ontológico propuesto trata de limitar por tanto las partes personalizables de la ontología a los módulos verticales de manera que los *stakeholders* puedan adaptar o añadir parte de su *realidad* allí de una manera más sencilla y controlada.
 
