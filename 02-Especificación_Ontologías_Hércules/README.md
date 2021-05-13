@@ -3,28 +3,28 @@
 | Entregable                       | Especificación de las ontologías Hércules                    |
 | -------------------------------- | ------------------------------------------------------------ |
 | Fecha                            | 03/05/2021                                                   |
-| Revisado por                     | Paloma Terán Pérez                                           |
+| Revisado por                     | Paloma Terán Pérez, Emilio Rubiera Azcona                                           |
 | Proyecto                         | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
 | Módulo                           | Infraestructura Ontológica                                   |
 | Tipo                             | Entregable complementario a la documentación de la ontología, que se encuentra en la carpeta [Red de ontologías Hércules](../01-Red_de_Ontologías_Hércules). |
 | Objetivo                         | Documento donde se explica la aproximación para especificar, personalizando, las partes de la red de ontologías Hércules según los intereses del *stakeholder* en cuestión. |
-| Estado                           | **80%**. Se contemplaba un desarrollo de las ontologías del 80% para el hito 1 de proyecto y se considera alcanzado. |
-| Próximos pasos                   | Para el hito 2 se contempla continuar el desarrollo del 20% restante de las ontologías por medio del añadido de más módulos verticales que contemplen otras realidades más allá de las preguntas de competencia proporcionadas para el hito 1 y de acuerdo a los datasets proporcionados por la Universidad de Murcia y otros casos que se juzguen idóneos (Universidad de Oviedo u otras). |
+| Estado                           | **100%**.                                                    |
+| Próximos pasos                   |                                                              |
 | Repositorio de software asociado | El espacio de trabajo de las ontologías Hércules es accesible [aquí](https://github.com/HerculesCRUE/ib-hercules-ontology). |
 
 
 
 # Especificación de las ontologías Hércules
 
-## 1. introducción
+## 1. Introducción
 
 Este documento describe el modelo propuesto para proceso de especificación/personalización de las ontologías Hércules. Una de las principales preocupaciones a la hora de diseñar ontologías es su ciclo vital, incluyendo modificaciones que adapten el modelo ontológico a nuevas *realidades* del dominio. La modificación o añadido de entidades a una ontología no es algo trivial y debe ser llevado a cabo con un meticuloso análisis previo.
 
 Como veremos más adelante, el modelo propuesto trata de minimizar los cambios del *core* ontológico y de marginar estos al máximo a los módulos verticales.
 
-## 2. módulos verticales y *personalización*
+## 2. Módulos verticales y *personalización*
 
-La apuesta por [SKOS](https://www.w3.org/TR/swbp-skos-core-spec/) como solución principal para los módulos verticales, en lugar de centrarnos en otras propuestas menos estandarizadas, como, por ejemplo, el modelo [Lemon](https://lemon-model.net/) que mencionábamos en el documento de la red de ontologías, tiene que ver precisamente con la personalización (*customisation*) de determinadas áreas del dominio formalizado.
+La apuesta por [SKOS](https://www.w3.org/TR/swbp-skos-core-spec/) como solución principal para los módulos verticales tiene que ver precisamente con la personalización (*customisation*) de determinadas áreas del dominio formalizado.
 
 El modelo ontológico propuesto trata de limitar por tanto las partes personalizables de la ontología a los módulos verticales de manera que los *stakeholders* puedan adaptar o añadir parte de su *realidad* allí de una manera más sencilla y controlada.
 
@@ -38,7 +38,7 @@ Además, el uso de SKOS podría traer aparejado un editor que facilitaría la ta
 
 Finalmente, cabe decir que en el diseño de esta modularización se tuvo en cuenta el patrón de diseño [Using SKOS Concept](http://ontologydesignpatterns.org/wiki/Community:Using_SKOS_Concept).
 
-## 3. un ejemplo de especificación: recursos humanos universitarios
+## 3. Un ejemplo de especificación: recursos humanos universitarios
 
 En el módulo vertical de *recursos humanos universitarios* se proporcionaban ya algunos ejemplos de especificación de figuras profesorales provenientes de diversas realidades nacionales y regionales. Recuperémoslas de nuevo aquí con fines ilustrativos.
 
@@ -108,7 +108,7 @@ Estos individuos se incluyen actualmente en los módulos de RRHH pero no se desc
 
 Finalmente, cabe mencionar también que la propiedad `asio:referenceLaw` se utiliza específicamente para enlazar una figura de RRHH con su correspondiente legislación.
 
-## 4. conclusiones
+## 4. Conclusiones
 
 El documento presenta la solución propuesta de especificación de la ontología por medio de los módulos verticales como detentores de la realidad de los *stakeholders* y proporciona ejemplos de cómo llevar a cabo esa especificación por medio de ejemplos reales ya incluidos en el modelo ontológico.
 
@@ -119,7 +119,7 @@ Las correspondencias entre entidades para facilitar la especificación de las po
 
 
 
-## 5. referencias
+## 5. Referencias
 
 Carreras i Barnés, J. (2012). Avaluació de la qualitat docent i promoció del professorat. Legislació universitària espanyola: modificació de la Llei Orgànica d'Universitats. Professorat contractat permanent (2004-2008). *Temps d’Educació*, 42, p. 201-232. Universitat de Barcelona.
 
