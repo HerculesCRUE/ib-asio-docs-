@@ -326,6 +326,8 @@ For each one it is included links to the issue where it was discussed and solved
 
 ***Note 2*** queries for CQ13 and CQ14 are just presented as 'sheer queries' and do not implement insertions and/or updates.
 
+***Note 3*** whenever there is syntax error when introducing a query a Java exception is thrown. This functionality is provided by Wikibase and it is the expected output. Furthermore, the query it self shows the syntax error and provides and provides hints on how to fix it. 
+
 ### General questions
 
 | Competence question                                          | Comment                                                      |
