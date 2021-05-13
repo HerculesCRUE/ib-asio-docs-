@@ -322,7 +322,9 @@ Vandenbussche, P.; Atemezing, G.; Poveda-Villalón, M.; Vatant, B. (2014). *Pier
 This annex provides a list of the competence questions provided by the University of Murcia and the current responses for them by the ASIO ontology.
 For each one it is included links to the issue where it was discussed and solved the answer and also to query (sometimes multiple ones) to finally solved the competence question.
 
-*Note* that the competence questions were provided in Spanish and we leave them in that language here even if the rest of the document is in English.
+***Note 1*** that the competence questions were provided in Spanish and we leave them in that language here even if the rest of the document is in English.
+
+***Note 2*** queries for CQ13 and CQ14 are just presented as 'sheer queries' and do not implement insertions and/or updates.
 
 ### General questions
 
