@@ -4,13 +4,14 @@
 
 | Entregable     | Conversión de recursos a OWL                                 |
 | -------------- | ------------------------------------------------------------ |
-| Fecha          | 03/09/2020                                                   |
+| Fecha          | 03/09/2020                                          |
+| Revisado por   | Emilio Rubiera Azcona 03/05/2021                             |
 | Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
 | Módulo         | Infraestructura Ontológica                                   |
 | Tipo           | Documento                                                    |
 | Objetivo       | Este documento enumera las herramientas consideradas para la conversión de recursos a OWL y describe el candidato utilizado para este primer hito. |
-| Estado         | **100%** El estado del documento se ajusta al 100% comprometido para el hito 1 del proyecto, si bien se contempla la utilización de otras herramientas para el hito 2. |
-| Próximos pasos | La utilización de otras herramientas para estos mismos fines con vistas al hito 2, se documentará debidamente. |
+| Estado         | **100%** |
+| Próximos pasos | |
 
 
 
@@ -22,19 +23,19 @@ Este documento enumera las herramientas consideradas y utilizadas para la conver
 Con el fin de convertir a formatos semánticos recursos interesantes de ser incluídos en la ontología, sobre todo vocabularios cuyas fuentes venían en formatos desestructurados, se llevó a cabo una búsqueda de herramientas que facilitaran la labor.
 
 ## Herramientas consideradas
-El equipo de desarrollo ya conocía algunas herramientas candidatas, desarrolladas con la participación de  miembros del grupo de investigación WESO.
+El equipo de desarrollo ya conocía algunas herramientas candidatas, desarrolladas con la participación de miembros del grupo de investigación WESO.
 
 La primera de ellas, [ShExML](http://shexml.herminiogarcia.com/), explota Shape Expressions Mapping Language, un lenguaje heterogéneo para el mapeo de datos basado en Shape Expressions (ShEx), cuyo objetivo es permitir a usuarios mapear y conglomerar fuentes de datos heterogéneas en un medio de representación unificado en RDF.
 
-Sin embargo, para esta fase inicial del proyecto se desestimó el uso de esta herramienta debido al formato de partida de muchos de los recursos propuestos por el cliente y la urgencia en su conversión.
+Sin embargo, en la fase inicial del proyecto se desestimó el uso de esta herramienta debido al formato de partida de muchos de los recursos propuestos por el cliente y la urgencia en su conversión.
 
 Otra posibilidad que se valoró fue [Open Refine](https://openrefine.org/) con la que también se contaba con alguna familiaridad.
 
-La tercera herramienta considerada, [Tablines](https://bitbucket.org/alfonso_noriega/tablines/src/default/), fue originalmente desarrollada en la Fundación CTIC, en Asturias, con la participación de uno de los integrantes actuales del grupo WESO, y fue la que finalmente se utilizó en el hito 1 del proyecto, sobre todo por el conocimiento del lenguaje necesario para crear los programas de transformación de ese integrante del equipo.
+La tercera herramienta considerada, [Tablines](https://github.com/weso/tablines), fue originalmente desarrollada en la Fundación CTIC, en Asturias, con la participación de uno de los integrantes actuales del grupo WESO, y fue la que finalmente se utilizó en el hito 1 del proyecto, sobre todo por el conocimiento del lenguaje necesario para crear los programas de transformación de ese integrante del equipo.
 
-Sin embargo, esta decisión de utilizar Tablines se limita únicamente al primer hito del proyecto debido a la contingencia de los compromisos intermedios de evaluación.
+Sin embargo, esta decisión de utilizar Tablines se limitó únicamente al primer hito del proyecto debido a la contingencia de los compromisos intermedios de evaluación.
 
-Para la continuación del proyecto la apuesta sigue siendo ShExML una herramienta propia del equipo.
+Para la continuación del proyecto la apuesta siguió siendo ShExML una herramienta totalmente desarrollada por el equipo, si bien las condiciones originadas por la fusión de las ontologías de ambos equipos hicieron que no fuera necesaria la conversión de más recursos a OWL.
 
 
 
@@ -102,7 +103,7 @@ FOR ?rowId IN rows
     ...
 ```
 
-
+Estos programas de transformación se encuentran enlazados en el repositorio dentro del fichero README que acompaña a este entregable.
 
 El resultado final es el módulo vertical subject areas, que se utiliza para asignar a una propuesta de proyecto el área de investigación exigida por el ministerio.
 
@@ -116,11 +117,13 @@ La carga de estos datos se realiza por medio de los módulos verticales de la on
 
 ## Herramientas a utilizar en el hito 2 del proyecto
 
-Para el hito 2 del proyecto se desestima la utilización de Tablines, debido a la falta de mantenimiento de la herramienta, y se optará por priorizar el uso de [Open Refine](https://openrefine.org/) como útil principal y de [ShExML](http://shexml.herminiogarcia.com/) como alternativa secundaria para casos específicos de formatos.
+Para el hito 2 del proyecto en principio se desestimó la utilización de Tablines, debido a la falta de mantenimiento de la herramienta, y se optó por priorizar el uso de [Open Refine](https://openrefine.org/) como útil principal y de [ShExML](http://shexml.herminiogarcia.com/) como alternativa secundaria para casos específicos de formatos.
 
-La decisión de priorizar Open Refine se basa en su status como proyecto en continuo desarrollo, en la multiplicidad de formatos que acepta como *input* y en las interesantes extensiones que se van desarrollando dentro de su ecosistema.
+La decisión de priorizar Open Refine se basó en su status como proyecto en continuo desarrollo, en la multiplicidad de formatos que acepta como *input* y en las interesantes extensiones que se van desarrollando dentro de su ecosistema.
 
 Por ejemplo, una de estas [extensiones](https://github.com/FAIRDataTeam/OpenRefine-metadata-extension), desarrollada por el [FAIRDataTeam](https://github.com/FAIRDataTeam/OpenRefine-metadata-extension/graphs/contributors), proporciona soporte de metadatos, de acuerdo con FAIR, a los datasets generados por medio del [FAIR Data Point](https://github.com/FAIRDataTeam/FAIRDataPoint) (metadata storage).
 
-Por otro lado, la herramienta desarrollada en WESO [ShExML](http://shexml.herminiogarcia.com/) puede considerarse equivalente y en muchos casos, como el de la conversión de datos tabulares en RDF, más sencilla de utilizar. Además, las posibilidades de conversión de XML a RDF también resultan interesantes para el hito 2.
+Por otro lado, la herramienta desarrollada en WESO [ShExML](http://shexml.herminiogarcia.com/) puede considerarse equivalente y en muchos casos, como el de la conversión de datos tabulares en RDF, más sencilla de utilizar. Además, las posibilidades de conversión de XML a RDF también resultaron inicialmente interesantes para el hito 2.
+
+Sin embargo, dado el devenir en el desarrollo de la tercera ontología, en colaboración el otro equipo, finalmente no resultó necesaria la conversión de más recursos a formato OWL: la fusión de ambas ontologías aseguró un modelo de dominio común y por otro lado, la generación de datos de validación para poner a prueba la ontología corrió a cargo de la empresa que llevó a cabo tal fusión.
 
