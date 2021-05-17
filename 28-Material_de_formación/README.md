@@ -135,5 +135,5 @@ En el siguiente enlace se podrán localizar todas las sesiones de formación en 
 
 
 
-También puede resultar interesante el Manual de [Usuario de la aplicación](../00-Análisis/Manual%20de%20usuario/Manual%20de%20usuario.md).
+También puede resultar interesante el [Manual de Usuario de la aplicación](../00-Análisis/Manual%20de%20usuario/Manual%20de%20usuario.md).
 
