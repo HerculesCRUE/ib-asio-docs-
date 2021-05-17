@@ -33,6 +33,8 @@
 
 [4. Wikibase](#wikibase)
 
+[5. Pantallas](#pantallas)
+
 
 
 
@@ -204,3 +206,14 @@ WHERE
 
 
 Para más información sobre como manejar Wikibase se puede consultar la guía de [Wikidata](https://www.wikidata.org/wiki/Help:Contents).
+
+
+
+
+
+# Pantallas
+
+
+
+Se puede encontrar información sobre las pantallas realizadas en el documento ["Categorías - pantallas reales.md"](../Diseño%20de%20pantallas/Categorías%20-%20pantallas%20reales.md)
+
