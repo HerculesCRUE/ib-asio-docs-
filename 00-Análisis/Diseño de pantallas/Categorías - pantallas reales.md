@@ -2,12 +2,16 @@
 
 
 
-| Fecha        | 29/04/2021                                                   |
-| ------------ | ------------------------------------------------------------ |
-| Revisado por | Paloma Terán Pérez                                           |
-| Módulo       | Pantallas reales                                             |
-| Tipo         | Documento                                                    |
-| Objetivo     | Documento con las pantallas reales realizadas a partir de los análisis |
+| Entregable     | Manual de uso Backend SGI                                    |
+| -------------- | ------------------------------------------------------------ |
+| Fecha          | 17/05/2021                                                   |
+| Revisado por   | Paloma Terán Pérez                                           |
+| Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
+| Módulo         | Manual de pantallas                                          |
+| Tipo           | Documento                                                    |
+| Objetivo       | Documento con uan guía visual de las pantallas desarrolladas y capturas de las pantallas reales en al aplicación front |
+| Estado         | **100%**                                                     |
+| Próximos pasos |                                                              |
 
 
 
