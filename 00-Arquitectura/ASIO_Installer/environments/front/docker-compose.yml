@@ -1,0 +1,122 @@
+version: "3.7"
+
+services:
+  # Trellis
+  trellis:
+    # image: umansioacr.azurecr.io/ldp/asio-ldp:1.0-SNAPSHOT-24
+    image: herculescrue/asio-ldp:1.0
+    restart: unless-stopped
+    ports:
+      - 8083:8080
+    expose:
+      - 8080
+    environment:
+      - ASIO_LDP_CONFIG_FILE=/opt/trellis/conf/config.yml
+      - JAVA_OPTS=-Dtrellis.webac.default-acl-location=org/trellisldp/webac/nonSecuredAcl.ttl
+    volumes:
+      - trellis_data:/opt/trellis/data
+      - ./trellis/config.yml:/opt/trellis/conf/config.yml
+      - ./trellis/users.auth:/opt/trellis/etc/users.auth
+    depends_on:
+      - keycloak
+    links:
+      - keycloak
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+      - "back.um.es:${BACK_HOST}"
+      - "db.um.es:${DB_HOST}"
+    networks:
+      - asionet
+
+  # Keycloak
+  keycloak:
+    image: quay.io/keycloak/keycloak:11.0.3
+    restart: unless-stopped
+    # ports:
+      # - "8080:8080"
+      # - "8787:8080"
+    expose:
+      - 8080
+    volumes:
+      - ./keycloak/keycloak-logo-text.png:/opt/jboss/keycloak/themes/keycloak/login/resources/img/keycloak-logo-text.png
+      - ./keycloak/login.css:/opt/jboss/keycloak/themes/keycloak/login/resources/css/login.css
+    environment:
+      - KEYCLOAK_USER=admin
+      - KEYCLOAK_PASSWORD=admin
+      - KEYCLOAK_CORS=true
+      - TZ=Europe/Madrid
+      # keycloak persistence configuration
+      - DB_VENDOR=mariadb
+      - DB_ADDR=db.um.es
+      - DB_DATABASE=keycloak
+      - DB_USER=keycloak
+      - DB_PASSWORD=uHkSyrvUsQD&
+      - JGROUPS_DISCOVERY_PROTOCOL=JDBC_PING
+      - JGROUPS_DISCOVERY_PROPERTIES=datasource_jndi_name=java:jboss/datasources/KeycloakDS,info_writer_sleep_time=500
+      # https support https://keycloak.discourse.group/t/keycloak-in-docker-behind-reverse-proxy/1195/11
+      - PROXY_ADDRESS_FORWARDING=true
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    extra_hosts:
+      - "linkeddata1test.um.es:172.19.0.1"
+      - "back.um.es:${BACK_HOST}"
+      - "db.um.es:${DB_HOST}"
+    networks:
+      - asionet
+
+  # web-publication-backend
+  web-publication-backend:
+    # image: umansioacr.azurecr.io/web-publication/web-publication-backend:1.0-SNAPSHOT-30
+    image: herculescrue/web-publication-backend:develop
+    restart: unless-stopped
+    environment:
+      - KEYCLOAK_AUTHSERVERURL=http://authld1test.um.es/auth
+      - APP_PERSISTENCE_DATASOURCE_USERNAME=umasio
+      - APP_PERSISTENCE_DATASOURCE_PASSWORD=R5HCUMtYwa7W
+      - APP_PERSISTENCE_DATASOURCE_URL=jdbc:mysql://db.um.es:3306/umasio?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&createDatabaseIfNotExist=true
+      - APP_PERSISTENCE_JPA_GENERATE_DDL=true
+    env_file:
+      - ./env/global.env
+      - ./env/global-api.env
+      - ./env/web-publication-backend.env
+    # ports:
+    #   - "8080:8080"
+    expose:
+      - "9321"
+      - "8080"
+    extra_hosts:
+      - "linkeddata1test.um.es:172.19.0.1"
+      - "back.um.es:${BACK_HOST}"
+      - "db.um.es:${DB_HOST}"
+    networks:
+      - asionet
+
+  # Web Publication Service
+  web-publication-service:
+    # image: umansioacr.azurecr.io/web-publication/web-publication-service:1.0.0-36
+    image: herculescrue/web-publication-service:develop
+    restart: unless-stopped
+    env_file:
+      - /env/global.env
+      - ./env/global-api.env
+      - ./env/web-publication-service.env
+      - ./env/web-publication-backend.env
+    # ports:
+    #   - "81:80"
+    expose:
+      - 80
+    extra_hosts:
+      - "back.um.es:${BACK_HOST}"
+      - "db.um.es:${DB_HOST}"
+    networks:
+      - asionet
+
+volumes:
+  trellis_data:
+
+networks:
+  asionet:
+    name: asio_network
