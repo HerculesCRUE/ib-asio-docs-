@@ -80,13 +80,30 @@ def stop_front():
     if option == 0:
         dh.stop_compose('docker-compose.yml', db_path+'/reports', 'ASIO_REPORTS')
 
-    option = u.option_handler("Parar ONTOLOCI (Integración continua para ontologías) SAML TEST [S|n]", "Valor no valido, solo son validos los valores [s|n]", None, ['S', 'N'], 0)
+    option = u.option_handler("Parar ONTOLOCI (Integración continua para ontologías) [S|n]", "Valor no valido, solo son validos los valores [s|n]", None, ['S', 'N'], 0)
     if option == 0:
-        dh.stop_compose('docker-compose.yml', db_path+'/deploy_ontoloci/docker', 'ASIO_ONTOLOCI')
+        dh.stop_compose('docker-compose.yml', db_path+'/deploy_ontoloci', 'ASIO_ONTOLOCI')
 
     option = u.option_handler("Parar SAML TEST [S|n]", "Valor no valido, solo son validos los valores [s|n]", None, ['S', 'N'], 0)
     if option == 0:
         dh.stop_compose('docker-compose.yml', db_path+'/samltest', 'ASIO_SAMLTEST')
+
+    dh.stop_compose('docker-compose.yml', db_path+'/gateway', 'ASIO_GATEWAY')
+
+
+def deploy_back(db_address, front_address):
+    dh = DockerHelper()
+    project_name = 'ASIO_BACK'
+    db_path = 'environments/back'
+    os.environ.putenv('DB_HOST', db_address)
+    os.environ.putenv('FRONT_HOST', front_address)
+    dh.run_compose('docker-compose.yml', db_path, project_name, True)
+    # dh.run_compose('docker-compose-service-discovery.yml', db_path, project_name, True)
+    # dh.run_compose('docker-compose-bechmarks.yml', db_path, project_name, True)
+    #
+    # option = u.option_handler("Desplegar Wikibase Ontologico [S|n]", "Valor no valido, solo son validos los valores [s|n]", None, ['S', 'N'], 0)
+    # if option == 0:
+    #     dh.run_compose('docker-compose.yml', db_path+'/io', 'ASIO_FRONT_IO', True)
 
 
 def deploy_portainer():

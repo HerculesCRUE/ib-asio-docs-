@@ -119,3 +119,7 @@ volumes:
   query-service-data:
   quickstatements-data:
 
+networks:
+  asionet:
+    external:
+      name: asio_network_front

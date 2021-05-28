@@ -17,6 +17,10 @@ services:
     restart: always
     networks:
       - asionet
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+      - "back.um.es:${BACK_HOST}"
+      - "db.um.es:${DB_HOST}"
 
 networks:
   asionet:

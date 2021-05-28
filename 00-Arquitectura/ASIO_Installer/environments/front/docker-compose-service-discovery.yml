@@ -10,9 +10,9 @@ services:
     ports:
       - "9329:9329"
       - "8089:8080"
-    expose:
-      - "9329"
-      - "8080"
+#    expose:
+#      - "9329"
+#      - "8080"
     extra_hosts:
       - "linkeddata1test.um.es:172.19.0.1"
       - "back.um.es:${BACK_HOST}"

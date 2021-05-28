@@ -27,7 +27,19 @@ def handle_options():
         elif option == 4:
             dh.stop_front()
         elif option == 5:
-            dh.deploy_portainer()
+            address_db = request_address("DB")
+            address_front = request_address("FRONT")
+            dh.deploy_back(address_db, address_front)
+        elif option == 6:
+            pass
+        elif option == 7:
+            pass
+        elif option == 8:
+            pass
+        elif option == 9:
+            pass
+        elif option == 10:
+            pass
 
 
 def request_options():

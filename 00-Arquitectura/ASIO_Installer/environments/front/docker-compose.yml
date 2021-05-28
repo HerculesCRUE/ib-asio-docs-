@@ -103,7 +103,6 @@ services:
       - ./env/global.env
       - ./env/global-api.env
       - ./env/web-publication-service.env
-      - ./env/web-publication-backend.env
     # ports:
     #   - "81:80"
     expose:
