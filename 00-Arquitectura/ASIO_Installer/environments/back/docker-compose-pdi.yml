@@ -8,7 +8,7 @@ services:
     ports:
       - "8080:8080"
     volumes: 
-      - /home/herculesizertis/pdi/repositories:/pentaho-di/repositories
+      - ./pdi/repositories:/pentaho-di/repositories
       - ./pdi/kettle.properties:/pentaho-di/.kettle/kettle.properties
     environment: 
       - CARTE_NAME=master1
@@ -18,3 +18,6 @@ services:
       - REPOSITORY_NAME=ASIO-UM
       - REPOSITORY_BASE_DIRECTORY=/pentaho-di/repositories/asio-um/project
       - TZ=Europe/Madrid
+    extra_hosts:
+      - "back.um.es:${FRONT_HOST}"
+      - "db.um.es:${DB_HOST}"

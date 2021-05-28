@@ -98,12 +98,19 @@ def deploy_back(db_address, front_address):
     os.environ.putenv('DB_HOST', db_address)
     os.environ.putenv('FRONT_HOST', front_address)
     dh.run_compose('docker-compose.yml', db_path, project_name, True)
-    # dh.run_compose('docker-compose-service-discovery.yml', db_path, project_name, True)
-    # dh.run_compose('docker-compose-bechmarks.yml', db_path, project_name, True)
-    #
-    # option = u.option_handler("Desplegar Wikibase Ontologico [S|n]", "Valor no valido, solo son validos los valores [s|n]", None, ['S', 'N'], 0)
-    # if option == 0:
-    #     dh.run_compose('docker-compose.yml', db_path+'/io', 'ASIO_FRONT_IO', True)
+    dh.run_compose('docker-compose-pdi.yml', db_path, project_name, True)
+
+    option = u.option_handler("Desplegar Wikibase IO [S|n]", "Valor no valido, solo son validos los valores [s|n]", None, ['S', 'N'], 0)
+    if option == 0:
+        dh.run_compose('docker-compose.yml', db_path+'/wikibase-IO', 'ASIO_BACK_WB_IO', True)
+
+
+def stop_back():
+    dh = DockerHelper()
+    db_path = 'environments/back'
+    project_name = 'ASIO_BACK'
+    dh.stop_compose('docker-compose.yml', db_path, project_name)
+    # dh.stop_compose('docker-compose-pdi.yml', db_path, project_name)
 
 
 def deploy_portainer():

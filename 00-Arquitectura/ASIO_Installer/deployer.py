@@ -31,7 +31,7 @@ def handle_options():
             address_front = request_address("FRONT")
             dh.deploy_back(address_db, address_front)
         elif option == 6:
-            pass
+            dh.stop_back()
         elif option == 7:
             pass
         elif option == 8:

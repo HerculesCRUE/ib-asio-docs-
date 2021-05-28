@@ -1,0 +1,4 @@
+2021/04/22 15:28:13 - pre_loading_data - Using run configuration [Pentaho local]
+2021/04/22 15:31:06 - load_plain - Using run configuration [Pentaho local]
+2021/04/22 16:04:57 - load_link - Using run configuration [Pentaho local]
+2021/04/22 16:05:50 - finalize_succeeded - Using run configuration [Pentaho local]

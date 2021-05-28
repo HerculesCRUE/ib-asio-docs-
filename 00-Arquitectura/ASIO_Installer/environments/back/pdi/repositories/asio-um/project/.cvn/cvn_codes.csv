@@ -1,0 +1,129 @@
+code;descr
+20.010.010.000;Estudios de 1º y 2º ciclo, y antiguos ciclos (Licenciados, Diplomados, Ingenieros Superiores, Ingenieros Técnicos, Arquitectos)
+20.010.010.030;Nombre del título
+20.010.010.060;Comunidad Autónoma/Región entidad titulación
+20.010.010.110;Tipo de entidad
+20.010.020.000;Doctorados
+20.010.020.010;Programa de doctorado
+20.010.020.070;Comunidad Autónoma/Región entidad de la titulación
+20.010.020.160;Título de la tesis
+20.010.020.170;Director/a de tesis
+20.010.020.180;Codirector/a de tesis
+30.010.000.000;Formación académica impartida
+30.010.000.010;Tipo de docencia
+30.010.000.020;Titulación universitaria
+30.010.000.040;País de la entidad de realización
+30.010.000.050;Comunidad Autónoma/Región de la entidad de realización
+30.010.000.070;Ciudad de la entidad de realización
+30.010.000.110;Tipo de entidad
+30.010.000.130;Departamento
+30.010.000.140;Tipo de programa
+30.010.000.160;Nombre de asignatura/nombre del curso
+30.010.000.170;Tipo de docencia
+30.010.000.180;Tipo de docencia, otros
+30.010.000.190;Tipo de asignatura
+30.010.000.200;Curso de la titulación que se imparte
+30.040.000.000;Dirección de tesis doctorales y/o proyectos fin de carrera
+30.040.000.010;Tipo de proyecto: tesis, PFC, DEA, trabajo de fin de grado, trabajo de fin de máster
+30.040.000.030;Título del trabajo
+30.040.000.040;País de dirección TD
+30.040.000.050;Comunidad Autónoma/Región de la dirección TD
+30.040.000.100;Tipo de entidad
+30.040.000.120;Alumno/a
+30.040.000.150;Calificación obtenida
+30.040.000.180;Codirector/a de tesis
+50.010.000.000;Grupos/equipos de investigación, desarrollo o innovación
+50.010.000.010;Objeto del grupo
+50.010.000.040;País de radicación del grupo
+50.010.000.050;Comunidad Autónoma/Región de radicación del grupo
+50.010.000.070;Ciudad de radicación del grupo
+50.010.000.080;Nombre del/de la investigador/a principal (IP)
+50.010.000.110;Tipo de entidad
+50.020.010.000;Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas
+50.020.010.010;Nombre del proyecto
+50.020.010.120;Tipo de entidad
+50.020.010.140;Nombre del/de la investigador/a principal (IP, CoIP,...)
+50.020.010.190;Entidad/es financiadora/s
+50.020.010.210;Tipo de entidad
+50.020.010.230;Tipo de participación
+50.020.010.250;Nombre del programa de financiación
+50.020.010.360;País de la entidad financiadora
+50.020.010.370;Comunidad Autónoma/Región de la entidad financiadora
+50.020.010.390;Ciudad de la entidad financiadora
+50.020.020.000;Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas
+50.020.020.010;Nombre del proyecto
+50.020.020.040;Ámbito del proyecto
+50.020.020.060;País de la entidad de realización
+50.020.020.070;Comunidad Autónoma/Región de la entidad de realización
+50.020.020.090;Ciudad de la entidad de realización
+50.020.020.120;Nombre/s entidad/es financiadora/s
+50.020.020.140;Tipo de entidad
+50.020.020.150;Tipo de entidad, otros
+50.020.020.250;Nombre del/de la investigador/a principal (IP, CoIP,...)
+50.020.020.330;Tipo de entidad
+50.020.020.340;Ciudad de la entidad financiadora
+50.020.020.350;País de la entidad financiadora
+50.020.020.360;Comunidad Autónoma/Región de la entidad financiadora
+50.030.010.000;Propiedad industrial e intelectual
+50.030.010.020;Título/nombre/denominación
+50.030.010.090;Inventores-as/autores-as/obtentores-as
+60.010.010.000;Publicaciones, documentos científicos y técnicos
+60.010.010.010;Tipo de producción
+60.010.010.030;Publicación, título
+60.010.010.040;Autores/as (p. o. de firma), nombre
+60.010.010.060;Grado de contribución
+60.010.010.070;Soporte
+60.010.010.080;Publicación, volumen (revista), capítulo (libro)
+60.010.010.100;Publicación, editorial
+60.010.010.180;Publicación, índice de impacto de año de publicación
+60.010.010.180;Publicación, índice de impacto de año de publicación
+60.010.010.190;Fuente de impacto
+60.010.010.200;Fuente de impacto, otros
+60.010.010.210;Publicación, nombre
+60.010.020.000;Trabajos presentados en congresos nacionales o internacionales
+60.010.020.010;Tipo de evento
+60.010.020.030;Título del trabajo
+60.010.020.040;Autores/as
+60.010.020.050;Tipo de participación
+60.010.020.080;Ámbito del congreso
+60.010.020.090;Ámbito del congreso, otros
+60.010.020.100;Localización, nombre del congreso
+60.010.020.180;Localización, ciudad
+60.010.020.220;Forma de contribución
+60.010.020.230;Publicación, título
+60.010.020.240;Publicación, volumen
+60.010.020.370;Publicación, nombre
+60.020.030.000;Organización de actividades de I+D+i
+60.020.030.010;Título de la actividad
+60.020.030.060;Ciudad de la actividad
+60.020.030.130;Ámbito de la reunión
+60.020.030.140;Ámbito de la reunión, otros
+60.020.060.000;Evaluación y revisión de proyectos y artículos de I+D+i
+60.020.060.060;Modalidad de la actividad
+60.020.060.100;Tipo de entidad
+60.020.060.110;Tipo de entidad, otros
+60.030.010.000;Ayudas y becas obtenidas
+60.030.010.010;Nombre de la ayuda
+60.030.010.020;País de la entidad que la concede
+60.030.010.070;Finalidad, otros
+60.030.010.100;Tipo de entidad que la concede
+60.030.070.000;Períodos de actividad investigadora
+60.030.070.020;País de la entidad que acredita
+000.010.000.000;Identificación CVN
+000.010.000.010;Apellidos
+000.010.000.020;Nombre
+000.010.000.060;País de nacimiento
+000.010.000.100;DNI
+000.010.000.150;Resto de dirección contacto
+000.010.000.180;País de contacto
+000.010.000.210;Teléfono fijo
+000.010.000.230;Correo electrónico
+000.020.000.000;Identificación de currículo
+000.020.000.080;Versión de codificación
+60.010.010.090;Publicación, página inicial-final
+60.010.020.250;Publicación, página inicial-final
+60.010.010.160;Publicación, ISBN/ISSN
+60.010.020.320;Publicación, ISBN/ISSN
+50.020.010.260;Código de proyecto según la entidad financiadora
+50.010.000.030;Código normalizado
+60.010.010.170;Publicación, depósito legal
