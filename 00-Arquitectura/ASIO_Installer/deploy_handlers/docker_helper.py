@@ -14,8 +14,9 @@ class DockerHelper:
     niceLogger = NiceLogger()
     base_dir = ROOT_DIR = Path(__file__).absolute().parent.parent
 
-    def run_compose(self, composer_file, composer_path, project_name):
-        self.stop_compose(composer_file, composer_path, project_name)
+    def run_compose(self, composer_file, composer_path, project_name, stop):
+        if stop:
+            self.stop_compose(composer_file, composer_path, project_name)
         os.environ.putenv('COMPOSE_PROJECT_NAME', project_name)
         config_path = os.path.join(self.base_dir, composer_path)
         p = subprocess.Popen(['docker', 'compose', '-f', composer_file, 'up', '-d'], cwd=config_path)

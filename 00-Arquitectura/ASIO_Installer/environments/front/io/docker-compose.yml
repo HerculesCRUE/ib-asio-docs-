@@ -15,10 +15,13 @@ services:
         aliases:
          - wikibase.svc
          # CONFIG - Add your real wikibase hostname here, for example wikibase-registry.wmflabs.org
+    extra_hosts:
+      - "back.um.es:${BACK_HOST}"
+      - "db.um.es:${DB_HOST}"
     environment:
-      - DB_SERVER=herc-iz-bd-prod.atica.um.es:3306
-      - MW_ELASTIC_HOST=herc-iz-bd-prod.atica.um.es
-      - MW_ELASTIC_PORT=9202
+      - DB_SERVER=db.um.es:3306
+      - MW_ELASTIC_HOST=db.um.es
+      - MW_ELASTIC_PORT=9201
       # CONFIG - Change the default values below
       - MW_ADMIN_NAME=WikibaseAdmin
       - MW_ADMIN_PASS=WikibaseDockerAdminPass
@@ -28,7 +31,7 @@ services:
       - DB_USER=wiki_io
       - DB_PASS=ZVRJUlA03#wZ
       - DB_NAME=wiki_io
-      - QS_PUBLIC_SCHEME_HOST_AND_PORT=http://herc-iz-front-prod.atica.um.es:19191
+      - QS_PUBLIC_SCHEME_HOST_AND_PORT=http://host.docker.internal:19191
   wdqs-frontend:
     image: wikibase/wdqs-frontend:latest
     restart: unless-stopped
@@ -37,13 +40,14 @@ services:
      - "18282:80"
     depends_on:
     - wdqs-proxy
+    - wikibase
     networks:
       default:
         aliases:
          - wdqs-frontend.svc
     environment:
-      - WIKIBASE_HOST=wikibase.svc
-      - WDQS_HOST=wdqs-proxy.svc
+      - WIKIBASE_HOST=wikibase
+      - WDQS_HOST=wdqs-proxy
   wdqs:
     image: wikibase/wdqs:0.3.10
     restart: unless-stopped
@@ -56,7 +60,7 @@ services:
          - wdqs.svc
     environment:
       - WIKIBASE_HOST=wikibase.svc
-      - WDQS_HOST=wdqs.svc
+      - WDQS_HOST=wdqs
       - WDQS_PORT=9999
     expose:
       - 9999
@@ -64,11 +68,11 @@ services:
     image: wikibase/wdqs-proxy
     restart: unless-stopped
     environment:
-      - PROXY_PASS_HOST=wdqs.svc:9999
+      - PROXY_PASS_HOST=wdqs:9999
     ports:
      - "18989:80"
     depends_on:
-    - wdqs
+      - wdqs
     networks:
       default:
         aliases:
@@ -102,8 +106,8 @@ services:
         aliases:
          - quickstatements.svc
     environment:
-      - QS_PUBLIC_SCHEME_HOST_AND_PORT=http://herc-iz-front-prod.atica.um.es:19191
-      - WB_PUBLIC_SCHEME_HOST_AND_PORT=http://herc-iz-front-prod.atica.um.es:18181
+      - QS_PUBLIC_SCHEME_HOST_AND_PORT=http://host.docker.internal:19191
+      - WB_PUBLIC_SCHEME_HOST_AND_PORT=http://host.docker.internal:18181
       - WIKIBASE_SCHEME_AND_HOST=http://wikibase.svc
       - WB_PROPERTY_NAMESPACE=122
       - "WB_PROPERTY_PREFIX=Property:"

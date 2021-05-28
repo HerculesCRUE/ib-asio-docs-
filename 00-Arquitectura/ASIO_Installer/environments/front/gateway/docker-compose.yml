@@ -21,4 +21,4 @@ services:
 networks:
   asionet:
     external:
-      name: asio_network
+      name: asio_network_front

@@ -4,7 +4,7 @@ services:
 
   reports:
     # image: umansioacr.azurecr.io/reports:21v2
-    image: umansioacr.azurecr.io/reports:41
+    image: herculescrue/reports:latest
     restart: unless-stopped
     # ports:
     #   - "8070:80"
@@ -18,4 +18,4 @@ services:
 networks:
   asionet:
     external:
-      name: asio_network
+      name: asio_network_front
