@@ -110,7 +110,10 @@ def stop_back():
     db_path = 'environments/back'
     project_name = 'ASIO_BACK'
     dh.stop_compose('docker-compose.yml', db_path, project_name)
-    # dh.stop_compose('docker-compose-pdi.yml', db_path, project_name)
+    dh.stop_compose('docker-compose-pdi.yml', db_path, project_name)
+    option = u.option_handler("Parar Wikibase IO [S|n]", "Valor no valido, solo son validos los valores [s|n]", None, ['S', 'N'], 0)
+    if option == 0:
+        dh.stop_compose('docker-compose.yml', db_path+'/wikibase-IO', 'ASIO_BACK_WB_IO')
 
 
 def deploy_portainer():

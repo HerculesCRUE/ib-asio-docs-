@@ -33,7 +33,7 @@ services:
          # CONFIG - Add your real wikibase hostname here, only for internal names and when NOT terminating SSL outside the container.
     environment:
       - DB_SERVER=mysql.svc:3306
-      - MW_ELASTIC_HOST=elasticsearch.svc
+      - MW_ELASTIC_HOST=elasticsearch
       - MW_ELASTIC_PORT=9200
       # CONFIG - Change the default values below
       - MW_ADMIN_NAME=WikibaseAdmin
@@ -73,8 +73,8 @@ services:
         aliases:
          - wdqs-frontend.svc
     environment:
-      - WIKIBASE_HOST=wikibase.svc
-      - WDQS_HOST=wdqs-proxy.svc
+      - WIKIBASE_HOST=wikibase-IO
+      - WDQS_HOST=wdqs-proxy-IO
   wdqs-IO:
     image: wikibase/wdqs:0.3.40
     restart: unless-stopped
@@ -86,8 +86,8 @@ services:
         aliases:
          - wdqs.svc
     environment:
-      - WIKIBASE_HOST=wikibase.svc
-      - WDQS_HOST=wdqs.svc
+      - WIKIBASE_HOST=wikibase-IO
+      - WDQS_HOST=wdqs-IO
       - WDQS_PORT=9999
     expose:
       - 9999
@@ -95,7 +95,7 @@ services:
     image: wikibase/wdqs-proxy
     restart: unless-stopped
     environment:
-      - PROXY_PASS_HOST=wdqs.svc:9999
+      - PROXY_PASS_HOST=wdqs-IO:9999
     ports:
      - "8989:80"
     depends_on:
@@ -116,8 +116,8 @@ services:
         aliases:
          - wdqs-updater.svc
     environment:
-     - WIKIBASE_HOST=wikibase.svc
-     - WDQS_HOST=wdqs.svc
+     - WIKIBASE_HOST=wikibase-IO
+     - WDQS_HOST=wdqs-IO
      - WDQS_PORT=9999
   elasticsearch:
     image: wikibase/elasticsearch:6.5.4-extra
@@ -145,7 +145,7 @@ services:
     environment:
       - QS_PUBLIC_SCHEME_HOST_AND_PORT=http://localhost:9191
       - WB_PUBLIC_SCHEME_HOST_AND_PORT=http://localhost:8181
-      - WIKIBASE_SCHEME_AND_HOST=http://wikibase.svc
+      - WIKIBASE_SCHEME_AND_HOST=http://wikibase-IO
       - WB_PROPERTY_NAMESPACE=122
       - "WB_PROPERTY_PREFIX=Property:"
       - WB_ITEM_NAMESPACE=120
