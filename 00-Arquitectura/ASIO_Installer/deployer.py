@@ -33,13 +33,21 @@ def handle_options():
         elif option == 6:
             dh.stop_back()
         elif option == 7:
-            pass
+            dh.deploy_db()
+            address_db = request_address("DB")
+            address_back = request_address("BACK")
+            dh.deploy_front(address_db, address_back)
+            address_db = request_address("DB")
+            address_front = request_address("FRONT")
+            dh.deploy_back(address_db, address_front)
         elif option == 8:
-            pass
+            dh.stop_db()
+            dh.stop_front()
+            dh.stop_back()
         elif option == 9:
-            pass
+            dh.deploy_portainer()
         elif option == 10:
-            pass
+            dh.stop_portainer()
 
 
 def request_options():

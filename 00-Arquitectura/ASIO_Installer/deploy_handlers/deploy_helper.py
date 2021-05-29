@@ -97,8 +97,8 @@ def deploy_back(db_address, front_address):
     db_path = 'environments/back'
     os.environ.putenv('DB_HOST', db_address)
     os.environ.putenv('FRONT_HOST', front_address)
-    dh.run_compose('docker-compose.yml', db_path, project_name, True)
-    dh.run_compose('docker-compose-pdi.yml', db_path, project_name, True)
+    # dh.run_compose('docker-compose.yml', db_path, project_name, True)
+    # dh.run_compose('docker-compose-pdi.yml', db_path, project_name, True)
 
     option = u.option_handler("Desplegar Wikibase IO [S|n]", "Valor no valido, solo son validos los valores [s|n]", None, ['S', 'N'], 0)
     if option == 0:
@@ -128,3 +128,14 @@ def deploy_portainer():
         dh.run_compose('docker-compose-ce.yml', db_path, project_name, True)
         #dh.run_docker(['docker run -p 9000:9000 --name portainer --restart always -v \\.\pipe\docker_engine:\\.\pipe\docker_engine -v portainer_data:C:\data portainer/portainer-ce'])
 
+
+def stop_portainer():
+    dh = DockerHelper()
+    db_path = 'environments/portainer'
+    project_name = 'ASIO_PORTAINER'
+    if not is_windows:
+        print('Desplegando Portainer para Linux')
+        dh.stop_compose('docker-compose-ce.yml', db_path, project_name)
+    else:
+        print('Desplegando Portainer para windows')
+        dh.stop_compose('docker-compose-ce.yml', db_path, project_name)
