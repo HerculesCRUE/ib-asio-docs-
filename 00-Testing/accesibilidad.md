@@ -29,4 +29,4 @@ Para las validaciones manuales se ha utilizado la herramienta [Accessibility Ins
 
 Mediante esta herramienta se genera un informe con los resultados de la validación de accesibilidad.
 
-[Informe Accessibility Insights](./AccessibilityInsightsWeb)
+[Informe Accessibility Insights](./AccessibilityInsightsWeb.html)
