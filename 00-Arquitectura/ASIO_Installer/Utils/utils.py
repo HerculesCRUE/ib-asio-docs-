@@ -1,5 +1,5 @@
 import re
-
+import sys
 
 def is_valid_address(address):
     is_valid_ip = re.match("^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$", address)
@@ -14,9 +14,10 @@ def is_valid_address(address):
 
 def get_private_ip_address():
     import socket
-    hostname = socket.gethostname()
-    IPAddr = socket.gethostbyname(hostname)
-    return IPAddr
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.connect(('8.8.8.8', 1))  # connect() for UDP doesn't send packets
+    local_ip_address = s.getsockname()[0]
+    return local_ip_address
 
 
 def option_handler(message_request, message_error, message_success, options, position_default ):
@@ -32,3 +33,6 @@ def option_handler(message_request, message_error, message_success, options, pos
         print(message_success)
     return [x.lower() for x in options].index(str(selected).lower())
 
+
+def check_is_win():
+    return sys.platform.startswith('win')

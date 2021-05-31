@@ -1,6 +1,5 @@
 from deploy_handlers.docker_helper import DockerHelper
 import sys
-is_windows = sys.platform.startswith('win')
 import os
 import Utils.utils as u
 

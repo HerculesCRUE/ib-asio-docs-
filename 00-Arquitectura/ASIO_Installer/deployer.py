@@ -78,8 +78,8 @@ def request_address(machine):
         print("Inserta la IP o el DNS donde se ha desplegado los servicios de la maquina %s (si esta vacío se asumirá localhost):" % machine)
         address = input()
         if address == "":
-            # address = u.get_private_ip_address()
-            address = "192.168.1.27"
+            address = u.get_private_ip_address()
+            # address = "192.168.1.27"
             print("\t...Usada localhost [%s] para maquina %s" % (address, machine))
         elif not u.is_valid_address(address):
             print("\t...Formato de dirección: %s para la maquina %s no valido" % address, machine)

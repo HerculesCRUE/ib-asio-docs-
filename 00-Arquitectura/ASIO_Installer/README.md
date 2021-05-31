@@ -20,7 +20,27 @@ Obviamente hay que adaptar lo aquí descrito (para una máquina Unix), a el tipo
 
 * [Docker](https://docs.docker.com/get-docker/)
 * [docker-compose](https://docs.docker.com/compose/install/)
-* [Python 3](https://docs.docker.com/compose/install/)
+* [Python 3](https://www.python.org/downloads/)
+
+Adicionalmente a esto, puede ser necesario configurar para algunos servicios la cantidad de memoria de la maquina virtual java dentro para los contenedores docker.
+
+Para hacerlo en maquinas **Windows** puede ser necesario ejecutar los siguientes comandos:
+
+```sh
+wsl -d docker-desktop
+sysctl -w vm.max_map_count=262144
+```
+
+Para **Linux**:
+
+```sh
+sudo sysctl -w vm.max_map_count=262144
+sudo sysctl -w fs.file-max=65536
+```
+
+## 
+
+
 
 ## Instalador
 
