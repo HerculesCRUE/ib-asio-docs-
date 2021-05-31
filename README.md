@@ -49,6 +49,7 @@ Relación de entregables adicionales del proyecto.
 | [00-Análisis](./00-An%C3%A1lisis)                            | N/A     | Actual       |
 | [00-Arquitectura](./00-Arquitectura/architecture.md)         | N/A     | Actual       |
 | [00-Testing](./00-Testing/testing.md)                        | N/A     | Actual       |
+| [00-Accesibilidad](./00-Testing/accesibilidad.md)            | N/A     | Actual       |
 | [00-Pruebas Rendimiento](./00-Testing/Pruebas%20De%20Rendimiento.md) | N/A     | Actual       |
 | [00-Memoria de publicaciones](./00-Difusión_de_contenidos/Resumen_de_publicaciones.md) | N/A     | Actual       |
 | [00-Manual de despliegue](./00-Arquitectura/Manual_de_despliegue/manual_de_despliegue.md) | N/A     | Actual       |
