@@ -115,8 +115,8 @@ services:
     restart: unless-stopped
     environment:
       - PROXY_PASS_HOST=host.docker.internal:9999
-    expose:
-      - "18989:80"
+    ports:
+      - "28989:80"
     depends_on:
       - wb-wdqs-IO
     networks:
