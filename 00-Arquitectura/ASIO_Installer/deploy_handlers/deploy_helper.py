@@ -96,8 +96,8 @@ def deploy_back(db_address, front_address):
     db_path = 'environments/back'
     os.environ.putenv('DB_HOST', db_address)
     os.environ.putenv('FRONT_HOST', front_address)
-    # dh.run_compose('docker-compose.yml', db_path, project_name, True)
-    # dh.run_compose('docker-compose-pdi.yml', db_path, project_name, True)
+    dh.run_compose('docker-compose.yml', db_path, project_name, True)
+    dh.run_compose('docker-compose-pdi.yml', db_path, project_name, True)
 
     option = u.option_handler("Desplegar Wikibase IO [S|n]", "Valor no valido, solo son validos los valores [s|n]", None, ['S', 'N'], 0)
     if option == 0:
