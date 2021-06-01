@@ -6,7 +6,7 @@ services:
     image: herculescrue/pdi:9.0
     restart: unless-stopped
     ports:
-      - "8080:8080"
+      - "18080:8080"
     volumes: 
       - ./pdi/repositories:/pentaho-di/repositories
       - ./pdi/kettle.properties:/pentaho-di/.kettle/kettle.properties

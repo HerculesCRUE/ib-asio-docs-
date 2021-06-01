@@ -118,7 +118,7 @@ services:
     ports:
       - "18989:80"
     depends_on:
-      - wb.wdqs-IO
+      - wb-wdqs-IO
     networks:
       bwikibase:
         aliases:
