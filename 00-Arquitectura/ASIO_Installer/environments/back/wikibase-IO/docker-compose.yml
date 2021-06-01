@@ -144,7 +144,7 @@ services:
     ports:
       - "19191:80"
     depends_on:
-      - wd-wikibase-IO
+      - wb-wikibase-IO
     volumes:
       - wb-quickstatements-data:/quickstatements/data
     networks:
