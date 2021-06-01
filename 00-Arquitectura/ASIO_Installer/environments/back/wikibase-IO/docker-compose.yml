@@ -15,7 +15,7 @@ services:
   wb-wikibase-IO:
     image: wikibase/wikibase:1.35-bundle
     links:
-      - mysql
+      - wb-mysql
     ports:
       # CONFIG - Change the 8181 here to expose Wikibase & MediaWiki on a different port
       - "18484:80"
@@ -23,8 +23,8 @@ services:
       - wb-mediawiki-images-data:/var/www/html/images
       - wb-quickstatements-data:/quickstatements/data
     depends_on:
-      - mysql
-      - elasticsearch
+      - wb-mysql
+      - wb-elasticsearch
     restart: unless-stopped
     networks:
       bwikibase:
@@ -83,8 +83,8 @@ services:
       # CONFIG - Change the 8282 here to expose the Query Service UI on a different port
       - "18585:80"
     depends_on:
-      - wdqs-proxy-IO
-      - wikibase-IO
+      - wb-wdqs-proxy-IO
+      - wb-wikibase-IO
     networks:
       bwikibase:
         aliases:
@@ -103,7 +103,7 @@ services:
         aliases:
           - wb.wdqs.svc
     depends_on:
-      - wikibase-IO
+      - wb-wikibase-IO
     environment:
       - WIKIBASE_HOST=wb.wikibase.svc
       - WDQS_HOST=wb.wdqs.svc
@@ -128,8 +128,8 @@ services:
     restart: unless-stopped
     command: /runUpdate.sh
     depends_on:
-      - wdqs-IO
-      - wikibase-IO
+      - wb-wdqs-IO
+      - wb-wikibase-IO
     networks:
       bwikibase:
         aliases:
@@ -144,7 +144,7 @@ services:
     ports:
       - "19191:80"
     depends_on:
-      - wikibase-IO
+      - wd-wikibase-IO
     volumes:
       - wb-quickstatements-data:/quickstatements/data
     networks:
