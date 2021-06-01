@@ -44,7 +44,7 @@ services:
       - DB_USER=wikiuser
       - DB_PASS=sqlpass
       - DB_NAME=my_wiki
-      - QS_PUBLIC_SCHEME_HOST_AND_PORT=http://wb-quickstatements-data:19191
+      - QS_PUBLIC_SCHEME_HOST_AND_PORT=http://wb-quickstatements-data:29191
   wb-mysql:
     image: mariadb:10.3
     restart: unless-stopped
@@ -115,7 +115,7 @@ services:
     restart: unless-stopped
     environment:
       - PROXY_PASS_HOST=host.docker.internal:9999
-    ports:
+    expose:
       - "18989:80"
     depends_on:
       - wb-wdqs-IO
@@ -142,7 +142,7 @@ services:
   wb-quickstatements-IO:
     image: wikibase/quickstatements:latest
     ports:
-      - "19191:80"
+      - "29191:80"
     depends_on:
       - wb-wikibase-IO
     volumes:
@@ -152,7 +152,7 @@ services:
         aliases:
           - wb.quickstatements.svc
     environment:
-      - QS_PUBLIC_SCHEME_HOST_AND_PORT=http://wb.quickstatements.svc:19191
+      - QS_PUBLIC_SCHEME_HOST_AND_PORT=http://wb.quickstatements.svc:29191
       - WB_PUBLIC_SCHEME_HOST_AND_PORT=http://localhost:8181
       - WIKIBASE_SCHEME_AND_HOST=http://wb.wikibase.svc
       - WB_PROPERTY_NAMESPACE=122
