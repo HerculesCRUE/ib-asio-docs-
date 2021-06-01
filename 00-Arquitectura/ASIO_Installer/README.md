@@ -1,3 +1,5 @@
+
+
 # Instalador ASIO
 
 El presente documento, describe el Script de instalación implementado con python.
@@ -40,7 +42,29 @@ sudo sysctl -w fs.file-max=65536
 
 ## 
 
+Por otro lado en entornos Windows es necesario configurar Docker con configuración experiemental, que integra docker-compose en el motor de docker.
 
+
+
+![config](./img/docker.config.png)
+
+
+
+```{
+  "registry-mirrors": [],
+  "insecure-registries": [],
+  "debug": false,
+  "experimental": true,
+  "builder": {
+    "gc": {
+      "enabled": true,
+      "defaultKeepStorage": "20GB"
+    }
+  }
+}
+```
+
+Por otro lado para instalar las dependencias en de el proyecto, antes de ejecutar el Script es necesario, ejecutar el comando`pip install -r requirements.txt` desde la raíz del instalador.
 
 ## Instalador
 
