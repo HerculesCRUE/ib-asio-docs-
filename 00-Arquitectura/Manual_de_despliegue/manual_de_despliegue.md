@@ -1452,21 +1452,183 @@ Por ejemplo, en caso de querer ejecutar cada 5 minutos:
 
 Los Script para invocar los servicios en batch, se encuentran en la ruta [./script](https://github.com/HerculesCRUE/ib-asio-composeset/tree/master/entornos/preproduccion/back/scripts)
 
-## 4 Escalabilidad
+## 4 Escalabilidad y alta disponibilidad
 
 Todo el proyecto Hércules, esta desplegado usando arquitectura de microservicios mediante contenedores Docker.
 
 Esto hace posible que dado que los servicios están débilmente acoplados entre ellos, puedan escalarse tanto horizontalmente como verticalmente según demanda.
 
-Para escalar un servicio, es suficiente con invocar el comando 
+Para **escalar un servicio**, es suficiente con invocar el comando 
 
 ```docker-compose -f docker-compose-donde-esta-definid-el-servicio up --scale nombre-del-dervicio-a-escalar=número_de_isntancias -d```
 
 Para hacerlo es necesario cambiar el fichero de configuración docker-compose donde esta definido el servicio, cambiando el puerto que expone por un rango de puertos (al menos uno para cada replica), de forma que cada instancia del servicio pueda exponerse en un puerto distinto.
 
-Probablemente para hacerlo, necesitaremos añadir un balanceador de carga para repartir las peticiones entre las instancias del servicio replicado. Podemos ver un ejemplo de ello en el siguiente [enlace](https://pspdfkit.com/blog/2018/how-to-use-docker-compose-to-run-multiple-instances-of-a-service-in-development/).
+Probablemente para hacerlo, necesitaremos añadir un balanceador de carga para repartir las peticiones entre las instancias del servicio replicado. Podemos ver un ejemplo de ello en el siguiente [enlace](https://pspdfkit.com/blog/2018/how-to-use-docker-compose-to-run-multiple-instances-of-a-service-in-development/) o usar el servidor [nginx](#Nginx) como balanceador de carga, tal y como se muestra en el siguiente [enlace](https://picodotdev.github.io/blog-bitix/2016/07/configurar-nginx-como-balanceador-de-carga/).
 
 Otra opción podría ser configurar un cluster de Kubernetes a partir de la configuración disponible en los docker-compose ya que podemos tanto escalar dinámicamente los servicios en función de la carga como de forma manual en función de la previsión, y usar el balanceador de carga que nativamente proporciona Kubernetes.
+
+Cabe recordar también que los servicios, al estar orquestados mediante docker-compose, tienen de facto una alta tolerancia a fallos (todos los servicios tienen configurado restart: unless-stopped), y por lo tanto una alta disponibilidad, es decir, cualquier servicio que sufra cualquier tipo de fallo, se reiniciara automáticamente, y reiniciándose en un corto espacio de tiempo (cuestión de segundos) minimizando de esta forma el impacto que un posible fallo pueda suponer a los usuarios.
+
+En la siguiente tabla se enumeraran los servicios que pudiese ser interesante escalar y el método aconsejado para hacerlo, ya sea por razones de volumetría o alta disponibilidad. Para el resto de servicios consideramos que no seria ni necesario ni conveniente replicarlos, ya que por un lado no son servicios expuestos al exterior, por otro lado la propia tolerancia a fallos ofrecida por la orquestación docker-compose garantizan su correcto reinicio en caso de fallo, y por último, son servicios conectados a asíncronamente a una cola de mensajes, por lo que en ningún caso se perderá información, sino que esta será procesada, cuando el sistema este en condiciones de hacerlo (es decir, una vez completado el reinicio).
+
+
+
+| Maquina                                      | Servicio            | Motivo                                                       | Método                                                       |
+| -------------------------------------------- | ------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [DB](#241-servicios-desplegados-en-db)       | [Fuseki](#Fuseki)   | Fuseki es el Triple Store usado para almacenar las tripletas. Según las pruebas realizadas el los [Bechmarks](https://github.com/HerculesCRUE/ib-benchmarks), se han testado hasta con 20 Millones de registros (en una sola instancia), tanto en escritura con lectura, con resultados aceptables. A priori **no se recomienda** escalar este componente, sin una volumetría que lo justifique, ya que el coste beneficio, debido a la complejidad introducida y al probable aumento de latencias al garantizar consistencia. | Seria necesario el USO de herramienta [RDF Delta](https://afs.github.io/rdf-delta/ha-system.html), ya que Fuseki por si mismo no es capaz de trabajar en multinodo, ofreciendo coherencia |
+| [DB](#241-servicios-desplegados-en-db)       | [Kafka](#Kafka)     | Kafka actúa como bus de datos, para todos los microservicios de la solución.  Si la volumetría lo justifica (no lo hace en este momento), seria aconsejable disponer de un cluster con mas de un nodo. | En este caso es muy sencillo ya que kafka usa zookeper como broker para conocer la ubicación del resto de nodos, solo seria necesario usar el comando **--scale** de **docker-compose** para definir el numero de replicas, y poner un balanceador de carga, siguiendo los pasos que se detallan en este mismo apartado. |
+| [Front](#242-servicios-desplegados-en-front) | [Trellis](#Trellis) | Trellis es el Servidor LDP por el que muchos servicios acceden a los datos.  Si la volumetría lo justifica (no lo hace en este momento), seria aconsejable disponer de un mas de una instancia. | En este caso es muy sencillo solo seria necesario usar el comando **--scale** de **docker-compose** para definir el numero de replicas, y poner un balanceador de carga o usar el nginx del proyecto para ello, siguiendo los pasos que se detallan en este mismo apartado. |
+|                                              |                     |                                                              |                                                              |
+|                                              |                     |                                                              |                                                              |
+|                                              |                     |                                                              |                                                              |
+|                                              |                     |                                                              |                                                              |
+|                                              |                     |                                                              |                                                              |
+|                                              |                     |                                                              |                                                              |
+|                                              |                     |                                                              |                                                              |
+|                                              |                     |                                                              |                                                              |
+|                                              |                     |                                                              |                                                              |
+|                                              |                     |                                                              |                                                              |
+|                                              |                     |                                                              |                                                              |
+|                                              |                     |                                                              |                                                              |
+|                                              |                     |                                                              |                                                              |
+|                                              |                     |                                                              |                                                              |
+|                                              |                     |                                                              |                                                              |
+|                                              |                     |                                                              |                                                              |
+
+### 4.1 Modos de escalado
+
+#### 4.1.1 Servicios replicables en múltiples instancias
+
+Son aquellos servicios que por su implementación, función y diseño, pueden ser replicados en múltiples instancias, no viéndose por ello afectados el resto de los servicios de la solución. Como norma general, prácticamente todos los servicios desarrollados ad-hoc para este proyecto, han sido diseñados como microservicios, y por lo tanto son replicables en múltiples instancias. Para replicar estos servicios existen varios métodos:
+
+##### 4.1.1.1 Escalado usando docker-compose (recomendado)
+
+Para **escalar un servicio**, es suficiente con invocar el comando 
+
+```docker-compose -f docker-compose-donde-esta-definid-el-servicio up --scale nombre-del-dervicio-a-escalar=número_de_isntancias -d```
+
+Para hacerlo es necesario cambiar el fichero de configuración docker-compose donde esta definido el servicio, cambiando el puerto que expone por un rango de puertos (al menos uno para cada replica), de forma que cada instancia del servicio pueda exponerse en un puerto distinto.
+
+Probablemente para hacerlo, necesitaremos añadir un balanceador de carga para repartir las peticiones entre las instancias del servicio replicado. Podemos ver un ejemplo de ello en el siguiente [enlace](https://pspdfkit.com/blog/2018/how-to-use-docker-compose-to-run-multiple-instances-of-a-service-in-development/) o usar el servidor [nginx](#Nginx) como balanceador de carga, tal y como se muestra en el siguiente [enlace](https://picodotdev.github.io/blog-bitix/2016/07/configurar-nginx-como-balanceador-de-carga/).
+
+##### 4.1.1.2 Escalado usando kubernetes
+
+Otra opción podría ser configurar un [cluster de Kubernetes](https://kubernetes.io/es/docs/concepts/) a partir de la configuración disponible en los docker-compose ya que podemos tanto escalar dinámicamente los servicios en función de la carga como de forma manual en función de la previsión, y usar el balanceador de carga que nativamente proporciona Kubernetes.
+
+#### 4.1.2 Servicios no replicables en múltiples instancias
+
+Otro tipo de servicios son los que por su implementación, función y diseño, **no pueden** ser replicados en múltiples instancias.
+
+Por ejemplo las bases de datos, necesitan coherencia entre los datos almacenados en una u otra instancia, o otras herramientas (por ejemplo kafka), están diseñadas de facto para desplegarse como un cluster, y otras por ejemplo Fuseki, no están diseñadas para ello, por lo tanto para ser replicadas, necesitan alguna herramienta adicional.
+
+En definitiva para estos servicios, la escalabilidad, es ad-hoc siendo normalmente necesario seguir los pasos indicados para dicha servicio, preferiblemente en su documentación oficial.
+
+Expondremos a continuación los casos que creemos mas relevantes:
+
+##### 4.1.2 Fuseki
+
+A priori, tal como esta diseñado el servicio, este no es desplegable a modo de cluster
+
+Afortunadamente existen herramientas como [RDF Delta](https://afs.github.io/rdf-delta/ha-system.html), que proporcionan coherencia entre los datos de distintas instancias de Apache Jena Fuseki, y esta podría ser usada en el proyecto, aunque habría que sopesar el coste-beneficio de hacerlo, ya que introducir un nuevo servicio, aumentará considerablemente la complejidad de la arquitectura, y probablemente añadirá algo de latencia.
+
+Según las pruebas realizadas el los [Bechmarks](https://github.com/HerculesCRUE/ib-benchmarks), se han testado hasta con 20 Millones de registros (en una sola instancia), tanto en escritura con lectura, con resultados aceptables. A priori **no se recomienda** escalar este componente, sin una volumetría que lo justifique, ya que el coste beneficio es discutible, debido a un previsible aumento de la complejidad introducida y al probable aumento de latencias al garantizar consistencia. 
+
+##### 4.1.2 Kafka
+
+Kafka actúa como bus de datos, para todos los microservicios de la solución.  Si la volumetría lo justifica (no lo hace en este momento), seria aconsejable disponer de un cluster con mas de un nodo.   
+
+En este caso es muy sencillo ya que kafka usa zookeper como broker para conocer la ubicación del resto de nodos, solo seria necesario copiar tantas veces el servicio kafka como replicas queramos el contenido del fichero docker-compose.yml de la maquina DB, cambiando nombre de servicio y puertos externos
+
+Actualmente para una instancia el contenido seria el siguiente: 
+
+```
+kafka:
+  image: bitnami/kafka:2.4.1
+  restart: unless-stopped
+  ports:
+    - 9092:9092
+    - 29092:29092
+  volumes:
+    - kafka_data:/bitnami
+  environment:
+    - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
+    - ALLOW_PLAINTEXT_LISTENER=yes
+    - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+    - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092,PLAINTEXT_HOST://:29092
+    - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092,PLAINTEXT_HOST://db.um.es:29092
+    # - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092,PLAINTEXT_HOST://host.docker.internal:29092
+    - KAFKA_MESSAGE_MAX_BYTES=10000000
+  depends_on:
+    - zookeeper
+```
+
+Para por ejemplo 3 instancias podría ser el siguiente: 
+
+```
+kafka1:
+  image: bitnami/kafka:2.4.1
+  restart: unless-stopped
+  ports:
+    - 9092:9092
+    - 29092:29092
+  volumes:
+    - kafka_data:/bitnami
+  environment:
+    - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
+    - ALLOW_PLAINTEXT_LISTENER=yes
+    - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+    - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092,PLAINTEXT_HOST://:29092
+    - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092,PLAINTEXT_HOST://db.um.es:29092
+    # - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092,PLAINTEXT_HOST://host.docker.internal:29092
+    - KAFKA_MESSAGE_MAX_BYTES=10000000
+  depends_on:
+    - zookeeper
+    
+kafka2:
+  image: bitnami/kafka:2.4.1
+  restart: unless-stopped
+  ports:
+    - 9093:9092
+    - 29093:29092
+  volumes:
+    - kafka_data:/bitnami
+  environment:
+    - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
+    - ALLOW_PLAINTEXT_LISTENER=yes
+    - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+    - KAFKA_CFG_LISTENERS=PLAINTEXT://:9093,PLAINTEXT_HOST://:29092
+    - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9093,PLAINTEXT_HOST://db.um.es:29093
+    # - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9093,PLAINTEXT_HOST://host.docker.internal:29093
+    - KAFKA_MESSAGE_MAX_BYTES=10000000
+  depends_on:
+    - zookeeper
+    
+kafka3:
+  image: bitnami/kafka:2.4.1
+  restart: unless-stopped
+  ports:
+    - 9094:9092
+    - 29094:29092
+  volumes:
+    - kafka_data:/bitnami
+  environment:
+    - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181
+    - ALLOW_PLAINTEXT_LISTENER=yes
+    - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+    - KAFKA_CFG_LISTENERS=PLAINTEXT://:9093,PLAINTEXT_HOST://:29092
+    - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9094,PLAINTEXT_HOST://db.um.es:29094
+    # - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9094,PLAINTEXT_HOST://host.docker.internal:29094
+    - KAFKA_MESSAGE_MAX_BYTES=10000000
+  depends_on:
+    - zookeeper
+```
+
+
+
+
+
+
 
 ## 5 Backups y recuperación
 
