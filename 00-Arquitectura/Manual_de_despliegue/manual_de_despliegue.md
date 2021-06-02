@@ -312,7 +312,7 @@ Generalmente en esta maquina están desplegados todos los servicios relativos a 
   * **Configuración:** /trellis/config.yml para la configuración y trellis/users.auth para la autentificación y la autorización.
 * **Persistencia:** Volumen docker trellis_data.
 
-##### Input Processor
+##### Keycloak
 
 * **Nombre del servicio:** keycloak.
 * **Puertos:** 
@@ -1474,27 +1474,16 @@ En la siguiente tabla se enumeraran los servicios que pudiese ser interesante es
 
 
 
-| Maquina                                      | Servicio            | Motivo                                                       | Método                                                       |
-| -------------------------------------------- | ------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [DB](#241-servicios-desplegados-en-db)       | [Fuseki](#Fuseki)   | Fuseki es el Triple Store usado para almacenar las tripletas. Según las pruebas realizadas el los [Bechmarks](https://github.com/HerculesCRUE/ib-benchmarks), se han testado hasta con 20 Millones de registros (en una sola instancia), tanto en escritura con lectura, con resultados aceptables. A priori **no se recomienda** escalar este componente, sin una volumetría que lo justifique, ya que el coste beneficio, debido a la complejidad introducida y al probable aumento de latencias al garantizar consistencia. | Seria necesario el USO de herramienta [RDF Delta](https://afs.github.io/rdf-delta/ha-system.html), ya que Fuseki por si mismo no es capaz de trabajar en multinodo, ofreciendo coherencia |
-| [DB](#241-servicios-desplegados-en-db)       | [Kafka](#Kafka)     | Kafka actúa como bus de datos, para todos los microservicios de la solución.  Si la volumetría lo justifica (no lo hace en este momento), seria aconsejable disponer de un cluster con mas de un nodo. | En este caso es muy sencillo ya que kafka usa zookeper como broker para conocer la ubicación del resto de nodos, solo seria necesario usar el comando **--scale** de **docker-compose** para definir el numero de replicas, y poner un balanceador de carga, siguiendo los pasos que se detallan en este mismo apartado. |
-| [Front](#242-servicios-desplegados-en-front) | [Trellis](#Trellis) | Trellis es el Servidor LDP por el que muchos servicios acceden a los datos.  Si la volumetría lo justifica (no lo hace en este momento), seria aconsejable disponer de un mas de una instancia. | En este caso es muy sencillo solo seria necesario usar el comando **--scale** de **docker-compose** para definir el numero de replicas, y poner un balanceador de carga o usar el nginx del proyecto para ello, siguiendo los pasos que se detallan en este mismo apartado. |
-|                                              |                     |                                                              |                                                              |
-|                                              |                     |                                                              |                                                              |
-|                                              |                     |                                                              |                                                              |
-|                                              |                     |                                                              |                                                              |
-|                                              |                     |                                                              |                                                              |
-|                                              |                     |                                                              |                                                              |
-|                                              |                     |                                                              |                                                              |
-|                                              |                     |                                                              |                                                              |
-|                                              |                     |                                                              |                                                              |
-|                                              |                     |                                                              |                                                              |
-|                                              |                     |                                                              |                                                              |
-|                                              |                     |                                                              |                                                              |
-|                                              |                     |                                                              |                                                              |
-|                                              |                     |                                                              |                                                              |
-|                                              |                     |                                                              |                                                              |
-|                                              |                     |                                                              |                                                              |
+| Maquina                                       | Servicio                                | Recomendable                                                 | Consecuencia en caso de fallo                                | Método                                                       |
+| --------------------------------------------- | --------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [DB](#241-servicios-desplegados-en-db)        | [Fuseki](#Fuseki)                       | No, salvo gran volumetría                                    | Reinicio automático, segundos de inactividad                 | [Replicar Fuseki](#412-Fuseki)                               |
+| [DB](#241-servicios-desplegados-en-db)        | [Kafka](#Kafka)                         | No, salvo gran volumetría                                    | Reinicio automático, segundos de inactividad                 | [Replicar Kafka](#412-Fuseki)                                |
+| [Front](#242-servicios-desplegados-en-front)  | [Trellis](#Trellis)                     | Si, aunque la volumetría actual no lo justifica.             | Reinicio automático, segundos de inactividad                 | [Escalado con docker-compose](#4111-Escalado-usando-docker-compose (recomendado)) |
+| [Front](#242-servicios-desplegados-en-front)  | [Frontal](#web-publication-service)     | Si, aunque el desarrollo en Angular hace que el servidor soporte muy poca carga y sea capaz de soportar miles o millones de peticiones | El Front dejaría de estar disponible temporalmente, hasta reinicio automático | [Escalado con docker-compose](#4111-Escalado-usando-docker-compose (recomendado)) |
+| [Front](#242-servicios-desplegados-en-front)  | [Keycloak](#Keycloak)                   | Si, aunque una sola instancia soporta millones de peticiones, puede ser conveniente configurarlo en alta disponibilidad. | Reinicio automático, segundos de inactividad. Durante ese periodo afectara a otros servicios. | [Escalado Keycloak](#413-Keycloak)                           |
+| [Front](#242-servicios-desplegados-en-front)  | [Service Discovery](#Service-Discovery) | Si. Realmente no soporta una gran carga de trabajo, pero es un componente critico para la Federación de consultas. | Reinicio automático, segundos de inactividad. Durante ese periodo afectara especialmente a la Federación. | [Escalado con docker-compose](#4111-Escalado-usando-docker-compose (recomendado)) |
+| [Backend](#243-servicios-desplegados-en-back) | [URIs Generator](#uris-generator)       | Si. Realmente no soporta una gran carga de trabajo, salvo en las importaciones masivas, pero siendo un componente del que dependen otros, puede ser conveniente. | Reinicio automático, segundos de inactividad. Durante ese periodo afectara a la importación. | [Escalado con docker-compose](#4111-Escalado-usando-docker-compose (recomendado)) |
+| [Backend](#243-servicios-desplegados-en-back) | [Discovery](#discover)                  | No. En caso de fallo, se auto desplegara automáticamente y reintentara el mismo proceso de forma asíncrona, por lo que no es necesario. Por otro lado, la carga de trabajo es muy intensa aunque  puntual, | Reinicio automático, segundos de inactividad. Durante ese periodo afectara a la importación. | [Escalado con docker-compose](#4111-Escalado-usando-docker-compose (recomendado)) |
 
 ### 4.1 Modos de escalado
 
@@ -1514,7 +1503,7 @@ Probablemente para hacerlo, necesitaremos añadir un balanceador de carga para r
 
 ##### 4.1.1.2 Escalado usando kubernetes
 
-Otra opción podría ser configurar un [cluster de Kubernetes](https://kubernetes.io/es/docs/concepts/) a partir de la configuración disponible en los docker-compose ya que podemos tanto escalar dinámicamente los servicios en función de la carga como de forma manual en función de la previsión, y usar el balanceador de carga que nativamente proporciona Kubernetes.
+Otra opción podría ser configurar un [cluster de Kubernetes](https://kubernetes.io/es/docs/concepts/) a partir de la configuración disponible en los docker-compose ya que podemos tanto escalar dinámicamente los servicios en función de la carga como de forma manual en función de la previsión, y usar el balanceador de carga que nativamente proporciona Kubernetes. Sin embargo esta opción implica una complejidad añadida al tener que configurar un cluster de kubernetes, en las maquinas disponibles, y adicionalmente perderíamos el control de que componente ha sido desplegado en que máquina, por lo que por el momento se desaconseja para este caso de uso.
 
 #### 4.1.2 Servicios no replicables en múltiples instancias
 
@@ -1626,7 +1615,13 @@ kafka3:
 
 
 
+##### 4.1.3 Keycloak
 
+Keycloak gestiona la autentificación y autorización de la solución.
+
+A pesar de que soporta millones de peticiones, podría ser conveniente configurar un cluster.
+
+Para hacerlo es suficiente seguir los pasos descritos en la documentación de la [imagen docker](https://hub.docker.com/r/bitnami/keycloak)
 
 
 
