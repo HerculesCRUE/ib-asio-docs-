@@ -990,7 +990,7 @@ Arrancar servicio
 sudo systemctl start docker.service
 ```
 
-También es interesante modificar el driver de logging de docker para que no crezca indiscriminadamente. Para ello se modificará el fichero `/etc/docker/daemon.json`.
+También opcionalmente es interesante modificar el driver de logging de docker para que no crezca indiscriminadamente. Para ello se modificará o creara si es necesario el fichero `/etc/docker/daemon.json`.
 
 ```
 {
@@ -1019,8 +1019,10 @@ sudo useradd -g herculesizertis  -d /home/herculesizertis -m -p h3rcul3s1z3rt1s 
 Añadir grupos **herculesizertis**
 
 ```
-sudo usermod -a -G sistemas herculesizertis
+# Para incluir añadir el grupo docker al usuario herculesizertis
 sudo usermod -a -G docker herculesizertis
+# (Opcional) Para incluir el grupo de sistemas (sustituir "sistemas" por el nombre del grupo de administración usado para tareas de administración)
+sudo usermod -a -G sistemas herculesizertis
 ```
 
 Cambiar el grupo
@@ -1056,47 +1058,7 @@ newgrp docker
 
 #### 3.1.3  Instalar docker-compose
 
-Actualizar
-
-```
-yum update -y
-```
-
-Instalar dependencias
-
-```
-sudo yum install epel-release
-```
-
-Instalar Python y gcc
-
-```
-sudo yum install -y python-pip python-devel gcc
-```
-
-Actualizar python
-
-```
- sudo yum upgrade python*
-```
-
-Actualizar pip
-
-```
-sudo pip install --upgrade pip
-```
-
-Instalar docker-compose
-
-```
-sudo pip install docker-compose
-```
-
-Comprobar instalación
-
-```
-docker-compose version
-```
+Seguir las [instrucciones de instalación](https://docs.docker.com/compose/install/) la pagina oficial, según el sistema operativo.
 
 #### 3.1.4 Actualización vm.max_map_count 
 
