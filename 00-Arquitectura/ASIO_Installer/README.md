@@ -66,6 +66,16 @@ Por otro lado en entornos Windows es necesario configurar Docker con configuraci
 
 Por otro lado para instalar las dependencias en de el proyecto, antes de ejecutar el Script es necesario, ejecutar el comando`pip install -r requirements.txt` desde la raíz del instalador.
 
+## Descripción del instalador
+
+Para ejecutar el instalador, es necesario descargar **todos** los ficheros que se encuentran en el directorio [ASIO_Installer](https://github.com/HerculesCRUE/ib-asio-docs-/tree/master/00-Arquitectura/ASIO_Installer)
+
+En dicho directorio podemos encontrar distintos tipos de ficheros entre los que se encuentran:
+
+* Otros módulos Python que son necesarios para el proceso de instalación
+* Ficheros de configuración yaml que describen el despliegue de los contenedores docker (en la ruta environments/nombre de maquina[DB | FRONT | BACK])
+* Ficheros de configuración de variables de entorno usadas por los contenedores, (en la ruta environments/nombre de maquina[DB | FRONT | BACK]/env)
+
 ## Instalador
 
 Podemos ejecutar el instalador mediante el comando
@@ -104,6 +114,8 @@ Los servicios desplegados, lo harán con un nombre de prefijo ASIO_FRONT_XXXX, p
 
 `docker ps | grep ASIO_FRONT`
 
+Los servicios desplegados para la maquina front requieren conocer la IP publica por la que pueden acceder a la maquina de DB y BACK y esta será solicitada durante el proceso de despliegue.
+
 ### Despliegue de servicios BACK
 
 La ejecución de la opción 2 (Desplegar servicios de Backend),  automatizara el despliegue de los servicios descritos en la sección [Servicios desplegados en Backend](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/00-Arquitectura/Manual_de_despliegue/manual_de_despliegue.md#243-servicios-desplegados-en-back) , siguiendo los pasos que se describen en [Despliegue de Maquina DB](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/00-Arquitectura/Manual_de_despliegue/manual_de_despliegue.md#323-m%C3%A1quina-back) del manual de despliegue (a excepción del servicio Portainer, que debe instalarse una vez por cada máquina física).
@@ -111,6 +123,8 @@ La ejecución de la opción 2 (Desplegar servicios de Backend),  automatizara el
 Los servicios desplegados, lo harán con un nombre de prefijo ASIO_FRONT_XXXX, por lo que  podemos visualizarlos mediante el comando 
 
 `docker ps | grep ASIO_FRONT`
+
+Los servicios desplegados para la maquina back requieren conocer la IP publica por la que pueden acceder a la maquina de DB y FRONT y esta será solicitada durante el proceso de despliegue.
 
 ## Ficheros relevantes para el instalador
 
