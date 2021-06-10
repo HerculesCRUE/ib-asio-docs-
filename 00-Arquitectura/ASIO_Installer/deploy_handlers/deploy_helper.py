@@ -3,6 +3,8 @@ import sys
 import os
 import Utils.utils as u
 
+is_windows = u.check_is_win()
+
 
 def deploy_db():
     dh = DockerHelper()
