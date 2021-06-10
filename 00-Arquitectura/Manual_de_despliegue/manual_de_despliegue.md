@@ -51,14 +51,15 @@ Para el proyecto Hércules de la universidad de Murcia, se han desplegado todos 
 
 En cuanto a la dimensión y características de las maquinas, ahora mismo, para la universidad de Murcia, esta es la descripción del Hardware donde la solución ha sido desplegada.
 
-| Nombre           | FRONT                                                        | BACK                                      | DB                                        |
-| ---------------- | ------------------------------------------------------------ | ----------------------------------------- | ----------------------------------------- |
-| **SO**           | CentOS Linux release 7.7.1908                                | CentOS Linux release 7.7.1908             | CentOS Linux release 7.7.1908             |
-| **MEMORIA**      | 16GB                                                         | 32GB                                      | 16GB                                      |
-| **PROCESADOR**   | Intel Core i7 9xx (Nehalem Class Core i7)                    | Intel Core i7 9xx (Nehalem Class Core i7) | Intel Core i7 9xx (Nehalem Class Core i7) |
-| **CORES**        | 4                                                            | 8                                         | 4                                         |
-| **ARQUITECTURA** | 64                                                           | 64                                        | 64                                        |
-| **PUERTOS**      | 22, 443, 80, 55555, 3030, 8081, 8070, 80, 81, 8080, 9321, 9326 | 22, 9321                                  | 22, 80, 8282, 8181, 3030                  |
+| Nombre                                        | FRONT                                                        | BACK                                                         | DB                                                           |
+| --------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **SO**                                        | CentOS Linux release 7.7.1908                                | CentOS Linux release 7.7.1908                                | CentOS Linux release 7.7.1908                                |
+| **MEMORIA**                                   | 16GB                                                         | 32GB                                                         | 16GB                                                         |
+| **PROCESADOR**                                | Intel Core i7 9xx (Nehalem Class Core i7)                    | Intel Core i7 9xx (Nehalem Class Core i7)                    | Intel Core i7 9xx (Nehalem Class Core i7)                    |
+| **CORES**                                     | 4                                                            | 8                                                            | 4                                                            |
+| **ARQUITECTURA**                              | 64                                                           | 64                                                           | 64                                                           |
+| **PUERTOS**                                   | 22, 443, 80, 55555, 3030, 8081, 8070, 80, 81, 8080, 9321, 9326 | 22, 9321                                                     | 22, 80, 8282, 8181, 3030                                     |
+| **Disco duro recomendado (montado en  /var)** | **Mínimo** (Solo imágenes): 15GB </br>**Recomendado**: 100GB | **Mínimo** (Solo imágenes): 6GB </br>**Recomendado **: 100GB | **Mínimo** (Solo imágenes): 20GB </br>**Recomendado**: 100GB |
 
 Obviamente es posible que según la volumetría de datos prevista para otros nodos, esta configuración pueda cambiar, por lo que será necesario adaptarla a cada caso.
 
