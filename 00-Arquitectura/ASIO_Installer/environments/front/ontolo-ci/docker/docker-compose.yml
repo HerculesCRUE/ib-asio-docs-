@@ -1,5 +1,7 @@
 version: '3.1'
+
 services:
+
   # This is the container for the back
   ontoloci-back:
     image: ontoloci-back
@@ -9,11 +11,13 @@ services:
     ports:
       - 8090:8090
     environment:
-      ONTOLOCI_GITHUB_USERNAME: "herculescrue"
-      ONTOLOCI_GITHUB_OAUTH: "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"
+      ONTOLOCI_GITHUB_USERNAME: "mistermboy"
+      ONTOLOCI_GITHUB_OAUTH: "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"
       ONTOLOCI_GITHUB_APP_ID: "106686"
       ONTOLOCI_GITHUB_KEY_PATH: "/ontolo-ci-hercules-pkcs8.key"
+
     stdin_open: true # Needed to keep the image alive.
+
   # This is the container for the web gui.
   ontoloci-web:
     image: ontoloci-web
