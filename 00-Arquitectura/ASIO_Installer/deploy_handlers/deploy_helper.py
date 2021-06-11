@@ -44,7 +44,7 @@ def deploy_front(db_address, back_address):
 
     option = u.option_handler("Desplegar ONTOLOCI (Integración continua para ontologías) [S|n]", "Valor no valido, solo son validos los valores [s|n]", None, ['S', 'N'], 0)
     if option == 0:
-        dh.run_compose('docker-compose.yml', db_path+'/deploy_ontoloci', 'ASIO_ONTOLOCI', True)
+        dh.run_compose('docker-compose.yml', db_path+'/ontolo-ci/docker', 'ASIO_ONTOLOCI', True)
 
     option = u.option_handler("Desplegar SAML TEST [S|n]", "Valor no valido, solo son validos los valores [s|n]", None, ['S', 'N'], 0)
     if option == 0:
