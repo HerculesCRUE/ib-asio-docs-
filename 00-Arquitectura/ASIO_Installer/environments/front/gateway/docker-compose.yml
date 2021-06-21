@@ -5,7 +5,7 @@ services:
   nginx:
     container_name: nginx
     image: 'nginx:alpine'
-    ports: 
+    ports:
       - "80:80"
       - "443:443"
       # - "8443:8443"
@@ -13,7 +13,6 @@ services:
       - './conf.d:/etc/nginx/conf.d'
       - './certsm:/etc/nginx/certs'
       - './certs.ss:/etc/nginx/certs.ss'
-      - './conf:/etc/nginx/confff'
     restart: always
     networks:
       - asionet
