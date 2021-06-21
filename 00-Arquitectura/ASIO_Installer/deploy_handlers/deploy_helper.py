@@ -30,6 +30,7 @@ def deploy_front(db_address, back_address):
     db_path = 'environments/front'
     os.environ.putenv('BACK_HOST', db_address)
     os.environ.putenv('DB_HOST', back_address)
+    deploy_portainer()
     dh.run_compose('docker-compose.yml', db_path, project_name, True)
     dh.run_compose('docker-compose-service-discovery.yml', db_path, project_name, True)
     dh.run_compose('docker-compose-bechmarks.yml', db_path, project_name, True)
@@ -69,6 +70,7 @@ def stop_front():
     dh = DockerHelper()
     db_path = 'environments/front'
     project_name = 'ASIO_FRONT'
+    stop_portainer()
     dh.stop_compose('docker-compose.yml', db_path, project_name)
     dh.stop_compose('docker-compose-service-discovery.yml', db_path, project_name)
     dh.stop_compose('docker-compose-bechmarks.yml', db_path, project_name)
@@ -83,7 +85,7 @@ def stop_front():
 
     option = u.option_handler("Parar ONTOLOCI (Integración continua para ontologías) [S|n]", "Valor no valido, solo son validos los valores [s|n]", None, ['S', 'N'], 0)
     if option == 0:
-        dh.stop_compose('docker-compose.yml', db_path+'/deploy_ontoloci', 'ASIO_ONTOLOCI')
+        dh.stop_compose('docker-compose.yml', db_path+'/ontolo-ci/docker', 'ASIO_ONTOLOCI')
 
     option = u.option_handler("Parar SAML TEST [S|n]", "Valor no valido, solo son validos los valores [s|n]", None, ['S', 'N'], 0)
     if option == 0:

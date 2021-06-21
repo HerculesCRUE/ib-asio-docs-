@@ -90,8 +90,8 @@ services:
         aliases:
           - wb.wdqs-frontend.svc
     environment:
-      - WIKIBASE_HOST=host.docker.internal
-      - WDQS_HOST=host.docker.internal
+      - WIKIBASE_HOST=wb-wikibase-IO
+      - WDQS_HOST=wb-wdqs-proxy-IO
   wb-wdqs-IO:
     image: wikibase/wdqs:0.3.40
     restart: unless-stopped
@@ -114,7 +114,7 @@ services:
     image: wikibase/wdqs-proxy
     restart: unless-stopped
     environment:
-      - PROXY_PASS_HOST=host.docker.internal:9999
+      - PROXY_PASS_HOST=wb-wdqs-IO:9999
     ports:
       - "28989:80"
     depends_on:

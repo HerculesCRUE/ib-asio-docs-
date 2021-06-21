@@ -23,7 +23,7 @@ services:
       context: ../ontoloci-web
       dockerfile: Dockerfile
     ports:
-      - 80:3000
+      - 3000:3000
     environment:
       REACT_APP_ONTOLOCI_GITHUB_CLIENT_ID: "Iv1.4165e745cebcb7f9"
     stdin_open: true # Needed to keep the image alive.
