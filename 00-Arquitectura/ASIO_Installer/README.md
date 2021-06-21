@@ -116,6 +116,89 @@ Los servicios desplegados, lo harán con un nombre de prefijo ASIO_FRONT_XXXX, p
 
 Los servicios desplegados para la maquina front requieren conocer la IP publica por la que pueden acceder a la maquina de DB y BACK y esta será solicitada durante el proceso de despliegue.
 
+#### Servicio Gateway
+
+El servicio Gateway es el encargado de exponer el resto de servicios (solo los que es necesario exponer), centralizándolos en un solo punto de acceso (un servidor nginx).
+
+Para ellos es necesario gestionar adecuadamente los ficheros de configuración.
+
+En los siguientes puntos, se enumeraran los pasos necesarios, para realizar la configuración (en este caso con un certificado auto firmado). Obviamente es necesario adaptar dichos pasos a la configuración deseada para un entorno real.
+
+##### Generación de certificado auto firmado para pruebas (solo si no se dispone de otro tipo de certificado)
+
+```
+######################
+# Become a Certificate Authority
+######################
+
+# Generate private key
+openssl genrsa -des3 -out myCA.key 2048
+# Generate root certificate
+openssl req -x509 -new -nodes -key myCA.key -sha256 -days 825 -out myCA.pem
+
+######################
+# Create CA-signed certs
+######################
+
+NAME=mydomain.com # Use your own domain name
+# Generate a private key
+openssl genrsa -out $NAME.key 2048
+# Create a certificate-signing request
+openssl req -new -key $NAME.key -out $NAME.csr
+# Create a config file for the extensions
+>$NAME.ext cat <<-EOF
+authorityKeyIdentifier=keyid,issuer
+basicConstraints=CA:FALSE
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
+subjectAltName = @alt_names
+[alt_names]
+DNS.1 = $NAME # Be sure to include the domain name here because Common Name is not so commonly honoured by itself
+DNS.2 = bar.$NAME # Optionally, add additional domains (I've added a subdomain here)
+IP.1 = 192.168.0.13 # Optionally, add an IP address (if the connection which you have planned requires it)
+EOF
+# Create the signed certificate
+openssl x509 -req -in $NAME.csr -CA myCA.pem -CAkey myCA.key -CAcreateserial \
+-out $NAME.crt -days 825 -sha256 -extfile $NAME.ext
+
+```
+
+##### Ficheros de configuración
+
+Los ficheros de configuración se encuentran en la ruta (relativa a ASIO_Installer) **./environtments/front/gateway/conf.d** 
+
+Para gestionar los certificados, tenemos que usar el fichero **ssl.conf**
+
+```
+server {
+  listen 80;
+  listen [::]:80;
+  return 301 https://$host$request_uri;
+}
+
+server {
+  # listen 443            ssl;
+  # listen [::]:443       ssl;
+  listen 80;
+
+  server_name hercules1testgrp.atica.um.es;
+
+  ############ En esta Ruta establecemos los certificados
+  ssl_certificate     /etc/nginx/certs/certificado.chain.pem;   ### Ruta a la clave publica
+  ssl_certificate_key /etc/nginx/certs/privada.pem;             ### Ruta a la clave privada
+
+  ssl_session_cache shared:SSL:50m;
+  ssl_session_timeout  30m;
+
+  # ssl_dhparam /etc/nginx/certs/dhparam.pem;
+
+  ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+  ssl_ciphers 'ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA:ECDHE-ECDSA-DES-CBC3-SHA:ECDHE-RSA-DES-CBC3-SHA:EDH-RSA-DES-CBC3-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:DES-CBC3-SHA:!DSS';
+  ssl_prefer_server_ciphers on;
+
+  add_header Strict-Transport-Security max-age=15768000;
+}
+```
+
 ### Despliegue de servicios BACK
 
 La ejecución de la opción 2 (Desplegar servicios de Backend),  automatizara el despliegue de los servicios descritos en la sección [Servicios desplegados en Backend](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/00-Arquitectura/Manual_de_despliegue/manual_de_despliegue.md#243-servicios-desplegados-en-back) , siguiendo los pasos que se describen en [Despliegue de Maquina DB](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/00-Arquitectura/Manual_de_despliegue/manual_de_despliegue.md#323-m%C3%A1quina-back) del manual de despliegue (a excepción del servicio Portainer, que debe instalarse una vez por cada máquina física).
