@@ -7,7 +7,7 @@ services:
       - \\.\pipe\docker_engine:\\.\pipe\docker_engine
       - /var/lib/docker/volumes:/var/lib/docker/volumes
     ports:
-      - target: 9001
+      - target: 9011
         published: 9001
         protocol: tcp
         mode: host
