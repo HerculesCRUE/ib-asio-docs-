@@ -1,4 +1,4 @@
 
-qpython:S1192"TDefine a constant instead of duplicating this literal 'docker-compose.yml' 18 times.(‹¶Îıÿÿÿÿ
-spython:S1192~"VDefine a constant instead of duplicating this literal 'docker-compose-ce.yml' 4 times.(óÇ×Æùÿÿÿÿ
-python:S1192%"uDefine a constant instead of duplicating this literal "Valor no valido, solo son validos los valores [s|n]" 10 times.(Œ×Í¨
+xpython:S1192"TDefine a constant instead of duplicating this literal 'docker-compose.yml' 18 times.(‹¶Îıÿÿÿÿ8Õ¤óî¢/
+{python:S1192€"VDefine a constant instead of duplicating this literal 'docker-compose-ce.yml' 4 times.(óÇ×Æùÿÿÿÿ8Õ¤óî¢/
+”python:S1192&"uDefine a constant instead of duplicating this literal "Valor no valido, solo son validos los valores [s|n]" 10 times.(Œ×Í¨8Õ¤óî¢/
