@@ -21,29 +21,53 @@
 
 
 [1. Introducción](#introduccion)
+
 [2. Acceso a la aplicación](#acceso)
+
 [3. Acceso Público](#accesopublico)
+
 [3.1. Estructuras de investigación](#estructurasinvestigacion)
+
 [3.2. Personal investigador](#personalinvestigador)
+
 [3.3.  Áreas](#areas)
+
 [3.4.  Producción científica](#produccioncientifica)
+
 [3.5.  Acciones de investigación](#accionesinvestigacion)
+
 [3.6.  Estadísticas](#estadisticas)
+
 [3.7. Consultas Sparql](#consultassparql)
+
 [3.8. Linked Data Graph](#linkeddata)
+
 [3.9. Instalador](#instalador)
+
 [3.10. Enlaces](#enlaces)
+
 [3.11. Información](#informacion)
+
 [4. Acceso Privado](#accesoprivado)
+
 [4.1. Consultas Sparql](#consultassparqlprivado)
+
 [4.2. Libreria descubrimiento](#libreriadescubrimiento)
+
 [4.3. Factoría de URIs](#factoriauris)
+
 [4.4. Monitor Backends](#monitorbackends)
+
 [4.5. Importador de datos](#importador)
+
 [4.6. Borrado de datos](#borrado)
+
 [4.7. Validadores](#validadores)
+
 [4. Trellis](#trellis)
+
 [5. Wikibase](#wikibase)
+
 [6. Pantallas](#pantallas)
 
 
