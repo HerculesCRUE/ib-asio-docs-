@@ -325,9 +325,6 @@ El objetivo de esta sección es que se muestren estadísticas, en base a los dat
 
 ![Estadisticas](./images/screenshots/estadisticas.png)
 
-En este documento, se explica como poder añadir un nuevo gráfico de estadísticas.
-
-
 <a name="consultassparql"></a>
 # 3.7. Consultas SparQL
 
