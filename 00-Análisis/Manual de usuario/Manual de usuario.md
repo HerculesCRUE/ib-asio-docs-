@@ -64,11 +64,11 @@
 
 [4.7. Validadores](#validadores)
 
+[4.8. Gestión de usuarios](#gestionusuarios)
+
 [4. Trellis](#trellis)
 
 [5. Wikibase](#wikibase)
-
-[6. Pantallas](#pantallas)
 
 
 <a name="introduccion"></a>
@@ -389,43 +389,51 @@ Para las consultas propias, existe la opción de borrar, no así para las predef
 <a name="importador"></a>
 # 4.5. Importador de datos
 
+Esta nueva pantalla estará solamente accesible desde la parte privada.
 
-Se dispone de dos importadores diferentes, unos para jobs y otro para CVNs. Para ambos hay que lanzar un proceso, diferente para cada uno, desde el servidor, en el lugar en el que se encuentre el fichero .jar del proyecto dataset-importer. Para más información, mirar el documento [README.md](https://github.com/HerculesCRUE/ib-dataset-importer/blob/master/README.md) del proyecto.
+Al acceder a la pantalla de importación de datos el usuario podrá visualizar el listado de ejecuciones de importación, así como detalles de quién lanzó la ejecución o con qué frecuencia es ejecutada esa tarea. Tal y como se muestra en la imagen de abajo.
 
-Al lanzar cualquiera de los dos procesos, se inicializa la importación tanto en Trellis como en Wikibase, ambos procesos pueden llevar algo de tiempo por lo que los resultados de la importación pueden tardar en verse en ambos.
+![Importador](./images/screenshots/importador.png)
 
+El usuario podrá visualizar un pop-up con un listado de errores en la ejecución, sí es que los hubo clicando en el enlace “Errores”.
 
+![Errores](./images/screenshots/erroresimportacion.png)
 
-Importador de Datasets
----------------------------
+Desde la pantalla de importación de datos se podrán seleccionar el tipo de importación a realizar, así como sus parámetros de configuración. En caso de que el usuario no introduzca ningún parámetro la aplicación establecerá la configuración por defecto.
 
-El importador de Datasets, importa los datos a partir de los ficheros XML proporcionados por la UM. El proceso que hay que lanzar para iniciar el procesado de estos ficheros es: 
+![Nueva importacion](./images/screenshots/nuevaimportacion.png)
 
-```
-java -jar -Dspring.batch.job.names=importDataSetJob {jar-name}.jar
-```
+El usuario podrá definir una expresión cron, indicando la frecuencia de ejecución de la importación. Para usuarios no experimentados con las expresiones cron se ha habilitado un link explicativo de cómo funcionan las expresiones cron.
 
+## Tipos de importadores
 
+A continuación, se explican los 4 tipos de importaciones que se pueden realizar:
+- Dataset: Importación de datos procedentes de Murcia, ficheros xml.
+- CVN: Importación de datos procedentes de CVN.
+- SGI: Importación de datos procedentes de SGI HERCULES.
+- CERIF: Importación de datos procedentes de CERIF.
 
-## Importador de CVNs
+| **Importador** | **Configuración** **por** **defecto** |
+| ------------------------------------------------------------ |
+| **Dataset** | APP_DATA_PATH: /home/herculesizertis/resourcesFull/dataset |
+| **CVN** | http://curriculumpruebas.um.es/curriculum/rest/v1/auth |
+| **SGI** | http://herc-as-front-desa.atica.um.es/oai-pmh-xml/OAI_PMH |
+| **CERIF** | https://cris.uns.ac.rs/OAIHandlerOpenAIRECRIS |
 
-El importador de CVNs, importa los datos a partir de los servicios mockeados proporcionados por la UM. El proceso que hay que lanzar para iniciar el procesado de estos ficheros es: 
+## Importación de datos Dataset
 
-```
-java -jar -Dspring.batch.job.names=importCvnJob {jar-name}.jar
-```
+El usuario deberá previamente subir los ficheros xml que se quieran importar a una carpeta en el servidor, por defecto esta carpeta es /home/herculesizertis/resourcesFull/dataset. Si se quisiera cambiar esta ruta bastaría con indicarla en la sección parámetros de la importación en la variable: APP_DATA_PATH.
+Para subir estos ficheros el usuario deberá conectarse a la máquina mediante FTP, utilizando cualquier cliente FTP disponible en el mercado por ejemplo WinSCP en entornos Windows o GIGOLO para entornos Linux.
 
+![FTP](./images/screenshots/ftp.png)
 
+## Importación de datos CVN
 
-## Importador SGI
+Para la importación de este tipo de datos basta con especificar la ruta del endpoint que sirve los datos del CVN. Este planteamiento permite fácilmente cambiar el origen de importación de los CVN con tan solo modificar el parámetro de entrada del endpoint.
 
-El importador de SGI importa los datos a partir de unos servicios implementados por el protocolo OAI-PMH.
+## Importación de datos SGI y CERIF
+Al igual que el apartado anterior, para este tipo de importación basta con indicar la url del endpoint encargada de devolver los datos o utilizar en su defecto las ya preestablecidas.
 
-El repositorio de este servicio se puede consultar en [oah-pmh](https://github.com/HerculesCRUE/oai-pmh). El proceso que hay que lanzar para iniciar el procesado de estos ficheros es: 
-
-```
-java -jar -Dspring.batch.job.names=importOaipmhJob {jar-name}.jar
-```
 
 <a name="borrado"></a>
 # 4.6. Borrado de datos
@@ -433,6 +441,26 @@ java -jar -Dspring.batch.job.names=importOaipmhJob {jar-name}.jar
 <a name="validadores"></a>
 # 4.7. Validadores
 
+Desde esta sección, un usuario logueado, podrá añadir Shapes que se aplicarán en el proceso de importación.
+El proceso de importación usa las Shapes definidas por este mecanismo y se guardarán las trazas de dicho error de forma que un usuario pueda comprobar que elementos de la importación no han podido ser insertados por algún incumplimiento de lo definido en las Shapes, y su causa.
+
+En definitiva, esta interfaz de Validación tiene las siguientes funcionalidades:
+•	Crear, modificar y borrar shape expresión relacionadas con una entidad o propiedad.
+•	Visualizar y tener una trazabilidad completa de las instancias que incumplen las shapes, y por lo tanto no son insertadas.
+
+![mantenimientovalidadores](./images/screenshots/mantenimientovalidadores.png)
+
+A través de esta pantalla, se podrán visualizar, editar o añadir las shapeEx que serán utilizadas posteriormente para validar cada una de las entidades. Si para alguna entidad no existe, no se realizará la validación.
+
+Para crear un nuevo validador, se deberá pulsar en "Crear validador" y rellenar el siguiente formulario:
+![mantenimientovalidadores](./images/screenshots/mantenimientovalidadores.png)
+
+
+Durante el proceso de importación, una vez generado el RDF, se verificará si existe una ShapeEx definida para cada entidad. El usuario administrador, podrá visualizar el informe de errores de validación ocurridos en el proceso de importación, a través del histórico de importaciones, tal como se muestra en la siguiente imagen:
+![Errores](./images/screenshots/erroresimportacion.png)
+
+<a name="gestionusuarios"></a>
+# 4.8. Gestión de usuarios
 
 <a name="trellis"></a>
 # 5. Trellis
