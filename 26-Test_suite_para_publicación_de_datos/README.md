@@ -2,8 +2,8 @@
 
 | Entregable   | Test Suite para publicación de datos                         |
 | ------------ | ------------------------------------------------------------ |
-| Fecha        | 03/05/2021                                                   |
-| Revisado por | Paloma Terán Pérez                                           |
+| Fecha        | 14/07/2021                                                   |
+| Revisado por | Hugo Pintado Pérez                                           |
 | Proyecto     | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://www.crue.org/proyecto/hercules/) |
 | Módulo       | Test Suite para publicación de datos                         |
 | Tipo         | Software                                                     |
@@ -616,6 +616,13 @@ Como un BasicContainer es una sub-clase de RDFSource, pues en mi opinión, cumpl
 ## Test
 
 Test para BasicContainer
+
+## Dataset de Pruebas
+
+Durante las pruebas realizadas para la importación se han empleado distintos conjuntos de datos (datasets), alguno de los cuales pueden descargarse a continuacion
+* [DataSet Proyectos](./datasets/dataset_proyectos.rar)
+* [DataSet Reducido](./datasets/dataset_reducido.rar)
+* [DataSet Reducido con Personas](./datasets/dataset_reducido_personas.rar)
 
 ## Conclusiones
 
