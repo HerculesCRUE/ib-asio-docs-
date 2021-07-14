@@ -2,8 +2,8 @@
 
 | Entregable   | Test Suite para publicación de datos                         |
 | ------------ | ------------------------------------------------------------ |
-| Fecha        | 03/05/2021                                                   |
-| Revisado por | Paloma Terán Pérez                                           |
+| Fecha        | 14/07/2021                                                   |
+| Revisado por | Hugo Pintado Pérez                                           |
 | Proyecto     | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://www.crue.org/proyecto/hercules/) |
 | Módulo       | Test Suite para publicación de datos                         |
 | Tipo         | Software                                                     |
