@@ -408,11 +408,25 @@ En la sección de consultas guardadas podremos encontrar las consultas predefini
 <a name="libreriadescubrimiento"></a>
 # 4.2. Librería de descubrimiento
 
+Desde esta opción de menú podremos realizar consultas sobre la librería de descubrimiento. Visualizando tanto datos estadísticos de los objetos, como realizar búsquedas de similitudes 
+
+![Librería](./images/screenshots/libdesc.PNG)
+
+![Librería](./images/screenshots/libdesc2.PNG)
+
 <a name="factoriauris"></a>
 # 4.3. Factoría de URIs
 
+Desde esta sección se podrán realizar consultas a la factoría de URIS y de esta forma poder visualizar las uris de uan entidad en concreto, por ejemplo.
+
+![Factoria](./images/screenshots/factoria.PNG)
+
 <a name="monitorbackends"></a>
 # 4.4. Monitor Backends
+
+Desde el monitor de Backends se podrá visualizar la información sobre los distintos backends que esté federados.
+
+![Monitor](./images/screenshots/monitor.PNG)
 
 <a name="importador"></a>
 # 4.5. Importador de datos
