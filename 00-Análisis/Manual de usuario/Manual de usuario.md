@@ -99,6 +99,7 @@ A continuación se detallan las diferentes secciones a las que se puede acceder 
 - Acciones de investigación
 - Estadísticas
 - Consultas SPARQL
+- Linked Data Graph
 - Instalador
 - Enlaces
 - Información
