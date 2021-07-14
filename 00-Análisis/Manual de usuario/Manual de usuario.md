@@ -408,27 +408,300 @@ En la sección de consultas guardadas podremos encontrar las consultas predefini
 <a name="libreriadescubrimiento"></a>
 # 4.2. Librería de descubrimiento
 
-Desde esta opción de menú podremos realizar consultas sobre la librería de descubrimiento. Visualizando tanto datos estadísticos de los objetos, como realizar búsquedas de similitudes 
+Desde esta opción de menú podremos realizar consultas sobre la librería de descubrimiento. Visualizando tanto datos estadísticos de los objetos, como realizar búsquedas de similitudes.
 
-![Librería](./images/screenshots/libdesc.PNG)
+Básicamente podemos acceder a tres pestañas distintas, aunque las pestañas de Búsqueda y Resultados, solo son visibles en la zona privada, para un usuario administrador
 
-![Librería](./images/screenshots/libdesc2.PNG)
+
+
+
+
+![Librería](./images/screenshots/desc-opt.PNG)
+
+
+
+En esta documentación se comentaran las tres y se indicara claramente que opciones seran solo visibles para usuarios administradores
+
+### Control (público)
+
+Visible para cualquier perfil de usuario, básicamente muestra estadísticas
+
+* Estado de la librería de descubrimiento: Muestra el estado y la sincronización  de los datos en la librería de descubrimiento, en tres tipos de almacenamientos:
+
+  * Redis: Cache
+  * Elasticsearh: Motor de búsqueda
+  * Real Data: Estructuras de datos en memoria
+
+  ![Librería](./images/screenshots/desc-state.PNG)
+
+  
+
+  También muestra dos botones:
+
+  * Actualizar estado: Refresca la tabla que se esta visualizando
+  * Forzar recarga de los datos: Esta acción, fuerza a la librería de descubrimiento a obtener todos los datos desde el Triple Store, y actualizar Redis y Elasticsearch. Es una acción pesada, que dejara inactiva la librería de descubrimiento, por un periodo de tiempo dependiente de la volumetria de datos, por lo tanto esta acción esta restringida a administradores.
+
+* Estadísticas de objetos: En esta sección es posible visualizar las estadísticas relativas  a la importancia de un determinado atributo para una determinada entidad, filtrando por Nodo, Triple Store y Clase.
+
+  ![Librería](./images/screenshots/disc-stats.PNG)
+
+  
+
+### Búsqueda (Privado)
+
+En esta pestaña están agrupadas todas las acciones de búsqueda posibles para la librería de descubrimiento.
+
+![Librería](./images/screenshots/disc-search-select.PNG)
+
+Cada acción de búsqueda muestra un formulario especifico, pero existen ciertos atributos comunes para todos los formularios como son:
+
+* **Nodo**: (seleccionable) Nodo de origen a partir del cual se realizara la búsqueda de similitudes.
+* **Almacenamiento**: (seleccionable) Triple Store donde se buscarán las similitudes.
+* **Clase**: (seleccionable) Clase o entidad para la que se realizara la búsqueda.
+* **Hacer petición síncrona**: (check) Determina si la aplicación esperará por la respuesta o no. Se recomienda desmarcarlo siempre, ya que es una petición pesada, y el tiempo de respuesta puede ser considerable. En caso de no hacerse síncrona, la petición se procesara cuando la librería de descubrimiento este preparada para hacerlo. En el momento de hacer la petición se mostrara un numero de petición a partir del cual se puede recuperar la respuesta una vez procesada.
+* **Aplicar búsqueda solo en deltas**: (check) Determina la búsqueda se realizara solo en las entidades que pudiese haber cambiado desde la última búsqueda, reduciendo considerablemente el tiempo necesario para procesar la petición (salvo en el caso de ser la primera búsqueda, o que haya cambiado un numero considerable de entidades desde la última)
+* **Buscar en otros Backends**: (check) Determina la búsqueda se realizara solo en el Backend seleccionado, o se compararan las entidades de dicho Backend con las entidades de otros Backends. Obviamente el tiempo necesario para ejecutar la acción aumenta drásticamente, por lo que se aconseja, mantenerlo desactivado.  
+
+Básicamente se dispone de tres tipos de búsqueda:
+
+#### Búsqueda de similitudes por clase
+
+Esto lanzará una búsqueda de similitudes, para comparar todas las instancias de una misma clase (o solo los deltas si el check esta activado).
+
+No tiene parámetros adicionales a los ya explicados.
+
+![Librería](./images/screenshots/desc-s-c.PNG)
+
+#### Búsqueda de similitudes por clase
+
+Esto lanzará una búsqueda de similitudes, para comparar todas las instancias de una misma clase (o solo los deltas si el check esta activado).
+
+No tiene parámetros adicionales a los ya explicados.
+
+![Librería](./images/screenshots/desc-s-c.PNG)
+
+La respuesta es la descrita en la sección [Respuesta](#Respuesta).
+
+#### Búsqueda de similitudes por instancia
+
+Esto lanzará una búsqueda de similitudes, para comparar una determinada instancia, pasada como parámetro, con el resto de instancias de su misma clase almacenadas en el Triple Store.
+
+Tiene algún parámetro adicional:
+
+* **id de la entidad:** Sera usado para poder visualizar claramente en la respuesta, sobre que entidad se realizo la búsqueda.
+* **Atributos del objeto en formato JSON:** Conjunto de atributos que se usaran en la comparación, en formato JSON.
+
+![Librería](./images/screenshots/desc-s-i.PNG)
+
+La respuesta es la descrita en la sección [Respuesta](#Respuesta).
+
+#### Búsqueda de similitudes en la nube LOD
+
+Esto lanzará una búsqueda de similitudes, entre las instancias de una determinada clase, en un determinado nodo, y en un determinado Triple Store, con las instancias similares que pudiese encontrar en la Nube LOD (dataset externos, definidos para el proyecto).
+
+Tiene algún parámetro adicional:
+
+* **Datasource:** Dataset externo donde se realizara la búsqueda de instancias similares. * (Wilcard --All--) indica que se realizara la búsqueda en todos los dataset definidos, obviamente esto implica un mayor tiempo de proceso.
+
+![Librería](./images/screenshots/desc-s-l.PNG)
+
+La respuesta es la descrita en la sección [Respuesta](#Respuesta).
+
+#### Respuesta
+
+La respuesta a una búsqueda de similitud, depende de si la petición se realiza de forma síncrona o asíncrona.
+
+Para una petición asíncrona la respuesta será como la que se muestra en la imagen.
+
+Los campos coloreados en verde, son aquellos que necesitaremos para recuperar la respuesta, cuando esta esta disponible, según se describe en la sección [Resultados](#Resultados-(Privado)).
+
+![Librería](./images/screenshots/desc-resp-asinc.PNG)
+
+Para una petición síncrona la respuesta será idéntica a la descrita en la sección [Resultados](#Resultados-(Privado))
+
+### Resultados (Privado)
+
+En esta pestaña se pueden recuperar cualquier tipo de respuesta a cualquier petición anterior hecha a la librería de descubrimiento.
+
+![Librería](./images/screenshots/desc-r-sel.png)
+
+Estas pueden ser de dos tipos:
+
+* **action-results:** Permite recuperar la respuesta de una petición concreta.
+* **action-open:** Permite recuperar todas las respuestas que necesitan intervención del usuario para desambiguar una similitud.
+
+#### Action Result
+
+Permite recuperar la respuesta de una petición concreta.
+
+![Librería](./images/screenshots/disc-r-ar.png)
+
+Para ello dispone de los siguientes parámetros:
+
+* Usuario: Selecciona automáticamente el usuario que realiza la petición, por medio del login. No permite otra selección
+* Tipo de resultado: 
+  * CLASS SEARCH: Para búsqueda de resultados por clase.
+  * INSTANCE SEARCH: Para búsqueda de resultados por instancia.
+  * LOD SEARCH: Para búsqueda de resultados en la nube LOD.
+* Clase: Clase donde se realizo la búsqueda.
+* Código de resultado: Desplegable donde para los filtros anteriores, podemos ver las respuestas disponibles y seleccionarla. Se muestra información del codigo de petición (que se facilita al ejecutar una búsqueda y fecha y hora de la petición)
+
+#### Action Open
+
+Permite recuperar todas las similitudes que están es estado abierto, es decir, requieren una acción del usuario para desambiguar las similitudes.
+
+![Librería](./images/screenshots/d-r-ao.png)
+
+Para ello dispone de los siguientes parámetros:
+
+* Nodo: Filtra por nodo
+* Almacenamiento: Filtra por almacenamiento
+
+#### Respuestas
+
+Las respuestas suelen ser complejas, y tiene varios niveles, para que un usuario pueda ver solo la información que precise.
+
+##### Sección de metadatos
+
+En esta parte podemos visualizar metadatos de la propia petición, como por ejemplo, cuando fue hecha, sobre que triple store, para que clase, su estado, y el instante de comienzo y fin
+
+![Librería](./images/screenshots/d-r-m.png)
+
+##### Sección de Resultados de similitudes
+
+Podemos ver en una lista desplegable (al desplegar veremos el detalle de cada entidad), las similitudes para las cuales ha encontrado algun tipo de similitud.
+
+![Librería](./images/screenshots/d-r-r-s.png)
+
+##### Detalle de Resultado de similitud para una entidad (al desplegar las anteriores)
+
+Al seleccionar cada una de las anteriores podemos ver el detalle de la similitud
+
+![Librería](./images/screenshots/d-r-r-s-d.png)
+
+En la primera parte de la imagen se muestra detalle de la entidad principal que acabamos de desplegar, y también sus atributos.
+
+En las siguientes secciones veremos tres secciones que describiremos a continuación:
+
+* Detalle de la entidad relacionada: Común para todas las entidades relacionadas, ya sean en Similitudes automáticas, manuales o acciones, descrita en el apartado [Detalle de Resultado de entidad relacionada](#Detalle-de-Resultado-de-entidad-relacionada)
+
+* Similitudes automáticas: Donde se muestra el detalle de la entidad relacionada, para aquellas similitudes con grado suficiente para desencadenar acciones automáticas.
+
+* Similitudes manuales: Donde se muestra el detalle de la entidad relacionada, para aquellas similitudes que no tienen grado suficiente para desencadenar acciones automáticas. En este caso aparecerán dos botones para que el usuario pueda desechar la similitud o aceptarla. Esto desencadenara las acciones correspondientes en la librería de descubrimiento
+
+  ![Librería](./images/screenshots/d-r-btn.png)
+
+* Acciones: Listado de acciones realizadas por la librería de descubrimiento tras detectar la similitud
+
+  ![Librería](./images/screenshots/d-r-acc.png)
+
+##### Detalle de Resultado de entidad relacionada
+
+Básicamente muestra la misma información que la tabla anterior con algunos matices
+
+* Similaridad: Grado de similaridad de esta entidad con respecto a la entidad principal relacionada
+* Similaridad sin id: Grado de similaridad sin tener en cuenta el atributo id de esta entidad con respecto a la entidad principal relacionada
+* Tabla de atributos: En esta caso muestra 3 columnas en vez de 2 como en el caso anterior, ya que además de mostrar el valor de el atributo para la entidad relacionada, también lo muestra para la principal, de forma que sea sencillo compararlas.
+
+![Librería](./images/screenshots/d-r-r-s-d-r.png)
+
+
+
+### Resultados (Privado)
 
 <a name="factoriauris"></a>
+
 # 4.3. Factoría de URIs
 
-Desde esta sección se podrán realizar consultas a la factoría de URIS y de esta forma poder visualizar las uris de uan entidad en concreto, por ejemplo.
+Desde esta sección se podrán realizar consultas a la factoría de URIS y de esta forma poder visualizar las URIs de una entidad en concreto, por ejemplo.
 
-![Factoria](./images/screenshots/factoria.PNG)
+![Factoria](./images/screenshots/factoria.PNG) 
+
+Esta pantalla pretende dar soporte a las acciones que para un usuario puedan tener sentido a la hora de interactuar con la Factoría de URIs. 
+
+Podemos seleccionar el tipo de URI, por medio del selector que aparece en la pantalla principal
+
+![](./images/screenshots/uf-select-main.png)
+
+Básicamente implementa la funcionalidad para obtener URIs de recursos, ya sean:
+
+### URIs Públicas 
+
+Son aquellas que siguen el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md), implementado por la [Factoría de URIs](https://github.com/HerculesCRUE/ib-uris-generator).
+
+Lo primero que veremos es un selector, donde podemos seleccionar el tipo de recurso al que queremos acceder
+
+![](./images/screenshots/uf-select-public.png)
+
+Para los distintos tipos de recursos, veremos distintos tipos de formularios, todos ellos comparten los selectores:
+
+* Dominio:  Dominio de la URI, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es opcional, si se informa se filtrara por ese criterio
+* Subdominio: Subdominio de la URI, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es opcional, si se informa se filtrara por ese criterio
+* Idioma: Idioma en la cual se definió la URI, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es opcional, si se informa se filtrara por ese criterio
+* Tipo: Tipo de recursode la URI, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es opcional, si se informa se filtrara por ese criterio
+
+Los siguientes campos son obligatorios según el tipo de recurso buscado:
+
+* Instancias: URIs de instancias concretas, por ejemplo un investigador concreto
+
+  ![](./images/screenshots/uf-instance.png)
+
+  * Entidad:  Clase de la entidad a la que pertenece la instancia, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es obligatorio.
+  * Id:  Identificador de la instancia, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es obligatorio.
+
+* Entidades:  URIs de clases las que pertenecen las instancias
+
+  ![](./images/screenshots/uf-entity.png)
+
+  * Entidad:  Clase de la entidad que queremos buscar, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es obligatorio.
+
+* Propiedades: URIs de propiedades que tienen tanto las instancias como las clases
+
+  ![](./images/screenshots/uf-property.png)
+
+  * Propiedad:  Nombre de la propiedad que queremos buscar, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es obligatorio.
+
+La respuesta podrá visualizarse como una tabla con una lista de resultados
+
+![](./images/screenshots/uf-canonical-response.png)
+
+### URIs Privadas
+
+Son aquellas que URIs des-referenciables, que indican la ubicación real del recurso.
+
+Podemos acceder a dichas URIS  a partir de la URI Canónica del recurso, descrito en el apartado anterior.
+
+![](./images/screenshots/uf-private.png)
 
 <a name="monitorbackends"></a>
+
 # 4.4. Monitor Backends
 
 Desde el monitor de Backends se podrá visualizar la información sobre los distintos backends que esté federados.
 
 ![Monitor](./images/screenshots/monitor.PNG)
 
+Estos aparecerán como paneles anidados, que podrán ser desplegados pulsando en ellos. Como se aprecia en la imagen, cada nivel muestra información de el contenido del siguiente nivel, por ejemplo, en la imagen se aprecian 2 nodos:
+
+* um: Que contiene 2 servicios
+* um2: Que contiene 1 servicio
+
+En cuanto a los niveles, son 3:
+
+* Nivel de nodo: Indica un backend completo, por ejemplo um para la Universidad de Murcia. Al desplegar un nodo podemos seleccionar si el nodo esta activo o no, para participar las consultas Federadas del [Endpoint SPARQL](#4.1.-Consultas-SparQL). Para todos los Backends que no sean el backend desde el cual estamos usando el front (para este, esa opción estará desactivada), podemos cambiar el estado a activado o desactivado.
+
+  ![Monitor](./images/screenshots/monitor-activate.PNG)
+
+* Nivel de servicio: Servicios expuestos, dentro de un determinado nodo y sus estados
+
+  ![Monitor](./images/screenshots/monitor-services.PNG)
+
+* Nivel de Endpoints: Aquí podemos ver los endpoints desplegados para cada servicio
+
+  ![Monitor](./images/screenshots/monitor-ep.PNG)
+
 <a name="importador"></a>
+
 # 4.5. Importador de datos
 
 Esta nueva pantalla estará solamente accesible desde la parte privada.
@@ -502,6 +775,7 @@ Durante el proceso de importación, una vez generado el RDF, se verificará si e
 ![Errores](./images/screenshots/erroresimportacion.png)
 
 <a name="gestionusuarios"></a>
+
 # 4.8. Gestión de usuarios
 
 La gestión de usuarios se realiza a través de la herramienta keycloak. Para acceder a ella bastará con pulsar sobre el enlace que verá el administrador una vez autenticado en la plataforma.
@@ -546,7 +820,19 @@ Para gestionar los roles de un usuario será necesario acceder a la pestaña "Ro
 ![edit](./images/screenshots/gestuser_role.PNG)
 
 
+
+<a name="gestionusuarios"></a>
+
+# 4.8. ETL
+
+Es posible modificar o crear procesos de ETL desde la interface grafica por medio de la integración con la herramienta Spoon Web, que a su vez está conectada directamente con el servicio PDI, que ejecutara el proceso ETL.
+
+![edit](./images/screenshots/etl-main.PNG)
+
+Existe documentación detallada en el [manual de usuario](https://github.com/HerculesCRUE/ib-dataset-etl) de  el proyecto dataset-etl.
+
 <a name="trellis"></a>
+
 # 5. Trellis
 
 Para acceder a la máquina de Trellis se necesita usuario y contraseña de la UM y se accede a través de la siguiente dirección:

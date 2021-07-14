@@ -1,5 +1,16 @@
 # Backups y restauraciones
 
+| Entregable     | Manual de usuario                                            |
+| -------------- | ------------------------------------------------------------ |
+| Fecha          | 13/07/2021                                                   |
+| Revisado por   | Daniel Ruiz Santamaría                                       |
+| Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
+| Módulo         | Backups y restauraciones                                     |
+| Tipo           | Documento                                                    |
+| Objetivo       | Documento destinado a dar asistencia a las personas que utilicen el sistema ASIO. |
+| Estado         | **100%**                                                     |
+| Próximos pasos |                                                              |
+
 El objetivo del presente documento es detallar los pasos necesarios para programar o realizar backups de las bases de datos del proyecto y describir asimismo los pasos necesarios para recuperar la información del sistema, en base a estos mismos backups de forma que sea siempre posible, recuperar un estado anterior del sistema, para un instante concreto en el tiempo.
 
 ## Bases de datos
@@ -332,7 +343,7 @@ Seleccionamos  otra vez el botón **manage datasets**
 
 Para restaurar la base de datos relacional a partir de los ficheros de backup, es necesario siguientes los siguientes pasos:
 
-1. Localizar los ficheros a partir de los cuales queremos recuperar el estado de la base de datos. Es necesario recuperar todas las bases de datos, y restaurarlas, para ello selecionaremos los ficheros de backup de la fecha que estemos interesados en restaurar. Tal y como se indico estos están disponibles en la ruta  **/opt/mysql/backups**.
+1. Localizar los ficheros a partir de los cuales queremos recuperar el estado de la base de datos. Es necesario recuperar todas las bases de datos, y restaurarlas, para ello seleccionaremos los ficheros de backup de la fecha que estemos interesados en restaurar. Tal y como se indico estos están disponibles en la ruta  **/opt/mysql/backups**.
 
    Podemos filtrarlos aprovechando el patrón de nombrado usando el siguiente comando
 
