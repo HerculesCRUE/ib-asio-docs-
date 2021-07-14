@@ -1,3 +1,14 @@
+![](./images/logos_feder.png)
+
+
+
+| Fecha        | 14/07/2021                                                   |
+| ------------ | :----------------------------------------------------------- |
+| Revisado por | Hugo Pintado Pérez                                          |
+| Módulo       | Autenticación y Autorización |
+| Tipo         | Documento                                                    |
+| Objetivo     |Configuración keycloak |
+
 # Keycloak
 
 ## Arranque
@@ -23,7 +34,7 @@ Se precisa acceder a la URL de administración http://localhost:8080/auth/admin,
 ### Crear un realm
 
 Por defecto se crea un realm denominado `Master`. Se debería crear un real específico para la solución. Desde la opción incluida dentro del nombre del realm (parte superior izquierda) aparecerá un botón "Add realm"
-![Add realm](/proyectos/universidaddemurcia/SEMANTMURC/authorization/keycloak/keycloak-add-realm-1024x615.webp)
+![Add realm](./proyectos/universidaddemurcia/SEMANTMURC/authorization/keycloak/keycloak-add-realm-1024x615.webp)
 
 En la siguiente pantalla se añadirá un nuevo realm denominado `umasio`.
 
@@ -51,16 +62,16 @@ Es posible configurar varios mecanismos de acceso, entre ellos una autenticació
 
 En Keycloak, nos iremos a la parte de `Identity Providers` y crearemos uno de tipo SAML 2.0.
 
-![SIR IdP](/proyectos/universidaddemurcia/SEMANTMURC/authorization/keycloak/sir-idp.png)
+![SIR IdP](./proyectos/universidaddemurcia/SEMANTMURC/authorization/keycloak/sir-idp.png)
 
 Nos saldrán múltiples opciones, pero antes de ponernos a rellenarlas, iremos a la parte de abajo donde pone `Import External IdP Config` importaremos los metadatos para que aparezcan los IdPs que queramos (en nuestro caso pondremos el enlace de los IdPs CRUE). 
 
 - Opcioón 1: https://md.sir2.rediris.es/sirrr/metadata/service/aHR0cHM6Ly93d3cucmVkaXJpcy5lcy9zaXIvY3J1ZWlkcA~~/metadata.xml
-- Opción 2: [metadata.xml](/proyectos/universidaddemurcia/SEMANTMURC/authorization/keycloak/metadata.xml)
+- Opción 2: [metadata.xml](./proyectos/universidaddemurcia/SEMANTMURC/authorization/keycloak/metadata.xml)
 
 Como podremos ver, se nos habrán rellenado automáticamente alguno de los campos:
 
-![SIR SAML configuration 1](/proyectos/universidaddemurcia/SEMANTMURC/authorization/keycloak/sir-saml-config1.png)
+![SIR SAML configuration 1](./proyectos/universidaddemurcia/SEMANTMURC/authorization/keycloak/sir-saml-config1.png)
 
 Pero tenemos que rellenar nosotros algunos más como (los dos primeros campos que van aparecer abajo, les hemos puesto el nombre de la federación, pero podrá ser otro cualquiera): 
 
@@ -73,7 +84,7 @@ Pero tenemos que rellenar nosotros algunos más como (los dos primeros campos qu
 
 Una vez tengamos todo lo anterior, guardamos y al volver a `Identity Providers` no debería de salir esto:
 
-![SIR IdP list](/proyectos/universidaddemurcia/SEMANTMURC/authorization/keycloak/sir-idp-list.png)
+![SIR IdP list](./proyectos/universidaddemurcia/SEMANTMURC/authorization/keycloak/sir-idp-list.png)
 
 Nuestro siguiente paso, será configurar los atributos para el acceso. Desde el punto anterior, seleccionamos el `Name` que nos aparece en azul (en nuestro caso, SIR2). Aquí nos saldrá otra vez los mismo que cuando estuvimos configurándolo, pero en la zona superior, saldrán tres pestañas:
 
@@ -83,7 +94,7 @@ Nuestro siguiente paso, será configurar los atributos para el acceso. Desde el 
 
 En el apartado de `Mappers`, tendremos que poner que atributos estamos solicitando para el acceso, veamos un ejemplo, de como añadir el atributo `eduPersonTargetedID` (ePTI):
 
-![mapperseduperson.png](/images/mapperseduperson.png)
+![mapperseduperson.png](./images/mapperseduperson.png)
 
 Lo primero, será poner en la casilla de `Mapper Type` el valor `Attribute Importer`. Una vez hecho esto, nos aparecerán las casillas de la imagen y las rellenaremos de la siguiente forma:
 
@@ -106,17 +117,17 @@ Lista de atributos:
 
 Para el campo username del usuario se creará un mapeo específico. De esta forma se tomará el campo email que se reciba de SIR como username del usuario local.
 
-![username.png](/images/username.png)
+![username.png](./images/username.png)
 
 Una vez rellenado, guardamos y ya tendremos un atributo configurado. Este proceso habrá que repetirlo para cada atributo que necesitemos.
 Con esto ya tendríamos todo configurado y solo quedaría ir a la pestaña de `Export` (mencionada con anterioridad), copiar los datos que salgan y enviarlo a la cola de sir2@rediris.es para que se den de alta en la federación.
 
 Flujos: Será necesario crear un nuevo flujo para el primer login ya que no es necesaria una lógica tan compleja. Para ello desde el menu authentication se insertará un nuevo flujo.
-![auth.png](/images/auth.png)
-![simple.png](/images/simple.png)
+![auth.png](./images/auth.png)
+![simple.png](./images/simple.png)
 
 Y se configurará en el identity provider.
-![identity.png](/images/identity.png)
+![identity.png](./images/identity.png)
 ### Certificado
 Será preciso generar una key que se incluirá a los metadatos. Para ello hay que ir a la opción Realm Settings -> Keys -> Providers. En caso que no exista ua de tipo rsa-generated, se creará una nueva, dejando los datos por defecto a excepción de la prioridad  que se indicará 100.
 Una vez creado, habrá que ir a Identity Providers, dentro del que se ha creado, hay que activar Want AuthnRequests Signed (ponerlo a ON), donde aparecerán los campos:
@@ -130,7 +141,7 @@ Tras esto, si se exportan los metadatos ya debería aparecer el certificado.
 
 Se ha realizado una exportación completa del realm listo para su importación
 
-- [realm-export.json](/proyectos/universidaddemurcia/SEMANTMURC/authorization/keycloak/realm-export.json)
+- [realm-export.json](./proyectos/universidaddemurcia/SEMANTMURC/authorization/keycloak/realm-export.json)
 
 
 ## Obtención de la configuración para OpenID
