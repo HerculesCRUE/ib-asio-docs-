@@ -115,6 +115,7 @@ Y las secciones a las que se podrá acceder desde la parte privada, además de l
 - Librería de descubrimiento
 - Monitor de Backends
 
+![home](./images/screenshots/home.PNG)
 
 A continuación, se explica cada una de las secciones, agrupadas por acceso público y privado
 
@@ -146,8 +147,7 @@ La pantalla dispondrá de una serie de filtros:
 - Las diferentes opciones que hay dentro de las estructuras de organización: Universidad, centro, etc. Si se selecciona una de estas sub-opciones, mostrará la información filtrada por ese tipo de estructura en la tabla.
 - Un buscador general por nombre de centro.
 
-![Captura de estructuras de investigación](./images/screenshots/estructuras.png)
-
+![EstructurasInvestigacion](./images/screenshots/estructura.PNG)
 
 
 La información que se muestra en esta página tratará de responder, entre otras, a las siguientes preguntas de competencia:
@@ -167,12 +167,12 @@ De cada estructura de investigación, se podrá consultar el listado de los inve
 
 - **Personal investigador**
 
-![Captura de detalle de una estructuras de investigación - tab personal investigador](./images/screenshots/detalle-estructuras-personal.png)
+![EstructurasInvestigacion](./images/screenshots/estructura_detalle1.PNG)
 
 
 - **Patentes**
 
-![Captura de detalle de una estructuras de investigación - tab patentes](./images/screenshots/detalle-estructuras-patentes.png)
+![EstructurasInvestigacion](./images/screenshots/estructura_detalle2.PNG)
 
 
 
@@ -194,8 +194,11 @@ En esta pantalla se responde a las siguientes preguntas de competencia:
 
 Se muestra el personal investigador filtrado por áreas y tipo, se podrá ordenar, cambiar el número de resultados, etc.
 
-![Captura de personal investigador](./images/screenshots/personal-investigador.png)
+![EstructurasInvestigacion](./images/screenshots/personal.PNG)
 
+Existe un filtro por áreas que por defecto estará oculto, para ser usado deberá ser desplegado 
+
+![EstructurasInvestigacion](./images/screenshots/filtroArea.PNG)
 
 Se utilizan las siguientes preguntas de competencia para el diseño de la pantalla:
 
@@ -213,22 +216,26 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 
 - **Acciones de investigación**
 
-![Captura de personal investigador](./images/screenshots/detalle-personal-investigador-acciones.png)
+![PersonalDetalle](./images/screenshots/personal_detalle1.PNG)
 
 
 - **Publicaciones científicas**
 
-![Captura de personal investigador](./images/screenshots/detalle-personal-investigador-publicaciones-cientificas.png)
+![PersonalDetalle](./images/screenshots/personal_detalle2.PNG)
 
 
 - **Publicaciones académicas**
 
-![Captura de personal investigador](./images/screenshots/detalle-personal-investigador-publicaciones-academicas.png)
+![PersonalDetalle](./images/screenshots/personal_detalle3.PNG)
+
+- **Proyectos**
+
+![PersonalDetalle](./images/screenshots/personal_detalle4.PNG)
 
 
 - **Eventos**
 
-![Captura de personal investigador](./images/screenshots/detalle-personal-investigador-eventos.png)
+![PersonalDetalle](./images/screenshots/personal_detalle5.PNG)
 
 
 
@@ -241,7 +248,7 @@ En esta pantalla se muestra información sobre los datos del módulo vertical "�
 
 
 
-![Captura áreas](./images/screenshots/areas.png)
+![PersonalDetalle](./images/screenshots/areas.PNG)
 
 
 
@@ -257,7 +264,7 @@ En esta pantalla, se muestran las publicaciones y los eventos de investigaciones
 
 
 
-![Publicaciones científicas](./images/screenshots/produccion-cientifica-publicaciones-cientificas.png)
+![Publicaciones científicas](./images/screenshots/pubcien.PNG)
 
 Se podrá acceder al detalle de cada publicación científica pulsando en cada item del listado.
 
@@ -265,20 +272,20 @@ Se podrá acceder al detalle de cada publicación científica pulsando en cada i
 ## Publicaciones académicas
 
 
-![Publicaciones académicas](./images/screenshots/produccion-cientifica-publicaciones-academicas.png)
+![Publicaciones Académicas](./images/screenshots/pubaca.PNG)
 
 Se podrá acceder al detalle de cada publicación académica pulsando en cada item del listado.
 
 ## Otras publicaciones
 
 
-![Otros publicaciones](./images/screenshots/produccion-cientifica-otros-documentos.png)
+![Publicaciones Otras](./images/screenshots/pubotras.PNG)
 
 Se podrá acceder al detalle de cada publicación pulsando en cada item del listado.
 
 ## Eventos
 
-![Eventos](./images/screenshots/produccion-cientifica-eventos.png)
+![Eventos](./images/screenshots/pubeventos.PNG)
 
 Se podrá acceder al detalle de cada evento pulsando en cada item del listado.
 
@@ -295,7 +302,7 @@ Se divide en dos secciones: Patentes y Proyectos
 
 En esta sección de acciones de investigación se podrán ver las patentes filtradas por nombre y por ámbito.
 
-![Captura de acciones de investigación - tab proyectos](./images/screenshots/acciones-investigacion-patentes.png)
+![Patentes](./images/screenshots/accinv1.PNG)
 
 Se podrá acceder al detalle de cada patente pulsando en cada item del listado.
 
@@ -305,7 +312,7 @@ Se podrá acceder al detalle de cada patente pulsando en cada item del listado.
 La tabla podrá ser filtrada por año y por nombre.
 
 
-![Captura de acciones de investigación - tab documentos](./images/screenshots/acciones-investigacion-proyectos.png)
+![Proyectos](./images/screenshots/accinv2.PNG)
 
 Se podrá acceder al detalle de cada proyecto, pulsando en cada item del listado. En dicho detalle, se podrá consultar la información general del proyecto y los participantes del mismo.
 
@@ -323,7 +330,7 @@ En esta página se muestra la información de las preguntas de competencia relac
 
 El objetivo de esta sección es que se muestren estadísticas, en base a los datos del sistema.
 
-![Estadisticas](./images/screenshots/estadisticas.png)
+![Estadisticas](./images/screenshots/estadisticas.PNG)
 
 <a name="consultassparql"></a>
 # 3.7. Consultas SparQL
@@ -335,22 +342,42 @@ Esta sección, a diferencia de las anteriores, varía si se accede de forma púb
 - No se podrán consultas federadas
 
 Al entrar en la pantalla, veremos que está dividida en dos partes
-![SparQL](./images/screenshots/sparqlpublica.png)
+![sparql](./images/screenshots/sparql_pub.PNG)
 Una parte superior donde se podrán lanzar consultas sparql y ver los resultados y una parte inferior donde se podrán consultar las consultas predefinidas.
 
 
 <a name="linkeddata"></a>
 # 3.8. Linked Data Graph
 
+A través de esta sección se accederá al Linked Data Graph. En una primera pantalla se mostrará el contador de registros por entidad.
+
+![ldp](./images/screenshots/ldp.PNG)
+
+A través del cajetín de búsqueda se podrán realizar consultas sobre el grafo.
+
+![ldp](./images/screenshots/ldp_find.PNG)
+
 <a name="instalador"></a>
 # 3.9. Instalador
 
+A traves de esta sección se podrá acceder a las instrucciones de instalación, teniendo dos opciones.
+ * instalación manual
+ * instalación a través de script
 
 <a name="enlaces"></a>
 # 3.10. Enlaces
 
+En la sección de enlaces se podrán encontrar enlaces de interes, tales como:
+
+* Enlace al repositorio de la tercera ontologia
+* Enlace al repositorio de Hércules
+* Enlace a asio-docs
+* ....
+
 <a name="informacion"></a>
 # 3.11. Información
+
+En esta sección podremos encontrar una descripción del proyecto Hércules.
 
 <a name="accesoprivado"></a>
 # 4. Acceso privado
@@ -364,7 +391,8 @@ Además de tener las mismas funcionalidades comentadas en el apartado 3.7, si el
 - Guardar consultas
 - Lanzar consultas federadas. 
 
-![SparQL](./images/screenshots/sparqlprivada.png)
+![ldp](./images/screenshots/sparQL.PNG)
+
 Se tiene la posibilidad de ejecutar una consulta sparQL y guardar dicha consulta que ha diseñado pulsando el botón “Guardar”, al pulsarlo se le solicitará un nombre identificativo de la consulta:
 
 ![Guardar SparQL](./images/screenshots/guardarconsulta.png)
@@ -373,7 +401,9 @@ En la mitad inferior de la pantalla se cuenta con un panel para la administraci�
 Una vez localizada la consulta que le interese utilizar, se podrá cargar en el formulario sparQL para su posterior uso pulsando sobre el botón “Usar”.
 Para las consultas propias, existe la opción de borrar, no así para las predefinidas del sistema.
 
-![Consultas guardadas](./images/screenshots/consultas guardadas.png)
+![Consultas guardadas](./images/screenshots/consultasguardadas.png)
+
+En la sección de consultas guardadas podremos encontrar las consultas predefinidas establecidas para todos los usuarios
 
 <a name="libreriadescubrimiento"></a>
 # 4.2. Librería de descubrimiento
