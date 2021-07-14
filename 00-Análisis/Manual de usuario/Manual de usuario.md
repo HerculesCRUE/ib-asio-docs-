@@ -497,6 +497,11 @@ Tambien se podrá realizar el reseteo de la contraseña, pudiendo introducir una
 
 ![edit](./images/screenshots/gestuser_pwd.PNG)
 
+Para gestionar los roles de un usuario será necesario acceder a la pestaña "Role Mappings"
+
+![edit](./images/screenshots/gestuser_role.PNG)
+
+
 <a name="trellis"></a>
 # 5. Trellis
 
