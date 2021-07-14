@@ -461,16 +461,20 @@ Durante el proceso de importación, una vez generado el RDF, se verificará si e
 # 4.8. Gestión de usuarios
 
 La gestión de usuarios se realiza a través de la herramienta keycloak. Para acceder a ella bastará con pulsar sobre el enlace que verá el administrador una vez autenticado en la plataforma.
+
 ![Acceso](./images/screenshots/gestuser_acceso.PNG)
 
 Nos llevará a keycloak donde tendremos que introducir el usuario de dicha herramienta.
+
 ![keycloak](./images/screenshots/gestuser_login.PNG)
 
-Una vez dentro podremos visualizar todas las opciones de configuración de keycloak. Para acceder a la gestión de usuarios bastará con pulsar sobre el enlace marcado
+Una vez dentro podremos visualizar todas las opciones de configuración de keycloak. Para acceder a la gestión de usuarios bastará con pulsar sobre el enlace marcado.
+
 ![usuarios](./images/screenshots/gestuser_user.PNG)
 
 
 Desde esta pantalla se podrán filtrar los usuarios, editarlos, eliminarlos o añadir nuevos usuarios.
+
 ![usuarios](./images/screenshots/gestuser_op.PNG)
 
 ## Nuevos usuarios
@@ -489,6 +493,9 @@ Podremos visualizar las propiedades que llegan desde SIR
 
 ![edit](./images/screenshots/gestuser_sir.PNG)
 
+Tambien se podrá realizar el reseteo de la contraseña, pudiendo introducir una temporal que el usuario deberá cambiar, o dejando una establecida.
+
+![edit](./images/screenshots/gestuser_pwd.PNG)
 
 <a name="trellis"></a>
 # 5. Trellis
