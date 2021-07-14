@@ -617,6 +617,13 @@ Como un BasicContainer es una sub-clase de RDFSource, pues en mi opinión, cumpl
 
 Test para BasicContainer
 
+## Dataset de Pruebas
+
+Durante las pruebas realizadas para la importación se han empleado distintos conjuntos de datos (datasets), alguno de los cuales pueden descargarse a continuacion
+* [DataSet Proyectos](./datasets/dataset_proyectos.rar)
+* [DataSet Reducido](./datasets/dataset_reducido.rar)
+* [DataSet Reducido con Personas](./datasets/dataset_reducido_personas.rar)
+
 ## Conclusiones
 
 Siempre se repiten los mismos fallos en los test, y estos casi siempre son SHOULD, es decir un deseo, no una obligación de que el servidor actué de una determinada manera.
