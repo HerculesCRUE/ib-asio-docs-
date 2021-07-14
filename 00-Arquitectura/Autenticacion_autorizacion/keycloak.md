@@ -34,7 +34,7 @@ Se precisa acceder a la URL de administración http://localhost:8080/auth/admin,
 ### Crear un realm
 
 Por defecto se crea un realm denominado `Master`. Se debería crear un real específico para la solución. Desde la opción incluida dentro del nombre del realm (parte superior izquierda) aparecerá un botón "Add realm"
-![Add realm](./proyectos/universidaddemurcia/SEMANTMURC/authorization/keycloak/keycloak-add-realm-1024x615.webp)
+![Add realm](./images/keycloak-add-realm-1024x615.webp)
 
 En la siguiente pantalla se añadirá un nuevo realm denominado `umasio`.
 
@@ -62,16 +62,16 @@ Es posible configurar varios mecanismos de acceso, entre ellos una autenticació
 
 En Keycloak, nos iremos a la parte de `Identity Providers` y crearemos uno de tipo SAML 2.0.
 
-![SIR IdP](./proyectos/universidaddemurcia/SEMANTMURC/authorization/keycloak/sir-idp.png)
+![SIR IdP](./images/sir-idp.png)
 
 Nos saldrán múltiples opciones, pero antes de ponernos a rellenarlas, iremos a la parte de abajo donde pone `Import External IdP Config` importaremos los metadatos para que aparezcan los IdPs que queramos (en nuestro caso pondremos el enlace de los IdPs CRUE). 
 
-- Opcioón 1: https://md.sir2.rediris.es/sirrr/metadata/service/aHR0cHM6Ly93d3cucmVkaXJpcy5lcy9zaXIvY3J1ZWlkcA~~/metadata.xml
-- Opción 2: [metadata.xml](./proyectos/universidaddemurcia/SEMANTMURC/authorization/keycloak/metadata.xml)
+ https://md.sir2.rediris.es/sirrr/metadata/service/aHR0cHM6Ly93d3cucmVkaXJpcy5lcy9zaXIvY3J1ZWlkcA~~/metadata.xml
+
 
 Como podremos ver, se nos habrán rellenado automáticamente alguno de los campos:
 
-![SIR SAML configuration 1](./proyectos/universidaddemurcia/SEMANTMURC/authorization/keycloak/sir-saml-config1.png)
+![SIR SAML configuration 1](./images/sir-saml-config1.png)
 
 Pero tenemos que rellenar nosotros algunos más como (los dos primeros campos que van aparecer abajo, les hemos puesto el nombre de la federación, pero podrá ser otro cualquiera): 
 
@@ -84,7 +84,7 @@ Pero tenemos que rellenar nosotros algunos más como (los dos primeros campos qu
 
 Una vez tengamos todo lo anterior, guardamos y al volver a `Identity Providers` no debería de salir esto:
 
-![SIR IdP list](./proyectos/universidaddemurcia/SEMANTMURC/authorization/keycloak/sir-idp-list.png)
+![SIR IdP list](./images/sir-idp-list.png)
 
 Nuestro siguiente paso, será configurar los atributos para el acceso. Desde el punto anterior, seleccionamos el `Name` que nos aparece en azul (en nuestro caso, SIR2). Aquí nos saldrá otra vez los mismo que cuando estuvimos configurándolo, pero en la zona superior, saldrán tres pestañas:
 
@@ -141,7 +141,7 @@ Tras esto, si se exportan los metadatos ya debería aparecer el certificado.
 
 Se ha realizado una exportación completa del realm listo para su importación
 
-- [realm-export.json](./proyectos/universidaddemurcia/SEMANTMURC/authorization/keycloak/realm-export.json)
+- [realm-export.json](./images/realm-export.json)
 
 
 ## Obtención de la configuración para OpenID
