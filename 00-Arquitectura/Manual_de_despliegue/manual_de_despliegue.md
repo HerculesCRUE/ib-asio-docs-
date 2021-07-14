@@ -8,7 +8,7 @@
 
 | Entregable     | Manual de usuario                                            |
 | -------------- | ------------------------------------------------------------ |
-| Fecha          | 03/05/2021                                                   |
+| Fecha          | 14/07/2021                                                   |
 | Revisado por   | Daniel Ruiz Santamaría                                       |
 | Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
 | Módulo         | Manual de despliegue                                         |
@@ -1586,6 +1586,7 @@ A pesar de que soporta millones de peticiones, podría ser conveniente configura
 
 Para hacerlo es suficiente seguir los pasos descritos en la documentación de la [imagen docker](https://hub.docker.com/r/bitnami/keycloak)
 
+Para realizar la configuración con SIR se puede seguir la siguiente guía [Configuración keycloak](../Autenticacion_autorizacion/keycloak.md)
 
 
 ## 5 Backups y recuperación
