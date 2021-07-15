@@ -416,7 +416,7 @@ Básicamente podemos acceder a tres pestañas distintas, aunque las pestañas de
 
 
 
-![Librería](./images/screenshots/desc-opt.PNG)
+![Librería](./images/screenshots/desc-opt.png)
 
 
 
@@ -432,7 +432,7 @@ Visible para cualquier perfil de usuario, básicamente muestra estadísticas
   * Elasticsearh: Motor de búsqueda
   * Real Data: Estructuras de datos en memoria
 
-  ![Librería](./images/screenshots/desc-state.PNG)
+  ![Librería](./images/screenshots/desc-state.png)
 
   
 
@@ -443,7 +443,7 @@ Visible para cualquier perfil de usuario, básicamente muestra estadísticas
 
 * Estadísticas de objetos: En esta sección es posible visualizar las estadísticas relativas  a la importancia de un determinado atributo para una determinada entidad, filtrando por Nodo, Triple Store y Clase.
 
-  ![Librería](./images/screenshots/disc-stats.PNG)
+  ![Librería](./images/screenshots/disc-stats.png)
 
   
 
@@ -451,7 +451,7 @@ Visible para cualquier perfil de usuario, básicamente muestra estadísticas
 
 En esta pestaña están agrupadas todas las acciones de búsqueda posibles para la librería de descubrimiento.
 
-![Librería](./images/screenshots/disc-search-select.PNG)
+![Librería](./images/screenshots/disc-search-select.png)
 
 Cada acción de búsqueda muestra un formulario especifico, pero existen ciertos atributos comunes para todos los formularios como son:
 
@@ -470,7 +470,7 @@ Esto lanzará una búsqueda de similitudes, para comparar todas las instancias d
 
 No tiene parámetros adicionales a los ya explicados.
 
-![Librería](./images/screenshots/desc-s-c.PNG)
+![Librería](./images/screenshots/desc-s-c.png)
 
 #### Búsqueda de similitudes por clase
 
@@ -478,7 +478,7 @@ Esto lanzará una búsqueda de similitudes, para comparar todas las instancias d
 
 No tiene parámetros adicionales a los ya explicados.
 
-![Librería](./images/screenshots/desc-s-c.PNG)
+![Librería](./images/screenshots/desc-s-c.png)
 
 La respuesta es la descrita en la sección [Respuesta](#Respuesta).
 
@@ -491,7 +491,7 @@ Tiene algún parámetro adicional:
 * **id de la entidad:** Sera usado para poder visualizar claramente en la respuesta, sobre que entidad se realizo la búsqueda.
 * **Atributos del objeto en formato JSON:** Conjunto de atributos que se usaran en la comparación, en formato JSON.
 
-![Librería](./images/screenshots/desc-s-i.PNG)
+![Librería](./images/screenshots/desc-s-i.png)
 
 La respuesta es la descrita en la sección [Respuesta](#Respuesta).
 
@@ -503,7 +503,7 @@ Tiene algún parámetro adicional:
 
 * **Datasource:** Dataset externo donde se realizara la búsqueda de instancias similares. * (Wilcard --All--) indica que se realizara la búsqueda en todos los dataset definidos, obviamente esto implica un mayor tiempo de proceso.
 
-![Librería](./images/screenshots/desc-s-l.PNG)
+![Librería](./images/screenshots/desc-s-l.png)
 
 La respuesta es la descrita en la sección [Respuesta](#Respuesta).
 
@@ -515,7 +515,7 @@ Para una petición asíncrona la respuesta será como la que se muestra en la im
 
 Los campos coloreados en verde, son aquellos que necesitaremos para recuperar la respuesta, cuando esta esta disponible, según se describe en la sección [Resultados](#Resultados-(Privado)).
 
-![Librería](./images/screenshots/desc-resp-asinc.PNG)
+![Librería](./images/screenshots/desc-resp-asinc.png)
 
 Para una petición síncrona la respuesta será idéntica a la descrita en la sección [Resultados](#Resultados-(Privado))
 
@@ -615,7 +615,7 @@ Básicamente muestra la misma información que la tabla anterior con algunos mat
 
 Desde esta sección se podrán realizar consultas a la factoría de URIS y de esta forma poder visualizar las URIs de una entidad en concreto, por ejemplo.
 
-![Factoria](./images/screenshots/factoria.PNG) 
+![Factoria](./images/screenshots/factoria.png) 
 
 Esta pantalla pretende dar soporte a las acciones que para un usuario puedan tener sentido a la hora de interactuar con la Factoría de URIs. 
 
@@ -679,7 +679,7 @@ Podemos acceder a dichas URIS  a partir de la URI Canónica del recurso, descrit
 
 Desde el monitor de Backends se podrá visualizar la información sobre los distintos backends que esté federados.
 
-![Monitor](./images/screenshots/monitor.PNG)
+![Monitor](./images/screenshots/monitor.png)
 
 Estos aparecerán como paneles anidados, que podrán ser desplegados pulsando en ellos. Como se aprecia en la imagen, cada nivel muestra información de el contenido del siguiente nivel, por ejemplo, en la imagen se aprecian 2 nodos:
 
@@ -690,15 +690,15 @@ En cuanto a los niveles, son 3:
 
 * Nivel de nodo: Indica un backend completo, por ejemplo um para la Universidad de Murcia. Al desplegar un nodo podemos seleccionar si el nodo esta activo o no, para participar las consultas Federadas del [Endpoint SPARQL](#4.1.-Consultas-SparQL). Para todos los Backends que no sean el backend desde el cual estamos usando el front (para este, esa opción estará desactivada), podemos cambiar el estado a activado o desactivado.
 
-  ![Monitor](./images/screenshots/monitor-activate.PNG)
+  ![Monitor](./images/screenshots/monitor-activate.png)
 
 * Nivel de servicio: Servicios expuestos, dentro de un determinado nodo y sus estados
 
-  ![Monitor](./images/screenshots/monitor-services.PNG)
+  ![Monitor](./images/screenshots/monitor-services.png)
 
 * Nivel de Endpoints: Aquí podemos ver los endpoints desplegados para cada servicio
 
-  ![Monitor](./images/screenshots/monitor-ep.PNG)
+  ![Monitor](./images/screenshots/monitor-ep.png)
 
 <a name="importador"></a>
 
