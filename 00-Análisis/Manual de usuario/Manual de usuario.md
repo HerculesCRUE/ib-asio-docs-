@@ -365,48 +365,10 @@ A traves de esta sección se podrá acceder a las instrucciones de instalación,
  * instalación a través de script
 
 <a name="enlaces"></a>
-# 3.10. Enlaces
-
-En la sección de enlaces se podrán encontrar enlaces de interes, tales como:
-
-* Enlace al repositorio de la tercera ontologia
-* Enlace al repositorio de Hércules
-* Enlace a asio-docs
-* ....
-
-<a name="informacion"></a>
-# 3.11. Información
-
-En esta sección podremos encontrar una descripción del proyecto Hércules.
-
-<a name="accesoprivado"></a>
-# 4. Acceso privado
-Para loguearse en el sistema, deberá accederse a la parte superior derecha y pulsar en "Acceder", ahí deberá introducir el nombre de usuario y contraseña.
-Cuando el usuario introduzca estos datos y pulse el botón "Log In", la aplicación comprobará si los datos introducidos son correctos. Si estos datos son correctos entonces se mostrarán más secciones en el menu y en la pantalla de inicio.
-
-<a name="consultassparqlprivado"></a>
-# 4.1. Consultas SparQL
-
-Además de tener las mismas funcionalidades comentadas en el apartado 3.7, si el usuario está logueado, podrá además:
-- Guardar consultas
-- Lanzar consultas federadas. 
-
-![ldp](./images/screenshots/sparQL.PNG)
-
-Se tiene la posibilidad de ejecutar una consulta sparQL y guardar dicha consulta que ha diseñado pulsando el botón “Guardar”, al pulsarlo se le solicitará un nombre identificativo de la consulta:
-
-![Guardar SparQL](./images/screenshots/guardarconsulta.png)
-
-En la mitad inferior de la pantalla se cuenta con un panel para la administración y uso de las consultas sparQL almacenadas. Desde él podrá filtrar las consultas, tanto las propias como las predefinidas en el sistema.
-Una vez localizada la consulta que le interese utilizar, se podrá cargar en el formulario sparQL para su posterior uso pulsando sobre el botón “Usar”.
-Para las consultas propias, existe la opción de borrar, no así para las predefinidas del sistema.
-
-![Consultas guardadas](./images/screenshots/consultasguardadas.png)
-
-En la sección de consultas guardadas podremos encontrar las consultas predefinidas establecidas para todos los usuarios
 
 <a name="libreriadescubrimiento"></a>
-# 4.2. Librería de descubrimiento
+
+# 3.10. Librería de descubrimiento
 
 Desde esta opción de menú podremos realizar consultas sobre la librería de descubrimiento. Visualizando tanto datos estadísticos de los objetos, como realizar búsquedas de similitudes.
 
@@ -446,6 +408,160 @@ Visible para cualquier perfil de usuario, básicamente muestra estadísticas
   ![Librería](./images/screenshots/disc-stats.png)
 
   
+
+<a name="factoriauris"></a>
+
+# 3.11. Factoría de URIs
+
+Desde esta sección se podrán realizar consultas a la factoría de URIS y de esta forma poder visualizar las URIs de una entidad en concreto, por ejemplo.
+
+![Factoria](./images/screenshots/factoria.PNG) 
+
+Esta pantalla pretende dar soporte a las acciones que para un usuario puedan tener sentido a la hora de interactuar con la Factoría de URIs. 
+
+Podemos seleccionar el tipo de URI, por medio del selector que aparece en la pantalla principal
+
+![](./images/screenshots/uf-select-main.png)
+
+Básicamente implementa la funcionalidad para obtener URIs de recursos, ya sean:
+
+### URIs Públicas 
+
+Son aquellas que siguen el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md), implementado por la [Factoría de URIs](https://github.com/HerculesCRUE/ib-uris-generator).
+
+Lo primero que veremos es un selector, donde podemos seleccionar el tipo de recurso al que queremos acceder
+
+![](./images/screenshots/uf-select-public.png)
+
+Para los distintos tipos de recursos, veremos distintos tipos de formularios, todos ellos comparten los selectores:
+
+* Dominio:  Dominio de la URI, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es opcional, si se informa se filtrara por ese criterio
+* Subdominio: Subdominio de la URI, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es opcional, si se informa se filtrara por ese criterio
+* Idioma: Idioma en la cual se definió la URI, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es opcional, si se informa se filtrara por ese criterio
+* Tipo: Tipo de recursode la URI, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es opcional, si se informa se filtrara por ese criterio
+
+Los siguientes campos son obligatorios según el tipo de recurso buscado:
+
+* Instancias: URIs de instancias concretas, por ejemplo un investigador concreto
+
+  ![](./images/screenshots/uf-instance.png)
+
+  * Entidad:  Clase de la entidad a la que pertenece la instancia, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es obligatorio.
+  * Id:  Identificador de la instancia, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es obligatorio.
+
+* Entidades:  URIs de clases las que pertenecen las instancias
+
+  ![](./images/screenshots/uf-entity.png)
+
+  * Entidad:  Clase de la entidad que queremos buscar, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es obligatorio.
+
+* Propiedades: URIs de propiedades que tienen tanto las instancias como las clases
+
+  ![](./images/screenshots/uf-property.png)
+
+  * Propiedad:  Nombre de la propiedad que queremos buscar, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es obligatorio.
+
+La respuesta podrá visualizarse como una tabla con una lista de resultados
+
+![](./images/screenshots/uf-canonical-response.png)
+
+### URIs Privadas
+
+Son aquellas que URIs des-referenciables, que indican la ubicación real del recurso.
+
+Podemos acceder a dichas URIS  a partir de la URI Canónica del recurso, descrito en el apartado anterior.
+
+![](./images/screenshots/uf-private.png)
+
+<a name="monitorbackends"></a>
+
+# 3.12. Monitor Backends
+
+Desde el monitor de Backends se podrá visualizar la información sobre los distintos backends que esté federados.
+
+![Monitor](./images/screenshots/monitor.PNG)
+
+Estos aparecerán como paneles anidados, que podrán ser desplegados pulsando en ellos. Como se aprecia en la imagen, cada nivel muestra información de el contenido del siguiente nivel, por ejemplo, en la imagen se aprecian 2 nodos:
+
+* um: Que contiene 2 servicios
+* um2: Que contiene 1 servicio
+
+En cuanto a los niveles, son 3:
+
+* Nivel de nodo: Indica un backend completo, por ejemplo um para la Universidad de Murcia. Al desplegar un nodo podemos seleccionar si el nodo esta activo o no, para participar las consultas Federadas del [Endpoint SPARQL](#4.1.-Consultas-SparQL). Para todos los Backends que no sean el backend desde el cual estamos usando el front (para este, esa opción estará desactivada), podemos cambiar el estado a activado o desactivado.
+
+  ![Monitor](./images/screenshots/monitor-activate.PNG)
+
+* Nivel de servicio: Servicios expuestos, dentro de un determinado nodo y sus estados
+
+  ![Monitor](./images/screenshots/monitor-services.PNG)
+
+* Nivel de Endpoints: Aquí podemos ver los endpoints desplegados para cada servicio
+
+  ![Monitor](./images/screenshots/monitor-ep.PNG)
+
+
+
+
+
+# 3.13. Enlaces
+
+En la sección de enlaces se podrán encontrar enlaces de interes, tales como:
+
+* Enlace al repositorio de la tercera ontologia
+* Enlace al repositorio de Hércules
+* Enlace a asio-docs
+* ....
+
+<a name="informacion"></a>
+# 3.14. Información
+
+En esta sección podremos encontrar una descripción del proyecto Hércules.
+
+<a name="accesoprivado"></a>
+
+
+
+
+
+# 4. Acceso privado
+
+Para loguearse en el sistema, deberá accederse a la parte superior derecha y pulsar en "Acceder", ahí deberá introducir el nombre de usuario y contraseña.
+Cuando el usuario introduzca estos datos y pulse el botón "Log In", la aplicación comprobará si los datos introducidos son correctos. Si estos datos son correctos entonces se mostrarán más secciones en el menu y en la pantalla de inicio.
+
+<a name="consultassparqlprivado"></a>
+# 4.1. Consultas SparQL
+
+Además de tener las mismas funcionalidades comentadas en el apartado 3.7, si el usuario está logueado, podrá además:
+- Guardar consultas
+- Lanzar consultas federadas. 
+
+![ldp](./images/screenshots/sparQL.PNG)
+
+Se tiene la posibilidad de ejecutar una consulta sparQL y guardar dicha consulta que ha diseñado pulsando el botón “Guardar”, al pulsarlo se le solicitará un nombre identificativo de la consulta:
+
+![Guardar SparQL](./images/screenshots/guardarconsulta.png)
+
+En la mitad inferior de la pantalla se cuenta con un panel para la administración y uso de las consultas sparQL almacenadas. Desde él podrá filtrar las consultas, tanto las propias como las predefinidas en el sistema.
+Una vez localizada la consulta que le interese utilizar, se podrá cargar en el formulario sparQL para su posterior uso pulsando sobre el botón “Usar”.
+Para las consultas propias, existe la opción de borrar, no así para las predefinidas del sistema.
+
+![Consultas guardadas](./images/screenshots/consultasguardadas.png)
+
+En la sección de consultas guardadas podremos encontrar las consultas predefinidas establecidas para todos los usuarios
+
+<a name="libreriadescubrimiento"></a>
+# 4.2. Librería de descubrimiento
+
+Desde esta opción de menú podremos realizar consultas sobre la librería de descubrimiento. Visualizando tanto datos estadísticos de los objetos, como realizar búsquedas de similitudes.
+
+Básicamente podemos acceder a tres pestañas distintas, aunque las pestañas de Búsqueda y Resultados, solo son visibles en la zona privada, para un usuario administrador
+
+
+
+
+
+![Librería](./images/screenshots/desc-opt.png)
 
 ### Búsqueda (Privado)
 
@@ -605,104 +721,9 @@ Básicamente muestra la misma información que la tabla anterior con algunos mat
 
 ![Librería](./images/screenshots/d-r-r-s-d-r.png)
 
-
-
-### Resultados (Privado)
-
-<a name="factoriauris"></a>
-
-# 4.3. Factoría de URIs
-
-Desde esta sección se podrán realizar consultas a la factoría de URIS y de esta forma poder visualizar las URIs de una entidad en concreto, por ejemplo.
-
-![Factoria](./images/screenshots/factoria.PNG) 
-
-Esta pantalla pretende dar soporte a las acciones que para un usuario puedan tener sentido a la hora de interactuar con la Factoría de URIs. 
-
-Podemos seleccionar el tipo de URI, por medio del selector que aparece en la pantalla principal
-
-![](./images/screenshots/uf-select-main.png)
-
-Básicamente implementa la funcionalidad para obtener URIs de recursos, ya sean:
-
-### URIs Públicas 
-
-Son aquellas que siguen el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md), implementado por la [Factoría de URIs](https://github.com/HerculesCRUE/ib-uris-generator).
-
-Lo primero que veremos es un selector, donde podemos seleccionar el tipo de recurso al que queremos acceder
-
-![](./images/screenshots/uf-select-public.png)
-
-Para los distintos tipos de recursos, veremos distintos tipos de formularios, todos ellos comparten los selectores:
-
-* Dominio:  Dominio de la URI, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es opcional, si se informa se filtrara por ese criterio
-* Subdominio: Subdominio de la URI, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es opcional, si se informa se filtrara por ese criterio
-* Idioma: Idioma en la cual se definió la URI, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es opcional, si se informa se filtrara por ese criterio
-* Tipo: Tipo de recursode la URI, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es opcional, si se informa se filtrara por ese criterio
-
-Los siguientes campos son obligatorios según el tipo de recurso buscado:
-
-* Instancias: URIs de instancias concretas, por ejemplo un investigador concreto
-
-  ![](./images/screenshots/uf-instance.png)
-
-  * Entidad:  Clase de la entidad a la que pertenece la instancia, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es obligatorio.
-  * Id:  Identificador de la instancia, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es obligatorio.
-
-* Entidades:  URIs de clases las que pertenecen las instancias
-
-  ![](./images/screenshots/uf-entity.png)
-
-  * Entidad:  Clase de la entidad que queremos buscar, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es obligatorio.
-
-* Propiedades: URIs de propiedades que tienen tanto las instancias como las clases
-
-  ![](./images/screenshots/uf-property.png)
-
-  * Propiedad:  Nombre de la propiedad que queremos buscar, definido en el [esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md). El campo es obligatorio.
-
-La respuesta podrá visualizarse como una tabla con una lista de resultados
-
-![](./images/screenshots/uf-canonical-response.png)
-
-### URIs Privadas
-
-Son aquellas que URIs des-referenciables, que indican la ubicación real del recurso.
-
-Podemos acceder a dichas URIS  a partir de la URI Canónica del recurso, descrito en el apartado anterior.
-
-![](./images/screenshots/uf-private.png)
-
-<a name="monitorbackends"></a>
-
-# 4.4. Monitor Backends
-
-Desde el monitor de Backends se podrá visualizar la información sobre los distintos backends que esté federados.
-
-![Monitor](./images/screenshots/monitor.PNG)
-
-Estos aparecerán como paneles anidados, que podrán ser desplegados pulsando en ellos. Como se aprecia en la imagen, cada nivel muestra información de el contenido del siguiente nivel, por ejemplo, en la imagen se aprecian 2 nodos:
-
-* um: Que contiene 2 servicios
-* um2: Que contiene 1 servicio
-
-En cuanto a los niveles, son 3:
-
-* Nivel de nodo: Indica un backend completo, por ejemplo um para la Universidad de Murcia. Al desplegar un nodo podemos seleccionar si el nodo esta activo o no, para participar las consultas Federadas del [Endpoint SPARQL](#4.1.-Consultas-SparQL). Para todos los Backends que no sean el backend desde el cual estamos usando el front (para este, esa opción estará desactivada), podemos cambiar el estado a activado o desactivado.
-
-  ![Monitor](./images/screenshots/monitor-activate.PNG)
-
-* Nivel de servicio: Servicios expuestos, dentro de un determinado nodo y sus estados
-
-  ![Monitor](./images/screenshots/monitor-services.PNG)
-
-* Nivel de Endpoints: Aquí podemos ver los endpoints desplegados para cada servicio
-
-  ![Monitor](./images/screenshots/monitor-ep.PNG)
-
 <a name="importador"></a>
 
-# 4.5. Importador de datos
+# 4.3. Importador de datos
 
 Esta nueva pantalla estará solamente accesible desde la parte privada.
 
@@ -751,10 +772,10 @@ Al igual que el apartado anterior, para este tipo de importación basta con indi
 
 
 <a name="borrado"></a>
-# 4.6. Borrado de datos
+# 4.4. Borrado de datos
 
 <a name="validadores"></a>
-# 4.7. Validadores
+# 4.5. Validadores
 
 Desde esta sección, un usuario logueado, podrá añadir Shapes que se aplicarán en el proceso de importación.
 El proceso de importación usa las Shapes definidas por este mecanismo y se guardarán las trazas de dicho error de forma que un usuario pueda comprobar que elementos de la importación no han podido ser insertados por algún incumplimiento de lo definido en las Shapes, y su causa.
@@ -776,7 +797,7 @@ Durante el proceso de importación, una vez generado el RDF, se verificará si e
 
 <a name="gestionusuarios"></a>
 
-# 4.8. Gestión de usuarios
+# 4.6. Gestión de usuarios
 
 La gestión de usuarios se realiza a través de la herramienta keycloak. Para acceder a ella bastará con pulsar sobre el enlace que verá el administrador una vez autenticado en la plataforma.
 
@@ -821,9 +842,9 @@ Para gestionar los roles de un usuario será necesario acceder a la pestaña "Ro
 
 
 
-<a name="gestionusuarios"></a>
+<a name="ETL"></a>
 
-# 4.8. ETL
+# 4.7. ETL
 
 Es posible modificar o crear procesos de ETL desde la interface grafica por medio de la integración con la herramienta Spoon Web, que a su vez está conectada directamente con el servicio PDI, que ejecutara el proceso ETL.
 
