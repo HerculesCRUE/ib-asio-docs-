@@ -788,7 +788,7 @@ Al igual que el apartado anterior, para este tipo de importación basta con indi
 
 A través de la sección de Borrado, se podrá restaurar los datos a una versión anterior, seleccionando una fecha. Para ello se debe seleccionar una fecha y pulsar en el botón Restaurar:
 
-![borrado](./images/screenshots/borrado.png)
+![borrado](./images/screenshots/borrado.PNG)
 
 Esta funcionalidad envía un correo al área de sistemas con los pasos a seguir del backup.
 
