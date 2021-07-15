@@ -79,7 +79,7 @@
 	- [4.7. ETL](#47-etl)
 - [5. Trellis](#5-trellis)
 - [6. Wikibase](#6-wikibase)
-	- [Ejemplos de consultas de Wikibase:](#ejemplos-de-consultas-de-wikibase)#ejemplos-de-consultas-de-wikibase-)
+	- [Ejemplos de consultas de Wikibase:](#ejemplos-de-consultas-de-wikibase)
 
 
 
