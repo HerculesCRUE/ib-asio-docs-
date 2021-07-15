@@ -109,8 +109,11 @@ A continuación se detallan las diferentes secciones a las que se puede acceder 
 - Producción científica
 - Acciones de investigación
 - Estadísticas
+- Librería de descubrimiento
+- Factoría de URIs
+- Monitor Backends
 - Consultas SPARQL
-- Linked Data Graph
+- Entidades del Grafo ASIO-SGI
 - Instalador
 - Enlaces
 - Información
@@ -122,9 +125,7 @@ Y las secciones a las que se podrá acceder desde la parte privada, además de l
 - Gestión de usuarios
 - Importador de datos
 - Borrado de datos
-- Factoría de URIs
-- Librería de descubrimiento
-- Monitor de Backends
+- ETL
 
 ![home](./images/screenshots/home.PNG)
 
@@ -784,6 +785,15 @@ Al igual que el apartado anterior, para este tipo de importación basta con indi
 
 <a name="borrado"></a>
 ## 4.4. Borrado de datos
+
+A través de la sección de Borrado, se podrá restaurar los datos a una versión anterior, seleccionando una fecha. Para ello se debe seleccionar una fecha y pulsar en el botón Restaurar:
+
+![mantenimientovalidadores](./images/screenshots/borrado.png)
+
+Esta funcionalidad envía un correo al área de sistemas con los pasos a seguir del backup.
+
+Para realizar el borrado OAI-PMH, debe consultarse esta documentación: https://github.com/HerculesCRUE/ib-dataset-importer/blob/master/manual-borrado-oai-pmh.md
+
 
 <a name="validadores"></a>
 ## 4.5. Validadores
