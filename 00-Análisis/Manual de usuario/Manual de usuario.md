@@ -118,7 +118,7 @@ A continuación se detallan las diferentes secciones a las que se puede acceder 
 - Enlaces
 - Información
 
-(./images/iniciopublica.png)
+![iniciopublica](./images/screenshots/iniciopublica.PNG)
 
 Y las secciones a las que se podrá acceder desde la parte privada, además de las anteriores, es decir una vez logueado con un usuario y contraseña, son las siguientes:
 
