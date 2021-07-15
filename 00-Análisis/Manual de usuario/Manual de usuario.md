@@ -20,55 +20,8 @@
 # ÍNDICE
 
 
-[1. Introducción](#introduccion)
 
-[2. Acceso a la aplicación](#acceso)
-
-[3. Acceso Público](#accesopublico)
-
-[3.1. Estructuras de investigación](#estructurasinvestigacion)
-
-[3.2. Personal investigador](#personalinvestigador)
-
-[3.3.  Áreas](#areas)
-
-[3.4.  Producción científica](#produccioncientifica)
-
-[3.5.  Acciones de investigación](#accionesinvestigacion)
-
-[3.6.  Estadísticas](#estadisticas)
-
-[3.7. Consultas Sparql](#consultassparql)
-
-[3.8. Linked Data Graph](#linkeddata)
-
-[3.9. Instalador](#instalador)
-
-[3.10. Enlaces](#enlaces)
-
-[3.11. Información](#informacion)
-
-[4. Acceso Privado](#accesoprivado)
-
-[4.1. Consultas Sparql](#consultassparqlprivado)
-
-[4.2. Libreria descubrimiento](#libreriadescubrimiento)
-
-[4.3. Factoría de URIs](#factoriauris)
-
-[4.4. Monitor Backends](#monitorbackends)
-
-[4.5. Importador de datos](#importador)
-
-[4.6. Borrado de datos](#borrado)
-
-[4.7. Validadores](#validadores)
-
-[4.8. Gestión de usuarios](#gestionusuarios)
-
-[4. Trellis](#trellis)
-
-[5. Wikibase](#wikibase)
+[TOC]
 
 
 <a name="introduccion"></a>
@@ -240,7 +193,7 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 
 
 <a name="areas"></a>
-# 3.3. Áreas
+## 3.3. Áreas
 
 
 
@@ -253,14 +206,14 @@ En esta pantalla se muestra información sobre los datos del módulo vertical "�
 
 
 <a name="produccioncientifica"></a>
-# 3.4. Producción científica
+## 3.4. Producción científica
 
 
 En esta pantalla, se muestran las publicaciones y los eventos de investigaciones.
 
 
 
-## Publicaciones científicas
+### Publicaciones científicas
 
 
 
@@ -269,21 +222,21 @@ En esta pantalla, se muestran las publicaciones y los eventos de investigaciones
 Se podrá acceder al detalle de cada publicación científica pulsando en cada item del listado.
 
 
-## Publicaciones académicas
+### Publicaciones académicas
 
 
 ![Publicaciones Académicas](./images/screenshots/pubaca.PNG)
 
 Se podrá acceder al detalle de cada publicación académica pulsando en cada item del listado.
 
-## Otras publicaciones
+### Otras publicaciones
 
 
 ![Publicaciones Otras](./images/screenshots/pubotras.PNG)
 
 Se podrá acceder al detalle de cada publicación pulsando en cada item del listado.
 
-## Eventos
+### Eventos
 
 ![Eventos](./images/screenshots/pubeventos.PNG)
 
@@ -291,14 +244,14 @@ Se podrá acceder al detalle de cada evento pulsando en cada item del listado.
 
 
 <a name="accionesinvestigacion"></a>
-# 3.5. Acciones de investigación
+## 3.5. Acciones de investigación
 
 
 
 Se divide en dos secciones: Patentes y Proyectos
 
 
-## Patentes
+### Patentes
 
 En esta sección de acciones de investigación se podrán ver las patentes filtradas por nombre y por ámbito.
 
@@ -306,7 +259,7 @@ En esta sección de acciones de investigación se podrán ver las patentes filtr
 
 Se podrá acceder al detalle de cada patente pulsando en cada item del listado.
 
-## Proyectos
+### Proyectos
 
 
 La tabla podrá ser filtrada por año y por nombre.
@@ -326,14 +279,14 @@ En esta página se muestra la información de las preguntas de competencia relac
 | CQ14. Como usuario necesito una visualización [filtering] que me permita explorar la información de cada proyecto según los filtros que haya elegido, por ejemplo, por años, por tipo de convocatoria, por cuantía mayor a determinado valor, según un área/disciplina, según la ubicación geográfica, etc. |
 
 <a name="estadisticas"></a>
-# 3.6. Estadísticas
+## 3.6. Estadísticas
 
 El objetivo de esta sección es que se muestren estadísticas, en base a los datos del sistema.
 
 ![Estadisticas](./images/screenshots/estadisticas.PNG)
 
 <a name="consultassparql"></a>
-# 3.7. Consultas SparQL
+## 3.7. Consultas SparQL
 
 A través de esta sección, se podrán visualizar, ejecutar y mantener las consultas de competencia y/o consultas SPARQL predefinidas.
 Esta sección, a diferencia de las anteriores, varía si se accede de forma pública o privada. A continuación, se explican las funcionades de la parte pública, y en el apartado 4.1 las funcionalidades que pueden realizarse por un usuario logueado.
@@ -347,7 +300,7 @@ Una parte superior donde se podrán lanzar consultas sparql y ver los resultados
 
 
 <a name="linkeddata"></a>
-# 3.8. Linked Data Graph
+## 3.8. Linked Data Graph
 
 A través de esta sección se accederá al Linked Data Graph. En una primera pantalla se mostrará el contador de registros por entidad.
 
@@ -358,7 +311,7 @@ A través del cajetín de búsqueda se podrán realizar consultas sobre el grafo
 ![ldp](./images/screenshots/ldp_find.PNG)
 
 <a name="instalador"></a>
-# 3.9. Instalador
+## 3.9. Instalador
 
 A traves de esta sección se podrá acceder a las instrucciones de instalación, teniendo dos opciones.
  * instalación manual
@@ -368,7 +321,7 @@ A traves de esta sección se podrá acceder a las instrucciones de instalación,
 
 <a name="libreriadescubrimiento"></a>
 
-# 3.10. Librería de descubrimiento
+## 3.10. Librería de descubrimiento
 
 Desde esta opción de menú podremos realizar consultas sobre la librería de descubrimiento. Visualizando tanto datos estadísticos de los objetos, como realizar búsquedas de similitudes.
 
@@ -411,7 +364,7 @@ Visible para cualquier perfil de usuario, básicamente muestra estadísticas
 
 <a name="factoriauris"></a>
 
-# 3.11. Factoría de URIs
+## 3.11. Factoría de URIs
 
 Desde esta sección se podrán realizar consultas a la factoría de URIS y de esta forma poder visualizar las URIs de una entidad en concreto, por ejemplo.
 
@@ -475,7 +428,7 @@ Podemos acceder a dichas URIS  a partir de la URI Canónica del recurso, descrit
 
 <a name="monitorbackends"></a>
 
-# 3.12. Monitor Backends
+## 3.12. Monitor Backends
 
 Desde el monitor de Backends se podrá visualizar la información sobre los distintos backends que esté federados.
 
@@ -504,7 +457,7 @@ En cuanto a los niveles, son 3:
 
 
 
-# 3.13. Enlaces
+## 3.13. Enlaces
 
 En la sección de enlaces se podrán encontrar enlaces de interes, tales como:
 
@@ -514,7 +467,7 @@ En la sección de enlaces se podrán encontrar enlaces de interes, tales como:
 * ....
 
 <a name="informacion"></a>
-# 3.14. Información
+## 3.14. Información
 
 En esta sección podremos encontrar una descripción del proyecto Hércules.
 
@@ -530,7 +483,7 @@ Para loguearse en el sistema, deberá accederse a la parte superior derecha y pu
 Cuando el usuario introduzca estos datos y pulse el botón "Log In", la aplicación comprobará si los datos introducidos son correctos. Si estos datos son correctos entonces se mostrarán más secciones en el menu y en la pantalla de inicio.
 
 <a name="consultassparqlprivado"></a>
-# 4.1. Consultas SparQL
+## 4.1. Consultas SparQL
 
 Además de tener las mismas funcionalidades comentadas en el apartado 3.7, si el usuario está logueado, podrá además:
 - Guardar consultas
@@ -551,7 +504,7 @@ Para las consultas propias, existe la opción de borrar, no así para las predef
 En la sección de consultas guardadas podremos encontrar las consultas predefinidas establecidas para todos los usuarios
 
 <a name="libreriadescubrimiento"></a>
-# 4.2. Librería de descubrimiento
+## 4.2. Librería de descubrimiento
 
 Desde esta opción de menú podremos realizar consultas sobre la librería de descubrimiento. Visualizando tanto datos estadísticos de los objetos, como realizar búsquedas de similitudes.
 
@@ -723,7 +676,7 @@ Básicamente muestra la misma información que la tabla anterior con algunos mat
 
 <a name="importador"></a>
 
-# 4.3. Importador de datos
+## 4.3. Importador de datos
 
 Esta nueva pantalla estará solamente accesible desde la parte privada.
 
@@ -741,7 +694,7 @@ Desde la pantalla de importación de datos se podrán seleccionar el tipo de imp
 
 El usuario podrá definir una expresión cron, indicando la frecuencia de ejecución de la importación. Para usuarios no experimentados con las expresiones cron se ha habilitado un link explicativo de cómo funcionan las expresiones cron.
 
-## Tipos de importadores
+### Tipos de importadores
 
 A continuación, se explican los 4 tipos de importaciones que se pueden realizar:
 - Dataset: Importación de datos procedentes de Murcia, ficheros xml.
@@ -756,26 +709,26 @@ A continuación, se explican los 4 tipos de importaciones que se pueden realizar
 | **SGI** | http://herc-as-front-desa.atica.um.es/oai-pmh-xml/OAI_PMH |
 | **CERIF** | https://cris.uns.ac.rs/OAIHandlerOpenAIRECRIS |
 
-## Importación de datos Dataset
+### Importación de datos Dataset
 
 El usuario deberá previamente subir los ficheros xml que se quieran importar a una carpeta en el servidor, por defecto esta carpeta es /home/herculesizertis/resourcesFull/dataset. Si se quisiera cambiar esta ruta bastaría con indicarla en la sección parámetros de la importación en la variable: APP_DATA_PATH.
 Para subir estos ficheros el usuario deberá conectarse a la máquina mediante FTP, utilizando cualquier cliente FTP disponible en el mercado por ejemplo WinSCP en entornos Windows o GIGOLO para entornos Linux.
 
 ![FTP](./images/screenshots/ftp.png)
 
-## Importación de datos CVN
+### Importación de datos CVN
 
 Para la importación de este tipo de datos basta con especificar la ruta del endpoint que sirve los datos del CVN. Este planteamiento permite fácilmente cambiar el origen de importación de los CVN con tan solo modificar el parámetro de entrada del endpoint.
 
-## Importación de datos SGI y CERIF
+### Importación de datos SGI y CERIF
 Al igual que el apartado anterior, para este tipo de importación basta con indicar la url del endpoint encargada de devolver los datos o utilizar en su defecto las ya preestablecidas.
 
 
 <a name="borrado"></a>
-# 4.4. Borrado de datos
+## 4.4. Borrado de datos
 
 <a name="validadores"></a>
-# 4.5. Validadores
+## 4.5. Validadores
 
 Desde esta sección, un usuario logueado, podrá añadir Shapes que se aplicarán en el proceso de importación.
 El proceso de importación usa las Shapes definidas por este mecanismo y se guardarán las trazas de dicho error de forma que un usuario pueda comprobar que elementos de la importación no han podido ser insertados por algún incumplimiento de lo definido en las Shapes, y su causa.
@@ -797,7 +750,7 @@ Durante el proceso de importación, una vez generado el RDF, se verificará si e
 
 <a name="gestionusuarios"></a>
 
-# 4.6. Gestión de usuarios
+## 4.6. Gestión de usuarios
 
 La gestión de usuarios se realiza a través de la herramienta keycloak. Para acceder a ella bastará con pulsar sobre el enlace que verá el administrador una vez autenticado en la plataforma.
 
@@ -816,13 +769,13 @@ Desde esta pantalla se podrán filtrar los usuarios, editarlos, eliminarlos o a�
 
 ![usuarios](./images/screenshots/gestuser_op.PNG)
 
-## Nuevos usuarios
+### Nuevos usuarios
 
 Desde la opción de Add User accederemos al formulario de nuevo usuario
 
 ![add](./images/screenshots/gestuser_add.PNG)
 
-## Editar usuario
+### Editar usuario
 
 Para editar un usuario bastará con pulsar el enlace "Edit" que aparece en su registro.
 
@@ -844,7 +797,7 @@ Para gestionar los roles de un usuario será necesario acceder a la pestaña "Ro
 
 <a name="ETL"></a>
 
-# 4.7. ETL
+## 4.7. ETL
 
 Es posible modificar o crear procesos de ETL desde la interface grafica por medio de la integración con la herramienta Spoon Web, que a su vez está conectada directamente con el servicio PDI, que ejecutara el proceso ETL.
 
@@ -899,7 +852,7 @@ A través de las consultas SparQL también se podrán obtener los datos que nos 
 
 
 
-### Ejemplos de consultas de Wikibase:
+## Ejemplos de consultas de Wikibase:
 
 ```
 #Proyectos y su grupo de investigación
