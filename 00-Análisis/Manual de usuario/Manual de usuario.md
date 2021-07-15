@@ -694,7 +694,7 @@ En cuanto a los niveles, son 3:
 
 * Nivel de servicio: Servicios expuestos, dentro de un determinado nodo y sus estados
 
-  ![Monitor](./images/screenshots/monitor-services.png)
+  ![Monitor](./images/screenshots/monitor-services.PNG)
 
 * Nivel de Endpoints: Aquí podemos ver los endpoints desplegados para cada servicio
 
