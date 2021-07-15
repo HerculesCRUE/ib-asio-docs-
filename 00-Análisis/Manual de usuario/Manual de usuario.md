@@ -118,7 +118,7 @@ A continuación se detallan las diferentes secciones a las que se puede acceder 
 - Enlaces
 - Información
 
-![iniciopublica](./images/screenshots/iniciopublica.PNG)
+![iniciopublica](./images/screenshots/iniciopublica.png)
 
 Y las secciones a las que se podrá acceder desde la parte privada, además de las anteriores, es decir una vez logueado con un usuario y contraseña, son las siguientes:
 
@@ -127,7 +127,7 @@ Y las secciones a las que se podrá acceder desde la parte privada, además de l
 - Borrado de datos
 - ETL
 
-![home](./images/screenshots/home.PNG)
+![home](./images/screenshots/home.png)
 
 A continuación, se explica cada una de las secciones, agrupadas por acceso público y privado
 
