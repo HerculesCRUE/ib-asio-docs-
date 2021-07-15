@@ -21,10 +21,126 @@
 
 
 
-[TOC]
+[1. Introducción](#1-introducción)
+
+[2. Acceso a la aplicación](#2-acceso-a-la-aplicaci-n)
+
+[3. Acceso Público](#3-acceso-público)
+
+​	[3.1. Estructura de investigación](#31-estructura-de-investigación)
+
+​		[Detalle de una estructura de investigación](#detalle-de-una-estructura-de-investigación)
+
+​	[3.2. Personal investigador](#32-personal-investigador)
+
+​		[Detalle de personal investigador](#detalle-de-personal-investigador)
+
+​	[3.3. Áreas](#33-Áreas)
+
+​	[3.4. Producción científica](#34-producción-científica)
+
+​		[Publicaciones científicas](#publicaciones-científicas)
+
+​		[Publicaciones académicas](#publicaciones-académicas)
+
+​		[Otras publicaciones](#otras-publicaciones)
+
+​		[Eventos](#eventos)
+
+​	[3.5. Acciones de investigación](#35-acciones-de-investigación)
+
+​		[Patentes](#patentes)
+
+​		[Proyectos](#proyectos)
+
+​	[3.6. Estadísticas](#36-estadísticas)
+
+​	[3.7. Consultas SparQL](#37-consultas-sparql)
+
+​	[3.8. Linked Data Graph](#38-linked-data-graph)
+
+​	[3.9. Instalador](#39-instalador)
+
+​	[3.10. Librería de descubrimiento](#310-librería-de-descubrimiento)
+
+​		[Control (público)](#control--p-blico-)
+
+​	[3.11. Factoría de URIs](#311-factoría-de-uris)
+
+​		[URIs Públicas](#uris-públicas)
+
+​		[URIs Privadas](#uris-privadas)
+
+​	[3.12. Monitor Backends](#312-monitor-backends)
+
+​	[3.13. Enlaces](#313-enlaces)
+
+​	[3.14. Información](#314-información)
+
+[4. Acceso privado](#4-acceso-privado)
+
+​	[4.1. Consultas SparQL](#41-consultas-sparql)
+
+​	[4.2. Librería de descubrimiento](#42-librería-de-descubrimiento)
+
+​		[Búsqueda (Privado)](#búsqueda--privado-)
+
+​			[Búsqueda de similitudes por clase](#búsqueda-de-similitudes-por-clase)
+
+​			[Búsqueda de similitudes por clase](#búsqueda-de-similitudes-por-clase-1)
+
+​			[Búsqueda de similitudes por instancia](#búsqueda-de-similitudes-por-instancia)
+
+​			[Búsqueda de similitudes en la nube LOD](#búsqueda-de-similitudes-en-la-nube-lod)
+
+​			[Respuesta](#respuesta)
+
+​		[Resultados (Privado)](#resultados--privado-)
+
+​			[Action Result](#action-result)
+
+​			[Action Open](#action-open)
+
+​			[Respuestas](#respuestas)
+
+​				[Sección de metadatos](#sección-de-metadatos)
+
+​				[Sección de Resultados de similitudes](#sección-de-resultados-de-similitudes)
+
+​				[Detalle de Resultado de similitud para una entidad (al desplegar las anteriores)](#detalle-de-resultado-de-similitud-para-una-entidad--al-desplegar-las-anteriores-)
+
+​				[Detalle de Resultado de entidad relacionada](#detalle-de-resultado-de-entidad-relacionada)
+
+​	[4.3. Importador de datos](#43-importador-de-datos)
+
+​		[Tipos de importadores](#tipos-de-importadores)
+
+​		[Importación de datos Dataset](#importación-de-datos-dataset)
+
+​		[Importación de datos CVN](#importación-de-datos-cvn)
+
+​		[Importación de datos SGI y CERIF](#importación-de-datos-sgi-y-cerif)
+
+​	[4.4. Borrado de datos](#44-borrado-de-datos)
+
+​	[4.5. Validadores](#45-validadores)
+
+​	[4.6. Gestión de usuarios](#46-gestión-de-usuarios)
+
+​		[Nuevos usuarios](#nuevos-usuarios)
+
+​		[Editar usuario](#editar-usuario)
+
+​	[4.7. ETL](#47-etl)
+
+[5. Trellis](#5-trellis)
+
+[6. Wikibase](#6-wikibase)
+
+​	[Ejemplos de consultas de Wikibase:](#ejemplos-de-consultas-de-wikibase-)
 
 
-<a name="introduccion"></a>
+
 # 1. Introducción
 
 Este documento, pretende ser el manual de ayuda para los usuarios que utilicen el sistema ASIO. En este documento se explicarán todas las funcionalidades que se encuentran en la interfaz web, desde el punto de vista del usuario que entra en la aplicación.
@@ -899,8 +1015,6 @@ WHERE
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE]". }
 }
 ```
-
-
 
 
 
