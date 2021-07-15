@@ -615,7 +615,7 @@ Básicamente muestra la misma información que la tabla anterior con algunos mat
 
 Desde esta sección se podrán realizar consultas a la factoría de URIS y de esta forma poder visualizar las URIs de una entidad en concreto, por ejemplo.
 
-![Factoria](./images/screenshots/factoria.png) 
+![Factoria](./images/screenshots/factoria.PNG) 
 
 Esta pantalla pretende dar soporte a las acciones que para un usuario puedan tener sentido a la hora de interactuar con la Factoría de URIs. 
 
@@ -679,7 +679,7 @@ Podemos acceder a dichas URIS  a partir de la URI Canónica del recurso, descrit
 
 Desde el monitor de Backends se podrá visualizar la información sobre los distintos backends que esté federados.
 
-![Monitor](./images/screenshots/monitor.png)
+![Monitor](./images/screenshots/monitor.PNG)
 
 Estos aparecerán como paneles anidados, que podrán ser desplegados pulsando en ellos. Como se aprecia en la imagen, cada nivel muestra información de el contenido del siguiente nivel, por ejemplo, en la imagen se aprecian 2 nodos:
 
@@ -690,7 +690,7 @@ En cuanto a los niveles, son 3:
 
 * Nivel de nodo: Indica un backend completo, por ejemplo um para la Universidad de Murcia. Al desplegar un nodo podemos seleccionar si el nodo esta activo o no, para participar las consultas Federadas del [Endpoint SPARQL](#4.1.-Consultas-SparQL). Para todos los Backends que no sean el backend desde el cual estamos usando el front (para este, esa opción estará desactivada), podemos cambiar el estado a activado o desactivado.
 
-  ![Monitor](./images/screenshots/monitor-activate.png)
+  ![Monitor](./images/screenshots/monitor-activate.PNG)
 
 * Nivel de servicio: Servicios expuestos, dentro de un determinado nodo y sus estados
 
@@ -698,7 +698,7 @@ En cuanto a los niveles, son 3:
 
 * Nivel de Endpoints: Aquí podemos ver los endpoints desplegados para cada servicio
 
-  ![Monitor](./images/screenshots/monitor-ep.png)
+  ![Monitor](./images/screenshots/monitor-ep.PNG)
 
 <a name="importador"></a>
 
