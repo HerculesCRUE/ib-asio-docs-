@@ -72,6 +72,7 @@ Nos saldrán múltiples opciones, pero antes de ponernos a rellenarlas, iremos a
 Como podremos ver, se nos habrán rellenado automáticamente alguno de los campos:
 
 ![SIR SAML configuration 1](./images/sir-saml-config1.png)
+![SIR SAML configuration 1](./images/samlconfig.png)
 
 Pero tenemos que rellenar nosotros algunos más como (los dos primeros campos que van aparecer abajo, les hemos puesto el nombre de la federación, pero podrá ser otro cualquiera): 
 
@@ -81,6 +82,7 @@ Pero tenemos que rellenar nosotros algunos más como (los dos primeros campos qu
 - En la parte de SAML Config:
     - Validate Signature ON (nos debería de salir justo abajo otro campo rellenado que se llama `Validating X509 Certificates`)
     - Want AuthnRequests Signed ON
+	- HTTP-POST Binding for AuthnRequest ON
 
 Una vez tengamos todo lo anterior, guardamos y al volver a `Identity Providers` no debería de salir esto:
 
