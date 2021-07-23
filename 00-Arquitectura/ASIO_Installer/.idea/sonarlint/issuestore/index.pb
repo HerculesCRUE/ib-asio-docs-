@@ -65,3 +65,17 @@ _
 /environments/front/gateway/conf.d/wikibase.conf,2\5\251d3b38e8e78212bdcbce38bdd34df9c7f0283e
 ^
 .environments/front/gateway/conf.d/reports.conf,4\d\4d6b5605a745f265620d1c5a42e56dd69abaac06
+T
+$environments/back/docker-compose.yml,b\f\bf875435e55a71caac353f579651a998093b349a
+U
+%environments/front/trellis/users.auth,1\8\18225d89a94fdc00d61ee171b5a0feb54b1cf436
+X
+(environments/back/env/uris-generator.env,3\3\334ec646d047368197fab8201c6ce2afa8baa328
+\
+,environments/front/env/service-discovery.env,4\3\43c4f6b9091a4b57f5a0d09dec915c9f738113b2
+T
+$environments/back/env/federation.env,2\4\24b00a8021c7f741a4c60de42f0df74a3f18564b
+U
+%environments/front/trellis/config.yml,e\9\e9d7a6ba877326d3c3f5ce9fbed101f74f3969c8
+Q
+!environments/db/fuseki/config.ttl,1\b\1b9ce68237b474c9fc9cc0cd9d5526c24f693c1b
