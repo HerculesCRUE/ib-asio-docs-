@@ -18,6 +18,24 @@ A modo general de cara a la modificación de los estilos de los distintos compon
 
 Actualmente y de cara a garantizar la uniformidad en el diseño de todo el portal se utilizan clases comunes.
 
+## Características del Módulo
+
+El módulo está implementado en angular 9.1 [Angular](https://angular.io/), para el desarrollo y/o modificación del mismo pueden utilizarse cualqueir herramienta preparada para trabajar con anular (Ej: [Visual Code](https://code.visualstudio.com/))
+
+Será necesario contar con conocimientos de html, css y angular.
+
+## Puesta en funcionamiento
+
+Para la puesta en funcionamiento se puede seguir lo indicado en [ib-web-publication-service](https://github.com/HerculesCRUE/ib-web-publication-service) de cara a la configuración de las distintas variables de entorno.
+
+En primer lugar será necesario descargarse el código fuente, al estar integrado en el ib-web-publication-service, se puede encontrar en [ib-web-publication-service](https://github.com/HerculesCRUE/ib-web-publication-service).
+
+Ejecutar:  
+1.- npm install -> Descarga de librerías
+2.- npm run start -> pone en funcionamiento el servidor con la aplicación
+
+Tras realizar las modificaciones, deberá redesplegarse el módulo [ib-web-publication-service](https://github.com/HerculesCRUE/ib-web-publication-service)
+
 ## Componentes del Módulo
 
 ![componentes](./images/componentes.png)
@@ -28,7 +46,7 @@ Este componente es el que se enlaza desde el portal y contiene a los demás. En 
 
 Podría modificarse tanto su contenido cambiando en los ficheros de internacionalización `assets\i18n\` el valor de dicha etiqueta.
 
-Se podría modificar igualmente los estilos de la misma mediante el ajuste de la clase css `legend` o la creación de una nueva clase. Es importante tener en cuenta que si se modifica dicha clase podrían verse afectadas otras páginas. 
+Se podría modificar igualmente los estilos de la misma mediante el ajuste de la clase css `legend` o la creación de una nueva clase. Es importante tener en cuenta que si se modifica dicha clase podrían verse afectadas otras páginas.
 
 ![CSS legend](./images/legend.png)
 
