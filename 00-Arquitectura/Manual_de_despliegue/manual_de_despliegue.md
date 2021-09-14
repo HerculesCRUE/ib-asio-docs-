@@ -1642,8 +1642,8 @@ En todas las máquinas definidas anteriormente, existe una instancia de Portaine
 
 Podemos acceder mediante el siguiente enlace: 
 
-* Pre:  https://monitorld1.um.es/
-* Desa:   https://monitorld1desa.um.es/
+* Pre:  https://portld1.um.es
+* Desa:   https://portld1desa.um.es
 
 Como resultado (tras logarnos), podemos ver la siguiente pantalla
 
@@ -1661,7 +1661,7 @@ En este frontal, podemos monitorizar:
 
 Es posible también en combinación con otras herramientas, por ejemplo Prometheus, generar alertas en base a los criterios que definamos (ya sea por comportamiento individual de cada microservicio como por estadísticas generales del host), para ello se puede seguir el ejemplo en este [enlace](https://www.anovaapps.com/lets-talk-how-to-configure-portainer-and-prometheus-in-containers/).
 
-La herramienta Graylog disponible en la maquina de Front mediante el siguiente enlace https://monitorld1.um.es/ (entorno de pre-producción) o https://monitorld1.um.es/ (entorno de desarrollo), nos ofrece la posibilidad de:
+La herramienta Graylog disponible en la maquina de Front mediante el siguiente enlace https://monitorld1.um.es/ (entorno de pre-producción) o https://monitorld1desa.um.es/ (entorno de desarrollo), nos ofrece la posibilidad de:
 
 * Monitorizar los logs de las aplicaciones en tiempo real
 * Crear alarmas en base a patrones de comportamiento en los logs
@@ -1671,7 +1671,7 @@ La herramienta Graylog disponible en la maquina de Front mediante el siguiente e
 
 Por otro lado todas las nuevas versiones de software, han de pasar el test suite que tienen asociado, de forma que no se generara una nueva imagen docker, si el software desarrollado, no tiene la calidad suficiente y por tanto, no podrá ser desplegado en el entorno.
 
-Podemos monitorizar los test implementados y los resultados de los mismos en el siguiente [enlace](http://reports.hercules1testgrp.atica.um.es/)
+Podemos monitorizar los test implementados y los resultados de los mismos en el siguiente [enlace](https://reportsld1.um.es/) para el entorno de pre y este [otro enlace](https://reportsld1desa.um.es/) para el entorno de desarrollo.
 
 ![Report](./img/Test.png)
 
