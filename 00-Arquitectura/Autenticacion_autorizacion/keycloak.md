@@ -72,6 +72,9 @@ Nos saldrán múltiples opciones, pero antes de ponernos a rellenarlas, iremos a
 Como podremos ver, se nos habrán rellenado automáticamente alguno de los campos:
 
 ![SIR SAML configuration 1](./images/sir-saml-config1.png)
+
+SAML Config
+
 ![SIR SAML configuration 1](./images/samlconfig.png)
 
 Pero tenemos que rellenar nosotros algunos más como (los dos primeros campos que van aparecer abajo, les hemos puesto el nombre de la federación, pero podrá ser otro cualquiera): 
@@ -83,6 +86,7 @@ Pero tenemos que rellenar nosotros algunos más como (los dos primeros campos qu
     - Validate Signature ON (nos debería de salir justo abajo otro campo rellenado que se llama `Validating X509 Certificates`)
     - Want AuthnRequests Signed ON
 	- HTTP-POST Binding for AuthnRequest ON
+	- Principal Atribute: se configurará el atributo de usuario que deseemos usar como principal, en este caso se ha usado el mail
 
 Una vez tengamos todo lo anterior, guardamos y al volver a `Identity Providers` no debería de salir esto:
 
@@ -116,10 +120,22 @@ Lista de atributos:
 - schacHomeOrganization: urn:oid:1.3.6.1.4.1.25178.1.2.9
 - eduPersonEntitlement: urn:oid:1.3.6.1.4.1.5923.1.1.1.7
 - eduPersonTargetedID: urn:oid:1.3.6.1.4.1.5923.1.1.1.10
+- uid: AttibuteName:uid  
+- displayName: AttibuteName:displayName  
+- cn: AttibuteName:cn  
+- organization: AttibuteName:o  
+- eduPersonPrincipalAffiliation: AttibuteName:eduPersonPrincipalAffiliation
+ 
 
 Para el campo username del usuario se creará un mapeo específico. De esta forma se tomará el campo email que se reciba de SIR como username del usuario local.
 
 ![username.png](./images/username.png)
+
+Adicionalmente se podrán configurar el mapeo de los roles a otorgar a los usuarios
+
+![userrole.png](./images/userrole.png)
+
+En el caso del rol de administrador se podrá configurar una regla para que se otorgue en función de algún parámetro del usuario.
 
 Una vez rellenado, guardamos y ya tendremos un atributo configurado. Este proceso habrá que repetirlo para cada atributo que necesitemos.
 Con esto ya tendríamos todo configurado y solo quedaría ir a la pestaña de `Export` (mencionada con anterioridad), copiar los datos que salgan y enviarlo a la cola de sir2@rediris.es para que se den de alta en la federación.
@@ -139,6 +155,9 @@ SAML Signature Key Name
 
 Se indicará en el primero el valor RSA_SHA256.
 Tras esto, si se exportan los metadatos ya debería aparecer el certificado.
+
+Esta exportación deberá ser enviada al equipo de RedIris para que la configuren en su sistema.
+
 ## Importar 
 
 Se ha realizado una exportación completa del realm listo para su importación
