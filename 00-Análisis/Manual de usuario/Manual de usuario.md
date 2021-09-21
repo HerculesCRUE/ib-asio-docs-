@@ -21,6 +21,8 @@
 
 
 
+- [Manual de usuario](#manual-de-usuario)
+- [ÍNDICE](#índice)
 - [1. Introducción](#1-introducción)
 - [2. Acceso a la aplicación](#2-acceso-a-la-aplicación)
 - [3. Acceso Público](#3-acceso-público)
@@ -80,7 +82,7 @@
 - [5. Trellis](#5-trellis)
 - [6. Wikibase](#6-wikibase)
 	- [Ejemplos de consultas de Wikibase:](#ejemplos-de-consultas-de-wikibase)
-
+- [7. Interfaz para Máquinas](#7-interfaz-para-máquinas)
 
 
 # 1. Introducción
@@ -971,5 +973,47 @@ WHERE
 
 
 Para más información sobre como manejar Wikibase se puede consultar la guía de [Wikidata](https://www.wikidata.org/wiki/Help:Contents).
+<a name="interfazM"></a>
+# 7. Interfaz para Máquinas
 
+Es posible la realización de consultas a través de un cliente REST, facilitando la comunicación entre máquinas.
 
+Se puede ejecutar un curl para acceder a la información
+`curl --location --request POST 'https://linkeddata1.um.es/api/trellis/sparql' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'query=PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>SELECT * WHERE {  ?sub ?pred ?obj .} LIMIT 10'`
+
+Donde:
+* https://linkeddata1.um.es/api/trellis/sparql  es la dirección del servicio
+* query=PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>SELECT * WHERE {  ?sub ?pred ?obj .} LIMIT 1'  Es la consulta SPARQL a ejecutar. 
+
+El resultado que obtenemos tiene el siguiente formato:
+`
+{
+    "head": {
+        "vars": [
+            "sub",
+            "pred",
+            "obj"
+        ]
+    },
+    "results": {
+        "bindings": [
+            {
+                "sub": {
+                    "type": "uri",
+                    "value": "trellis:data/"
+                },
+                "pred": {
+                    "type": "uri",
+                    "value": "http://purl.org/dc/terms/modified"
+                },
+                "obj": {
+                    "type": "literal",
+                    "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "value": "09-09-2021"
+                }
+            }
+        ]
+    }
+}`
