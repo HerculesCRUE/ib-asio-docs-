@@ -978,13 +978,12 @@ Para más información sobre como manejar Wikibase se puede consultar la guía d
 
 Es posible la realización de consultas a través de un cliente REST, facilitando la comunicación entre máquinas.
 
-Se puede ejecutar un curl para acceder a la información
-`curl --location --request POST 'https://linkeddata1.um.es/api/trellis/sparql' \
---header 'Content-Type: application/x-www-form-urlencoded' \
---data-urlencode 'query=PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>SELECT * WHERE {  ?sub ?pred ?obj .} LIMIT 10'`
+A modo de demostración se ha usado [PostMan](https://www.postman.com/)
+![postman](./images/postman.png)
 
 Donde:
 * https://linkeddata1.um.es/api/trellis/sparql  es la dirección del servicio
+* Se ha de establecer el tipo x-www-form-urlencoded
 * query=PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>SELECT * WHERE {  ?sub ?pred ?obj .} LIMIT 1'  Es la consulta SPARQL a ejecutar. 
 
 El resultado que obtenemos tiene el siguiente formato:
