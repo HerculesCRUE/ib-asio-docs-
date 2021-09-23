@@ -361,6 +361,7 @@ Una parte superior donde se podrán lanzar consultas sparql y ver los resultados
 
 Para poder utilizar la visualización en gráficas es necesario que el resultado de la consulta sparQL conste únicamente de dos columnas (para que se tome una para cada eje) y que al menos una de ellas sea numérica.
 
+Para el caso de los mapas, en la respuesta ha de venir información sobre geolocalización.
 
 <a name="linkeddata"></a>
 ## 3.8. Linked Data Graph
@@ -553,6 +554,8 @@ Además de tener las mismas funcionalidades comentadas en el apartado 3.7, si el
 - Lanzar consultas federadas. 
 
 Para poder utilizar la visualización en gráficas es necesario que el resultado de la consulta sparQL conste únicamente de dos columnas (para que se tome una para cada eje) y que al menos una de ellas sea numérica.
+
+Para el caso de los mapas, en la respuesta ha de venir información sobre geolocalización.
 
 ![ldp](./images/screenshots/sparQL.PNG)
 
