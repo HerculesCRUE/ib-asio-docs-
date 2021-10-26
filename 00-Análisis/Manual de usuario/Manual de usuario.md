@@ -779,10 +779,174 @@ A continuación, se explican los 4 tipos de importaciones que se pueden realizar
 
 ### Importación de datos Dataset
 
-El usuario deberá previamente subir los ficheros xml que se quieran importar a una carpeta en el servidor, por defecto esta carpeta es /home/herculesizertis/resourcesFull/dataset. Si se quisiera cambiar esta ruta bastaría con indicarla en la sección parámetros de la importación en la variable: APP_DATA_PATH.
+El usuario deberá previamente subir los ficheros xml que se quieran importar a una carpeta en el servidor, por defecto esta carpeta es /home/herculesizertis/resourcesFull/. Si se quisiera cambiar esta ruta bastaría con indicarla en la sección parámetros de la importación en la variable: APP_DATA_PATH.
 Para subir estos ficheros el usuario deberá conectarse a la máquina mediante FTP, utilizando cualquier cliente FTP disponible en el mercado por ejemplo WinSCP en entornos Windows o GIGOLO para entornos Linux.
 
 ![FTP](./images/screenshots/ftp.png)
+
+A continuación, se definen las rutas para cada uno de los ficheros XML del Dataset.
+
+
+| **Fichero**     | **Ruta**                                           |
+| -------------- | ------------------------------------------------------------ |
+| Actividades.XML | /home/herculesizertis/resourcesFull/dataset/Actividades |
+| Facturas emitidas actividades.XML | /home/herculesizertis/resourcesFull/dataset/Actividades |
+| Grupos actividades proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Actividades |
+| Grupos actividades.XML | /home/herculesizertis/resourcesFull/dataset/Actividades |
+| Impuestos repercutidos actividades.XML | /home/herculesizertis/resourcesFull/dataset/Actividades |
+| Tipos actividades.XML | /home/herculesizertis/resourcesFull/dataset/Actividades |
+| Amortizaciones financiacion registros ayudas definitivas.XML | /home/herculesizertis/resourcesFull/dataset/Ayudas |
+| Anualidades financiacion registros ayudas definitivas.XML | /home/herculesizertis/resourcesFull/dataset/Ayudas |
+| Convocatorias ayudas.XML | /home/herculesizertis/resourcesFull/dataset/Ayudas |
+| Desglose gastos registro ayudas definitivas.XML | /home/herculesizertis/resourcesFull/dataset/Ayudas |
+| Desglose gastos registro ayudas provisionales.XML | /home/herculesizertis/resourcesFull/dataset/Ayudas |
+| Desglose gastos solicitudes ayuda.XML | /home/herculesizertis/resourcesFull/dataset/Ayudas |
+| Entidades colaboradoras solicitudes ayudas.XML | /home/herculesizertis/resourcesFull/dataset/Ayudas |
+| Equipos solicitudes ayuda.XML | /home/herculesizertis/resourcesFull/dataset/Ayudas |
+| Financiacion registros ayudas definitivas.XML | /home/herculesizertis/resourcesFull/dataset/Ayudas |
+| Financiacion unidades ayudas.XML | /home/herculesizertis/resourcesFull/dataset/Ayudas |
+| Fuentes unidades ayuda.XML | /home/herculesizertis/resourcesFull/dataset/Ayudas |
+| Partidas convocatorias.XML | /home/herculesizertis/resourcesFull/dataset/Ayudas |
+| Referencias unesco solicitudes ayuda.XML | /home/herculesizertis/resourcesFull/dataset/Ayudas |
+| Registro ayudas provisionales.XML | /home/herculesizertis/resourcesFull/dataset/Ayudas |
+| Registros ayudas definitivas.XML | /home/herculesizertis/resourcesFull/dataset/Ayudas |
+| Solicitudes ayudas.XML | /home/herculesizertis/resourcesFull/dataset/Ayudas |
+| Subprogramas ayudas.XML | /home/herculesizertis/resourcesFull/dataset/Ayudas |
+| Tipos ayudas.XML | /home/herculesizertis/resourcesFull/dataset/Ayudas |
+| Tipos gastos unidades ayudas.XML | /home/herculesizertis/resourcesFull/dataset/Ayudas |
+| Unidades ayudas.XML | /home/herculesizertis/resourcesFull/dataset/Ayudas |
+| Unidades gestoras unidades ayudas.XML | /home/herculesizertis/resourcesFull/dataset/Ayudas |
+| Centros.XML | /home/herculesizertis/resourcesFull/dataset/Centros |
+| Departamentos.XML | /home/herculesizertis/resourcesFull/dataset/Centros |
+| Anualidades contratos proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Contratos |
+| Contratos proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Contratos |
+| Desglose gastos contratos proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Contratos |
+| Desglose gastos prorrogas contratos.XML | /home/herculesizertis/resourcesFull/dataset/Contratos |
+| Equipos contratos proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Contratos |
+| Impuestos contratos proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Contratos |
+| Impuestos prorrogas contratos.XML | /home/herculesizertis/resourcesFull/dataset/Contratos |
+| Patentes contratos proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Contratos |
+| Prorrogas contratos proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Contratos |
+| Codigos UNESCO.XML | /home/herculesizertis/resourcesFull/dataset/Grupos de investigacion |
+| Conceptos grupos.XML | /home/herculesizertis/resourcesFull/dataset/Grupos de investigacion |
+| Conceptos investigadores.XML | /home/herculesizertis/resourcesFull/dataset/Grupos de investigacion |
+| Datos contacto grupos.XML | /home/herculesizertis/resourcesFull/dataset/Grupos de investigacion |
+| Datos equipo investigacion.XML | /home/herculesizertis/resourcesFull/dataset/Grupos de investigacion |
+| Grupos de investigacion.XML | /home/herculesizertis/resourcesFull/dataset/Grupos de investigacion |
+| Lineas de investigacion.XML | /home/herculesizertis/resourcesFull/dataset/Grupos de investigacion |
+| Lineas investigador.XML | /home/herculesizertis/resourcesFull/dataset/Grupos de investigacion |
+| Lineas UNESCO.XML | /home/herculesizertis/resourcesFull/dataset/Grupos de investigacion |
+| Tipo participacion grupo.XML | /home/herculesizertis/resourcesFull/dataset/Grupos de investigacion |
+| Costes patentes.XML | /home/herculesizertis/resourcesFull/dataset/Patentes |
+| Empresas explotan patentes.XML | /home/herculesizertis/resourcesFull/dataset/Patentes |
+| Empresas titulares patentes.XML | /home/herculesizertis/resourcesFull/dataset/Patentes |
+| Inventores patentes.XML | /home/herculesizertis/resourcesFull/dataset/Patentes |
+| Patentes.XML | /home/herculesizertis/resourcesFull/dataset/Patentes |
+| Protecciones patentes.XML | /home/herculesizertis/resourcesFull/dataset/Patentes |
+| Sectores industriales patentes.XML | /home/herculesizertis/resourcesFull/dataset/Patentes |
+| Anualidades proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Areas UNESCO Proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Datos anualidades proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Dependencias proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Equipos proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Facturas emitir proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Facturas proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Fechas equipos proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Fechas proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Financiacion proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Gastos previstos proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Gastos proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Importes proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Impuestos repercutidos proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Ingresos proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Justificaciones previstas proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Organizaciones externas.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Origenes proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Proyectos dependencias proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Relaciones origenes proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Tipos actividades.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Tipos auditorias proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Tipos financiacion.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Tipos fuentes financiacion.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Tipos gastos genericos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Tipos ingresos genericos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Tipos motivos cambios fechas.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Tipos origenes proyectos.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Tipos rechazos justificacion.XML | /home/herculesizertis/resourcesFull/dataset/Proyectos |
+| Convocatorias recursos humanos.XML | /home/herculesizertis/resourcesFull/dataset/Recursos Humanos |
+| Idiomas solicitudes recursos humanos.XML | /home/herculesizertis/resourcesFull/dataset/Recursos Humanos |
+| Meritos solicitudes recursos humanos.XML | /home/herculesizertis/resourcesFull/dataset/Recursos Humanos |
+| Registro recurso humano concedido.XML | /home/herculesizertis/resourcesFull/dataset/Recursos Humanos |
+| Registro recurso humano provisional.XML | /home/herculesizertis/resourcesFull/dataset/Recursos Humanos |
+| Solicitudes recurso humano concendido.XML | /home/herculesizertis/resourcesFull/dataset/Recursos Humanos |
+| Solicitudes recursos humanos.XML | /home/herculesizertis/resourcesFull/dataset/Recursos Humanos |
+| Solicitudes registro recurso humano provisional.XML | /home/herculesizertis/resourcesFull/dataset/Recursos Humanos |
+| Subprogramas recursos humanos.XML | /home/herculesizertis/resourcesFull/dataset/Recursos Humanos |
+| Tipos recursos humanos.XML | /home/herculesizertis/resourcesFull/dataset/Recursos Humanos |
+| Unidades recursos humanos.XML | /home/herculesizertis/resourcesFull/dataset/Recursos Humanos |
+| Dedicacion investigador.XML | /home/herculesizertis/resourcesFull/Goliat |
+| No laborables.XML | /home/herculesizertis/resourcesFull/Goliat |
+| Timesheets.XML | /home/herculesizertis/resourcesFull/Goliat |
+| Work descriptions.XML | /home/herculesizertis/resourcesFull/Goliat |
+| Work logs.XML | /home/herculesizertis/resourcesFull/Goliat |
+| Work packages.XML | /home/herculesizertis/resourcesFull/Goliat |
+| Alegaciones.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Articulos.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Autores articulos.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Autores captitulos libros.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Autores congresos.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Autores diseños.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Autores exposicion.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Autores exposiciones.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Autores libros.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Autores prologo libros.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Ayudas iniciacion.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Ayudas postdoctorales.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Capitulos libros.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Comite congresos.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Comite editorialXML | /home/herculesizertis/resourcesFull/Paginas |
+| Congresos.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Congresos2.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Contratos postdoctorales.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Convocatorias.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Diploma estudios avanzados externo.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Diploma estudios avanzados.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Directores contratos postdoctorales.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Directores diploma estudios avanzados externo.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Directores diploma estudios avanzados.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Directores tesinas externas.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Directores tesis externas.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Directores tesis.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Diseños.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Editores libros.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Empresas explota patentes.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Estancias breves.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Estancias.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Exposiciones.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Inventores patentes.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Investigadores proyectos cooperacion internacional.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Libros.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Miembros comite congresos.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Paises patentes.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Palabras clave articulos.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Palabras clave comite congresos.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Palabras clave congresos.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Palabras clave libros.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Palabras clave prologo libros.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Patentes.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Prologo libros.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Proyectos cooperacion internacional.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Requisitos contratos postdoctorales.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Solicitudes cambios grupos investigacion.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Tesinas externas.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Tesis dirigidas UMU no registradas.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Tesis externas.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Tesis.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Tipos eventos.XML | /home/herculesizertis/resourcesFull/Paginas |
+| Personas.XML | /home/herculesizertis/resourcesFull/Personas |
+
+
 
 ### Importación de datos CVN
 
