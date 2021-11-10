@@ -177,16 +177,10 @@ La información que se muestra en esta página tratará de responder, entre otra
 ### Detalle de una estructura de investigación
 
 Pulsando sobre un centro de investigación en el listado, la web redirigirá a la información de esa estrutura de investigación.
-De cada estructura de investigación, se podrá consultar el listado de los investigadores y patentes asociados a dicha estructura.
+De cada estructura de investigación, se podrá consultar el listado de las relaciones asociadas a dicha estructura.
 
-- **Personal investigador**
 
 ![EstructurasInvestigacion](./images/screenshots/estructura_detalle1.PNG)
-
-
-- **Patentes**
-
-![EstructurasInvestigacion](./images/screenshots/estructura_detalle2.PNG)
 
 
 
@@ -224,32 +218,9 @@ Se utilizan las siguientes preguntas de competencia para el diseño de la pantal
 |                                                              |
 
 
-
 ### Detalle de personal investigador
 
-
-- **Acciones de investigación**
-
 ![PersonalDetalle](./images/screenshots/personal_detalle1.PNG)
-
-
-- **Publicaciones científicas**
-
-![PersonalDetalle](./images/screenshots/personal_detalle2.PNG)
-
-
-- **Publicaciones académicas**
-
-![PersonalDetalle](./images/screenshots/personal_detalle3.PNG)
-
-- **Proyectos**
-
-![PersonalDetalle](./images/screenshots/personal_detalle4.PNG)
-
-
-- **Eventos**
-
-![PersonalDetalle](./images/screenshots/personal_detalle5.PNG)
 
 
 
