@@ -370,9 +370,25 @@ A través de esta sección se accederá al Linked Data Graph. En una primera pan
 
 ![ldp](./images/screenshots/ldp.PNG)
 
-A través del cajetín de búsqueda se podrán realizar consultas sobre el grafo.
+A través del cajetín de búsqueda se podrán realizar consultas sobre el grafo indicando título, nombre o descripción de la entidad:
 
 ![ldp](./images/screenshots/ldp_find.PNG)
+
+Pulsando sobre el Título/Nombre de una entidad, accederemos a los detalles de la misma:
+![ldp](./images/screenshots/ldp_details.PNG)
+En esta sección se divide en tres partes:
+* Los detalles de la entidad.
+* Las relaciones principales. Por ejemplo, en el caso de una publicación sus autores.
+* Otras relaciones. Por ejemplo, para un proyecto, la universidad a la que pertenecen sus autores.
+
+En ambos listados, por cada registro, se mostrará el tipo de relación con la entidad consultada, la categoría de la entidad relacionada y una descripción de la misma. Esta descripción a su vez, será un enlace que nos permite navegar hasta sus datos.
+
+Tanto la columna relación como la de categoría serán ordenables pulsando sobre el el icono con las flechas. Con cada pulsaación se alternará la ordenación para que sea ascendente, descendente o para desactivarla.
+
+Por otro lado existe también la opción de filtrar los listados por categoría de la entidad relacionada, para ello, habrá que pulsar sobre el icono del filtro y seleccionar en el combo la categoría deseada:
+![ldp](./images/screenshots/ldp_details_filter.png)
+
+
 
 <a name="instalador"></a>
 ## 3.9. Instalador
