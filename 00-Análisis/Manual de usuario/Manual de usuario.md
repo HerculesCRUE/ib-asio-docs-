@@ -621,17 +621,11 @@ Básicamente se dispone de tres tipos de búsqueda:
 
 Esto lanzará una búsqueda de similitudes, para comparar todas las instancias de una misma clase (o solo los deltas si el check esta activado).
 
-No tiene parámetros adicionales a los ya explicados.
+Como parámetro adicional tenemos:
 
-![Librería](./images/screenshots/desc-s-c.png)
+* **Email**: Email del usuario, al que se le notificará al concluir la operación de búsqueda de similitudes.  Idealmente, si el usuario se logo, usando un email, este email, aparecerá en este campo, en cualquier caso, podremos introducir cualquier otro email.![Librería](./images/screenshots/desc-s-c.png)
 
-#### Búsqueda de similitudes por clase
 
-Esto lanzará una búsqueda de similitudes, para comparar todas las instancias de una misma clase (o solo los deltas si el check esta activado).
-
-No tiene parámetros adicionales a los ya explicados.
-
-![Librería](./images/screenshots/desc-s-c.png)
 
 La respuesta es la descrita en la sección [Respuesta](#Respuesta).
 
@@ -724,7 +718,11 @@ En esta parte podemos visualizar metadatos de la propia petición, como por ejem
 
 Podemos ver en una lista desplegable (al desplegar veremos el detalle de cada entidad), las similitudes para las cuales ha encontrado algun tipo de similitud.
 
-![Librería](./images/screenshots/d-r-r-s.png)
+Asimismo se ofrecerán filtros para poder acotar los resultados, ya sea por nombre, por acciones automaticas ejecutadas por la librería de descubrimiento, así como por similitudes manuales, sobre las cuales deberemos tomar una decisión.
+
+![Librería](./images/screenshots/d-r-r-s-2.png)
+
+
 
 ##### Detalle de Resultado de similitud para una entidad (al desplegar las anteriores)
 
@@ -736,13 +734,19 @@ En la primera parte de la imagen se muestra detalle de la entidad principal que 
 
 En las siguientes secciones veremos tres secciones que describiremos a continuación:
 
-* Detalle de la entidad relacionada: Común para todas las entidades relacionadas, ya sean en Similitudes automáticas, manuales o acciones, descrita en el apartado [Detalle de Resultado de entidad relacionada](#Detalle-de-Resultado-de-entidad-relacionada)
+* **Detalle de la entidad relacionada:** Común para todas las entidades relacionadas, ya sean en Similitudes automáticas, manuales o acciones, descrita en el apartado [Detalle de Resultado de entidad relacionada](#Detalle-de-Resultado-de-entidad-relacionada)
 
-* Similitudes automáticas: Donde se muestra el detalle de la entidad relacionada, para aquellas similitudes con grado suficiente para desencadenar acciones automáticas.
+* **Similitudes automáticas:** Donde se muestra el detalle de la entidad relacionada, para aquellas similitudes con grado suficiente para desencadenar acciones automáticas.
 
-* Similitudes manuales: Donde se muestra el detalle de la entidad relacionada, para aquellas similitudes que no tienen grado suficiente para desencadenar acciones automáticas. En este caso aparecerán dos botones para que el usuario pueda desechar la similitud o aceptarla. Esto desencadenara las acciones correspondientes en la librería de descubrimiento
+* **Similitudes manuales:** Donde se muestra el detalle de la entidad relacionada, para aquellas similitudes que no tienen grado suficiente para desencadenar acciones automáticas. En este caso aparecerán dos botones para que el usuario pueda desechar la similitud o aceptarla. Esto desencadenara las acciones correspondientes en la librería de descubrimiento.
 
-  ![Librería](./images/screenshots/d-r-btn.png)
+  ![Librería](./images/screenshots/d-r-btn2.png)
+
+  En cuanto a el comportamiento de los botones, tenemos lo siguiente:
+
+  * Aceptar similitud: Esto implica aceptar la similitud, tal como esta propuesta por la librería de descubrimiento. El numero de links, indica los links que apuntan a la entidad a eliminar, y por lo tanto que habra que mover al realizar la fusión de entidades. Se recomienda (siempre que no exista otro tipo de criterio), aceptar la similitud con menos links, ya que sopondra menos actualizaciones en el triple store.
+  * Aceptar similitud invertida: Esto implica aceptar la similitud, de forma contraria a la que propone  la librería de descubrimiento. El número de links, indica los links que apuntan a la entidad a eliminar, y por lo tanto que habra que mover al realizar la fusión de entidades. Se recomienda (siempre que no exista otro tipo de criterio), aceptar la similitud con menos links, ya que sopondra menos actualizaciones en el triple store.
+  * Rechazar solicitud, implica no aceptar la similitud, y por lo tanto, en lo sucesivo, no sera propuesta en mas ocasiones.
 
 * Acciones: Listado de acciones realizadas por la librería de descubrimiento tras detectar la similitud
 
@@ -754,9 +758,10 @@ Básicamente muestra la misma información que la tabla anterior con algunos mat
 
 * Similaridad: Grado de similaridad de esta entidad con respecto a la entidad principal relacionada
 * Similaridad sin id: Grado de similaridad sin tener en cuenta el atributo id de esta entidad con respecto a la entidad principal relacionada
+* Links hacia la entidad: Numero de entidades que apuntan a la instancia. Debería de servir como criterio, par adeterminar que instancia prevalece a la hora de realizar la fusión (si procede).
 * Tabla de atributos: En esta caso muestra 3 columnas en vez de 2 como en el caso anterior, ya que además de mostrar el valor de el atributo para la entidad relacionada, también lo muestra para la principal, de forma que sea sencillo compararlas.
 
-![Librería](./images/screenshots/d-r-r-s-d-r.png)
+![Librería](./images/screenshots/d-r-r-s-d-r2.png)
 
 <a name="importador"></a>
 
