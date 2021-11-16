@@ -6,8 +6,8 @@
 
 | Entregable     | Manual de usuario                                            |
 | -------------- | ------------------------------------------------------------ |
-| Fecha          | 13/07/2021                                                  |
-| Revisado por   | Hugo Pintado Pérez                                           |
+| Fecha          | 10/11/2021                                                  |
+| Revisado por   | Daniel Ruiz Santamaría                                         |
 | Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
 | Módulo         | Manual de usuario                                            |
 | Tipo           | Documento                                                    |
@@ -953,7 +953,7 @@ Al igual que el apartado anterior, para este tipo de importación basta con indi
 
 A través de la sección de Borrado, se podrá restaurar los datos a una versión anterior, seleccionando una fecha. Para ello se debe seleccionar una fecha y pulsar en el botón Restaurar:
 
-![borrado](./images/screenshots/borrado.PNG)
+![borrado](./images/screenshots/Borrado.PNG)
 
 Esta funcionalidad envía un correo al área de sistemas con los pasos a seguir del backup.
 
