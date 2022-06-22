@@ -1,6 +1,6 @@
 requests==2.23.0
 cryptography==2.9.2
-numpy==1.18.4
+numpy==1.22.0
 pandas==1.0.3
 more-itertools
 rdflib==5.0.0
